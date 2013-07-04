@@ -7,6 +7,7 @@ Based on Octopress.
 0. Follow Octopress setup: <http://octopress.org/docs/setup/>
 1. `git submodule init && git submodule update` to install the brianchu.com theme under /.themes/bootstrap/
 2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
+    * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to pull the latest master commits if you are setting up a fresh clone of this repo.
 3. `./deployfromtheme.sh` to install the theme and deploy.
 
 

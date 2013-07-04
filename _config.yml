@@ -8,7 +8,7 @@ subtitle: a JavaScript front-end + back-end engineer.
 author: Brian Chu
 simple_search: http://google.com/search
 description:
-profile_picture: images/profile.png
+profile_picture: http://www.brianchu.com/images/profile.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
