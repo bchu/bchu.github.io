@@ -1,3 +1,15 @@
+## brianchu.com
+
+Based on Octopress.
+
+## Instructions
+
+0. Follow Octopress setup: <http://octopress.org/docs/setup/>
+1. `git submodule init && git submodule update` to install the brianchu.com theme under /.themes/bootstrap/
+2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
+3. `./deployfromtheme.sh` to install the theme and deploy.
+
+
 ## What is Octopress?
 
 Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
