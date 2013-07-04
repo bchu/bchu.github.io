@@ -8,6 +8,7 @@ subtitle: a JavaScript front-end + back-end engineer.
 author: Brian Chu
 simple_search: http://google.com/search
 description:
+profile_picture: images/profile.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
@@ -61,6 +62,9 @@ default_asides: [custom/asides/nav.html] #,asides/recent_posts.html, asides/gith
 # ----------------------- #
 #   3rd Party Settings    #
 # ----------------------- #
+
+# Linkedin
+linkedin_user: brchu
 
 # Github repositories
 github_user: bchu
