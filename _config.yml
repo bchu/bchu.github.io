@@ -100,5 +100,11 @@ disqus_show_comment_count: false
 # Google Analytics
 google_analytics_tracking_id: UA-41298092-1
 
+# Mixpanel
+mixpanel_id:
+
+# Quantcast
+quantcast_id: 
+
 # Facebook Like
 facebook_like: true
