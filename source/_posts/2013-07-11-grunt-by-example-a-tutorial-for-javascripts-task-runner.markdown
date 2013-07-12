@@ -5,6 +5,8 @@ title: "Grunt by Example -<br>A Tutorial for JavaScript's Task Runner"
 date: 2013-07-11 16:35
 comments: true
 categories: [JavaScript, tutorial]
+share_title: "Grunt by Example"
+description: "A Tutorial for JavaScript's Task Runner"
 ---
 
 What's Grunt used for? Automating front-end and JavaScript workflow tasks. Refreshing the browser when you change a script. Minifying and concatenating. Running tests. Think `rake` and `guard`, if you're coming from the Ruby world.
