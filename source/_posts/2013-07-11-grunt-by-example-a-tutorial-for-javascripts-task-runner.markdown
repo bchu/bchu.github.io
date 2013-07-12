@@ -201,4 +201,4 @@ Some tips:
     * `npm install --save-dev matchdep`
     * use `require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);` where you would otherwise list out all your `grunt.loadNpmTask` calls.
 
-For more advanced concepts, [read the Grunt docs!](http://gruntjs.com/getting-started). They're pretty good.
+For more advanced concepts, [read the Grunt docs!](http://gruntjs.com/getting-started) They're pretty good.
