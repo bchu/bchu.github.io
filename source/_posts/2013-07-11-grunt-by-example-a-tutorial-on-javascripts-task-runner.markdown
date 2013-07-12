@@ -1,6 +1,7 @@
 ---
 layout: post
-title: "Grunt by Example -<br>A Tutorial on JavaScript's Task Runner"
+url_title: "Grunt by Example - A Tutorial for JavaScript's Task Runner"
+title: "Grunt by Example -<br>A Tutorial for JavaScript's Task Runner"
 date: 2013-07-11 16:35
 comments: true
 categories: [JavaScript, tutorial]
