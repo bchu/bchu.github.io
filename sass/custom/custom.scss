@@ -14,8 +14,6 @@ h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
 }
 
-
-
 // BEGIN Octopress specific
 .sharing, .meta, .pager {
   margin: 20px 0px 20px 0px;
@@ -171,6 +169,7 @@ form.collapse {
 }
 
 .row-fluid {
+  box-sizing:border-box;
   margin-top: 40px;
   padding: 0 50px;
 }
