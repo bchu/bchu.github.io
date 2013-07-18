@@ -44,7 +44,7 @@ module.exports = function (grunt) {
     },
     watch: {
       dev: {
-        files: ['**{.js,.html,.yml,.md,.markdown,.css,.sass,.scss}, !public/**'],
+        files: ['**/*{.js,.html,.yml,.md,.markdown,.css,.sass,.scss}', '!public/**'],
         tasks:['exec:preview'],
         options: {
           livereload:LIVERELOAD_PORT
