@@ -21,11 +21,13 @@ layout: default
   <div class="centered entry-content">
     {% if page.title %}
     <header class="page-header">
-      <h2 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+      <h2 class="entry-title">{{ page.header }}</h2>
       {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
     </header>
     {% endif %}
-    {{ content }}
+    <div class="entry-content">
+      {{ content }}
+    </div>
     {% unless page.footer == false %}
       <footer>
         {% if page.date or page.author %}<p class="meta">
@@ -38,7 +40,7 @@ layout: default
         {% endunless %}
         {% if site.disqus_short_name and page.comments == true %}
         <section>
-          <h2>Comments</h2>
+          <h1>Comments</h1>
           <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
         </section>
         {% endif %}

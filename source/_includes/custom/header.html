@@ -1,7 +1,11 @@
-<hgroup>
-  <img src="images/profile.png" alt="Me">
-  <h1><a href="{{ root_url }}/">{{ site.title }}</a></h1>
-  {% if site.subtitle %}
-    <h2>{{ site.subtitle }}</h2>
-  {% endif %}
-</hgroup>
+<section class="span4">
+  <div class="profile-pic-container sidebar">
+    <a href="{{ root_url }}/"><img src="{{ site.profile_picture }}" title="{{ site.author }}" alt="Me" id="profile-pic"></a>
+  </div>
+</section>
+
+<section class="span8 centered" role="banner">
+  <h1>I'm {{ site.author }},</h1>
+  <h2 class="inline">a JavaScript front-end </h2><h2 class="plus">+</h2><h2 class="inline"> back-end engineer.</h2>
+  </div>
+</section>

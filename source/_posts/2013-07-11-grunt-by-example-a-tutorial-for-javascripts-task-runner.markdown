@@ -5,7 +5,7 @@ title: "Grunt by Example -<br>A Tutorial for JavaScript's Task Runner"
 date: 2013-07-11 16:35
 comments: true
 categories: [JavaScript, tutorial]
-share_title: "Grunt by Example"
+share_title: Grunt by Example
 description: A Tutorial for JavaScript's Task Runner
 ---
 
@@ -23,10 +23,12 @@ Grunt is just a task runner. Every unit of functionality that you would want is 
 
 Get the command line interface: `npm install -g grunt-cli`
 
-Add the actual grunt task runner as a development dependency to your project (--save-dev adds it to package.json):
+Add the actual grunt task runner as a development dependency to your project (`--save-dev` adds the package as a dependency to `package.json`):
 `npm install --save-dev grunt`
 
 Let's follow a process of gradual expansion.
+
+Create an empty `Gruntfile.js` file in your project root. This will contain all of your task configuration.
 
 Let's say that the first task we want to add to our workflow is to be able to concatenate several JavaScript files into one. Let's say those files are all in the `scripts/` sub-directory. We'd want to do this before deploying a website, for example.
 
@@ -41,8 +43,8 @@ module.exports = function(grunt) {
 
   // All upfront config goes in a massive nested object.
   grunt.initConfig({
-  // You can set arbitrary key-value pairs.
-  distFolder: 'dist'
+    // You can set arbitrary key-value pairs.
+    distFolder: 'dist',
     // You can also set the value of a key as parsed JSON.
     // Allows us to reference properties we declared in package.json.
     pkg: grunt.file.readJSON('package.json'),
@@ -164,8 +166,9 @@ watch: {
     // and subdirectories of subdirectories, and so on, recursively.
     files: ['client/**/*'],
     // In our case, we don't configure any additional tasks,
-    // since livereload is built into the watch task.
-    // Any other tasks to run (e.g. CoffeeScript) go here:
+    // since livereload is built into the watch task,
+    // and since the browser refresh is handled by the snippet.
+    // Any other tasks to run (e.g. compile CoffeeScript) go here:
     tasks:[],
     options: {
       livereload:LIVERELOAD_PORT
@@ -189,16 +192,16 @@ Some more grunt plugins to be aware about (`contrib` plugins are officially main
 * `grunt contrib-coffee` for compiling CoffeeScript.
 * `grunt-contrib-sass` for compiling SASS.
 * `grunt-concurrent` for running tasks concurrently (instead of sequentially) - useful if you want to run multiple watch tasks concurrently.
-  * If you have a series of tasks, the `watch` task must be run last, since `watch` is a task that never ends until you terminate it. Thus any tasks that you specify to run after it won't run.
-* `grunt-nodemon` for running nodemon with your node app. This runs your node app and reloads it when files change.
+  * If you have a series of tasks, the `watch` task must be run last. `watch` is a task that never ends until you terminate it. Thus, Grunt won't ever reach tasks that come after `watch`.
+* `grunt-nodemon` for running [nodemon](https://github.com/remy/nodemon) with your node app. This runs your node app and reloads it when files change.
 * `grunt-simplemocha` for running mocha tests.
 * `grunt-open` for opening files and URLs.
 
 Some tips:
 
-1. If it starts getting too unwieldy, you can break up your Gruntfile by using `grunt.file.readJSON()`.
+1. If your Gruntfile starts getting too unwieldy, you can break it up by using `grunt.file.readJSON()`.
 2. Tired of copying and pasting `loadNpmTasks`?  Try this:
     * `npm install --save-dev matchdep`
-    * use `require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);` where you would otherwise list out all your `grunt.loadNpmTask` calls.
+    * use `require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);` where you would otherwise list out all your multiple `grunt.loadNpmTask` calls.
 
 For more advanced concepts, [read the Grunt docs!](http://gruntjs.com/getting-started) They're pretty good.

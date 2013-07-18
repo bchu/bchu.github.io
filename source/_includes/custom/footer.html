@@ -1,12 +1,28 @@
+<footer role="contentinfo" class="footer-row">
+  <ul class="footer inline">
+    <li><a href="{{ root_url }}/blog/">Blog</a></li>
+    <li><a href="{{ root_url }}/blog/archives">Blog&nbsp;&nbsp;Archives</a></li>
+    <li><a href="{{ root_url }}/projects/">Projects</a></li>
+    <!-- <li><a href="{{ root_url }}/about/">About</a></li> -->
+    <li><a href="https://github.com/{{ site.github_user }}"><span class="icon-github-sign"></span> bchu</a></li>
+    <li><a href="https://twitter.com/{{ site.twitter_user }}"><span class="icon-twitter-sign"/></span> @brrrianchu</a></li>
+    <li><a href="http://www.linkedin.com/in/{{ site.linkedin_user }}"><span class="icon-linkedin-sign"/></span> LinkedIn</a></li>
+  </ul>
+</footer><!-- end row-fluid 3-->
+
+{% comment %}
 <hr>
 <p>
   Copyright &copy; {{ site.time | date: "%Y" }} - {{ site.author }}
-  <!-- <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span> -->
-  <ul class="footer">
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+  <ul class="footer inline">
     <li><a href="{{ root_url }}/">Blog</a></li>
-    <!-- <li><a href="{{ root_url }}/blog/archives">Archives</a></li> -->
+    {% comment %}
+    <li><a href="{{ root_url }}/blog/archives">Archives</a></li>
+    {% endcomment %}
     <li><a href="{{ root_url }}/portfolio/">Portfolio</a></li>
     <li><a href="https://github.com/bchu">GitHub: bchu</a></li>
     <li><a href="https://twitter.com/brrrianchu">@brrrianchu</a></li>
   </ul>
 </p>
+{% endcomment %}
