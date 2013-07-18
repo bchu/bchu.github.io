@@ -7,35 +7,50 @@ Based on Octopress.
 0. Follow Octopress setup: <http://octopress.org/docs/setup/>
 1. `git submodule init && git submodule update` to install the brianchu.com theme under /.themes/bootstrap/
 2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
-    * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to pull the latest master commits if you are setting up a fresh clone of this repo.
+    * run `./setup_github_pages.sh` to set up a clone of the repo in `/_deploy.`
+    * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to run the above command if you're setting up a github pages repo that already exists.
 3. `./deployfromtheme.sh` to install the theme and deploy.
 
+###Todo
 
-## What is Octopress?
+1. Update bootstrap.
+2. Pull changes from octopress classic theme. (esp. JS changes);
+3. This theme contains changes (i.e. projects/index.markdown) that are not reflected in the static website.
+    * consider just generating a new site and starting from that one for the static site
+4. Move away from the theme and just have everything in the source/sass folders
+5. after clicking on a blog, show button to return to index
+6. fix width layout overflow -> certain content elements are larger than body/html, such that there's always scrolling/overflow
+7. consider different permalink schemes
+8. Revamp Google search appearance, FB appearance
 
-Octopress is [Jekyll](https://github.com/mojombo/jekyll) blogging at its finest.
+## Prerequisites
 
-1. **Octopress sports a clean responsive theme** written in semantic HTML5, focused on readability and friendliness toward mobile devices.
-2. **Code blogging is easy and beautiful.** Embed code (with [Solarized](http://ethanschoonover.com/solarized) styling) in your posts from gists, jsFiddle or from your filesystem.
-3. **Third party integration is simple** with built-in support for Pinboard, Delicious, GitHub Repositories, Disqus Comments and Google Analytics.
-4. **It's easy to use.** A collection of rake tasks simplifies development and makes deploying a cinch.
-5. **Ships with great plug-ins** some original and others from the Jekyll community &mdash; tested and improved.
+Please check that you have a recent version of [compass](http://compass-style.org/) installed in octopress' bundle
+(see Gemfile.lock in your octopress directory and run bundle update if necessary), otherwise, you might get errors
+similar to those reported in issue #7. Compass version 0.12.1 is known to work.
 
+Currently, version of sass least 3.2 is needed due to requirements of [twitter-bootstrap-sass](https://github.com/jlong/sass-twitter-bootstrap):
 
-## Documentation
+     $ gem list| grep sass
+     sass (3.2.4)
 
-Check out [Octopress.org](http://octopress.org/docs) for guides and documentation.
+To update, run ````bundle update sass```` in your octopress directory. Make sure to *remove the older versions of sass*,
+as compass might pick one of those up and site generation would fail.
 
-
-## Contributing
-
-[![Build Status](https://travis-ci.org/imathis/octopress.png?branch=master)](https://travis-ci.org/imathis/octopress)
-
-We love to see people contributing to Octopress, whether it's a bug report, feature suggestion or a pull request. At the moment, we try to keep the core slick and lean, focusing on basic blogging needs, so some of your suggestions might not find their way into Octopress. For those ideas, we started a [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plugins), where you can link your own Octopress plug-in repositories. For the future, we're thinking about ways to easier add them them into our main releases.
+     $ bundle update sass
+     $ gem remove sass -v3.1.20
 
 
-## License
-(The MIT License)
+## Code snippet colors
+
+Theme utilizes the solarized color scheme for code snippets. By default, the
+bootstrap variant is selected, but light/dark colors can be used by setting
+the $solarized variable in sass/syntax/\_higlight.scss.
+
+
+## Acknowledgements
+
+This site uses Octopress. The Octopress license is included below:
 
 Copyright © 2009-2013 Brandon Mathis
 
@@ -44,8 +59,3 @@ Permission is hereby granted, free of charge, to any person obtaining a copy of 
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
 THE SOFTWARE IS PROVIDED ‘AS IS’, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
-
-
-#### If you want to be awesome.
-- Proudly display the 'Powered by Octopress' credit in the footer.
-- Add your site to the Wiki so we can watch the community grow.
