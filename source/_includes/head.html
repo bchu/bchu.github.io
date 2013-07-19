@@ -14,7 +14,18 @@
 
   <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
-  <!-- <meta property="og:image" content="thumbnail_image"> -->
+  <!-- <meta property="og:image" content="thumbnail_image_link"> -->
+  {% comment %}At least 50x50, ideally square{% endcomment %}
+  <!-- <meta property="og:site_name" content="Brian Chu"/> -->
+
+  <meta name="twitter:card" content="summary">
+  <!-- <meta name="twitter:site" content="@brrrianchu"> -->
+  <meta name="twitter:creator" content="@brrrianchu">
+  <meta name="twitter:title" content="{{ title }}">
+  {% capture description_content %}{% if page.homepage %}{{ site.description }}{% else if page.content %}{{ page.content | raw_content }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  <meta name="twitter:description" content="{{ description_content | markdownify | strip_html | condense_spaces | truncate:200 }}">
+  <!-- <meta name="twitter:image" content=""> -->
+
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
