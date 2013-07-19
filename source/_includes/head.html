@@ -4,14 +4,15 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>{% if page.title %}{{ page.title }} - {{ site.author }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}</title>
+  {% capture title %}{% if page.title %}{{ page.title }} - {{ site.author }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}{% endcapture %}
+  <title>{{ title }}</title>
   <meta name="author" content="{{ site.author }}">
 
   {% capture description %}{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description}}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
-  <meta property="og:title" content="{{ page.title }} - {{ site.author }}">
+  <meta property="og:title" content="{{ title }}">
   <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   <!-- <meta property="og:image" content="thumbnail_image"> -->
 
