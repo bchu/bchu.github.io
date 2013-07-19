@@ -16,6 +16,7 @@ Based on Octopress.
 1. Update bootstrap.
 2. Pull changes from octopress classic theme. (esp. JS changes);
 3. approval for twitter cards
+4. automatically link contact form email with mailchimp (depending on checkbox)
 5. after clicking on a blog, show button to return to index
 7. consider different permalink schemes
 8. Revamp Google search appearance, FB appearance
