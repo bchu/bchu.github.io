@@ -21,7 +21,9 @@ layout: default
   <div class="centered entry-content">
     {% if page.title %}
     <header class="page-header">
-      <h2 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h1>
+      {% comment %}Prefer page.html_title, fall back to page.title; assign to the variable 'title'{% endcomment %}
+      {% capture title %}{% if page.html_title %}{{ page.html_title }}{% else %}{{ page.html_title }}{% endif %}{% endcapture %}
+      <h2 class="entry-title">{% if site.titlecase %}{{ title | titlecase }}{% else %}{{ title }}{% endif %}</h2>
       {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
     </header>
     {% endif %}

@@ -1,9 +1,11 @@
 {% unless page.no_header %}
   <header class="page-header">
     {% if index %}
-      <h2 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a></h2>
+      {% capture title %}{% if post.html_title %}{{ post.html_title }}{% else %}{{ post.html_title }}{% endif %}{% endcapture %}
+      <h2 class="entry-title"><a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ title | titlecase }}{% else %}{{ title }}{% endif %}</a></h2>
     {% else %}
-      <h2 class="entry-title">{% if site.titlecase %}{{ page.title | titlecase }}{% else %}{{ page.title }}{% endif %}</h2>
+      {% capture title %}{% if page.html_title %}{{ page.html_title }}{% else %}{{ page.html_title }}{% endif %}{% endcapture %}
+      <h2 class="entry-title">{% if site.titlecase %}{{ title | titlecase }}{% else %}{{ title }}{% endif %}</h2>
     {% endif %}
     {% unless page.meta == false %}
       <p class="meta">
