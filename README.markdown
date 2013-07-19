@@ -7,7 +7,7 @@ Based on Octopress.
 0. Follow Octopress setup: <http://octopress.org/docs/setup/>
 1. `git submodule init && git submodule update` to install the brianchu.com theme under /.themes/bootstrap/
 2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
-    * run `./setup_github_pages.sh` to set up a clone of the repo in `/_deploy.`
+    * run `./setup_github_pages.sh` to set up a clone of the repo in `/_deploy`.
     * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to run the above command if you're setting up a github pages repo that already exists.
 3. `./deployfromtheme.sh` to install the theme and deploy.
 
@@ -15,11 +15,7 @@ Based on Octopress.
 
 1. Update bootstrap.
 2. Pull changes from octopress classic theme. (esp. JS changes);
-3. This theme contains changes (i.e. projects/index.markdown) that are not reflected in the static website.
-    * consider just generating a new site and starting from that one for the static site
-4. Move away from the theme and just have everything in the source/sass folders
 5. after clicking on a blog, show button to return to index
-6. fix width layout overflow -> certain content elements are larger than body/html, such that there's always scrolling/overflow
 7. consider different permalink schemes
 8. Revamp Google search appearance, FB appearance
 
