@@ -6,10 +6,6 @@ html {
   position:relative;
 }
 
-h1 {
-  // line-height
-}
-
 h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
 }
@@ -188,7 +184,6 @@ form.contact-form {
 }
 
 .row-fluid.content {
-  /*position:relative*/
   overflow:hidden;
 }
 
@@ -198,13 +193,12 @@ form.contact-form {
 }
 
 
-/*guideline: keep line width to between 50-75 characters*/
+// guideline: keep line width to between 50-75 characters
 .span8 {
   margin: 0 auto;
 
  .centered {
-    padding-right: 20%; /* override in media query*/
-    // margin:0 auto;
+    padding-right: 20%; // override in media query
     max-width: 700px;
   }
 }
@@ -231,7 +225,7 @@ form.contact-form {
   padding-top:10px;
   font-size: 1.2em;
   text-align: center;
-  width:100%; /*position absolute causes element's width to shink to contents, which breaks text align, so we set width*/
+  width:100%; // position absolute causes element's width to shink to contents, which breaks text align, so we set width
   background: $footerBgColor;
   vertical-align:bottom;
 
@@ -269,7 +263,6 @@ li a.slidebtn {
   box-sizing: border-box;
   color: white;
   display: inline-block;
-  // font-family: Lato, Calibri, Arial, sans-serif;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: normal;
@@ -278,7 +271,6 @@ li a.slidebtn {
   outline-style: none;
   outline-width: 0px;
   padding: 20px 120px 20px 40px;
-  // padding: 25px 0px 25px 0px;
   position: relative;
   text-align: center;
   text-shadow: none;
@@ -320,12 +312,12 @@ li a.slideout {
 .slideout:before {
   background: #fff;
   z-index: 2;
-  border-radius: 0px 10px 10px 0px; /*my change, also hack to fix bg from peeking out*/
-  /*border-radius: 10px 0 0 10px;*/
+  border-radius: 0px 10px 10px 0px; // my change, also hack to fix bg from peeking out
+  //border-radius: 10px 0 0 10px;
   position: absolute;
   height: 100%;
-  right:0; /*my change*/
-  /*left: 0;*/ /*my change*/
+  right:0; // my change
+  //left: 0; // my change
   top: 0;
   line-height: 2.6;
   font-size: 160%;
@@ -361,17 +353,14 @@ user: F007
 
 .icon:before {
   z-index: 2;
-  /*border-radius: 10px 0 0 10px;*/
   position: absolute;
   height: 100%;
-  right:0; /*my change*/
-  /*left: 0;*/ /*my change*/
+  right:0;
   top: 0;
   line-height: 2.6;
   font-size: 160%;
   width: 60px;
   content:'';
-
 
   font-family: 'FontAwesome';
   speak: none;
@@ -463,7 +452,3 @@ user: F007
   -moz-transition: all 0.3s;
   transition: all 0.3s;
 }
-
-// .active.slideout:before {
-//   color:$buttonColor;
-// }
