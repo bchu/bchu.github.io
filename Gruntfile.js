@@ -25,6 +25,16 @@ module.exports = function (grunt) {
         }
       }
     },
+    copy: {
+      static: {
+        files:[{
+          expand:true,
+          flatten:true,
+          src: ['sass/custom/*.scss'],
+          dest:'public/stylesheets/custom/'
+        }]
+      }
+    },
     exec: {
       preview: {
         cmd: 'bundle exec rake generate'
@@ -34,6 +44,11 @@ module.exports = function (grunt) {
       dev: {
         files: {
           'stylesheets/custom/custom.css': 'stylesheets/custom/custom.scss'
+        }
+      },
+      static: {
+        files: {
+          'public/stylesheets/custom/custom.css': 'public/stylesheets/custom/custom.scss'
         }
       }
     },
@@ -47,7 +62,14 @@ module.exports = function (grunt) {
         files: ['**/*{.js,.html,.yml,.md,.markdown,.css,.sass,.scss,.xml}', '!public/**', '!_deploy/**', '!node_modules/**'],
         tasks:['exec:preview'],
         options: {
-          livereload:LIVERELOAD_PORT
+          livereload: LIVERELOAD_PORT
+        }
+      },
+      static: {
+        files: ['public/**'],
+        tasks: ['sass:static'],
+        options: {
+          livereload: LIVERELOAD_PORT
         }
       }
     }
@@ -57,6 +79,15 @@ module.exports = function (grunt) {
     'exec:preview',
     'connect:livereload',
     'open',
-    'watch'
+    'watch:dev'
+  ]);
+
+  grunt.registerTask('static', [
+    'exec:preview',
+    'copy:static',
+    'sass:static',
+    'connect:livereload',
+    'open',
+    'watch:static'
   ]);
 };

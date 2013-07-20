@@ -45,7 +45,7 @@ a {
 }
 
 // content line-height and font-size and hacks to get around em stacking
-%content {
+._content {
   line-height: $contentLineHeight;
   margin-bottom:20px;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
@@ -57,12 +57,12 @@ div.content {
 
   // Content elements:
   p {
-    @extend %content;
+    @extend ._content;
   }
   div.centered .entry-content {
     font-size: $baseFontSize;
     ul, ol {
-      @extend %content;
+      @extend ._content;
     }
     li {
       line-height: $contentLineHeight;
