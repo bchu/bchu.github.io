@@ -25,15 +25,18 @@ module.exports = function (grunt) {
         }
       }
     },
-    copy: {
-      static: {
-        files:[{
-          expand:true,
-          flatten:true,
-          src: ['sass/custom/*.scss'],
-          dest:'public/stylesheets/custom/'
-        }]
-      }
+    // copy: {
+    //   static: {
+    //     files:[{
+    //       expand:true,
+    //       flatten:true,
+    //       src: ['sass/custom/*.scss'],
+    //       dest:'public/stylesheets/custom/'
+    //     }]
+    //   }
+    // },
+    concurrent: {
+      static: ['watch:staticsass', 'watch:static']
     },
     exec: {
       preview: {
@@ -48,7 +51,7 @@ module.exports = function (grunt) {
       },
       static: {
         files: {
-          'public/stylesheets/custom/custom.css': 'public/stylesheets/custom/custom.scss'
+          'public/stylesheets/custom/custom.css': 'sass/custom/custom.scss'
         }
       }
     },
@@ -65,9 +68,12 @@ module.exports = function (grunt) {
           livereload: LIVERELOAD_PORT
         }
       },
+      staticsass:{
+        files: ['sass/**'],
+        tasks: ['sass:static']
+      },
       static: {
         files: ['public/**'],
-        tasks: ['sass:static'],
         options: {
           livereload: LIVERELOAD_PORT
         }
@@ -84,10 +90,8 @@ module.exports = function (grunt) {
 
   grunt.registerTask('static', [
     'exec:preview',
-    'copy:static',
-    'sass:static',
     'connect:livereload',
     'open',
-    'watch:static'
+    'concurrent'
   ]);
 };
