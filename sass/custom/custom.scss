@@ -159,9 +159,12 @@ form.collapse {
 }
 
 .sidebar-nav {
-  margin-right:5px;
   font-size: 1.2em;
   text-align:center;
+}
+
+.nav-list {
+  padding-right: 15px + $buttonShadowWidth;
 }
 
 form.contact-form {
@@ -287,7 +290,7 @@ li a.slidebtn {
 
 a.slidebtn:focus, .slidebtn:active, .slidebtn.active {
   box-shadow: 0 0 $buttonShadowColor;
-  left: 6px;
+  left: $buttonShadowWidth;
 }
 
 li a.slideout {
