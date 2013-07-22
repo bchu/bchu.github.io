@@ -3,34 +3,29 @@
   font-size:1.1em;
 }
 
-.pager li>a, .btn {
+.pager li>.flat-btn, .btn {
   border-radius: $buttonBorderRadius;
 }
 
-.nav>li>a:hover {
-  background-color: $buttonColor;
-}
+.flat-btn, li a.flat-btn, .btn.flat-btn {
+  //bootstrap override
+  color: white;
+  transition:none;
+  background-image:none;
 
-li a.slidebtn {
-  -webkit-transition: none;
-  -moz-transition: none;
-  transition: none;
-
-  -webkit-box-shadow: $buttonShadowColor 6px 0px 0px 0px;
-  background-color: $buttonColor;
-  border-radius:$buttonBorderRadius; //used to be 5px
-  box-shadow: $buttonShadowColor 6px 0px 0px 0px;
+  font-family: $bodyFonts;
+  background: $buttonColor;
+  border:0;
+  border-radius:$buttonBorderRadius;
+  -webkit-box-shadow: $buttonShadowColor $buttonShadowWidth 0px 0px 0px;
+  box-shadow: $buttonShadowColor $buttonShadowWidth 0px 0px 0px;
   -moz-box-sizing:border-box;
   box-sizing: border-box;
-  color: white;
   display: inline-block;
   font-weight: bold;
   letter-spacing: 1px;
   line-height: normal;
   margin-bottom: 15px;
-  outline-color: rgb(255, 255, 255);
-  outline-style: none;
-  outline-width: 0px;
   padding: 20px 120px 20px 40px;
   position: relative;
   text-align: center;
@@ -39,19 +34,44 @@ li a.slidebtn {
   width: 233px;
   height:60px;
   word-spacing: 0px;
+  &:hover {
+    //bootstrap override
+    color: white;
+
+    background-color: $buttonColor;
+    box-shadow: ($buttonShadowWidth - 2) 0 $buttonShadowColor;
+    left: 2px;
+  }
+  &:focus, &:active, &.active {
+    box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
+    left: $buttonShadowWidth;
+  }
+
+  //the box-shadow should be 1px less
+  &.flat-small {
+    text-transform: none;
+    height: 30px;
+    width: auto;
+    padding:6px 15px 6px 15px;
+    -webkit-box-shadow: $buttonShadowColor ($buttonShadowWidth - 1) 0px 0px 0px;
+    box-shadow: $buttonShadowColor ($buttonShadowWidth - 1) 0px 0px 0px;
+    &:hover {
+      box-shadow: ($buttonShadowWidth - 1 - 2) 0 $buttonShadowColor;
+      left: 2px;
+    }
+    &:focus, &:active, &.active {
+      box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
+      left: $buttonShadowWidth - 1;
+    }
+  }
 }
 
-.slidebtn:hover {
-  box-shadow: 4px 0 $buttonShadowColor;
-  left: 2px;
+//adjust buttons to account for box-shadow (move the buttons to the left)
+.well-adjust {
+  margin-right:5px;
 }
 
-a.slidebtn:focus, .slidebtn:active, .slidebtn.active {
-  box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
-  left: $buttonShadowWidth;
-}
-
-li a.slideout {
+li .slideout {
   /*background-color: rgb(242, 158, 13);*/
   /*display: inline-block;*/
   /*font-size: 16px;*/
