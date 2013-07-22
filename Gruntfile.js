@@ -36,10 +36,13 @@ module.exports = function (grunt) {
     //   }
     // },
     concurrent: {
+      options: {
+        logConcurrentOutput: true
+      },
       static: ['watch:staticsass', 'watch:static']
     },
     exec: {
-      preview: {
+      generate: {
         cmd: 'bundle exec rake generate'
       }
     },
@@ -55,6 +58,14 @@ module.exports = function (grunt) {
         }
       }
     },
+    targethtml: {
+      public: {
+        files: [{
+          expand:true,
+          src:['public/**/*.html']
+        }]
+      }
+    },
     open: {
       dev: {
         path: 'http://localhost:<%= connect.options.port%>'
@@ -63,7 +74,7 @@ module.exports = function (grunt) {
     watch: {
       dev: {
         files: ['**/*{.js,.html,.yml,.md,.markdown,.css,.sass,.scss,.xml}', '!public/**', '!_deploy/**', '!node_modules/**'],
-        tasks:['exec:preview'],
+        tasks:['exec:generate'],
         options: {
           livereload: LIVERELOAD_PORT
         }
@@ -81,15 +92,17 @@ module.exports = function (grunt) {
     }
   });
 
+  //re-build entire project upon changes in source
   grunt.registerTask('default', [
-    'exec:preview',
+    'exec:generate',
     'connect:livereload',
     'open',
     'watch:dev'
   ]);
 
+  //only watch public folder and sass stylesheets (preview mode)
   grunt.registerTask('static', [
-    'exec:preview',
+    'exec:generate',
     'connect:livereload',
     'open',
     'concurrent'
