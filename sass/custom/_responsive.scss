@@ -1,0 +1,15 @@
+@media (max-width: 767px) {
+  .span4 {
+    text-align: left;
+  }
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+@media (max-width: 320px) {
+  .row-fluid {
+    padding:0;
+  }
+}

@@ -137,11 +137,6 @@ h1 {
 .span4 {
   text-align: right;
 }
-@media (max-width: 767px) {
-  .span4 {
-    text-align: left
-  }
-}
 
 .sidebar .well {
   p {
@@ -188,11 +183,6 @@ form.in.collapse {
   margin-top: 40px;
   padding: 0 50px;
 }
-@media (max-width: 320px) {
-  .row-fluid {
-    padding:0;
-  }
-}
 
 .row-fluid.content {
   overflow:hidden;
@@ -202,7 +192,6 @@ form.in.collapse {
   content:'';
   clear:both;
 }
-
 
 // guideline: keep line width to between 50-75 characters
 .span8 {
@@ -229,8 +218,6 @@ form.in.collapse {
 }
 
 .footer-row {
-  //goes with container-fluid negative margin hack
-  height:$footerHeight;
   position:absolute;
   bottom:0;
   margin-top: 50px;
@@ -242,11 +229,11 @@ form.in.collapse {
   vertical-align:bottom;
 
   ul {
-    padding-top:10px;
     display:block;
     line-height:0px;
   }
   li {
+    padding-top:10px;
     margin-right:30px;
   }
   a {
@@ -256,3 +243,5 @@ form.in.collapse {
     color:$footerLinkHoverColor;
   }
 }
+
+@import '_responsive.scss';
