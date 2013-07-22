@@ -27,15 +27,6 @@ single: true
         {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         {% include post/categories.html %}
       </p>
-      {% unless page.sharing == false %}
-        {% include post/sharing.html %}
-      {% endunless %}
-      {% if site.disqus_short_name and page.comments == true %}
-      <section>
-        <h2>Comments</h2>
-        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
-      </section>
-      {% endif %}
       <ul class="pager centered">
         {% if page.previous.url %}
         <li class="previous"><a class="basic-alignment left"
@@ -49,6 +40,15 @@ single: true
           &raquo;</a></li>
         {% endif %}
       </ul>
+      {% unless page.sharing == false %}
+        {% include post/sharing.html %}
+      {% endunless %}
+      {% if site.disqus_short_name and page.comments == true %}
+      <section>
+        <h2>Comments</h2>
+        <div id="disqus_thread" aria-live="polite">{% include post/disqus_thread.html %}</div>
+      </section>
+      {% endif %}
     </footer>
   </div>
 </article>
