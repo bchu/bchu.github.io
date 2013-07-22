@@ -13,13 +13,18 @@ Based on Octopress.
 
 ###Todo
 
-1. Update bootstrap.
+1. Update bootstrap sass.
 2. Pull changes from octopress classic theme. (esp. JS changes);
 3. approval for twitter cards
 4. automatically link contact form email with mailchimp (depending on checkbox)
 5. after clicking on a blog, show button to return to index
 7. consider different permalink schemes
 8. Revamp Google search appearance, FB appearance
+9. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
+    * also have content text wrap around sidebar
+    * probably also have content text wrap around even at higher sizes like 1200px or so
+10. Enlarge read on and meta parts
+11. Have code wrapping - hide line numbers at that point
 
 ## Prerequisites
 
