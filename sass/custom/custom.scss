@@ -130,7 +130,7 @@ form.collapse {
 }
 
 #profile-pic {
-  border-radius:40px;
+  border-radius: $buttonBorderRadius + 10px;
   margin-right: 20px;
 }
 
