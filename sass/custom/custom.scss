@@ -39,6 +39,7 @@ body {
   font-family: $bodyFonts;
   color:$fontColor;
   padding-bottom:40px;
+  font-size:$baseFontSize;
 }
 
 a {
@@ -61,7 +62,6 @@ div.content {
     @extend ._content;
   }
   div.centered .entry-content {
-    font-size: $baseFontSize;
     ul, ol {
       @extend ._content;
     }
@@ -94,7 +94,7 @@ h1.title {
 
 h1 {
   margin-bottom: 15px;
-  font-size: 3.5em;
+  font-size: 2.7em;
 }
 
 .container-fluid{
@@ -139,9 +139,6 @@ h1 {
 }
 
 .sidebar .well {
-  p {
-    font-size:$baseFontSize;
-  }
   border:0;
   background:$wellBgColor;
   box-shadow:inset 1px 1px 2px rgba(135,205,234,0.15);
@@ -150,7 +147,6 @@ h1 {
 }
 
 .sidebar-nav {
-  font-size: 1.2em;
   text-align:center;
 }
 
@@ -222,7 +218,7 @@ form.in.collapse {
   bottom:0;
   margin-top: 50px;
   padding-top:10px;
-  font-size: 1.2em;
+  font-size: 0.95em;
   text-align: center;
   width:100%; // position absolute causes element's width to shink to contents, which breaks text align, so we set width
   background: $footerBgColor;

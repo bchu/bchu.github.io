@@ -1,6 +1,6 @@
 .btn {
   font-family: $bodyFonts;
-  font-size:1.1em;
+  font-size:1em;
 }
 
 .pager li>.flat-btn, .btn {
@@ -48,6 +48,7 @@
 
   //the box-shadow should be 1px less
   &.flat-small {
+    font-size: 0.85em;
     text-transform: none;
     height: 30px;
     width: auto;
