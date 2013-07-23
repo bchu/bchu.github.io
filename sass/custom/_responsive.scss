@@ -1,4 +1,45 @@
+// code-block starts collapsing
+@media (max-width: 1445px) {
+  .span8 .centered {
+    padding-right: 0;
+  }
+  figure.code {
+    margin:0 !important;
+  }
+}
+
+
+//eliminate padding on left-hand side
+@media (max-width: 1200px) {
+
+}
+
+// code block starts collapsing again
+@media (max-width: 1035px) {
+
+}
+
+//eliminate 50px padding
+@media (max-width: 920px) {
+  .row-fluid {
+  }
+}
+
 @media (max-width: 767px) {
+  header.row-fluid{
+    margin-top:10px;
+    padding-top:0;
+  }
+
+  .profile-pic-container {
+    float:left;
+    position:relative;
+    top:30px;
+    margin-right:25px;
+  }
+  .row-fluid {
+    padding:40px;
+  }
   .span4 {
     text-align: left;
   }
@@ -6,6 +47,9 @@
     padding-right: 0;
     padding-left: 0;
   }
+}
+
+@media (max-width: 480px) {
 }
 
 @media (max-width: 320px) {

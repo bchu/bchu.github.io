@@ -81,7 +81,7 @@ header.row-fluid {
   border-bottom: 1px solid gray;
   margin-top:40px;
   box-shadow: 0 4px 2px -3px gray; /*x-off, y-off, blur-radius, spread (neg = shrink)*/
-  padding: 20px 50px;
+  padding: 20px 3%;
 }
 
 .subtext {
@@ -177,7 +177,7 @@ form.in.collapse {
 .row-fluid {
   box-sizing:border-box;
   margin-top: 40px;
-  padding: 0 50px;
+  padding: 0 3%;
 }
 
 .row-fluid.content {
