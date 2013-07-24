@@ -1,0 +1,47 @@
+// BEGIN Octopress specific
+.sharing, .meta, .pager {
+  margin: 20px 0px 20px 0px;
+}
+td.code {
+  vertical-align:top;
+}
+
+// This fixes a bug with lines of code not lining up with their line numbers.
+// Caused by the fact that bootstrap sets font-size to 13px.
+// which affects the line-height of the span elements that make up the lines of code
+// this causes the lines to be smaller than they should be.
+// .highlight code is the exact selector that is used to set the line-height
+// Override bootstrap
+.highlight code {
+  font-size: 13px;
+}
+// END Octopress specific
+
+h1,h2,h3,h4,h5,h6 {
+  text-rendering: optimizeLegibility;
+}
+
+a {
+  color:$linkColor;
+}
+
+.subtext {
+  color: $subFontColor;
+}
+
+h1.title {
+  font-family: $headerFonts;
+}
+
+h1 {
+  margin-bottom: 15px;
+  font-size: 2.7em;
+}
+
+.plus {
+  display: inline;
+}
+
+.inline {
+  display: inline;
+}
