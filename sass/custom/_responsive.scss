@@ -9,7 +9,21 @@
 }
 
 
-@media (max-width: 1200px) {
+@media (max-width: 1000px) {
+
+  .content .span8 {
+    width: 100%;
+    .entry-content p {
+      text-align:justify;
+    }
+  }
+  header .span8.centered {
+    margin: 0 auto;
+  }
+  .span8 .centered {
+    margin:0;
+    padding: 0 20px;
+  }
 }
 
 // text and code block starts collapsing again - make sidebar elements stack horizontally
@@ -48,6 +62,16 @@
   }
 }
 
+@media (max-width: 921px) {
+  .row-fluid {
+    margin-top: 20px;
+  }
+  header.row-fluid{
+    padding: 3%;
+    margin-top: 2%;
+  }
+}
+
 // third-aside needs to be wrapped
 @media (max-width: 921px) and (min-width:676px) {
   .well {
@@ -78,11 +102,6 @@
 }
 
 @media (max-width: 767px) {
-  header.row-fluid{
-    margin-top:10px;
-    padding-top:0;
-  }
-
   .profile-pic-container {
     float:left;
     position:relative;
@@ -90,7 +109,8 @@
     margin-right:25px;
   }
   .row-fluid {
-    padding:40px;
+    padding-left:40px;
+    padding-right:40px;
   }
   .span4 {
     text-align: left;
@@ -101,11 +121,28 @@
   }
 }
 
-@media (max-width: 480px) {
+// collapse sidebar into a pop-down
+@media (max-width: 677px) {
+
+  aside.span4 {
+    // display:none !important;
+  }
 }
 
-@media (max-width: 320px) {
+@media (max-width: 400px) {
   .row-fluid {
     padding:0;
+  }
+  header.row-fluid{
+    padding: 0 2%;
+    margin-top: 0%;
+  }
+
+  .sidebar section {
+    position:static;
+    bottom:0;
+  }
+  section.sidebar-nav {
+    position: relative;
   }
 }
