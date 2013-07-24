@@ -9,19 +9,71 @@
 }
 
 
-//eliminate padding on left-hand side
 @media (max-width: 1200px) {
-
 }
 
-// code block starts collapsing again
-@media (max-width: 1035px) {
+// text and code block starts collapsing again - make sidebar elements stack horizontally
+@media (max-width: 1000px) and (min-width:676px) {
+  .row-fluid aside.span4 {
+    width: 100%;
+    text-align: center;
+  }
+  .span4 .sidebar:not(.profile-pic-container) {
+    max-width: none;
+  }
 
+  .sidebar section {
+    float:left;
+    margin-left: 20px;
+    width:250px;
+    min-height: 165px;
+  }
+  .sidebar > section:first-child {
+    margin-left: 0;
+  }
+  // outer section
+  section.dropdown-wrapper {
+    min-height: 0;
+    float:left;
+  }
+  // middle wrapper
+  section > .dropdown-wrapper {
+    position:relative;
+  }
+  // inner section
+  .dropdown-wrapper section {
+    z-index: 3;
+    position: absolute;
+    margin-left:0;
+  }
 }
 
-//eliminate 50px padding
-@media (max-width: 920px) {
-  .row-fluid {
+// third-aside needs to be wrapped
+@media (max-width: 921px) and (min-width:676px) {
+  .well {
+    margin-bottom: -10px;
+  }
+
+  .span4 .sidebar:not(.profile-pic-container) {
+    max-width: 600px;
+  }
+
+  section.dropdown-wrapper {
+    min-height: 120px;
+    margin:0;
+    width: 100%;
+  }
+  // middle wrapper
+  section > .dropdown-wrapper {
+    position:relative;
+  }
+  .dropdown-wrapper section {
+    border-top:0;
+    right: 0;
+    min-height: 100%;
+    border-top-right-radius: 0 !important;
+    border-top-left-radius: 0 !important;
+    box-shadow: inset 1px -2px 2px $sidebarWellShadow !important;
   }
 }
 
