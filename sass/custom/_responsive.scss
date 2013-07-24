@@ -1,6 +1,6 @@
 // code-block starts collapsing
 @media (max-width: 1445px) {
-  .span8 .centered {
+  .content-row .span8 {
     padding-right: 0;
   }
   figure.code {
@@ -11,16 +11,16 @@
 
 @media (max-width: 1000px) {
 
-  .content .span8 {
+  .content-row .span8 {
     width: 100%;
-    .entry-content p {
+    .main-col p {
       text-align:justify;
     }
   }
-  header .span8.centered {
+  header .span8 {
     margin: 0 auto;
   }
-  .span8 .centered {
+  .content-row .span8 {
     margin:0;
     padding: 0 20px;
   }
@@ -32,17 +32,17 @@
     width: 100%;
     text-align: center;
   }
-  .span4 .sidebar:not(.profile-pic-container) {
+  .span4:not(.profile-pic-container) {
     max-width: none;
   }
 
-  .sidebar section {
+  .span4 section {
     float:left;
     margin-left: 20px;
     width:250px;
     min-height: 165px;
   }
-  .sidebar > section:first-child {
+  .span4 > section:first-child {
     margin-left: 0;
   }
   // outer section
@@ -78,7 +78,7 @@
     margin-bottom: -10px;
   }
 
-  .span4 .sidebar:not(.profile-pic-container) {
+  .span4:not(.profile-pic-container) {
     max-width: 600px;
   }
 
@@ -138,7 +138,7 @@
     margin-top: 0%;
   }
 
-  .sidebar section {
+  .span4 section {
     position:static;
     bottom:0;
   }

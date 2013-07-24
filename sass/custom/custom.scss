@@ -53,7 +53,7 @@ a {
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 
-div.content {
+div.content-row {
   letter-spacing:0px;
   line-height: $contentLineHeight;
 
@@ -61,7 +61,7 @@ div.content {
   p {
     @extend ._content;
   }
-  div.centered .entry-content {
+  .content-row .span8 {
     ul, ol {
       @extend ._content;
     }
@@ -128,17 +128,19 @@ h1 {
   margin-right: 2px;
 }
 
-.span4 .sidebar{
-  max-width: 300px;
-  display:inline-block;
-  text-align: left;
-}
-
 .span4 {
-  text-align: right;
+  text-align:right;
+  display:inline-block;
 }
 
-.sidebar .well {
+.span4 section {
+  text-align:left;
+  box-sizing:border-box;
+  max-width: 300px;
+  margin-left: auto;
+}
+
+aside .well {
   border:0;
   background:$wellBgColor;
   box-shadow:inset 1px 1px 2px $sidebarWellShadow;
@@ -146,7 +148,7 @@ h1 {
   padding-bottom:25px;
 }
 
-.sidebar-nav {
+section.sidebar-nav {
   text-align:center;
 }
 
@@ -180,11 +182,11 @@ form.in.collapse {
   padding: 0 3%;
 }
 
-.row-fluid.content {
+.row-fluid.content-row {
   overflow:hidden;
 }
 
-.row-fluid.content:after{
+.row-fluid.content-row:after{
   content:'';
   clear:both;
 }
@@ -193,16 +195,18 @@ form.in.collapse {
 .span8 {
   margin: 0 auto;
   padding-left:10px;
-
- .centered {
-    padding-right: 20%; // override in media query
-    max-width: 700px;
-  }
 }
 
-.span8 .pager{
+.content-row .span8 {
+  max-width: 700px;
+}
+
+.content-row .span8{
   padding-right:0;
-  text-align:right;
+}
+
+.pager, article footer {
+  text-align: right;
 }
 
 .plus {
@@ -213,7 +217,7 @@ form.in.collapse {
   display: inline;
 }
 
-.footer-row {
+footer.row-fluid{
   position:absolute;
   bottom:0;
   margin-top: 50px;

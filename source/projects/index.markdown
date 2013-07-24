@@ -3,7 +3,7 @@ layout: projects_page
 title: "Projects"
 header: "Some of my projects:"
 sharing: false
-footer: true
+footer: false
 ---
 
 ##[Nodetron](http://www.nodetron.com) <i class="icon-cogs"></i> <small>(ongoing open-source project)</small>
