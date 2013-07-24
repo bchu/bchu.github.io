@@ -103,6 +103,10 @@ section.sidebar-nav {
   text-align:center;
 }
 
+.sidebar-centering {
+  display: inline-block;
+}
+
 .nav-list {
   padding-right: 15px + $buttonShadowWidth;
   li:first-child {

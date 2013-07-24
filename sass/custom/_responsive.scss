@@ -1,50 +1,42 @@
 // code-block starts collapsing
 @media (max-width: 1445px) {
-  .content-row .span8 {
-    padding-right: 0;
-  }
   figure.code {
     margin:0 !important;
   }
 }
 
-
-@media (max-width: 1000px) {
-
+@media (max-width: 1015px) {
   .content-row .span8 {
+    margin:0 auto;
+    padding: 0 20px;
     width: 100%;
-    .main-col p {
+    p {
       text-align:justify;
     }
   }
   header .span8 {
     margin: 0 auto;
   }
-  .content-row .span8 {
-    margin:0;
-    padding: 0 20px;
-  }
 }
 
 // text and code block starts collapsing again - make sidebar elements stack horizontally
-@media (max-width: 1000px) and (min-width:676px) {
+@media (max-width: 1015px) and (min-width:676px) {
   .row-fluid aside.span4 {
     width: 100%;
     text-align: center;
   }
-  .span4:not(.profile-pic-container) {
-    max-width: none;
-  }
 
-  .span4 section {
+  .sidebar-centering section {
     float:left;
     margin-left: 20px;
     width:250px;
     min-height: 165px;
   }
-  .span4 > section:first-child {
+  .sidebar-centering > section:first-child {
     margin-left: 0;
   }
+
+  // Dropdown menu overlay (z-index)
   // outer section
   section.dropdown-wrapper {
     min-height: 0;
@@ -62,7 +54,7 @@
   }
 }
 
-@media (max-width: 921px) {
+@media (max-width: 937px) {
   .row-fluid {
     margin-top: 20px;
   }
@@ -73,7 +65,7 @@
 }
 
 // third-aside needs to be wrapped
-@media (max-width: 921px) and (min-width:676px) {
+@media (max-width: 937px) and (min-width:676px) {
   .well {
     margin-bottom: -10px;
   }
@@ -102,10 +94,10 @@
 }
 
 @media (max-width: 767px) {
-  .profile-pic-container {
+  section.span4.profile-pic-container {
     float:left;
+    width: auto;
     position:relative;
-    top:30px;
     margin-right:25px;
   }
   .row-fluid {
@@ -136,11 +128,6 @@
   header.row-fluid{
     padding: 0 2%;
     margin-top: 0%;
-  }
-
-  .span4 section {
-    position:static;
-    bottom:0;
   }
   section.sidebar-nav {
     position: relative;
