@@ -24,6 +24,8 @@ Based on Octopress.
     * also have content text wrap around sidebar
     * probably also have content text wrap around even at higher sizes like 1200px or so
 11. Have code wrapping - hide line numbers at that point
+12. have rss and search move to footer for media query
+13. add search (swifttype).
 
 ## Prerequisites
 

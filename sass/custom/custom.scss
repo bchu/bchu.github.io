@@ -99,6 +99,16 @@ aside .well {
   padding-bottom:25px;
 }
 
+.well.clear-well {
+  text-align: right;
+  background: none;
+  margin:0;
+  padding-top:0px;
+  margin-right:2px;
+  min-width: 0;
+  width:auto;
+}
+
 section.sidebar-nav {
   text-align:center;
 }
