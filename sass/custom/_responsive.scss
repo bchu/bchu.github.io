@@ -111,6 +111,18 @@
     padding-right: 0;
     padding-left: 0;
   }
+
+}
+
+// Start wrapping code
+@media (max-width: 740px) {
+  .line-numbers {
+    display: none;
+  }
+  pre code, p code {
+    word-wrap: break-word;
+    white-space: pre-wrap;
+  }
 }
 
 // collapse sidebar into a pop-down

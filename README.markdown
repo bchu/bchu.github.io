@@ -21,9 +21,7 @@ Based on Octopress.
 7. consider different permalink schemes
 8. Revamp Google search appearance, FB appearance
 9. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
-11. Have code wrapping - hide line numbers at that point
 12. have rss and search move to footer for media query
-13. add search (swifttype).
 14. align footer with body
 15. fix issue with spacing between profile picture and header
 
