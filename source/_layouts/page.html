@@ -1,16 +1,7 @@
 ---
 layout: default
 ---
-{% unless page.sidebar == false %}
-<aside class="span4">
-  {% if site.page_asides.size %}
-    {% include_array page_asides %}
-  {% else %}
-    {% include_array default_asides %}
-  {% endif %}
-</aside>
-{% endunless %}
-
+{% include asides.html %}
 {% if page.sidebar == false %}
 <!-- TODO have yet to handle this case! -->
 <section role="article" class="span12">
