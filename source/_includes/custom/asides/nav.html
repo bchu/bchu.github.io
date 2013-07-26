@@ -3,9 +3,9 @@
 <section role="navigation" class="sidebar-nav well">
   <ul class="nav nav-list">
     <li><a href="{{ root_url }}/" class="btn flat-btn icon blog-icon {% unless page.title %}active{% endunless %}">Blog</a></li>
+    <li><a href="{{ root_url }}/about/" class="btn flat-btn icon user-icon {%if page.title == 'About Me' %}active{% endif %}">About Me</a></li>
     <li><a href="{{ root_url }}/projects/" class="btn flat-btn icon projects-icon {%if page.title == 'Projects' %}active{% endif %}">Projects</a></li>
     {% comment %}
-    <!-- <li><a href="http://www.brianchu.com/about/" class="slidebtn icon user-icon">About</a></li> -->
     <!--TODO-->
     <!-- <li><a href="#bchu" class="slidebtn slideout git-icon">GitHub</a></li> -->
     <!-- <li><a href="" class="slidebtn">Contact&nbsp;Me</a></li> -->

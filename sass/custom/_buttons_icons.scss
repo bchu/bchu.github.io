@@ -25,7 +25,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   line-height: normal;
-  padding: 15px 120px 20px 40px;
+  padding: 15px 145px 20px 40px;
   position: relative;
   text-align: center;
   text-shadow: none;
@@ -33,6 +33,8 @@
   width: 210px;
   height:50px;
   word-spacing: 0px;
+  white-space: nowrap; // fallback
+  white-space: pre;
   &:hover {
     //bootstrap override
     color: white;
