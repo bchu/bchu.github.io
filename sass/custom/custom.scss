@@ -141,6 +141,11 @@ form.in.collapse {
   margin-top: 10px;
 }
 
+.page-header {
+  padding-bottom: 0;
+  margin-bottom: 10px;
+}
+
 .pager, article footer {
   text-align: right;
 }
@@ -178,7 +183,7 @@ footer.row-fluid{
 
 #profile-pic {
   border-radius: $buttonBorderRadius + 10px;
-  margin-right: 2px;
+  margin-right: 6px;
 }
 
 @import '_responsive.scss';
