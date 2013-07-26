@@ -11,11 +11,11 @@ description: A Tutorial for JavaScript's Task Runner
 
 What's Grunt used for? Automating front-end and JavaScript workflow tasks. Refreshing the browser when you change a script. Minifying and concatenating. Running tests. Think `rake` and `guard`, if you're coming from the Ruby world.
 
-The catch - Grunt configuration files can be fairly convoluted at first glance, usually due to the fact that developers add more and more steps to their workflow over time.
-
 Enter Grunt by Example! A blow-by-blow tutorial. Just the way I like it. Let's dive in.
 
 <!-- more -->
+
+The catch - Grunt configuration files can be fairly convoluted at first glance, usually due to the fact that developers add more and more steps to their workflow over time.
 
 Grunt is just a task runner. Every unit of functionality that you would want is usually achieved with a separate npm package (a grunt "plugin").
 
