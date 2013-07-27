@@ -1,5 +1,8 @@
 {% unless page.sidebar == false %}
-<aside class="span4">
+<aside class="span4 sidebar clear-affix" data-spy="affix" data-offset-top="226"></aside>
+{% comment %}
+{% endcomment %}
+<aside class="span4 sidebar" data-spy="affix" data-offset-top="226">
   <div class="sidebar-centering">
     {% if site.page_asides.size %}
       {% include_array page_asides %}

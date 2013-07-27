@@ -40,26 +40,25 @@ body {
   }
 }
 
-.container-fluid{
-  margin: 0 auto;
 
-  padding: 0 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
+// cannot set percentage (fluid) padding on container nor row, since this will create problems for the sticky sidebar
+.container-fluid{
+  padding: 0;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
 .row-fluid {
-  box-sizing:border-box;
+  padding: 0;
   margin-top: 40px;
-  padding: 0 3%;
+  box-sizing:border-box;
 }
 
 header.row-fluid {
-  /*background: url('../../background-edit.jpg') no-repeat center center;*/
-  /*background-size: cover;*/
-  /*background-color:#F5FAFF;*/
-  /*background-color: rgba(245, 250, 255, 0.9);*/
+  // background: url('../../background-edit.jpg') no-repeat center center;
+  // background-size: cover;
+  // background-color:#F5FAFF;
+  // background-color: rgba(245, 250, 255, 0.9);
 
   border-bottom: 1px solid gray;
   margin-top:40px;
@@ -74,8 +73,25 @@ header.row-fluid {
   section {
     text-align:left;
     box-sizing:border-box;
-    max-width: 300px;
+    width:250px;
     margin-left: auto;
+  }
+
+  &.affix {
+    top:0;
+    z-index:2;
+  }
+  &.sidebar {
+    margin-left: 0;
+  }
+}
+
+// hack - a placeholder aside that ensures proper page flow after the regular aside is stickified
+.clear-affix {
+  position: absolute;
+  margin-left:0 !important;
+  &.affix {
+    position:static;
   }
 }
 
