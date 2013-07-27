@@ -13,15 +13,14 @@ Based on Octopress.
 
 ###Todo
 
-1. Update bootstrap sass.
-2. Pull changes from octopress classic theme. (esp. JS changes);
-3. approval for twitter cards
-4. automatically link contact form email with mailchimp (depending on checkbox)
-5. suppress google redirect, show indication of success
-7. consider different permalink schemes
-8. Revamp Google search appearance, FB appearance
-9. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
-12. have rss and search move to footer for media query
+1. Pull changes from octopress classic theme. (esp. JS changes);
+2. approval for twitter cards
+3. automatically link contact form email with mailchimp (depending on checkbox)
+4. suppress google redirect, show indication of success
+5. consider different permalink schemes
+6. Revamp Google search appearance, FB appearance
+7. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
+8. consider long form with scrollspy
 
 ## Prerequisites
 
