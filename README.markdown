@@ -21,6 +21,8 @@ Based on Octopress.
 6. Revamp Google search appearance, FB appearance
 7. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
 8. consider long form with scrollspy
+9. fix sidebar jumping issue
+10. find way to add fluid padding back in 
 
 ## Prerequisites
 
