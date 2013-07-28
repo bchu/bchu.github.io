@@ -35,17 +35,21 @@
   word-spacing: 0px;
   white-space: nowrap; // fallback
   white-space: pre;
+
+  // Commented-out box-shadow and left properties deal with make the buttons depress on hover and click
   &:hover {
     //bootstrap override
     color: white;
 
     background-color: $buttonColor;
-    box-shadow: ($buttonShadowWidth - 2) 0 $buttonShadowColor;
-    left: 2px;
+    box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
+    // box-shadow: ($buttonShadowWidth - 2) 0 $buttonShadowColor;
+    // left: 2px;
   }
   &:focus, &:active, &.active {
-    box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
-    left: $buttonShadowWidth;
+    box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
+    // box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
+    // left: $buttonShadowWidth;
   }
 
   //the box-shadow should be 1px less
@@ -58,12 +62,14 @@
     -webkit-box-shadow: $buttonShadowColor ($buttonShadowWidth - 1) 0px 0px 0px;
     box-shadow: $buttonShadowColor ($buttonShadowWidth - 1) 0px 0px 0px;
     &:hover {
-      box-shadow: ($buttonShadowWidth - 1 - 2) 0 $buttonShadowColor;
-      left: 2px;
+      box-shadow: $buttonColor ($buttonShadowWidth - 1) 0px 0px 0px;
+      // box-shadow: ($buttonShadowWidth - 1 - 2) 0 $buttonShadowColor;
+      // left: 2px;
     }
     &:focus, &:active, &.active {
-      box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
-      left: $buttonShadowWidth - 1;
+      box-shadow: $buttonColor ($buttonShadowWidth - 1) 0px 0px 0px;
+      // box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
+      // left: $buttonShadowWidth - 1;
     }
   }
 }
