@@ -25,13 +25,13 @@
   font-weight: bold;
   letter-spacing: 1px;
   line-height: normal;
-  padding: 15px 145px 20px 40px;
+  padding: 12px 145px 20px 40px;
   position: relative;
   text-align: center;
   text-shadow: none;
   text-transform: uppercase;
   width: 210px;
-  height:50px;
+  height:45px;
   word-spacing: 0px;
   white-space: nowrap; // fallback
   white-space: pre;
@@ -52,9 +52,9 @@
   &.flat-small {
     font-size: 0.85em;
     text-transform: none;
-    height: 30px;
+    height: 28px;
     width: auto;
-    padding:6px 15px 6px 15px;
+    padding:5px 15px 6px 15px;
     -webkit-box-shadow: $buttonShadowColor ($buttonShadowWidth - 1) 0px 0px 0px;
     box-shadow: $buttonShadowColor ($buttonShadowWidth - 1) 0px 0px 0px;
     &:hover {
