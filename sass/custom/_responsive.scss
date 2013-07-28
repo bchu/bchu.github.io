@@ -21,6 +21,10 @@
 
 // text and code block starts collapsing again - make sidebar elements stack horizontally
 @media (max-width: 1015px) and (min-width:676px) {
+  .affix {
+    position: static;
+  }
+
   .row-fluid aside.span4 {
     width: 100%;
     text-align: center;
