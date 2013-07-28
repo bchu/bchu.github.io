@@ -1,3 +1,13 @@
+@media (max-height: 670px) {
+  .affix {
+    position: static !important;
+  }
+  .clear-affix {
+    position: absolute !important;
+  }
+}
+
+
 // code-block starts collapsing
 @media (max-width: 1445px) {
   figure.code {
