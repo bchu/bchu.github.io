@@ -2,6 +2,13 @@
 @import '_text.scss';
 @import '_buttons_icons.scss';
 
+// Drop shadows
+@mixin box-shadow($shadow...) {
+  -webkit-box-shadow: $shadow;
+     -moz-box-shadow: $shadow;
+          box-shadow: $shadow;
+}
+
 html {
   min-height:100%;
   position:relative; //needed for footer
@@ -125,6 +132,14 @@ aside .well {
   box-shadow: 0 0 0;
 }
 
+input, textarea, select {
+  &.defer-invalid:focus:invalid {
+    color: #555;
+    border-color: rgba(82,168,236,.8);
+    @include box-shadow(inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(82,168,236,.6));
+  }
+}
+
 .search-form {
   margin-bottom: 7px;
 }
@@ -147,14 +162,21 @@ section.sidebar-nav {
   }
 }
 
-form.collapse {
-  clear:both;
-  margin-bottom: 0;
-}
+.contact-modal {
+  text-align: left;
+  form {
+    margin:0;
+  }
 
-form.in.collapse {
-  margin-top:50px;
-  clear:both;
+  .modal-footer {
+    background-color: $wellBgColor;
+    text-align: center;
+  }
+
+  input[type='submit'] {
+    width: 70% !important;
+    min-width: 200px;
+  }
 }
 
 .contact-checkbox {
