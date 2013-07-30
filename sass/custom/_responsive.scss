@@ -20,12 +20,22 @@
     margin:0 auto;
     padding: 0 20px;
     width: 100%;
+    float:none;
     p {
       text-align:justify;
     }
   }
   header .span8 {
     margin: 0 auto;
+  }
+
+  // footer
+  .end-footer .span8 {
+    text-align: center;
+    max-width: none;
+  }
+  .row-fluid .span4 {
+    min-height: 0;
   }
 }
 
