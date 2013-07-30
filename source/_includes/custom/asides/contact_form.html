@@ -1,28 +1,59 @@
 <section class="dropdown-wrapper">
 <div class="dropdown-wrapper">
-<section class="well">
+<section class="well clearfix">
   <p class="no-margin">Feel free to reach out to me!</p>
   <div data-toggle="buttons-checkbox">
-    <button class="btn flat-btn flat-small toggle collapsed pull-right well-adjust " data-toggle="collapse" data-target="form.collapse.contact-form">Contact Me</button>
+    <button role="button" class="btn flat-btn flat-small pull-right well-adjust " data-toggle="modal" data-target=".modal.hide.fade">Contact Me</button>
   </div>
-  <form class="collapse contact-form" action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="_blank" onsubmit="">
-      <label class="control-label" for="entry_562979872">Name:</label>
-      <input class="span12" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
 
-      <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
-      <input class="span12" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
-
-      <label class="control-label" for="entry_1142668288">Message:</label>
-      <textarea class="span12" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
-      <label class="checkbox contact-checkbox">
-        <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1" checked>Sign up for email updates?
-      </label>
-
-    <input type="hidden" name="draftResponse" value="[]">
-    <input type="hidden" name="pageHistory" value="0">
-
-    <input type="submit" name="submit" value="Submit" class="btn flat-btn flat-small pull-right well-adjust">
-  </form>
+  
 </section>
 </div>
 </section>
+
+{% comment %}
+Old form code (collapsing sub-section):
+<button role="button" class="btn flat-btn flat-small toggle collapsed pull-right well-adjust " data-toggle="collapse" data-target="form.collapse.contact-form">Contact Me</button>
+<form class="collapse" action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="_blank" onsubmit="">
+// form.collapse {
+//   clear:both;
+//   margin-bottom: 0;
+// }
+
+// form.in.collapse {
+//   margin-top:50px;
+//   clear:both;
+// }
+{% endcomment %}
+
+<div class="modal hide fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="modalHeader">Contact Me</h3>
+  </div>
+
+    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="_blank" onsubmit="">
+
+      <div class="modal-body">
+        <label class="control-label" for="entry_562979872">Name:</label>
+        <input class="span12" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
+
+        <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
+        <input class="span12 defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
+
+        <label class="control-label" for="entry_1142668288">Message:</label>
+        <textarea class="span12 defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
+        <label class="checkbox contact-checkbox">
+          <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
+        </label>
+        <input type="hidden" name="draftResponse" value="[]">
+        <input type="hidden" name="pageHistory" value="0">
+      </div>
+
+      <div class="modal-footer">
+        <input type="submit" name="submit" value="Submit" class="btn flat-btn flat-small well-adjust">
+      </div>
+  </form>
+
+</div>
