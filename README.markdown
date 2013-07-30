@@ -13,16 +13,15 @@ Based on Octopress.
 
 ###Todo
 
-1. Pull changes from octopress classic theme. (esp. JS changes);
-2. approval for twitter cards
-3. automatically link contact form email with mailchimp (depending on checkbox)
-4. suppress google redirect, show indication of success
-5. consider different permalink schemes
-6. Revamp Google search appearance, FB appearance
-7. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
-8. consider long form with scrollspy
-9. fix sidebar jumping issue
-10. find way to add fluid padding back in 
+1. approval for twitter cards
+3. suppress google redirect, show indication of success
+4. consider different permalink schemes
+5. Revamp Google search appearance, FB appearance
+6. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
+7. consider long form with scrollspy
+8. fix sidebar jumping issue
+9. find way to add fluid padding back in 
+10. have github api data cached and static-ified on build
 
 ## Prerequisites
 
