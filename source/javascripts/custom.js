@@ -24,4 +24,21 @@ $(function () {
       $(this).addClass('defer-invalid');
     }
   });
+
+  // handle email signups from contact modal
+  $('.contact-modal').submit(function(e) {
+    var $this = $(this)
+    if ($this.find('input[type="checkbox"]').prop('checked')) {
+      var $form = $this.find('form');
+      var email = $form.find('input[type="email"]').val();
+      var $subscribeForm = $('.subscribe-form');
+      var $inputFill = $subscribeForm.find('input[type="email"]');
+      $inputFill.val(email);
+      setTimeout(function() {
+        $subscribeForm.submit();
+        $inputFill.val('');
+      }, 500);
+    }
+    $this.modal('hide');
+  });
 });
