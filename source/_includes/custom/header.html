@@ -4,7 +4,9 @@
 
 <section class="span8" role="banner">
   <h1 class="title">I'm {{ site.author }},</h1>
+{% if site.subtitle %}
   <span class="subtext">
-    <h3 class="inline">a JavaScript front-end </h3><h3 class="plus">+</h3><h3 class="inline"> back-end engineer.</h3>
+    <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
   </span>
+{% endif %}
 </section>
