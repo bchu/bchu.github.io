@@ -39,7 +39,17 @@ module.exports = function (grunt) {
       options: {
         logConcurrentOutput: true
       },
-      static: ['watch:staticsass', 'watch:static']
+      static: ['watch:staticsass', 'watch:static', 'watch:staticjs']
+    },
+    copy: {
+      js: {
+        files:[{
+          expand:true,
+          cwd: 'source/javascripts/',
+          src:['**'],
+          dest:'public/javascripts/'
+        }]
+      }
     },
     exec: {
       generate: {
@@ -71,6 +81,13 @@ module.exports = function (grunt) {
         path: 'http://localhost:<%= connect.options.port%>'
       }
     },
+    uglify: {
+      public: {
+        files: [{
+          'public/javascripts/custom.js': ['public/javascripts/octopress.js','public/javascripts/custom.js']
+        }]
+      }
+    },
     watch: {
       dev: {
         files: ['**/*{.js,.html,.yml,.md,.markdown,.css,.sass,.scss,.xml}', '!public/**', '!_deploy/**', '!node_modules/**'],
@@ -88,6 +105,10 @@ module.exports = function (grunt) {
         options: {
           livereload: LIVERELOAD_PORT
         }
+      },
+      staticjs: {
+        files: ['source/javascripts/**'],
+        tasks: ['copy:js']
       }
     }
   });
@@ -106,5 +127,10 @@ module.exports = function (grunt) {
     'connect:livereload',
     'open',
     'concurrent'
+  ]);
+  // run build tasks after 'rake generate' but before rake deploy. This means operating on files in the public directory.
+  grunt.registerTask('pre-deploy', [
+    'targethtml:public',
+    'uglify:public'
   ]);
 };

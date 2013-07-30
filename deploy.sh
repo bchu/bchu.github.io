@@ -2,5 +2,5 @@ cd _deploy
 git pull origin master
 cd ..
 bundle exec rake generate
-grunt targethtml:public
+grunt pre-deploy
 bundle exec rake deploy
