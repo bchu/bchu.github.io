@@ -8,7 +8,7 @@
 }
 
 
-// code-block starts collapsing
+// text and code block starts collapsing again - make sidebar elements stack horizontally
 @media (max-width: 1445px) {
   figure.code {
     margin:0 !important;
@@ -16,6 +16,10 @@
 }
 
 @media (max-width: 1015px) {
+  .affix {
+    position: static;
+  }
+
   .content-row .span8 {
     margin:0 auto;
     padding: 0 20px;
@@ -24,9 +28,15 @@
     p {
       text-align:justify;
     }
+    clear:both;
   }
   header .span8 {
     margin: 0 auto;
+  }
+
+  header.row-fluid{
+    padding: 3%;
+    margin-top: 2%;
   }
 
   // footer
@@ -39,12 +49,7 @@
   }
 }
 
-// text and code block starts collapsing again - make sidebar elements stack horizontally
 @media (max-width: 1015px) and (min-width:676px) {
-  .affix {
-    position: static;
-  }
-
   .row-fluid aside.span4 {
     width: 100%;
     text-align: center;
@@ -82,10 +87,7 @@
   .row-fluid {
     margin-top: 20px;
   }
-  header.row-fluid{
-    padding: 3%;
-    margin-top: 2%;
-  }
+
 }
 
 // third-aside needs to be wrapped
