@@ -4,7 +4,7 @@
     <li class="nav-header">Latest Tweets</li>
     <li class="loading">Status updating...</li>
   </ul>
-  <script type="text/javascript">
+  <script>
     $(document).ready(function(){
       getTwitterFeed("{{site.twitter_user}}", {{site.twitter_tweet_count}}, {{site.twitter_show_replies}});
     });
