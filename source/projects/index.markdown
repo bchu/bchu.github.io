@@ -36,7 +36,7 @@ AngelHack project using AngularJS and Firebase. An app that connects people need
 <br>
 
 
-##[FeedYourNet](http://www.feedyournet.meteor.com) <i class="icon-group"></i>
+##[FeedYourNet](http://feedyournet.meteor.com) <i class="icon-group"></i>
 
 Startup Weekend team project built with Meteor. Aggregate contacts from Facebook and LinkedIn. Schedule reminders to reach out to your contacts. Maintain relationships with the contacts most important to you.
 
