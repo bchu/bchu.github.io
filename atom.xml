@@ -1,0 +1,346 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[I'm Brian Chu]]></title>
+  <link href="http://www.brianchu.com/atom.xml" rel="self"/>
+  <link href="http://www.brianchu.com/"/>
+  <updated>2013-08-03T22:49:41-07:00</updated>
+  <id>http://www.brianchu.com/</id>
+  <author>
+    <name><![CDATA[Brian Chu]]></name>
+    
+  </author>
+  
+
+  
+  <entry>
+    <title type="html"><![CDATA[Grunt by Example - A Tutorial for JavaScript's Task Runner]]></title>
+    <link href="http://www.brianchu.com/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner/"/>
+    <updated>2013-07-11T16:35:00-07:00</updated>
+    <id>http://www.brianchu.com/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner</id>
+    <content type="html"><![CDATA[<p>What&rsquo;s Grunt used for? Automating front-end and JavaScript workflow tasks. Refreshing the browser when you change a script. Minifying and concatenating. Running tests. Think <code>rake</code> and <code>guard</code>, if you&rsquo;re coming from the Ruby world.</p>
+
+<p>Enter Grunt by Example! A blow-by-blow tutorial. Just the way I like it. Let&rsquo;s dive in.</p>
+
+<!-- more -->
+
+
+<p>The catch &ndash; Grunt configuration files can be fairly convoluted at first glance, usually due to the fact that developers add more and more steps to their workflow over time.</p>
+
+<p>Grunt is just a task runner. Every unit of functionality that you would want is usually achieved with a separate npm package (a grunt &ldquo;plugin&rdquo;).</p>
+
+<p><code>npm search grunt</code> to view literally every grunt plugin available.</p>
+
+<p>Get the command line interface: <code>npm install -g grunt-cli</code></p>
+
+<p>Add the actual grunt task runner as a development dependency to your project (<code>--save-dev</code> adds the package as a dependency to <code>package.json</code>):
+<code>npm install --save-dev grunt</code></p>
+
+<p>Let&rsquo;s follow a process of gradual expansion.</p>
+
+<p>Create an empty <code>Gruntfile.js</code> file in your project root. This will contain all of your task configuration.</p>
+
+<p>Let&rsquo;s say that the first task we want to add to our workflow is to be able to concatenate several JavaScript files into one. Let&rsquo;s say those files are all in the <code>scripts/</code> sub-directory. We&rsquo;d want to do this before deploying a website, for example.</p>
+
+<p>Run <code>npm install --save-dev grunt-contrib-concat</code>.</p>
+
+<p>Let&rsquo;s look at our Gruntfile configured with just this one task.</p>
+
+<p>A quick preview of the result before we look at the code. After setting up our configuration object, running <code>grunt concat</code>, <code>grunt concat:dist</code>, or <code>grunt build</code> in the shell in the project root will all do the same thing: concatenate all scripts in the <code>scripts</code> sub-directory into a single script called <code>main.js</code>.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//Grunt is just JavaScript running in node, after all...</span>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// All upfront config goes in a massive nested object.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span><span class='line'>    <span class="c1">// You can set arbitrary key-value pairs.</span>
+</span><span class='line'>    <span class="nx">distFolder</span><span class="o">:</span> <span class="s1">&#39;dist&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// You can also set the value of a key as parsed JSON.</span>
+</span><span class='line'>    <span class="c1">// Allows us to reference properties we declared in package.json.</span>
+</span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="c1">// Grunt tasks are associated with specific properties.</span>
+</span><span class='line'>    <span class="c1">// these names generally match their npm package name.</span>
+</span><span class='line'>    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// Specify some options, usually specific to each plugin.</span>
+</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Specifies string to be inserted between concatenated files.</span>
+</span><span class='line'>        <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="c1">// &#39;dist&#39; is what is called a &quot;target.&quot;</span>
+</span><span class='line'>      <span class="c1">// It&#39;s a way of specifying different sub-tasks or modes.</span>
+</span><span class='line'>      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// The files to concatenate:</span>
+</span><span class='line'>        <span class="c1">// Notice the wildcard, which is automatically expanded.</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;scripts/*.js&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="c1">// The destination file:</span>
+</span><span class='line'>        <span class="c1">// Notice the angle-bracketed ERB-like templating,</span>
+</span><span class='line'>        <span class="c1">// which allows you to reference other properties.</span>
+</span><span class='line'>        <span class="c1">// This is equivalent to &#39;dist/main.js&#39;.</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= distFolder %&gt;/main.js&#39;</span>
+</span><span class='line'>        <span class="c1">// You can reference any grunt config property you want.</span>
+</span><span class='line'>        <span class="c1">// Ex: &#39;&lt;%= concat.options.separator %&gt;&#39; instead of &#39;;&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span> <span class="c1">// The end of grunt.initConfig</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// We&#39;ve set up each task&#39;s configuration.</span>
+</span><span class='line'>  <span class="c1">// Now actually load the tasks.</span>
+</span><span class='line'>  <span class="c1">// This will do a lookup similar to node&#39;s require() function.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Register our own custom task alias.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;concat&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>You might still be confused about the notion of a &ldquo;target.&rdquo; More on that:</p>
+
+<p>Let&rsquo;s say there&rsquo;s another set of files you want to concatenate. All script files in <code>deploy/</code> should be concatenated into <code>deploy.js</code> (in the project root). Let&rsquo;s say we want that task to look like <code>grunt concat:deploy</code></p>
+
+<p>To achieve that, our concat task now looks like:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;scripts/*.js&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= distFolder %&gt;/main.js&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">deploy</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// options that are specific to the &#39;deploy&#39; target</span>
+</span><span class='line'>    <span class="c1">// target-level options override task-level options</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// separator:&#39;;;;&#39; would override the parent setting</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;deploy/*.js&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span><span class="s1">&#39;deploy.js&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>If you run <code>grunt concat:dist,</code> all scripts in <code>scripts/</code> will be concatenated into  <code>dist/main.js</code>. <code>grunt concat:dist</code> runs the concat task with the config settings that are specified under <code>dist</code>. <code>grunt concat:deploy</code> runs the concat task with the config settings specified under <code>deploy</code>. <code>grunt concat</code> will run concat with <em>both</em> targets, separately. The parent-level <code>options</code> setting specifies config settings that are shared by both targets. <code>grunt build</code> is an alias for <code>grunt concat</code>.</p>
+
+<p>Now let&rsquo;s tackle a common, yet relatively complicated task.</p>
+
+<p>Let&rsquo;s get Grunt to run certain tasks in response to changes in files. An extremely powerful and common use-case: reloading a static website when you change its HTML/CSS/JS. It&rsquo;s fairly complicated and it&rsquo;s usually something you just copy-and-paste. Here are the steps to setting this up using the <code>watch</code> and <code>connect</code> plugins, along with the <code>connect-livereload</code> (a piece of Connect middleware that is not grunt-specific). For this example, let&rsquo;s assume that your static website is located in the <code>client/</code> folder.</p>
+
+<p>Install the three plugins:<br/>
+<code>npm install --save-dev grunt-contrib-watch grunt-contrib-connect connect-livereload</code></p>
+
+<p>Add this basic initialization code to the top of your Gruntfile:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// This is the default port that livereload listens on;</span>
+</span><span class='line'><span class="c1">// change it if you configure livereload to use another port.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">LIVERELOAD_PORT</span> <span class="o">=</span> <span class="mi">35729</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// lrSnippet is just a function.</span>
+</span><span class='line'><span class="c1">// It&#39;s a piece of Connect middleware that injects</span>
+</span><span class='line'><span class="c1">// a script into the static served html.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">lrSnippet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;connect-livereload&#39;</span><span class="p">)({</span> <span class="nx">port</span><span class="o">:</span> <span class="nx">LIVERELOAD_PORT</span> <span class="p">});</span>
+</span><span class='line'><span class="c1">// All the middleware necessary to serve static files.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">livereloadMiddleware</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">connect</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">[</span>
+</span><span class='line'>    <span class="c1">// Inject a livereloading script into static files.</span>
+</span><span class='line'>    <span class="nx">lrSnippet</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Serve static files.</span>
+</span><span class='line'>    <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">base</span><span class="p">),</span>
+</span><span class='line'>    <span class="c1">// Make empty directories browsable.</span>
+</span><span class='line'>    <span class="nx">connect</span><span class="p">.</span><span class="nx">directory</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">base</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">];</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Add to your grunt.initConfig object the following two tasks configurations:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// The connect task is used to serve static files with a local server.</span>
+</span><span class='line'><span class="nx">connect</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">client</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// The server&#39;s port, and the folder to serve from:</span>
+</span><span class='line'>      <span class="c1">// Ex: &#39;localhost:9000&#39; would serve up &#39;client/index.html&#39;</span>
+</span><span class='line'>      <span class="nx">port</span><span class="o">:</span> <span class="mi">9000</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">base</span><span class="o">:</span><span class="s1">&#39;client&#39;</span>
+</span><span class='line'>      <span class="c1">// Custom middleware for the HTTP server:</span>
+</span><span class='line'>      <span class="c1">// The injected JavaScript reloads the page.</span>
+</span><span class='line'>      <span class="nx">middleware</span><span class="o">:</span> <span class="nx">livereloadMiddleware</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// The watch task is used to run tasks in response to file changes</span>
+</span><span class='line'><span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">client</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// &#39;**&#39; is used to include all subdirectories</span>
+</span><span class='line'>    <span class="c1">// and subdirectories of subdirectories, and so on, recursively.</span>
+</span><span class='line'>    <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;client/**/*&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="c1">// In our case, we don&#39;t configure any additional tasks,</span>
+</span><span class='line'>    <span class="c1">// since livereload is built into the watch task,</span>
+</span><span class='line'>    <span class="c1">// and since the browser refresh is handled by the snippet.</span>
+</span><span class='line'>    <span class="c1">// Any other tasks to run (e.g. compile CoffeeScript) go here:</span>
+</span><span class='line'>    <span class="nx">tasks</span><span class="o">:</span><span class="p">[],</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">livereload</span><span class="o">:</span><span class="nx">LIVERELOAD_PORT</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Finally, we need to run the <code>connect</code> and <code>watch</code> tasks in sequence. To save ourselves from having to type in two shell commands, we can register a task alias:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;preview&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;connect:client&#39;</span><span class="p">,</span><span class="s1">&#39;watch:client&#39;</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Running <code>grunt preview</code> will now run both tasks.</p>
+
+<p>Some more grunt plugins to be aware about (<code>contrib</code> plugins are officially maintained):</p>
+
+<ul>
+<li><code>grunt-contrib-uglify</code> for minifying your JS files. It works similarly to <code>grunt-contrib-concat</code>.</li>
+<li><code>grunt-contrib-jshint</code> for running JSHint.</li>
+<li><code>grunt contrib-coffee</code> for compiling CoffeeScript.</li>
+<li><code>grunt-contrib-sass</code> for compiling SASS.</li>
+<li><code>grunt-concurrent</code> for running tasks concurrently (instead of sequentially) &ndash; useful if you want to run multiple watch tasks concurrently.
+
+<ul>
+<li>If you have a series of tasks, the <code>watch</code> task must be run last. <code>watch</code> is a task that never ends until you terminate it. Thus, Grunt won&rsquo;t ever reach tasks that come after <code>watch</code>.</li>
+</ul>
+</li>
+<li><code>grunt-nodemon</code> for running <a href="https://github.com/remy/nodemon">nodemon</a> with your node app. This runs your node app and reloads it when files change.</li>
+<li><code>grunt-simplemocha</code> for running mocha tests.</li>
+<li><code>grunt-open</code> for opening files and URLs.</li>
+</ul>
+
+
+<p>Some tips:</p>
+
+<ol>
+<li>If your Gruntfile starts getting too unwieldy, you can break it up by using <code>grunt.file.readJSON()</code>.</li>
+<li>Tired of copying and pasting <code>loadNpmTasks</code>?  Try this:
+
+<ul>
+<li><code>npm install --save-dev matchdep</code></li>
+<li>use <code>require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);</code> where you would otherwise list out all your multiple <code>grunt.loadNpmTask</code> calls.</li>
+</ul>
+</li>
+</ol>
+
+
+<p>For more advanced concepts, <a href="http://gruntjs.com/getting-started">read the Grunt docs!</a> They&rsquo;re pretty good.</p>
+]]></content>
+  </entry>
+  
+</feed>

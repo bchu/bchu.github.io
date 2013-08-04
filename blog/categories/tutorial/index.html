@@ -1,0 +1,284 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <title>Category: tutorial - Brian Chu</title>
+  <meta name="author" content="Brian Chu">
+
+  
+  <meta name="description" content="Category: tutorial">
+  
+
+  <meta property="og:title" content="Category: tutorial - Brian Chu">
+  <meta property="og:description" content="Category: tutorial">
+  <!-- <meta property="og:image" content="thumbnail_image_link"> -->
+  
+  <!-- <meta property="og:site_name" content="Brian Chu"/> -->
+
+  <meta name="twitter:card" content="summary">
+  <!-- <meta name="twitter:site" content="@brrrianchu"> -->
+  <meta name="twitter:creator" content="@brrrianchu">
+  <meta name="twitter:title" content="Category: tutorial - Brian Chu">
+  
+  <meta name="twitter:description" content=" 2013 Grunt by Example - A Tutorial for JavaScript's Task Runner
+Jul 11 2013 posted in JavaScript, tutorial ">
+  <!-- <meta name="twitter:image" content=""> -->
+
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://www.brianchu.comblog/categories/tutorial">
+  <link href="/favicon.ico" rel="icon">
+  
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+<link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+<script src="/javascripts/custom.js"></script>
+
+
+
+
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <link href="/atom.xml" rel="alternate" title="I'm Brian Chu" type="application/atom+xml">
+  
+  <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41298092-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <div class="container-fluid">
+    <header class="row-fluid" role="banner"><section class="span4 profile-pic-container">
+    <a href="/"><img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic"></a>
+</section>
+
+<section class="span8" role="banner">
+  <h1 class="title">I'm Brian Chu,</h1>
+
+  <span class="subtext">
+    <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
+  </span>
+
+</section>
+
+</header>
+
+    <div class="row-fluid content-row">
+      
+      
+<aside class="span4 sidebar clear-affix" data-spy="affix" data-offset-top="206"></aside>
+
+<aside class="span4 sidebar" data-spy="affix" data-offset-top="206">
+  <div class="sidebar-centering">
+    
+      <section role="navigation" class="sidebar-nav well">
+      <form class="form-search">
+      <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
+      </form>
+  <ul class="nav nav-list">
+    <li><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li>
+    <li><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
+    <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
+    
+    <li data-toggle="buttons-checkbox">
+        <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
+    </li>
+  </ul>
+</section>
+<section class="well clearfix">
+  <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
+
+  <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
+    <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required autofocus>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+  </form>
+</section>
+
+
+<div class="modal hide fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="modalHeader">Contact Me</h3>
+  </div>
+
+    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="_blank" onsubmit="">
+
+      <div class="modal-body">
+        <label class="control-label" for="entry_562979872">Name:</label>
+        <input class="span12" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
+
+        <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
+        <input class="span12 defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
+
+        <label class="control-label" for="entry_1142668288">Message:</label>
+        <textarea class="span12 defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
+        <label class="checkbox contact-checkbox">
+          <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
+        </label>
+        <input type="hidden" name="draftResponse" value="[]">
+        <input type="hidden" name="pageHistory" value="0">
+      </div>
+
+      <div class="modal-footer">
+        <input type="submit" name="submit" value="Submit" class="btn flat-btn flat-small well-adjust">
+      </div>
+  </form>
+
+</div>
+
+    
+  </div>
+</aside>
+
+
+
+<section role="article" class="span8">
+
+  
+  <header class="page-header">
+    
+    
+    <h2 class="entry-title">Category: Tutorial</h2>
+    
+  </header>
+  
+  <div id="blog-archives" class="category">
+
+
+
+  
+  <h2>2013</h2>
+
+<article>
+  <div class="well">
+
+<h2><a href="/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner/">Grunt by Example - A Tutorial for JavaScript's Task Runner</a></h2>
+<time datetime="2013-07-11T16:35:00-07:00" pubdate><span class='month'>Jul</span> <span class='day'>11</span> <span class='year'>2013</span></time>
+
+<footer>
+  <span class="categories">posted in <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a></span>
+</footer>
+
+</div>
+
+</article>
+
+</div>
+
+  
+</section>
+
+    </div>
+
+    <footer role="contentinfo" class="row-fluid content-row end-footer">
+  <!-- <ul class="span4"></ul> -->
+  <ul class="span12 inline">
+    <li><a href="/blog/archives">Blog</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/projects/">Projects</a></li>
+    <li><a href="https://github.com/bchu"><i class="icon-github-sign"></i> bchu</a></li>
+    <li><a href="https://twitter.com/brrrianchu"><i class="icon-twitter-sign"/></i> @brrrianchu</a></li>
+    <li><a href="http://www.linkedin.com/in/brchu"><i class="icon-linkedin-sign icon-large"/></i></a></li>
+    
+    <li><a href="https://plus.google.com/115101039553139400331?rel=author"><i class="icon-google-plus-sign icon-large"/></i></a></li>
+    
+    <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="icon-rss icon-large"></i></a></li>
+  </ul>
+</footer>
+
+
+
+
+  </div>
+  
+
+<script>
+      var disqus_shortname = 'brianchu';
+      
+        
+        var disqus_script = 'count.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id; js.async = true;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script>
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.async = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+<div id="st-results-container"></div>
+<script>
+  var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = '5J3i1dwgBx7wrJPqyp31';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = "overlay";
+
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    script.async = true;
+    script.src = "//swiftype.com/embed.js";
+    var entry = document.getElementsByTagName('script')[0];
+    entry.parentNode.insertBefore(script, entry);
+  }());
+</script>
+
+
+
+
+
+
+
+</body>
+</html>
