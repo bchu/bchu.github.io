@@ -26,8 +26,9 @@ $(function () {
   });
 
   // handle email signups from contact modal
+  // also close modal on submit
   $('.contact-modal').submit(function(e) {
-    var $this = $(this)
+    var $this = $(this);
     if ($this.find('input[type="checkbox"]').prop('checked')) {
       var $form = $this.find('form');
       var email = $form.find('input[type="email"]').val();
@@ -40,5 +41,10 @@ $(function () {
       }, 500);
     }
     $this.modal('hide');
+  });
+
+  // push contact button back up when modal hides
+  $('.contact-modal').on('hide', function() {
+    $('a[data-target=".contact-modal.hide.fade"]').button('toggle');
   });
 });
