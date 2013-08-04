@@ -25,7 +25,7 @@
   font-weight: bold;
   letter-spacing: 1px;
   line-height: normal;
-  padding: 12px 145px 20px 40px;
+  padding: 12px 145px 20px 40px; //12px 52px 20px 26px
   position: relative;
   text-align: center;
   text-shadow: none;
@@ -140,6 +140,11 @@ rocket: F135
 user: F007
 */
 
+.icon {
+  //bootstrap override
+  margin-right: 0 !important;
+}
+
 .icon:before {
   z-index: 2;
   position: absolute;
@@ -158,32 +163,35 @@ user: F007
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
+  color:white;
 }
 
-.blog-icon:before {
+.icon-blog:before {
   content: "\F0E7";
-  color:white;
 }
 
-.projects-icon:before {
-  content: "\F0C3";
-  color:white;
-}
-
-.user-icon:before {
+.icon-user:before {
   content: "\F007";
-  color:white;
 }
 
-.git-icon:before {
+.icon-projects:before {
+  content: "\F0C3";
+}
+
+.icon-contact:before {
+  content: "\F0E0";
+}
+
+.icon-git:before {
   content: "\F113";
   color:$buttonColor;
 }
 
-.twitter-icon:before {
+.icon-twitter:before {
   content: "\F099";
   color:$buttonColor;
 }
+
 
 // .slideout:after, .slideout:before {
 //     -webkit-transform:rotate(-1deg) translate(0,-1px);

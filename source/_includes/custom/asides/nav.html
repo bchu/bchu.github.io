@@ -1,15 +1,18 @@
 <section role="navigation" class="sidebar-nav well">
+      <form class="form-search">
+      <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
+      </form>
   <ul class="nav nav-list">
-    <li><a href="{{ root_url }}/" class="btn flat-btn icon blog-icon {% unless page.title %}active{% endunless %}">Blog</a></li>
-    <li><a href="{{ root_url }}/about/" class="btn flat-btn icon user-icon {%if page.title == 'About Me' %}active{% endif %}">About Me</a></li>
-    <li><a href="{{ root_url }}/projects/" class="btn flat-btn icon projects-icon {%if page.title == 'Projects' %}active{% endif %}">Projects</a></li>
+    <li><a href="{{ root_url }}/" class="btn flat-btn icon icon-blog {% unless page.title %}active{% endunless %}">Blog</a></li>
+    <li><a href="{{ root_url }}/about/" class="btn flat-btn icon icon-user {%if page.title == 'About Me' %}active{% endif %}">About Me</a></li>
+    <li><a href="{{ root_url }}/projects/" class="btn flat-btn icon icon-projects {%if page.title == 'Projects' %}active{% endif %}">Projects</a></li>
     {% comment %}
     <!--TODO-->
     <!-- <li><a href="#bchu" class="slidebtn slideout git-icon">GitHub</a></li> -->
     <!-- <li><a href="" class="slidebtn">Contact&nbsp;Me</a></li> -->
     {% endcomment %}
-  <li><form class="form-search">
-    <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search"></li>
-  </form>
+    <li data-toggle="buttons-checkbox">
+        <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".modal.hide.fade">Contact Me</a>
+    </li>
   </ul>
 </section>

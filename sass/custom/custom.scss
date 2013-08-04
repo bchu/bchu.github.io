@@ -141,7 +141,7 @@ input, textarea, select {
 }
 
 .form-search {
-  margin-bottom: 7px;
+  margin: 0 0 20px 0;
 }
 
 section.sidebar-nav {
@@ -153,7 +153,8 @@ section.sidebar-nav {
 }
 
 .nav-list {
-  padding-right: 15px + $buttonShadowWidth;
+  padding-left: 15px - $buttonShadowWidth;
+  padding-right: 0;
   li:first-child {
     margin-top: 0;
   }
