@@ -48,6 +48,7 @@
   }
   &:focus, &:active, &.active {
     box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
+    background-color: $buttonColor;
     // box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
     // left: $buttonShadowWidth;
   }
