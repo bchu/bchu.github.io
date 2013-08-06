@@ -1,12 +1,14 @@
-<section class="span4 profile-pic-container">
-    <a href="{{ root_url }}/"><img src="{{ site.profile_picture }}" title="{{ site.author }}" alt="Me" id="profile-pic"></a>
-</section>
+<header class="row-fluid" role="banner">
+  <section class="span4 profile-pic-container">
+      <a href="{{ root_url }}/"><img src="{{ site.profile_picture }}" title="{{ site.author }}" alt="Me" id="profile-pic"></a>
+  </section>
 
-<section class="span8" role="banner">
-  <h1 class="title">I'm {{ site.author }},</h1>
-{% if site.subtitle %}
-  <span class="subtext">
-    <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
-  </span>
-{% endif %}
-</section>
+  <section class="span8" role="banner">
+    <h1 class="title">I'm {{ site.author }},</h1>
+  {% if site.subtitle %}
+    <span class="subtext">
+      <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
+    </span>
+  {% endif %}
+  </section>
+</header>
