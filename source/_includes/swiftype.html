@@ -7,15 +7,8 @@
     Swiftype.inputElement = '#st-search-input';
     Swiftype.resultContainingElement = '#st-results-container';
     Swiftype.attachElement = '#st-search-input';
-    Swiftype.renderStyle = "overlay";
+    Swiftype.renderStyle = {% if page.title == '404' %}'inline'{% else %}'overlay'{% endif %};
   }());
 </script>
 <script src="//swiftype.com/embed.js" async></script>
 {% endif %}
-
-{% comment %}
-The input format:
-<form>
-  <input type="text" id="st-search-input" class="st-search-input" />
-</form>
-{% endcomment %}

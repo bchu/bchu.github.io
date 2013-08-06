@@ -22,6 +22,8 @@
 <script src="{{ root_url }}/javascripts/custom.js"></script>
 <!(endif)-->
 
+{% if page.title == '404' %}{% include 404_head.html %}{% endif %}
+
 {% comment %}
 <script src="{{ root_url }}/javascripts/libs/jquery.githubRepoWidget.min.js"></script>
 {% endcomment %}
