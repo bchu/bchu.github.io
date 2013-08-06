@@ -30,6 +30,10 @@
 {% endunless %} {% &hellip;">
   <!-- <meta name="twitter:image" content=""> -->
 
+  
+  <meta property="st:title" content="Blog Archive - Brian Chu" >
+    
+  
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -39,7 +43,6 @@
   
   <link rel="canonical" href="http://www.brianchu.com/blog/archives">
   <link href="/favicon.ico" rel="icon">
-  
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
@@ -72,23 +75,28 @@
 </head>
 
 <body   >
+  <div class="fixed-top alert text-center" style="display:none">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong></strong> <span></span>
+</div>
   <div class="container-fluid">
-    <header class="row-fluid" role="banner"><section class="span4 profile-pic-container">
-    <a href="/"><img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic"></a>
-</section>
+    <header class="row-fluid" role="banner">
+  <section class="span4 profile-pic-container">
+      <a href="/"><img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic"></a>
+  </section>
 
-<section class="span8" role="banner">
-  <h1 class="title">I'm Brian Chu,</h1>
-
-  <span class="subtext">
-    <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
-  </span>
-
-</section>
-
+  <section class="span8" role="banner">
+    <h1 class="title">I'm Brian Chu,</h1>
+  
+    <span class="subtext">
+      <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
+    </span>
+  
+  </section>
 </header>
 
-    <div class="row-fluid content-row">
+
+    <div class="row-fluid content-row" data-swiftype-index="true">
       
       
 <aside class="span4 sidebar clear-affix" data-spy="affix" data-offset-top="206"></aside>
@@ -127,7 +135,8 @@
     <h3 id="modalHeader">Contact Me</h3>
   </div>
 
-    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="_blank" onsubmit="">
+    <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
+    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame">
 
       <div class="modal-body">
         <label class="control-label" for="entry_562979872">Name:</label>
@@ -265,18 +274,10 @@
     Swiftype.inputElement = '#st-search-input';
     Swiftype.resultContainingElement = '#st-results-container';
     Swiftype.attachElement = '#st-search-input';
-    Swiftype.renderStyle = "overlay";
-
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = "//swiftype.com/embed.js";
-    var entry = document.getElementsByTagName('script')[0];
-    entry.parentNode.insertBefore(script, entry);
+    Swiftype.renderStyle = 'overlay';
   }());
 </script>
-
-
+<script src="//swiftype.com/embed.js" async></script>
 
 
 

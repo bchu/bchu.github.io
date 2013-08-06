@@ -24,10 +24,15 @@
   <meta name="twitter:creator" content="@brrrianchu">
   <meta name="twitter:title" content="404 - Brian Chu">
   
-  <meta name="twitter:description" content="Whoops! You arrived at the wrong page. Nothing&rsquo;s here. Try going to my (blog)[/blog/], or looking at some of my (projects)[/projects/].
-">
+  <meta name="twitter:description" content="Whoops! You arrived at the wrong page.
+Can you find what you&rsquo;re looking for in the search results below?
+Otherwise, go to my blog, or look at some of my projects. $(function() { var path = &hellip;">
   <!-- <meta name="twitter:image" content=""> -->
 
+  
+  <meta property="st:title" content="404 - Brian Chu" >
+    
+  
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
@@ -37,7 +42,6 @@
   
   <link rel="canonical" href="http://www.brianchu.com/404.html">
   <link href="/favicon.ico" rel="icon">
-  
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
 <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
 <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
@@ -70,23 +74,28 @@
 </head>
 
 <body   >
+  <div class="fixed-top alert text-center" style="display:none">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong></strong> <span></span>
+</div>
   <div class="container-fluid">
-    <header class="row-fluid" role="banner"><section class="span4 profile-pic-container">
-    <a href="/"><img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic"></a>
-</section>
+    <header class="row-fluid" role="banner">
+  <section class="span4 profile-pic-container">
+      <a href="/"><img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic"></a>
+  </section>
 
-<section class="span8" role="banner">
-  <h1 class="title">I'm Brian Chu,</h1>
-
-  <span class="subtext">
-    <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
-  </span>
-
-</section>
-
+  <section class="span8" role="banner">
+    <h1 class="title">I'm Brian Chu,</h1>
+  
+    <span class="subtext">
+      <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
+    </span>
+  
+  </section>
 </header>
 
-    <div class="row-fluid content-row">
+
+    <div class="row-fluid content-row" data-swiftype-index="true">
       
       
 <aside class="span4 sidebar clear-affix" data-spy="affix" data-offset-top="206"></aside>
@@ -125,7 +134,8 @@
     <h3 id="modalHeader">Contact Me</h3>
   </div>
 
-    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="_blank" onsubmit="">
+    <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
+    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame">
 
       <div class="modal-body">
         <label class="control-label" for="entry_562979872">Name:</label>
@@ -166,14 +176,38 @@
     
   </header>
   
-  <p>Whoops! You arrived at the wrong page. Nothing&rsquo;s here. Try going to my (blog)[/blog/], or looking at some of my (projects)[/projects/].</p>
+  <p>Whoops! You arrived at the wrong page.<br/>
+Can you find what you&rsquo;re looking for in the search results below?<br/>
+Otherwise, go to my <a href="/blog">blog</a>, or look at some of my <a href="/projects/">projects</a>.</p>
 
-  
-    <footer>
-      
-      
-      
-    </footer>
+<div id="results-404"></div>
+
+
+
+
+<script>
+$(function() {
+  var path = window.location.pathname;
+  path = path.replace(/(\.html|\.htm|\.css|\.js)/g, '');
+  path = path.replace(/\/|-/g,' ');
+  path = path.substr(1); // trim first space
+
+  $('#st-results-container').appendTo($('#results-404'));
+  if (path === '404') return;
+
+  $('#st-search-input').val(path);
+  setTimeout(function cb() {
+    if (window.Swiftype.Util) {
+      window.Swiftype.Util.setSearchLocation(path, 1); //setSearchLocation(query, page)
+    }
+    else {
+      setTimeout(cb,200);
+    }
+  }, 500)
+});
+</script>
+
+
   
 </section>
 
@@ -235,18 +269,10 @@
     Swiftype.inputElement = '#st-search-input';
     Swiftype.resultContainingElement = '#st-results-container';
     Swiftype.attachElement = '#st-search-input';
-    Swiftype.renderStyle = "overlay";
-
-    var script = document.createElement('script');
-    script.type = 'text/javascript';
-    script.async = true;
-    script.src = "//swiftype.com/embed.js";
-    var entry = document.getElementsByTagName('script')[0];
-    entry.parentNode.insertBefore(script, entry);
+    Swiftype.renderStyle = 'inline';
   }());
 </script>
-
-
+<script src="//swiftype.com/embed.js" async></script>
 
 
 
