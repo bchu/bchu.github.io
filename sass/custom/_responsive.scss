@@ -1,4 +1,4 @@
-@media (max-height: 585px) {
+@media (max-height: 582px + $sidebarAffixMarginTop + 1px) { // 582 = height of sidebar
   .affix {
     position: static !important;
   }
