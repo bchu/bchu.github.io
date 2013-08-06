@@ -68,6 +68,7 @@ module.exports = function (grunt) {
         }
       }
     },
+    // templating (conditional includes)
     targethtml: {
       public: {
         files: [{
@@ -79,6 +80,17 @@ module.exports = function (grunt) {
     open: {
       dev: {
         path: 'http://localhost:<%= connect.options.port%>'
+      }
+    },
+    prettify: {
+      options: {
+        prettifyrc:'.prettifyrc'
+      },
+      public: {
+        expand:true,
+        dest:'public/',
+        cwd:'public/',
+        src:['**/*.html']
       }
     },
     uglify: {
@@ -131,6 +143,7 @@ module.exports = function (grunt) {
   // run build tasks after 'rake generate' but before rake deploy. This means operating on files in the public directory.
   grunt.registerTask('pre-deploy', [
     'targethtml:public',
+    'prettify:public',
     'uglify:public'
   ]);
 };
