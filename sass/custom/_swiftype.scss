@@ -1,0 +1,24 @@
+.st-search-summary h2 {
+  font-size:1em !important;
+  line-height: 1.2;
+}
+.st-snippet em, .st-query {
+  font-weight: bold;
+}
+
+// only for inline search results:
+#st-results-container {
+  .st-result-text {
+    font-size:1em !important;
+    line-height: 1.2;
+  }
+  .st-result-text h3 {
+    font-size:1em !important;
+  }
+  .st-snippet {
+    font-size: 0.9em;
+  }
+  .st-snippet em {
+    font-weight: bold;
+  }
+}
