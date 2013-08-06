@@ -26,6 +26,12 @@
   <meta name="twitter:description" content="{{ description_content | markdownify | strip_html | condense_spaces | truncate:200 }}">
   <!-- <meta name="twitter:image" content=""> -->
 
+  {% if site.swiftype %}
+  <meta property="st:title" content="{{ title }}" >
+    {% if page.date %}
+  <meta property="st:published_at" content="{{ page.date | date_to_xmlschema }}">
+    {% endif %}
+  {% endif %}
 
   <!-- http://t.co/dKP3o1e -->
   <meta name="HandheldFriendly" content="True">
