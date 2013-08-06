@@ -14,12 +14,10 @@ Based on Octopress.
 ###Todo
 
 1. approval for twitter cards
-3. suppress google redirect, show indication of success
-4. consider different permalink schemes
+2. better way to represent link hover (instead of underline?), better link hover color
+3. tweak color scheme, more contrast
 5. Revamp Google search appearance, FB appearance
-6. Responsive fixes: in tablet mode (~800px), fix overlap between sidebar and content
-7. consider long form with scrollspy
-8. fix sidebar jumping issue
+6. Responsive fixes
 9. find way to add fluid padding back in 
 10. have github api data cached and static-ified on build
 
