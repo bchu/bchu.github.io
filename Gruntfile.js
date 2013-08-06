@@ -83,9 +83,9 @@ module.exports = function (grunt) {
     },
     uglify: {
       public: {
-        files: [{
-          'public/javascripts/custom.js': ['public/javascripts/octopress.js','public/javascripts/custom.js']
-        }]
+        files: [
+          {'public/javascripts/custom.js': ['public/javascripts/octopress.js','public/javascripts/custom.js']}
+        ]
       }
     },
     watch: {
