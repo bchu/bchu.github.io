@@ -234,4 +234,16 @@ footer.end-footer {
   margin-right: 6px;
 }
 
+.fixed-top {
+  position:fixed;
+  top:0;
+  z-index:10;
+}
+
+.alert {
+  width:100%;
+  margin:0;
+  opacity:0.95;
+}
+
 @import '_responsive.scss';

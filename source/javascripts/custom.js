@@ -14,7 +14,6 @@ $(function () {
     }
   });
   $('.defer-invalid').on('change submit', function() {
-    console.log('fired by', this);
     // invalid, remove defer-invalid
     if ($(this).parent().find(':invalid').length) {
       $(this).removeClass('defer-invalid');
@@ -46,5 +45,19 @@ $(function () {
   // push contact button back up when modal hides
   $('.contact-modal').on('hide', function() {
     $('a[data-target=".contact-modal.hide.fade"]').button('toggle');
+  });
+
+  // after the google contact form submission's response is loaded in the iframe
+  $('#contact-form-frame').load(function() {
+    var $alert = $('.alert');
+    $alert.addClass('alert-success');
+    $alert.find('strong').text('Thanks!');
+    $alert.find('span').text("I'll get back to you ASAP!");
+    $alert.slideToggle(200);
+    setTimeout(function() {
+      if ($alert.is(':visible')) {
+        $alert.slideToggle(200);
+      }
+    },4000);
   });
 });
