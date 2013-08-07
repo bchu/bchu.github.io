@@ -17,6 +17,8 @@
   background: $buttonColor;
   border:0;
   border-radius:$buttonBorderRadius;
+  border-top-right-radius:$buttonBorderRadius + 2px;
+  border-bottom-right-radius:$buttonBorderRadius + 2px;
   -webkit-box-shadow: $buttonShadowColor $buttonShadowWidth 0px 0px 0px;
   box-shadow: $buttonShadowColor $buttonShadowWidth 0px 0px 0px;
   -moz-box-sizing:border-box;
@@ -25,12 +27,12 @@
   font-weight: bold;
   letter-spacing: 1px;
   line-height: normal;
-  padding: 12px 145px 20px 40px; //12px 52px 20px 26px
+  padding: 12px 137px 0 26px; //12px 52px 20px 26px
   position: relative;
   text-align: center;
   text-shadow: none;
   text-transform: uppercase;
-  width: 210px;
+  width: $buttonWidth;
   height:45px;
   word-spacing: 0px;
   white-space: nowrap; // fallback
@@ -40,13 +42,14 @@
   &:hover {
     //bootstrap override
     color: white;
-
+    border-radius:$buttonBorderRadius;
     background-color: $buttonColor;
     box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
     // box-shadow: ($buttonShadowWidth - 2) 0 $buttonShadowColor;
     // left: 2px;
   }
   &:focus, &:active, &.active {
+    border-radius:$buttonBorderRadius;
     box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
     background-color: $buttonColor;
     // box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
@@ -150,8 +153,8 @@ user: F007
   z-index: 2;
   position: absolute;
   height: 100%;
-  right:0;
-  top: -9px;
+  right:-4px;
+  top: -11px;
   line-height: 2.6;
   font-size: 150%;
   width: 60px;
