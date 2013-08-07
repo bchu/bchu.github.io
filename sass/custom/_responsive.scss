@@ -1,4 +1,6 @@
-@media (max-height: 582px + $sidebarAffixMarginTop + 1px) { // 582 = height of sidebar
+// 582 = height of sidebar
+// 10px ensures that the sidebar does not overlap with the footer
+@media (max-height: 582px + $sidebarAffixMarginTop + 1px + 20px) {
   .affix {
     position: static !important;
   }
