@@ -14,8 +14,7 @@ Based on Octopress.
 ###Todo
 
 1. approval for twitter cards
-2. better way to represent link hover (instead of underline?), better link hover color
-3. tweak color scheme, more contrast
+3. tweak color scheme, more contrast, colorify headers
 5. Revamp Google search appearance, FB appearance
 6. Responsive fixes
 9. find way to add fluid padding back in 
