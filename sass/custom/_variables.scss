@@ -2,20 +2,20 @@ $baseFontSize:18px;
 
 $contentLineHeight:1.4;
 
-$backgroundColor:#F5FAFF;
-$fontColor:#2E2E2E;
+$backgroundColor:#FAFDFF;
+$fontColor:#26343C;
 $subFontColor:#454545;
 
 $bodyFonts: 'Source Sans Pro',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $headerFonts: 'Roboto Slab',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 $buttonBorderRadius:10px;
 
-$buttonColor: rgb(2,163,201);//rgb(20,133,204);//rgb(203, 78, 78);
-$buttonShadowColor: rgb(2, 135, 166);
+$buttonColor: #ee6768;
+$buttonShadowColor: #BE4B4C;
 $buttonShadowWidth: 6px;
 
-$linkColor: rgb(0,120,166);//rgb(143, 199, 227);
-$linkHoverColor: rgb(0,40,80);
+$linkColor: #1C94B3;
+$linkHoverColor: #1A7991;
 
 $footerHeight:50px;
 
@@ -23,7 +23,7 @@ $footerLinkColor: $linkColor;
 $footerLinkHoverColor: $linkHoverColor;
 
 $footerBgColor: rgb(235,245,250);
-$wellBgColor: $footerBgColor;//rgba(135,205,234,0.2);
+$wellBgColor: $footerBgColor;
 $sidebarWellShadow: rgba(135,205,234,0.15);
 
 $sidebarAffixMarginTop: 20px;
