@@ -1,7 +1,7 @@
 ---
-layout: projects_page
-title: "Projects"
-header: "Some of my projects:"
+layout: page
+title: Projects
+html_title: "Some of my projects:"
 sharing: false
 footer: false
 ---
