@@ -66,30 +66,12 @@
   .sidebar-centering > section:first-child {
     margin-left: 0;
   }
-
-  // Dropdown menu overlay (z-index)
-  // outer section
-  section.dropdown-wrapper {
-    min-height: 0;
-    float:left;
-  }
-  // middle wrapper
-  section > .dropdown-wrapper {
-    position:relative;
-  }
-  // inner section
-  .dropdown-wrapper section {
-    z-index: 3;
-    position: absolute;
-    margin-left:0;
-  }
 }
 
 @media (max-width: 937px) {
   .row-fluid {
     margin-top: 20px;
   }
-
 }
 
 // third-aside needs to be wrapped
@@ -102,23 +84,6 @@
     max-width: 600px;
   }
 
-  section.dropdown-wrapper {
-    min-height: 120px;
-    margin:0;
-    width: 100%;
-  }
-  // middle wrapper
-  section > .dropdown-wrapper {
-    position:relative;
-  }
-  .dropdown-wrapper section {
-    border-top:0;
-    right: 0;
-    min-height: 100%;
-    border-top-right-radius: 0 !important;
-    border-top-left-radius: 0 !important;
-    box-shadow: inset 1px -2px 2px $sidebarWellShadow !important;
-  }
 }
 
 @media (max-width: 767px) {
