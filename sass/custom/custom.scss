@@ -10,6 +10,13 @@
           box-shadow: $shadow;
 }
 
+// Bootstrap override
+.row-fluid .span4 {
+  width: 31%;//31.623932%;
+  *width: 30.9%;
+}
+// end override
+
 html {
   min-height:100%;
   position:relative; //needed for footer
@@ -187,6 +194,7 @@ section.sidebar-nav {
 
 .page-header {
   padding-bottom: 0;
+  margin-top: 0;
   margin-bottom: 10px;
 }
 
@@ -205,6 +213,7 @@ footer.end-footer {
   vertical-align:bottom;
 
   ul {
+    padding-left: 2%;
     display:block;
     line-height:0px;
     margin-bottom: 10px;
@@ -219,9 +228,6 @@ footer.end-footer {
   }
   a:hover {
     color:$footerLinkHoverColor;
-  }
-  .span4 {
-    margin: 0;
   }
 }
 
