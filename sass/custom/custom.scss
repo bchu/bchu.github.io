@@ -127,7 +127,7 @@ aside .well {
   border:0;
   background:$wellBgColor;
   box-shadow:inset 1px 1px 2px $sidebarWellShadow;
-  border-radius:10px;
+  border-radius:$buttonBorderRadius;
   padding-bottom:25px;
 }
 
