@@ -54,10 +54,34 @@ $(function () {
     $alert.find('strong').text('Thanks!');
     $alert.find('span').text("I'll get back to you ASAP!");
     $alert.slideToggle(200);
+    // automatically disappear
     setTimeout(function() {
       if ($alert.is(':visible')) {
         $alert.slideToggle(200);
       }
     },4000);
+  });
+
+  // toggle search bar
+  var toggled = false;
+  var toggleSearch = function() {
+    toggled = !toggled;
+    $this = $(this);
+    $this.toggleClass('hide');
+    $this.parent().toggleClass('fullwidth');
+    $this.siblings('.input-padding-wrapper').toggleClass('inline-block');
+    $this.siblings('a').toggleClass('hide'); // either .search-toggle or .close-search
+    $('.nav-list li').toggleClass('hide');
+  };
+  $('.search-toggle, .close-search').click(toggleSearch);
+  // 767 px threshold
+  // if browser window expands after search bar activated, clear the special search toggle
+  $(window).resize(function() {
+    if (toggled) {
+      var width = $(window).width();
+      if (width > 767) {
+        toggleSearch.call($('.close-search')[0]);
+      }
+    }
   });
 });
