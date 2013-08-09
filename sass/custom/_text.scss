@@ -50,6 +50,10 @@ h1 {
   margin-top: 0;
 }
 
+.fullwidth {
+  width: 100% !important;
+}
+
 .fullspan {
   min-height: 30px;
   width: 100%;
@@ -67,4 +71,12 @@ h1 {
 
 .no-margin {
   margin: 0 !important;
+}
+
+.inline-block {
+  display: inline-block !important;
+}
+
+.hide {
+  display: none !important;
 }
