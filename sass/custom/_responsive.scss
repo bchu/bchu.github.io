@@ -26,7 +26,7 @@
 // Prevent sidebar from being sticky if screen is smaller than sidebar.
 // 582 = height of sidebar
 // 10px ensures that the sidebar does not overlap with the footer
-@media (max-height: 582px + $sidebarAffixMarginTop + 1px + 20px) {
+@media (max-height: 582px + $sideAffixMarginTop + 1px + 20px) {
   .affix {
     position: static !important;
   }
@@ -80,13 +80,13 @@
     text-align: center;
   }
 
-  .sidebar-centering section {
+  .side-centering section {
     float:left;
     margin-left: 20px;
     width:250px;
     min-height: 165px;
   }
-  .sidebar-centering > section:first-child {
+  .side-centering > section:first-child {
     margin-left: 0;
   }
 }
@@ -101,7 +101,7 @@
     margin-top: 20px;
   }
 
-  .sidebar-centering {
+  .side-centering {
     display: block;
     position: fixed;
     top: 0;
@@ -109,7 +109,7 @@
     width: 100%;
   }
 
-  section.sidebar-nav {
+  section.side-nav {
     height: $navbarHeight;
     padding:15px;
     margin-bottom: 0;
@@ -120,7 +120,7 @@
     background: #423232;
   }
 
-  .sidebar-email:first {
+  .side-email:first {
     display: none;
   }
 
@@ -169,7 +169,7 @@
 
 @media (max-width: 767px) {
   // search input collapses into an icon
-  section.sidebar-nav {
+  section.side-nav {
     padding-right: 0;
   }
   .nav-search {
@@ -253,7 +253,7 @@
       }
     }
   }
-  section.sidebar-nav {
+  section.side-nav {
     padding-left: 2%;
     padding: 5px 0 5px 2%;
     height: $navbarHeight - 20px;
@@ -268,7 +268,7 @@
     padding: 0 2%;
     margin-top: 0%;
   }
-  section.sidebar-nav {
+  section.side-nav {
     position: relative;
   }
 }

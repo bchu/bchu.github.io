@@ -95,10 +95,10 @@ header.row-fluid {
   }
 
   &.affix {
-    top: $sidebarAffixMarginTop;
+    top: $sideAffixMarginTop;
     z-index:2;
   }
-  &.sidebar {
+  &.side-bar {
     margin-left: 0;
   }
 }
@@ -126,7 +126,7 @@ header.row-fluid {
 aside .well {
   border:0;
   background:$wellBgColor;
-  box-shadow:inset 1px 1px 2px $sidebarWellShadow;
+  box-shadow:inset 1px 1px 2px $sideWellShadow;
   border-radius:$buttonBorderRadius;
   padding-bottom:25px;
 }
@@ -141,6 +141,10 @@ aside .well {
   width:auto;
   border: 0;
   box-shadow: 0 0 0;
+}
+
+.aside-bottom {
+
 }
 
 input, textarea, select {
@@ -159,11 +163,11 @@ input, textarea, select {
   display: inline-block;
 }
 
-section.sidebar-nav {
+section.side-nav {
   text-align:center;
 }
 
-.sidebar-centering {
+.side-centering {
   display: inline-block;
 }
 
