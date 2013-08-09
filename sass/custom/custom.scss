@@ -152,11 +152,11 @@ input, textarea, select {
 }
 
 .nav-search {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
   width: $buttonWidth + 6px;
   display: inline-block;
-  form {
-    margin:0;
-  }
 }
 
 section.sidebar-nav {
@@ -172,11 +172,8 @@ section.sidebar-nav {
   box-sizing: border-box;
   padding-left: 15px - $buttonShadowWidth;
   padding-right: 0;
-  li:first-child {
-    margin-top: 0;
-  }
   li {
-    margin-top: 15px;
+    margin-bottom: 15px;
   }
 }
 

@@ -1,3 +1,29 @@
+.nav-search {
+  i {
+    font-weight: bold;
+  }
+  a {
+    padding: 10px 10px 10px 7px;
+    color: white;
+    text-decoration: none;
+  }
+  a:hover, a:focus, a:active {
+    color: $buttonColor;
+  }
+  .search-toggle {
+    display: none;
+  }
+  .close-search {
+    position: absolute;
+    right: 2px;
+    top: -6px;
+    color: white;
+    font-weight: bold;
+  }
+
+}
+
+// Prevent sidebar from being sticky if screen is smaller than sidebar.
 // 582 = height of sidebar
 // 10px ensures that the sidebar does not overlap with the footer
 @media (max-height: 582px + $sidebarAffixMarginTop + 1px + 20px) {
@@ -17,11 +43,8 @@
   }
 }
 
+// Collapse rows
 @media (max-width: 1015px) {
-  .affix {
-    position: static;
-  }
-
   .content-row .span8 {
     margin:0 auto;
     padding: 0 20px;
@@ -68,56 +91,123 @@
   }
 }
 
+// Collapse sidebar to top
 @media (max-width: 937px) {
+  header.row-fluid {
+    padding-top: $navbarHeight;
+  }
+
   .row-fluid {
     margin-top: 20px;
   }
-}
 
-@media (max-width: 937px) {
   .sidebar-centering {
     display: block;
     position: fixed;
     top: 0;
+    left:0;
     width: 100%;
   }
 
   section.sidebar-nav {
-    width: auto;
+    height: $navbarHeight;
+    padding:15px;
+    margin-bottom: 0;
+    min-height: 0;
+    width: 100%;
     background: none;
     border-radius: 0;
     background: #423232;
-    // border: none;
   }
-  .form-search {
+
+  .sidebar-email:first {
+    display: none;
+  }
+
+  .nav-search {
+    text-align: right;
+    position: relative;
+    top:6px;
+    float: left;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 20%;
     margin-bottom: 0;
   }
   .nav-list {
-    display: inline-block;
-  }
-  .nav-list li {
-    width: 20%;
-    display: inline-block;
-    padding-right: 30px;
-    .flat-btn {
-      // box-shadow: inset 1px 1px 1px 1px gray;
+    margin:0;
+    padding:0;
+    li {
+      display: inline-table;
+      vertical-align: middle !important;
+      float:left;
+      margin-top: 0;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      width: 20%;
+      padding-right: 15px;
+      .flat-btn {
+        display:table-cell;
+        vertical-align: middle !important;
+        text-align: left;
+        padding:0;
+        padding-left: 10%;
+        font-size: 0.8em;
+        width: 100%;
+        height: 40px;
+        white-space: normal;
+      }
     }
+  }
+  .icon:before {
+    width: 25%;
+    top: -8px;
+    right: 2px;
   }
 
 }
 
-// third-aside needs to be wrapped
-// @media (max-width: 937px) and (min-width:676px) {
-//   .well {
-//     margin-bottom: -10px;
-//   }
-
-//   .span4:not(.profile-pic-container) {
-//     max-width: 600px;
-//   }
-// }
-
 @media (max-width: 767px) {
+  // search input collapses into an icon
+  section.sidebar-nav {
+    padding-right: 0;
+  }
+  .nav-search {
+    text-align: right;
+    width: auto;
+    .search-toggle {
+      position: relative;
+      top: -6px; //reverse of nav-search positioning
+      display: inline-block;
+    }
+    .input-padding-wrapper {
+      width: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-right: 65px; //space for "Close"
+      display: none;
+    }
+    input.st-search-input {
+      width: 100%;
+      max-width:400px;
+      margin: 0 10px;
+    }
+  }
+  .nav-list {
+    padding-right: 35px; // space for icon
+    li {
+      width: 25%;
+      .flat-btn {
+        padding-left:0;
+        padding-right:0;
+        text-align: center;
+      }
+      .icon:before {
+        content:'';
+      }
+    }
+  }
+
   section.span4.profile-pic-container {
     float:left;
     width: auto;
@@ -149,11 +239,24 @@
   }
 }
 
-// collapse sidebar into a pop-down
-@media (max-width: 677px) {
-
-  aside.span4 {
-    // display:none !important;
+// remove button padding, flatten buttons, shrink navbar
+@media (max-width: 440px) {
+  header.row-fluid {
+    padding-top: $navbarHeight - 20px;
+  }
+  .nav-list {
+    li {
+      padding-right: 10px;
+      .flat-btn {
+        padding: 0 2px;
+        box-shadow: none !important;
+      }
+    }
+  }
+  section.sidebar-nav {
+    padding-left: 2%;
+    padding: 5px 0 5px 2%;
+    height: $navbarHeight - 20px;
   }
 }
 

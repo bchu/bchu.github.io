@@ -1,8 +1,4 @@
 <section role="navigation" class="sidebar-nav well">
-  <form class="nav-search">
-    <a><i class="icon-search"></i></a>
-    <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
-  </form>
   <ul class="nav nav-list">
     <li><a href="{{ root_url }}/" class="btn flat-btn icon icon-blog {% unless page.title %}active{% endunless %}">Blog</a></li>
     <li><a href="{{ root_url }}/about/" class="btn flat-btn icon icon-user {%if page.title == 'About Me' %}active{% endif %}">About Me</a></li>
@@ -16,4 +12,9 @@
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
     </li>
   </ul>
+  <form class="nav-search">
+    <a class="search-toggle"><i class="icon-search"></i></a>
+    <div class="input-padding-wrapper"><input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search"></div>
+    <a class="close-search hide">Close</a>
+  </form>
 </section>
