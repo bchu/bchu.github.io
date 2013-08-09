@@ -1,3 +1,7 @@
 {% comment %} Bottom asides (responsive) {% endcomment %}
 {% assign asides_bottom = true %}
+{% if site.bottom_asides.size %}
+<div class="bottom-asides">
 {% include_array bottom_asides %}
+</div>
+{% endif %}

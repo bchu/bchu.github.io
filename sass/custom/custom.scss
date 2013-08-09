@@ -128,10 +128,6 @@ header.row-fluid {
   padding-bottom:25px;
 }
 
-.aside-bottom {
-
-}
-
 .well.clear-well {
   text-align: right;
   background: none;
@@ -212,7 +208,7 @@ section.side-nav {
 footer.end-footer {
   position:absolute;
   bottom:0;
-  margin-top: 50px;
+  margin-top: 40px;
   padding-top:10px;
   font-size: 0.95em;
   width:100%; // position absolute causes element's width to shink to contents, which breaks text align, so we set width
