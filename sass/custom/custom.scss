@@ -87,13 +87,6 @@ header.row-fluid {
   text-align:right;
   display:inline-block;
 
-  section {
-    text-align:left;
-    -moz-box-sizing: border-box;
-    box-sizing:border-box;
-    width:250px;
-  }
-
   &.affix {
     top: $sideAffixMarginTop;
     z-index:2;
@@ -123,12 +116,20 @@ header.row-fluid {
   padding-right:0;
 }
 
-aside .well {
+.side-item {
+  text-align:left;
+  -moz-box-sizing: border-box;
+  box-sizing:border-box;
+  width:250px;
   border:0;
   background:$wellBgColor;
   box-shadow:inset 1px 1px 2px $sideWellShadow;
   border-radius:$buttonBorderRadius;
   padding-bottom:25px;
+}
+
+.aside-bottom {
+
 }
 
 .well.clear-well {
@@ -141,10 +142,6 @@ aside .well {
   width:auto;
   border: 0;
   box-shadow: 0 0 0;
-}
-
-.aside-bottom {
-
 }
 
 input, textarea, select {
