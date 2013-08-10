@@ -2,18 +2,24 @@ $baseFontSize:18px;
 
 $contentLineHeight:1.4;
 
-$backgroundColor:#FAFDFF;
+$bgImage: url('../../images/diamond_upholstery.png');
+$backgroundColor:#fafafa;//#FAFDFF;
+$headerBgColor: $backgroundColor; //#ebf5fa;
+$headerFontColor:none;
 $fontColor:#26343C;
 $subFontColor:#454545;
+$buttonTextColor: $backgroundColor;//#33383A;
 
 $bodyFonts: 'Source Sans Pro',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$headerFonts: 'Roboto Slab',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$buttonBorderRadius:5px;
+$headerFonts: 'Source Sans Pro','Roboto Slab',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
-$buttonColor: #ee6768;
+$buttonBorderRadius:4px;
+$buttonColor: #ee6768;//#7bdcf5;
 $buttonShadowColor: #BE4B4C;
 $buttonShadowWidth: 6px;
 $buttonWidth: 195px;
+
+$searchWidth:$buttonWidth + 6px;
 
 $linkColor: #1C94B3;
 $linkHoverColor: #1A7991;
@@ -23,12 +29,18 @@ $footerHeight:50px;
 $footerLinkColor: $linkColor;
 $footerLinkHoverColor: $linkHoverColor;
 
-$footerBgColor: rgb(235,245,250);
-$wellBgColor: $footerBgColor;
-$sideWellShadow: rgba(135,205,234,0.15);
+$wellBgColor: $backgroundColor;
+$wellShadow: #d3d3d3;//rgba(135,205,234,0.15);
+$wellBorderColor: $wellShadow;
 
+$sideItemWidth: 250px;
+
+$footerBgColor: $wellBgColor;//rgb(235,245,250);
+
+$profilePicRadius: $buttonBorderRadius + 6px;
 $sideAffixMarginTop: 20px;
 
+$navbarBg: $fontColor;
 $navbarHeight: 70px;
 
 //Experiment with a multi-fonted header

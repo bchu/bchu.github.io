@@ -10,10 +10,19 @@
           box-shadow: $shadow;
 }
 
+@media print {
+  a[href]:after {
+    content: " (" attr(href) ") ";
+  }
+}
+
 // Bootstrap override
 .row-fluid .span4 {
   width: 31%;//31.623932%;
   *width: 30.9%;
+}
+.pager li > a {
+  border-radius: $buttonBorderRadius;
 }
 // end override
 
@@ -24,11 +33,24 @@ html {
 
 body {
   margin-bottom: $footerHeight; //hack for sticky footers
-  background-color:$backgroundColor;
+  // background-color:$backgroundColor;
+  // background:transparent;
   font-family: $bodyFonts;
   color:$fontColor;
   padding-bottom:70px;
   font-size:$baseFontSize;
+}
+body:before {
+  content:'';
+  height:100%;
+  width:100%;
+  // background: $backgroundColor url('../../images/pixel_weave.png');
+  background: $backgroundColor $bgImage;
+  opacity:0.6;
+  position: absolute;
+  z-index:-1;
+  top:0;
+  left:0;
 }
 
 // content line-height and font-size and hacks to get around em stacking
@@ -72,15 +94,13 @@ body {
 }
 
 header.row-fluid {
-  // background: url('../../background-edit.jpg') no-repeat center center;
-  // background-size: cover;
-  // background-color:#F5FAFF;
-  // background-color: rgba(245, 250, 255, 0.9);
-
-  border-bottom: 1px solid gray;
-  margin-top:20px;
-  box-shadow: 0 4px 2px -3px gray; // x-off, y-off, blur-radius, spread (neg = shrink)
-  padding: 20px 0;
+  position: relative; //used to absolutely position profile pic at 767px media query
+  background: $headerBgColor;
+  color: $headerFontColor;
+  border-bottom: 1px solid $wellBorderColor;
+  margin-top:0;
+  box-shadow: 0 0px 0px 0px $wellShadow; // x-off, y-off, blur-radius, spread (neg = shrink)
+  padding: 20px 0 20px 0;
 }
 
 .span4 {
@@ -108,22 +128,32 @@ header.row-fluid {
 // guideline: keep line width to between 50-75 characters
 .span8 {
   margin: 0 auto;
-  padding-left:10px;
+  padding-left:40px;
+  &.block {
+    padding: 30px 40px;
+    padding-top: 19px - 5px; //19px matches well padding
+  }
 }
 
 .content-row .span8 {
-  max-width: 700px;
-  padding-right:0;
+  max-width: 750px;
+}
+
+.block {
+  border:1px solid $wellBorderColor;
+  background:$wellBgColor;
+  box-shadow:0 0 0px 0px $wellShadow;//inset 1px 1px 2px $wellShadow;
+  border-radius:$buttonBorderRadius;
 }
 
 .side-item {
   text-align:left;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
-  width:250px;
-  border:0;
+  width:$sideItemWidth;
+  border:1px solid $wellBorderColor;
   background:$wellBgColor;
-  box-shadow:inset 1px 1px 2px $sideWellShadow;
+  box-shadow:0 0 1px 0px $wellShadow;//inset 1px 1px 2px $wellShadow;
   border-radius:$buttonBorderRadius;
   padding-bottom:25px;
 }
@@ -152,7 +182,7 @@ input, textarea, select {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
-  width: $buttonWidth + 6px;
+  width: $searchWidth;
   display: inline-block;
 }
 
@@ -206,10 +236,11 @@ section.side-nav {
 }
 
 footer.end-footer {
+  border-top: 1px solid $wellBorderColor;
   position:absolute;
   bottom:0;
   margin-top: 40px;
-  padding-top:10px;
+  padding-top:4px;
   font-size: 0.95em;
   width:100%; // position absolute causes element's width to shink to contents, which breaks text align, so we set width
   background: $footerBgColor;
@@ -218,8 +249,8 @@ footer.end-footer {
   ul {
     padding-left: 2%;
     display:block;
-    line-height:0px;
-    margin-bottom: 10px;
+    line-height:32px;
+    margin-bottom: 8px;
     text-align: center;
   }
   li {
@@ -236,11 +267,15 @@ footer.end-footer {
 
 .profile-pic-container {
   text-align: right;
+  height: 100%;
+  // text-align: center;
+  // width: $sideItemWidth;
 }
 
+// width is 100px (predetermined)
 #profile-pic {
-  border-radius: $buttonBorderRadius + 10px;
-  margin-right: 6px;
+  border-radius: $profilePicRadius;
+  margin-right: 125px - 50px; //125px = $sideItemWidth /2; 50px = image width / 2
 }
 
 .fixed-top {

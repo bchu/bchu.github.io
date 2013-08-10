@@ -23,6 +23,7 @@
 }
 
 .bottom-asides {
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -52,11 +53,31 @@
   }
 }
 
+// decrease width of sidebar, expand width of content area
+@media (max-width: 1136px) {
+  .row-fluid .span4 {
+    width: 25%;//31.623932%;
+    *width: 24.9%;
+  }
+  .content-row .span8 {
+    width: 75%;
+  }
+}
+
 // Collapse rows
-@media (max-width: 1015px) {
+@media (max-width: 1044px) {
+  #profile-pic {
+    margin-right: 0;
+  }
+  .affix {
+    position: static !important;
+  }
+  .clear-affix {
+    position: absolute !important;
+  }
   .content-row .span8 {
     margin:0 auto;
-    padding: 0 20px;
+    padding: 30px;
     width: 100%;
     float:none;
     p {
@@ -64,13 +85,15 @@
     }
     clear:both;
   }
-  header .span8 {
-    margin: 0 auto;
-  }
 
-  header.row-fluid{
-    padding: 3%;
-    margin-top: 2%;
+  header.row-fluid {
+    padding: 15px;
+    .span8 {
+      margin: 0 auto;
+    }
+    .span4 {
+      width: 20%;
+    }
   }
 
   // footer
@@ -83,7 +106,14 @@
   }
 }
 
-@media (max-width: 1015px) and (min-width:676px) {
+// 767px is when bootstrap automatically sets width to 100%
+@media (max-width: 1044px) and (min-width: 768px) {
+  header.row-fluid .span8 {
+    width: 75%;
+  }
+}
+
+@media (max-width: 1044px) and (min-width:676px) {
   .row-fluid aside.span4 {
     width: 100%;
     text-align: center;
@@ -91,7 +121,6 @@
 
   .side-centering section {
     float:left;
-    margin-left: 20px;
     width:250px;
     min-height: 165px;
   }
@@ -108,7 +137,10 @@
 
 // Collapse sidebar to top
 @media (max-width: 937px) {
-  header.row-fluid {
+  .profile-pic-container {
+    display: inline-block;
+  }
+  body {
     padding-top: $navbarHeight;
   }
 
@@ -132,7 +164,7 @@
     width: 100%;
     background: none;
     border-radius: 0;
-    background: #423232;
+    background: $navbarBg;
   }
 
   .side-nonresponsive {
@@ -182,8 +214,9 @@
 
 }
 
+// search input collapses into an icon
+// bootstrap does stuff here
 @media (max-width: 767px) {
-  // search input collapses into an icon
   section.side-nav {
     padding-right: 0;
   }
@@ -223,15 +256,27 @@
     }
   }
 
-  section.span4.profile-pic-container {
-    float:left;
+  header.row-fluid .span4.profile-pic-container {
     width: auto;
-    position:relative;
-    margin-right:25px;
+    // width: 100%;
+    // text-align: center;
+    // margin-bottom: 10px;
+    vertical-align: top;
+    display: inline-block;
+    float:left;
+    margin-left: 40px;
+  }
+  header.row-fluid .span8 {
+    display: inline-block;
+    width: auto;
+    box-sizing:  border-box;
+    // padding-left: 155px;
+    h3.inline {
+      // font-size: 20px;
+    }
   }
   .row-fluid {
-    padding-left:40px;
-    padding-right:40px;
+    padding: 0;
   }
   .span4 {
     text-align: left;
@@ -240,7 +285,6 @@
     padding-right: 0;
     padding-left: 0;
   }
-
 }
 
 // Start wrapping code
@@ -254,24 +298,96 @@
   }
 }
 
-// remove button padding, flatten buttons, shrink navbar
+// collapse profile-pic and headline
+@media (max-width: 690px) {
+  header.row-fluid .span4.profile-pic-container {
+    width: 100%;
+    text-align: center;
+    margin-left:0;
+    margin-bottom: 10px;
+  }
+  header.row-fluid .span8 {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+  }
+   header h3.inline {
+    font-size: 22px;
+  }
+  .entry-title {
+    text-align: center;
+  }
+}
+
+@media (max-width: 459px) {
+ header h3.inline {
+    font-size: 18px;
+  }
+}
+
+// collapse into menu button
 @media (max-width: 440px) {
+  body {
+    padding-top:0;
+  }
+  header.row-fluid {
+  }
+  .hide.menu-btn {
+    position: fixed;
+    right: 6px;
+    top: 2px; 
+    border-radius: $buttonBorderRadius;
+    padding: 5px;
+    background: $fontColor;
+    color: white;
+    display: inline-block;
+    box-shadow: 0 0 1px 0 $fontColor;
+    // box-shadow: inset 1px 1px 1px 0px #435E6D;
+  }
   header.row-fluid {
     padding-top: $navbarHeight - 20px;
   }
-  .nav-list {
-    li {
-      padding-right: 10px;
-      .flat-btn {
-        padding: 0 2px;
-        box-shadow: none !important;
-      }
+  section.side-nav {
+    display: none;
+    z-index:100;
+    // border: none;
+    // box-shadow: none;
+    margin:0;
+    padding: 10px 0 10px 0;
+    height: auto;
+  }
+  .nav-search {
+    width: $searchWidth;
+    float: none;
+    top: 0;
+    .search-toggle {
+      display: none;
+    }
+    .input-padding-wrapper {
+      padding:0;
+      display: block;
     }
   }
-  section.side-nav {
-    padding-left: 2%;
-    padding: 5px 0 5px 2%;
-    height: $navbarHeight - 20px;
+  .nav-list {
+    padding:0 0 0 9px;
+    text-align: center;
+    li {
+      padding-right:0;
+      width: 100%;
+      text-align: center;
+      display: block;
+      float: none;
+      .flat-btn {
+        width: $buttonWidth;
+        display: inline-block;
+        // padding: 0 2px;
+        // box-shadow: none !important;
+      }
+      .icon:before {
+        content:inherit;
+      }
+    }
   }
 }
 
@@ -280,10 +396,23 @@
     padding:0;
   }
   header.row-fluid{
-    padding: 0 2%;
-    margin-top: 0%;
+    padding: 0;
+    padding-top:15px;
   }
-  section.side-nav {
-    position: relative;
+  .content-row .span8 {
+    padding: 15px;
+    border-left:0;
+    border-right:0;
   }
 }
+
+// @media (max-width: 399px) {
+//   section.side-nav {
+//     height: $navbarHeight * 2 - 40px;
+//   }
+// }
+// @media (max-width: 399px) and (max-height: 480px) {
+//   section.side-nav {
+//     height: $navbarHeight * 2 - 40px;
+//   }
+// }

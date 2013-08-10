@@ -9,7 +9,7 @@
 
 .flat-btn, li a.flat-btn, .btn.flat-btn {
   //bootstrap override
-  color: white;
+  color: $buttonTextColor;
   transition:none;
   background-image:none;
 
@@ -41,7 +41,7 @@
   // Commented-out box-shadow and left properties deal with make the buttons depress on hover and click
   &:hover {
     //bootstrap override
-    color: white;
+    color: $buttonTextColor;
     border-radius:$buttonBorderRadius;
     background-color: $buttonColor;
     box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
@@ -167,7 +167,7 @@ user: F007
   font-variant: normal;
   text-transform: none;
   -webkit-font-smoothing: antialiased;
-  color:white;
+  color:$buttonTextColor;
 }
 
 .icon-blog:before {
