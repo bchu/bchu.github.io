@@ -37,8 +37,11 @@ a {
   // color: $subFontColor;
 }
 
-h1.title {
+.title {
   font-family: $headerFonts;
+  .title-subdue {
+    font-weight: lighter;
+  }
 }
 
 h1 {
@@ -77,6 +80,10 @@ h1 {
   display: inline-block !important;
 }
 
-.hide {
+.force-hide {
   display: none !important;
+}
+
+.nowrap {
+  white-space: nowrap;
 }
