@@ -43,7 +43,7 @@
 
   <link rel="canonical" href="http://www.brianchu.com">
   <link href="/favicon.ico" rel="icon">
-  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic|Roboto+Slab' rel='stylesheet' type='text/css'>
+  <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -91,7 +91,8 @@
       </section>
 
       <section class="span8" role="banner">
-        <h1 class="title">I'm Brian Chu,</h1>
+        <h1 class="title">I'm <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span>
+        </h1>
 
         <span class="subtext">
       <h3 class="inline">a JavaScript front-end + back-end engineer.</h3>
@@ -104,15 +105,13 @@
     <div class="row-fluid content-row">
 
 
-      <aside class="span4 sidebar clear-affix" data-spy="affix" data-offset-top="206"></aside>
+      <aside class="span4 side-bar clear-affix" data-spy="affix" data-offset-top="206"></aside>
 
-      <aside class="span4 sidebar" data-spy="affix" data-offset-top="206">
-        <div class="sidebar-centering">
+      <aside class="span4 side-bar" data-spy="affix" data-offset-top="206">
+        <div class="side-centering">
 
-          <section role="navigation" class="sidebar-nav well">
-            <form class="form-search">
-              <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
-            </form>
+          <i class="menu-btn hide icon-align-justify icon-large"></i>
+          <section role="navigation" class="well side-item side-nav">
             <ul class="nav nav-list">
               <li><a href="/" class="btn flat-btn icon icon-blog active">Blog</a></li>
               <li><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
@@ -122,8 +121,15 @@
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
     </li>
             </ul>
+            <form class="nav-search">
+              <a class="search-toggle"><i class="icon-search"></i></a>
+              <div class="input-padding-wrapper">
+                <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
+              </div>
+              <a class="close-search force-hide">Close</a>
+            </form>
           </section>
-          <section class="well clearfix">
+          <section class="well side-item side-email clearfix side-nonresponsive">
             <p>I write posts occasionally. Leave your email here and I&#8217;ll keep you updated!</p>
 
             <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
@@ -138,7 +144,7 @@
 
 
 
-      <section class="span8">
+      <section class="span8 block">
 
 
 
@@ -195,6 +201,23 @@
 
         </ul>
       </section>
+
+
+
+      <div class="bottom-asides">
+        <section class="well side-item side-email side-responsive">
+          <p>I write posts occasionally. Leave your email here and I&#8217;ll keep you updated!</p>
+
+          <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
+            <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required autofocus>
+            <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+          </form>
+        </section>
+
+      </div>
+
+
+
     </div>
 
     <footer role="contentinfo" class="row-fluid content-row end-footer">
