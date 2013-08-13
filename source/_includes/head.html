@@ -6,6 +6,7 @@
   <meta charset="utf-8">
   {% capture title %}{% if page.title %}{{ page.title }} - {{ site.author }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}{% endcapture %}
   {% capture twitter_card_title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}{% endcapture %}
+  {% capture share_image %}{% if page.date or page.share_image %}{{ page.share_image }}{% else %}{{ site.profile_picture }}{% endif %}{% endcapture %}
   <title>{{ title }}</title>
   <meta name="author" content="{{ site.author }}">
 
@@ -13,24 +14,47 @@
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
+
+  {% capture og_type %}{% if page.date %}article{% else %}profile{% endif %}{% endcapture %}
   <meta property="og:title" content="{{ title }}">
+  <meta property="og:site_name" content="{{ site.title }}">
   <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
-  <!-- <meta property="og:image" content="thumbnail_image_link"> -->
-  {% comment %}At least 50x50, ideally square{% endcomment %}
-  <!-- <meta property="og:site_name" content="Brian Chu"/> -->
+  <meta property="fb:profile_id" content="{{ site.facebook_user }}">
+  <meta property="og:type" content="{{ og_type }}">
+  <meta property="og:title" content="{{ title }}">
+  {% if og_type == 'article' %}
+  <meta property="article:published_date" content="{{ page.date }}">
+  <meta property="article:section" content="Blog">
+  {% for tag in page.categories %} 
+    <meta property="article:tag" content="{{ tag }}">
+  {% endfor %} 
+  {% else %}
+  <meta property="profile:first_name" content="{{ site.first_name }}">
+  <meta property="profile:last_name" content="{{ site.last_name }}">
+  {% endif %}
+  {% if share_image != '' %}
+    {% comment %}At least 50x50, ideally square{% endcomment %}
+    <meta property="og:image" content="{{ share_image }}">
+  {% endif %}
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:site:id" content="@brrrianchu">
-  <meta name="twitter:creator" content="@brrrianchu">
+  <meta name="twitter:site" content="{{ site.twitter_user }}">
+  {% comment %}
+  Commented out cause this and twitter:site are redundant (and visually redundant)
+  <meta name="twitter:creator" content="{{ site.twitter_user }}">
+  {% endcomment %}
   <meta name="twitter:title" content="{{ twitter_card_title }}">
+  {% comment %} This gives a tuncated copy of the actual content of the page, rather than just a summary line (which og:description gives) {% endcomment %}
   {% capture description_content %}{% if page.homepage %}{{ site.description }}{% else if page.content %}{{ page.content | raw_content }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="twitter:description" content="{{ description_content | markdownify | strip_html | condense_spaces | truncate:200 }}">
-  <!-- <meta name="twitter:image" content=""> -->
+  {% if share_image != '' %}
+  <meta name="twitter:image" content="{{ share_image }}">
+  {% endif %}
 
   {% if site.swiftype %}
   <meta property="st:title" content="{{ title }}" >
     {% if page.date %}
-  <meta property="st:published_at" content="{{ page.date | date_to_xmlschema }}">
+      <meta property="st:published_at" content="{{ page.date | date_to_xmlschema }}">
     {% endif %}
   {% endif %}
 
