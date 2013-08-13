@@ -9,13 +9,14 @@ Based on Octopress.
 2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
     * run `./setup_github_pages.sh` to set up a clone of the repo in `/_deploy`.
     * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to run the above command if you're setting up a github pages repo that already exists.
-3. `./deployfromtheme.sh` to install the theme and deploy.
+3. `./deploy.sh` to install the theme and deploy.
+4. `grunt static` to generate the website and have livereload watch the sass and public folders (for editing the static website directly)
+5. `grunt` to generate the website and have livereload do the same watches as `grunt static`, but also regenerate the entire website when non-style/js/public source files change.
 
 ###Todo
 
 1. approval for twitter cards
 3. color scheme, colorify headers
-5. Revamp Google search appearance, FB appearance
 10. have github api data cached and static-ified on build
 11. cleanup CSS, simplify and consolidate responsive features
   -check responsinator, handle low heights, handle overflow for dropdown menu.

@@ -25,20 +25,11 @@ module.exports = function (grunt) {
         }
       }
     },
-    // copy: {
-    //   static: {
-    //     files:[{
-    //       expand:true,
-    //       flatten:true,
-    //       src: ['sass/custom/*.scss'],
-    //       dest:'public/stylesheets/custom/'
-    //     }]
-    //   }
-    // },
     concurrent: {
       options: {
         logConcurrentOutput: true
       },
+      full: ['watch:staticsass', 'watch:static', 'watch:staticjs', 'watch:full'],
       static: ['watch:staticsass', 'watch:static', 'watch:staticjs']
     },
     copy: {
@@ -101,44 +92,42 @@ module.exports = function (grunt) {
       }
     },
     watch: {
-      dev: {
-        files: ['**/*{.js,.html,.yml,.md,.markdown,.css,.sass,.scss,.xml}', '!public/**', '!_deploy/**', '!node_modules/**'],
-        tasks:['exec:generate'],
-        options: {
-          livereload: LIVERELOAD_PORT
-        }
-      },
-      staticsass:{
-        files: ['sass/**'],
-        tasks: ['sass:static']
-      },
       static: {
         files: ['public/**'],
         options: {
           livereload: LIVERELOAD_PORT
         }
       },
+      // these all trigger static, so no livereload necessary
+      staticsass:{
+        files: ['sass/**'],
+        tasks: ['sass:static']
+      },
       staticjs: {
         files: ['source/javascripts/**'],
         tasks: ['copy:js']
+      },
+      full: {
+        files: ['source/**/*{.js,.html,.yml,.md,.markdown,.css,.sass,.scss,.xml}', '**/*{.yml,.rb,.ru}', '!source/javascripts/**','!sass/**','!public/**', '!_deploy/**', '!node_modules/**'],
+        tasks:['exec:generate'],
       }
     }
   });
 
-  //re-build entire project upon changes in source
+  // regenerate full, entire project upon changes in source files, except for sass stylesheets and js files, which are selectively rebuilt and copied over without regenerating the entire project 
   grunt.registerTask('default', [
     'exec:generate',
     'connect:livereload',
     'open',
-    'watch:dev'
+    'concurrent:full',
   ]);
 
-  //only watch public folder and sass stylesheets (preview mode)
+  // only watch public folder, sass stylesheets, and js files (preview mode)
   grunt.registerTask('static', [
     'exec:generate',
     'connect:livereload',
     'open',
-    'concurrent'
+    'concurrent:static'
   ]);
   // run build tasks after 'rake generate' but before rake deploy. This means operating on files in the public directory.
   grunt.registerTask('pre-deploy', [
