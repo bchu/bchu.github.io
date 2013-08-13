@@ -331,6 +331,7 @@
   }
   .hide.menu-btn {
     position: fixed;
+    z-index: 2; // allows you to click on button
     right: 6px;
     top: 2px; 
     border-radius: $buttonBorderRadius;
