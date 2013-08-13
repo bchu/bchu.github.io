@@ -14,13 +14,11 @@ Based on Octopress.
 ###Todo
 
 1. approval for twitter cards
-3. tweak color scheme, more contrast, colorify headers
+3. color scheme, colorify headers
 5. Revamp Google search appearance, FB appearance
-9. find way to add fluid padding back in 
 10. have github api data cached and static-ified on build
 11. cleanup CSS, simplify and consolidate responsive features
   -check responsinator, handle low heights, handle overflow for dropdown menu.
-12. firefox: can't click search button, icon messup
 
 ## Prerequisites
 
