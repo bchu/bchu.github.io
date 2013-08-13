@@ -15,11 +15,17 @@ Based on Octopress.
 
 ###Todo
 
-1. approval for twitter cards
-3. color scheme, colorify headers
-10. have github api data cached and static-ified on build
-11. cleanup CSS, simplify and consolidate responsive features
+1. color scheme, colorify headers
+2. have github api data cached and static-ified on build
+3. cleanup CSS, simplify and consolidate responsive features
   -check responsinator, handle low heights, handle overflow for dropdown menu.
+4. library fallback js files
+<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
+5. Add touch icons for ios
+6. add images for projects
+7. add async/defer to js and keep in head, or add to end of body.
+8. 
+
 
 ## Prerequisites
 

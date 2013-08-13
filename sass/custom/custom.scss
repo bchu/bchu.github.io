@@ -2,6 +2,7 @@
 @import '_text.scss';
 @import '_buttons_icons.scss';
 @import '_swiftype.scss';
+@import '_print.scss';
 
 // Drop shadows
 @mixin box-shadow($shadow...) {
@@ -10,10 +11,11 @@
           box-shadow: $shadow;
 }
 
-@media print {
-  a[href]:after {
-    content: " (" attr(href) ") ";
-  }
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
 }
 
 // Bootstrap override
