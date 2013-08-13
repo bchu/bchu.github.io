@@ -19,6 +19,7 @@ Based on Octopress.
 9. find way to add fluid padding back in 
 10. have github api data cached and static-ified on build
 11. cleanup CSS, simplify and consolidate responsive features
+  -check responsinator, handle low heights, handle overflow for dropdown menu.
 12. firefox: can't click search button, icon messup
 
 ## Prerequisites
