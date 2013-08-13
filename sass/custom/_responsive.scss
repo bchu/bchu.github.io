@@ -186,6 +186,8 @@
     margin:0;
     padding:0;
     li {
+      // fixed issue with firefox psuedo elements not getting properly absolutely positioned.
+      position: relative;
       display: inline-table;
       vertical-align: middle !important;
       float:left;
