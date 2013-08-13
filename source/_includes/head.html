@@ -5,6 +5,7 @@
 <head>
   <meta charset="utf-8">
   {% capture title %}{% if page.title %}{{ page.title }} - {{ site.author }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}{% endcapture %}
+  {% capture twitter_card_title %}{% if page.title %}{{ page.title }}{% else %}{{ site.title }} - {{ site.subtitle }}{% endif %}{% endcapture %}
   <title>{{ title }}</title>
   <meta name="author" content="{{ site.author }}">
 
@@ -19,9 +20,9 @@
   <!-- <meta property="og:site_name" content="Brian Chu"/> -->
 
   <meta name="twitter:card" content="summary">
-  <!-- <meta name="twitter:site" content="@brrrianchu"> -->
+  <meta name="twitter:site:id" content="@brrrianchu">
   <meta name="twitter:creator" content="@brrrianchu">
-  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:title" content="{{ twitter_card_title }}">
   {% capture description_content %}{% if page.homepage %}{{ site.description }}{% else if page.content %}{{ page.content | raw_content }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="twitter:description" content="{{ description_content | markdownify | strip_html | condense_spaces | truncate:200 }}">
   <!-- <meta name="twitter:image" content=""> -->
