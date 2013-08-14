@@ -10,7 +10,7 @@
 
 
 
-  <title>Blog Archive - Brian Chu</title>
+  <title>A Little Note on Versions - Brian Chu</title>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="True">
   <meta name="MobileOptimized" content="320">
@@ -18,47 +18,46 @@
 
 
   <meta name="author" content="Brian Chu">
-  <meta name="description" content="Posts, guides, tutorials, and projects from Brian Chu, a full-stack software engineer with a focus on JavaScript and iOS.">
+  <meta name="description" content="Versions in bower and npm are maddeningly inconsistent.">
 
 
 
 
-  <meta property="og:title" content="Blog Archive - Brian Chu">
+  <meta property="og:title" content="A Little Note on Versions - Brian Chu">
   <meta property="og:site_name" content="I'm Brian Chu">
-  <meta property="og:description" content="Posts, guides, tutorials, and projects from Brian Chu, a full-stack software engineer with a focus on JavaScript and iOS.">
+  <meta property="og:description" content="Versions in bower and npm are maddeningly inconsistent.">
   <meta property="fb:profile_id" content="brian.chu">
-  <meta property="og:type" content="profile">
-  <meta property="og:title" content="Blog Archive - Brian Chu">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="A Little Note on Versions - Brian Chu">
 
-  <meta property="profile:first_name" content="Brian">
-  <meta property="profile:last_name" content="Chu">
+  <meta property="article:published_date" content="2013-08-14 04:27:00 -0700">
+  <meta property="article:section" content="Blog">
+
+  <meta property="article:tag" content="bower">
+
+  <meta property="article:tag" content="npm">
 
 
-
-  <meta property="og:image" content="http://www.brianchu.com/images/profile.png">
 
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:site" content="brrrianchu">
 
-  <meta name="twitter:title" content="Blog Archive">
+  <meta name="twitter:title" content="A Little Note on Versions">
 
 
-  <meta name="twitter:description" content="{% for post in site.posts reverse %}
-{% capture this_year %}{{ post.date | date: " %Y " }}{% endcapture %}
-{% unless year == this_year %} {% assign year = this_year %} {{ year }}
-{% endunless %} {% &hellip;">
-
-  <meta name="twitter:image" content="http://www.brianchu.com/images/profile.png">
+  <meta name="twitter:description" content="tl;dr Versions in bower and npm are maddeningly inconsistent in a tiny way. So&hellip; In semver and bower (I&rsquo;m assuming bower since it relies on the node-semver module), a hypenated version &hellip;">
 
 
 
-  <meta property="st:title" content="Blog Archive - Brian Chu">
+  <meta property="st:title" content="A Little Note on Versions - Brian Chu">
+
+  <meta property="st:published_at" content="2013-08-14T04:27:00-07:00">
 
 
 
 
-  <link rel="canonical" href="http://www.brianchu.com/blog/archives">
+  <link rel="canonical" href="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions">
   <link href="/favicon.ico" rel="icon">
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
@@ -164,60 +163,128 @@
 
 
 
-      <section role="article" class="span8 block">
+      <section class="hentry span8 block" role="article">
+
+        <article data-swiftype-index="true">
+
+          <header class="page-header">
 
 
-        <header class="page-header">
+            <h2 class="entry-title">A Little Note on Versions</h2>
 
 
-          <h2 class="entry-title">Blog Archive</h2>
-
-        </header>
-
-        <div id="blog-archives">
+            <p class="meta">
 
 
 
 
-          <h1>2013</h1>
 
-          <article>
-            <div class="well">
 
-              <h2><a href="/blog/2013/08/14/a-little-thing-with-versions/">A Little Note on Versions</a>
-              </h2>
-              <time datetime="2013-08-14T04:27:00-07:00" pubdate><span class='month'>Aug</span>  <span class='day'>14</span>  <span class='year'>2013</span>
-              </time>
 
-              <footer>
-                <span class="categories">posted in <a class='category' href='/blog/categories/bower/'>bower</a>, <a class='category' href='/blog/categories/npm/'>npm</a></span>
-              </footer>
 
+
+
+
+
+              <time datetime="2013-08-14T04:27:00-07:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+
+            </p>
+
+          </header>
+
+
+          <div class="article-body">
+            <p>tl;dr Versions in bower and npm are maddeningly inconsistent in a tiny way.</p>
+
+            <!-- more -->
+
+
+            <p>So&hellip; In semver and bower (I&rsquo;m assuming bower since it relies on the node-semver module), a hypenated version suffix (postfix) decreases precedence &lt;(1.0.0 > 1.0.0-alpha > 1.0.0-1) and non-hypenated suffixes are invalid (1.0.0alpha is invalid).</p>
+
+            <p>Whereas in npm, hypenation with a numeric suffix increases precedence (1.0.0-1 > 1.0.0) whereas anything that is not a hypenated number decreases precedence (1.0.0 > 1.0.0alpha). So 1.0.0-1 > 1.0.0-1-a > 1.0.0 > 1.0.0alpha. Somebody shoot me in my face.</p>
+          </div>
+
+        </article>
+
+        <footer>
+          <p class="meta subtext">
+
+
+
+            <span class="byline author vcard">Posted by <span class="fn">Brian Chu</span></span>
+
+
+
+
+
+
+
+
+
+
+
+
+
+            <time datetime="2013-08-14T04:27:00-07:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+
+
+            <span class="categories">
+  
+    <a class='category' href='/blog/categories/bower/'>bower</a>, <a class='category' href='/blog/categories/npm/'>npm</a>
+  
+</span>
+
+
+          </p>
+          <ul class="pager">
+
+            <li class="previous"><a class="basic-alignment left"
+        href="/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner/" title="Previous Post:
+        Grunt by Example - A Tutorial for JavaScript's Task Runner">&laquo; Grunt by Example - A Tutorial for JavaScript's Task Runner</a></li>
+
+            <li><a href="/blog/archives">Blog Archives</a></li>
+
+          </ul>
+
+
+
+
+          <div class="bottom-asides">
+            <section class="well side-item side-email side-responsive">
+              <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
+
+              <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
+                <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required autofocus>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+              </form>
+            </section>
+
+          </div>
+
+
+
+
+          <div class="sharing">
+
+            <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/">Tweet</a>
+
+
+
+            <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+
+          </div>
+
+
+
+          <section>
+            <h2>Comments</h2>
+            <div id="disqus_thread" aria-live="polite">
+              <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+              </noscript>
             </div>
+          </section>
 
-          </article>
-
-
-
-          <article>
-            <div class="well">
-
-              <h2><a href="/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner/">Grunt by Example - A Tutorial for JavaScript&#8217;s Task Runner</a>
-              </h2>
-              <time datetime="2013-07-11T16:35:00-07:00" pubdate><span class='month'>Jul</span>  <span class='day'>11</span>  <span class='year'>2013</span>
-              </time>
-
-              <footer>
-                <span class="categories">posted in <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a></span>
-              </footer>
-
-            </div>
-
-          </article>
-
-        </div>
-
-
+        </footer>
       </section>
 
     </div>
@@ -279,7 +346,10 @@
 
   <script>
   var disqus_shortname = 'brianchu';
-  var disqus_script = 'count.js';
+  // var disqus_developer = 1;
+  var disqus_identifier = 'http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/';
+  var disqus_url = 'http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/';
+  var disqus_script = 'embed.js';
   (function()
   {
     var dsq = document.createElement('script');
