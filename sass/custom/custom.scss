@@ -76,6 +76,12 @@ body:before {
     li {
       line-height: $contentLineHeight;
     }
+    article {
+      margin-bottom: 30px;
+    }
+    article:last-child {
+      margin-bottom: 0
+    }
   }
 }
 
