@@ -3,6 +3,7 @@
     (function(){
       var twitterWidgets = document.createElement('script');
       twitterWidgets.async = true;
+      twitterWidgets.defer = true;
       twitterWidgets.src = '//platform.twitter.com/widgets.js';
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
