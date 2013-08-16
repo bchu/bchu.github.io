@@ -28,6 +28,21 @@
 }
 // end override
 
+.profile-pic-container {
+  text-align: right;
+  height: 100%;
+  // text-align: center;
+  // width: $sideItemWidth;
+}
+
+// width is 100px (predetermined)
+#profile-pic {
+  width: 100px;
+  height: 100px;
+  border-radius: $profilePicRadius;
+  margin-right: 125px - 50px; //125px = $sideItemWidth /2; 50px = image width / 2
+}
+
 html {
   min-height:100%;
   position:relative; //needed for footer
@@ -271,19 +286,6 @@ footer.end-footer {
   a:hover {
     color:$footerLinkHoverColor;
   }
-}
-
-.profile-pic-container {
-  text-align: right;
-  height: 100%;
-  // text-align: center;
-  // width: $sideItemWidth;
-}
-
-// width is 100px (predetermined)
-#profile-pic {
-  border-radius: $profilePicRadius;
-  margin-right: 125px - 50px; //125px = $sideItemWidth /2; 50px = image width / 2
 }
 
 .fixed-top {
