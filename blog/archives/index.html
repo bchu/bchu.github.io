@@ -60,15 +60,11 @@
 
   <link rel="canonical" href="http://www.brianchu.com/blog/archives">
   <link href="/favicon.ico" rel="icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
   <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
   <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
   <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
-  <script src="/javascripts/custom.js"></script>
-
-
 
 
   <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
@@ -85,6 +81,7 @@
     var ga = document.createElement('script');
     ga.type = 'text/javascript';
     ga.async = true;
+    ga.defer = true;
     ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0];
     s.parentNode.insertBefore(ga, s);
@@ -285,6 +282,7 @@
     var dsq = document.createElement('script');
     dsq.type = 'text/javascript';
     dsq.async = true;
+    dsq.defer = true;
     dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
   }());
@@ -304,6 +302,7 @@
     js = d.createElement(s);
     js.id = id;
     js.async = true;
+    js.defer = true;
     js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
     fjs.parentNode.insertBefore(js, fjs);
   }(document, 'script', 'facebook-jssdk'));
@@ -318,6 +317,7 @@
   {
     var twitterWidgets = document.createElement('script');
     twitterWidgets.async = true;
+    twitterWidgets.defer = true;
     twitterWidgets.src = '//platform.twitter.com/widgets.js';
     document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
   })();
@@ -338,7 +338,11 @@
     Swiftype.renderStyle = 'overlay';
   }());
   </script>
-  <script src="//swiftype.com/embed.js" async></script>
+  <script src="//swiftype.com/embed.js" async defer></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+  <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+  <script src="/javascripts/custom.js"></script>
 
 
 
