@@ -5,7 +5,7 @@ Based on Octopress.
 ## Instructions
 
 0. Follow Octopress setup: <http://octopress.org/docs/setup/>
-1. `git submodule init && git submodule update` to install the brianchu.com theme under /.themes/bootstrap/
+    * Make sure `sass` gem is installed, run `bundle install`
 2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
     * run `./setup_github_pages.sh` to set up a clone of the repo in `/_deploy`.
     * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to run the above command if you're setting up a github pages repo that already exists.
@@ -19,13 +19,10 @@ Based on Octopress.
 2. have github api data cached and static-ified on build
 3. cleanup CSS, simplify and consolidate responsive features
   -check responsinator, handle low heights, handle overflow for dropdown menu.
-4. library fallback js files
-<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
-5. Add touch icons for ios
 6. add images for projects
-7. add async/defer to js and keep in head, or add to end of body.
-8. 
-
+8. show additional list of categories and recent posts when you scroll down a certain amount.
+9. track clicks!
+10. optimize png
 
 ## Prerequisites
 
