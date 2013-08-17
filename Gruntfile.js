@@ -12,6 +12,7 @@ module.exports = function (grunt) {
     pkg: grunt.file.readJSON('package.json'),
     connect: {
       options: {
+        hostname: '0.0.0.0',
         port:8000
       },
       livereload: {
