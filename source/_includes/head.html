@@ -29,9 +29,9 @@
   {% if og_type == 'article' %}
   <meta property="article:published_date" content="{{ page.date }}">
   <meta property="article:section" content="Blog">
-  {% for tag in page.categories %} 
+  {% for tag in page.categories %}
     <meta property="article:tag" content="{{ tag }}">
-  {% endfor %} 
+  {% endfor %}
   {% else %}
   <meta property="profile:first_name" content="{{ site.first_name }}">
   <meta property="profile:last_name" content="{{ site.last_name }}">
