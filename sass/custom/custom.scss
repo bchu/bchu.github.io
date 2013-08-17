@@ -18,6 +18,10 @@
     padding: 0.2em 0;
 }
 
+// Windows phone disable touch delay
+a, input, button {
+    -ms-touch-action: none !important;
+}
 // Bootstrap override
 .row-fluid .span4 {
   width: 31%;//31.623932%;
