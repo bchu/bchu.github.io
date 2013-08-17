@@ -19,8 +19,8 @@ Based on Octopress.
 3. cleanup CSS, simplify and consolidate responsive features
 6. add images for projects
 8. show additional list of categories and recent posts when you scroll down a certain amount.
-9. track clicks!
-10. optimize png
+10. mixpanel, quantcast, google analytics goals/click tracking
+11. github slideout
 
 ## Prerequisites
 
