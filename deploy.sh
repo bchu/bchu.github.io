@@ -1,5 +1,5 @@
 cd _deploy
-git pull origin master
+git pull -u origin master
 cd ..
 bundle exec rake generate
 grunt pre-deploy
