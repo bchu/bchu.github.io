@@ -1,10 +1,10 @@
 ---
-published: false
 layout: post
 comments: true
+published: false
 date: 2013-07-25 01:20
-categories: [JavaScript, tips]
-title: "An interesting module pattern: the Sealed Module"
+categories: [JavaScript, tutorial]
+title: "An Interesting Module Pattern: the Sealed Module"
 description: "Sharing private state across components of a module."
 ---
 
