@@ -18,6 +18,13 @@
     padding: 0.2em 0;
 }
 
+// reset button styles
+button {
+  padding:0;
+  border:0;
+  margin:0;
+}
+
 // Windows phone disable touch delay
 a, input, button {
     -ms-touch-action: none !important;
