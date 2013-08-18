@@ -135,7 +135,7 @@
   .side-centering {
     display: block;
     position: fixed;
-    z-index: 100;
+    z-index: $zNavDropdown;
     top: 0;
     left:0;
     width: 100%;
@@ -331,7 +331,6 @@
   }
   section.side-nav {
     display: none;
-    z-index:$zNavDropdown;
     margin:0;
     padding: 10px 0 10px 0;
     height: auto;
