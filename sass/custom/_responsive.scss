@@ -135,6 +135,7 @@
   .side-centering {
     display: block;
     position: fixed;
+    z-index: 100;
     top: 0;
     left:0;
     width: 100%;
@@ -314,7 +315,7 @@
   }
   .hide.menu-btn {
     position: fixed;
-    z-index: 2; // allows you to click on button
+    z-index: $zMenuBtn; // allows you to click on button
     right: 6px;
     top: 2px; 
     border-radius: $buttonBorderRadius;
@@ -330,7 +331,7 @@
   }
   section.side-nav {
     display: none;
-    z-index:100;
+    z-index:$zNavDropdown;
     margin:0;
     padding: 10px 0 10px 0;
     height: auto;

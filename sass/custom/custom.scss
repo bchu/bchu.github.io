@@ -138,7 +138,7 @@ header.row-fluid {
 
   &.affix {
     top: $sideAffixMarginTop;
-    z-index:2;
+    z-index:$zSidebarAffix;
   }
   &.side-bar {
     margin-left: 0;
@@ -297,7 +297,7 @@ footer.end-footer {
 .fixed-top {
   position:fixed;
   top:0;
-  z-index:3;
+  z-index:$zFixedTop;
 }
 
 .alert {
