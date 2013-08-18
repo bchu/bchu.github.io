@@ -10,9 +10,10 @@ footer: false
 
 A peer-to-peer, rich-client web app library that uses HTML5 WebRTC and Web Workers to reduce reliance on central servers. Using this library, developers should be able to quickly build peer to peer apps that directly send queries and transfer data directly with each other.
 
+{% comment %}
 [<i class="icon-github-sign"></i> See the GitHub repo.](https://github.com/bchu/nodetron)
-
-{% comment %} <div class="github-widget" data-repo="bchu/nodetron"></div> {% endcomment %}
+{% endcomment %}
+<div class="github-widget" data-repo="bchu/nodetron"></div>
 <br>
 
 
@@ -20,9 +21,10 @@ A peer-to-peer, rich-client web app library that uses HTML5 WebRTC and Web Worke
 
 The task app that tells you what to do, splitting and prioritizing tasks for the user. Built with AngularJS.
 
+{% comment %}
 [<i class="icon-github-sign"></i> See the GitHub repo.](https://github.com/bchu/preductive-web)
-
-{% comment %} <div class="github-widget" data-repo="bchu/preductive-web"></div> {% endcomment %}
+{% endcomment %}
+<div class="github-widget" data-repo="bchu/preductive-web"></div>
 <br>
 
 
@@ -30,9 +32,10 @@ The task app that tells you what to do, splitting and prioritizing tasks for the
 
 AngelHack project using AngularJS and Firebase. An app that connects people needing help with experts in teams/organizations.
 
+{% comment %}
 [<i class="icon-github-sign"></i> See the GitHub repo.](https://github.com/bchu/standhub)
-
-{% comment %} <div class="github-widget" data-repo="bchu/standhub"></div> {% endcomment %}
+{% endcomment %}
+<div class="github-widget" data-repo="bchu/standhub"></div>
 <br>
 
 
@@ -40,6 +43,7 @@ AngelHack project using AngularJS and Firebase. An app that connects people need
 
 Startup Weekend team project built with Meteor. Aggregate contacts from Facebook and LinkedIn. Schedule reminders to reach out to your contacts. Maintain relationships with the contacts most important to you.
 
+{% comment %}
 [<i class="icon-github-sign"></i> See the GitHub repo.](https://github.com/bchu/FeedYourNetwork)
-
-{% comment %} <div class="github-widget" data-repo="bchu/FeedYourNetwork"></div> {% endcomment %}
+{% endcomment %}
+<div class="github-widget" data-repo="bchu/FeedYourNetwork"></div>
