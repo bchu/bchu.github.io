@@ -116,6 +116,7 @@
 @media (min-width: 1045px) {
   .side-responsive {
     display: none;
+    visibility: hidden;
   }
 }
 
@@ -154,6 +155,7 @@
 
   .side-nonresponsive {
     display: none;
+    visibility: hidden;
   }
 
   .nav-search {
