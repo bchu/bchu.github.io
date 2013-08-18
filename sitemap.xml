@@ -4,34 +4,40 @@
         <loc>
             http://www.brianchu.com/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner/
         </loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-17T05:14:29-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-18T00:37:49-07:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/
+        </loc>
+        <lastmod>2013-08-18T04:55:58-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/404.html</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-17T05:14:29-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/about/</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-17T05:14:29-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/blog/archives/</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-18T04:55:58-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-18T04:55:58-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/projects/</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-18T02:25:58-07:00</lastmod>
     </url>
     <url>
         <loc>http://www.brianchu.com/robots.txt</loc>
-        <lastmod>2013-08-17T03:10:33-07:00</lastmod>
+        <lastmod>2013-08-17T05:14:30-07:00</lastmod>
     </url>
 </urlset>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: tutorial | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/tutorial/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2013-08-17T04:53:06-07:00</updated>
+  <updated>2013-08-18T05:24:28-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -12,6 +12,76 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[An Interesting Module Pattern: the Sealed Module]]></title>
+    <link href="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/"/>
+    <updated>2013-08-18T06:00:00-07:00</updated>
+    <id>http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module</id>
+    <content type="html"><![CDATA[<p>An interesting way to share private state across components of modules in JavaScript: <!-- more --><br/>
+(credit goes to <a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html">this article</a>)</p>
+
+<p>``` javascript
+var module = (function (module) {
+  var <em>private = module.</em>private = module.<em>private || {};
+  var </em>seal = module.<em>seal = module.</em>seal || function () {</p>
+
+<pre><code>delete module._private;
+delete module._seal;
+delete module._unseal;
+</code></pre>
+
+<p>  }
+  var <em>unseal = module.</em>unseal = module._unseal || function () {</p>
+
+<pre><code>module._private = _private;
+module._seal = _seal;
+module._unseal = _unseal;
+</code></pre>
+
+<p>  };
+  // permanent access to <em>private, </em>seal, and _unseal</p>
+
+<p>  return module;
+}(module || {}));
+```</p>
+
+<p><code>_unseal</code> must be called by a function (probably some sort of loader function) that was initialized before <code>_seal</code> was called (so that <code>_unseal</code> will be present in its closure scope).</p>
+
+<p>For example:</p>
+
+<p>``` javascript
+var loadScript = function (scriptUrl) {
+  _unseal();
+  var script = document.createElement(&lsquo;script&rsquo;);
+  script.src = scriptUrl;</p>
+
+<p>  if (script.readyState) {</p>
+
+<pre><code>script.onreadystatechange = function () {
+  if (script.readyState === "loaded" ||
+      script.readyState === "complete") {
+    script.onreadystatechange = null;
+    module.seal();
+  }
+};
+</code></pre>
+
+<p>  }
+  else {</p>
+
+<pre><code>script.onload = function() {
+  module.seal()
+};
+</code></pre>
+
+<p>  }</p>
+
+<p>  document.getElementsByTagName(&lsquo;head&rsquo;)[0].append(script);
+};
+```</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Grunt by Example - A Tutorial for JavaScript's Task Runner]]></title>

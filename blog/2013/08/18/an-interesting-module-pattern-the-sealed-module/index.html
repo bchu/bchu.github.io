@@ -10,7 +10,7 @@
 
 
 
-    <title>A Little Note on Versions - Brian Chu</title>
+    <title>An Interesting Module Pattern: the Sealed Module - Brian Chu</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
@@ -18,24 +18,24 @@
 
 
     <meta name="author" content="Brian Chu">
-    <meta name="description" content="Versions in bower and npm are maddeningly inconsistent.">
+    <meta name="description" content="Sharing private state across components of a module in JavaScript.">
 
 
 
 
-    <meta property="og:title" content="A Little Note on Versions - Brian Chu">
+    <meta property="og:title" content="An Interesting Module Pattern: the Sealed Module - Brian Chu">
     <meta property="og:site_name" content="I'm Brian Chu">
-    <meta property="og:description" content="Versions in bower and npm are maddeningly inconsistent.">
+    <meta property="og:description" content="Sharing private state across components of a module in JavaScript.">
     <meta property="fb:profile_id" content="brian.chu">
     <meta property="og:type" content="article">
-    <meta property="og:title" content="A Little Note on Versions - Brian Chu">
+    <meta property="og:title" content="An Interesting Module Pattern: the Sealed Module - Brian Chu">
 
-    <meta property="article:published_date" content="2013-08-14 04:27:00 -0700">
+    <meta property="article:published_date" content="2013-08-18 06:00:00 -0700">
     <meta property="article:section" content="Blog">
 
-    <meta property="article:tag" content="bower">
+    <meta property="article:tag" content="JavaScript">
 
-    <meta property="article:tag" content="npm">
+    <meta property="article:tag" content="tutorial">
 
 
 
@@ -43,21 +43,22 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="brrrianchu">
 
-    <meta name="twitter:title" content="A Little Note on Versions">
+    <meta name="twitter:title" content="An Interesting Module Pattern: the Sealed Module">
 
 
-    <meta name="twitter:description" content="tl;dr. Versions in bower and npm are maddeningly inconsistent in a tiny way now consistent. So&hellip; In semver and bower (I&rsquo;m assuming bower since it relies on the node-semver module), a &hellip;">
-
-
-
-    <meta property="st:title" content="A Little Note on Versions - Brian Chu">
-
-    <meta property="st:published_at" content="2013-08-14T04:27:00-07:00">
+    <meta name="twitter:description" content="An interesting way to share private state across components of modules in JavaScript: (credit goes to this article) ``` javascript
+var module = (function (module) { var private = module.private = &hellip;">
 
 
 
+    <meta property="st:title" content="An Interesting Module Pattern: the Sealed Module - Brian Chu">
 
-    <link rel="canonical" href="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions">
+    <meta property="st:published_at" content="2013-08-18T06:00:00-07:00">
+
+
+
+
+    <link rel="canonical" href="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module">
     <link href="/favicon.ico" rel="icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
@@ -168,7 +169,7 @@
             <header class="page-header">
 
 
-              <h2 class="entry-title">A Little Note on Versions</h2>
+              <h2 class="entry-title">An Interesting Module Pattern: the Sealed Module</h2>
 
 
               <p class="meta">
@@ -184,7 +185,7 @@
 
 
 
-                <time datetime="2013-08-14T04:27:00-07:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+                <time datetime="2013-08-18T06:00:00-07:00" pubdate data-updated="true">Aug 18<span>th</span>, 2013</time>
 
               </p>
 
@@ -192,14 +193,121 @@
 
 
             <div class="article-body">
-              <p>tl;dr. Versions in bower and npm are <del>maddeningly inconsistent in a tiny way</del> now consistent.</p>
+              <p>An interesting way to share private state across components of modules in JavaScript:
+                <!-- more -->
+                <br/>(credit goes to <a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html">this article</a>)</p>
 
-              <!-- more -->
+              <figure class='code'>
+                <figcaption><span></span>
+                </figcaption>
+                <div class="highlight">
+                  <table>
+                    <tr>
+                      <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre>
+                      </td>
+                      <td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">_private</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">_seal</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">_unseal</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>  <span class="c1">// permanent access to _private, _seal, and _unseal</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">module</span><span class="p">;</span>
+</span><span class='line'><span class="p">}(</span><span class="nx">module</span> <span class="o">||</span> <span class="p">{}));</span>
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </figure>
 
 
-              <p>So&hellip; In semver and bower (I&rsquo;m assuming bower since it relies on the node-semver module), a hypenated version suffix (postfix) decreases precedence &lt;(1.0.0 > 1.0.0-alpha > 1.0.0-1) and non-hypenated suffixes are invalid (1.0.0alpha is invalid).</p>
+              <p><code>_unseal</code> must be called by a function (probably some sort of loader function) that was initialized before <code>_seal</code> was called (so that <code>_unseal</code> will be present in its closure scope).</p>
 
-              <p>Whereas in npm, <del>hypenation with a numeric suffix increases precedence (1.0.0-1 > 1.0.0) whereas anything that is not a hypenated number decreases precedence (1.0.0 > 1.0.0alpha). So 1.0.0-1 > 1.0.0-1-a > 1.0.0 > 1.0.0alpha.</del> versioning does in fact follow semver. Npm will automatically append a hypen if you leave it out (1.0.0alpha is 1.0.0-alpha). <del>The (outdated?) <a href="https://npmjs.org/doc/json.html#version">npm documentation</a> had led me to believe otherwise.</del> The docs have been updated!</p>
+              <p>For example:</p>
+
+              <figure class='code'>
+                <figcaption><span></span>
+                </figcaption>
+                <div class="highlight">
+                  <table>
+                    <tr>
+                      <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre>
+                      </td>
+                      <td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">loadScript</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scriptUrl</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">_unseal</span><span class="p">();</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">scriptUrl</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;loaded&quot;</span> <span class="o">||</span>
+</span><span class='line'>          <span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;complete&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">module</span><span class="p">.</span><span class="nx">seal</span><span class="p">();</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">module</span><span class="p">.</span><span class="nx">seal</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">append</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre>
+                      </td>
+                    </tr>
+                  </table>
+                </div>
+              </figure>
+
             </div>
 
           </article>
@@ -223,12 +331,12 @@
 
 
 
-              <time datetime="2013-08-14T04:27:00-07:00" pubdate data-updated="true">Aug 14<span>th</span>, 2013</time>
+              <time datetime="2013-08-18T06:00:00-07:00" pubdate data-updated="true">Aug 18<span>th</span>, 2013</time>
 
 
               <span class="categories">
   
-    <a class='category' href='/blog/categories/bower/'>bower</a>, <a class='category' href='/blog/categories/npm/'>npm</a>
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
   
 </span>
 
@@ -237,14 +345,10 @@
             <ul class="pager">
 
               <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/07/11/grunt-by-example-a-tutorial-for-javascripts-task-runner/" title="Previous Post:
-        Grunt by Example - A Tutorial for JavaScript's Task Runner">&laquo; Grunt by Example - A Tutorial for JavaScript's Task Runner</a></li>
+        href="/blog/2013/08/14/a-little-thing-with-versions/" title="Previous Post:
+        A Little Note on Versions">&laquo; A Little Note on Versions</a></li>
 
               <li><a href="/blog/archives">Blog Archives</a></li>
-
-              <li class="next"><a class="basic-alignment right" href="/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/"
-        title="Next Post: An Interesting Module Pattern: the Sealed Module">An Interesting Module Pattern: the Sealed Module
-        &raquo;</a></li>
 
             </ul>
 
@@ -268,7 +372,7 @@
 
             <div class="sharing">
 
-              <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/">Tweet</a>
+              <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/">Tweet</a>
 
 
 
@@ -349,8 +453,8 @@
     <script>
     var disqus_shortname = 'brianchu';
      // var disqus_developer = 1;
-    var disqus_identifier = 'http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/';
-    var disqus_url = 'http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/';
+    var disqus_identifier = 'http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/';
+    var disqus_url = 'http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/';
     var disqus_script = 'embed.js';
     (function()
     {
