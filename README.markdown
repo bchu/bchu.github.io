@@ -16,9 +16,7 @@ Based on Octopress.
 ###Todo
 
 1. color scheme, colorify headers
-2. have github api data cached and static-ified on build
 3. cleanup CSS, simplify and consolidate responsive features
-  -check responsinator, handle low heights, handle overflow for dropdown menu.
 6. add images for projects
 8. show additional list of categories and recent posts when you scroll down a certain amount.
 9. track clicks!

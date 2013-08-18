@@ -1,11 +1,10 @@
 ---
 layout: post
 comments: true
-published: false
-date: 2013-07-25 01:20
+date: 2013-08-18 06:00
 categories: [JavaScript, tutorial]
 title: "An Interesting Module Pattern: the Sealed Module"
-description: "Sharing private state across components of a module."
+description: "Sharing private state across components of a module in JavaScript."
 ---
 
 An interesting way to share private state across components of modules in JavaScript: <!-- more -->  
