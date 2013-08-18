@@ -57,11 +57,8 @@ s, strike, del {
   // color: $subFontColor;
 }
 
-.title {
-  font-family: $headerFonts;
-  .title-subdue {
-    font-weight: lighter;
-  }
+.title .title-subdue {
+  font-weight: lighter;
 }
 
 h1 {

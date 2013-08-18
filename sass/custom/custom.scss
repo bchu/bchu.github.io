@@ -42,8 +42,6 @@ a, input, button {
 .profile-pic-container {
   text-align: right;
   height: 100%;
-  // text-align: center;
-  // width: $sideItemWidth;
 }
 
 // width is 100px (predetermined)
@@ -61,8 +59,6 @@ html {
 
 body {
   margin-bottom: $footerHeight; //hack for sticky footers
-  // background-color:$backgroundColor;
-  // background:transparent;
   font-family: $bodyFonts;
   color:$fontColor;
   padding-bottom:70px;
@@ -72,7 +68,6 @@ body:before {
   content:'';
   height:100%;
   width:100%;
-  // background: $backgroundColor url('../../images/pixel_weave.png');
   background: $backgroundColor $bgImage;
   opacity:0.6;
   position: absolute;

@@ -3,18 +3,17 @@ $baseFontSize:18px;
 $contentLineHeight:1.4;
 
 $bgImage: url('../../images/diamond_upholstery.png');
-$backgroundColor:#fafafa;//#FAFDFF;
-$headerBgColor: $backgroundColor; //#ebf5fa;
+$backgroundColor:#fafafa;
+$headerBgColor: $backgroundColor;
 $headerFontColor:none;
 $fontColor:#26343C;
 $subFontColor:#454545;
-$buttonTextColor: $backgroundColor;//#33383A;
+$buttonTextColor: $backgroundColor;
 
 $bodyFonts: 'Source Sans Pro',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-$headerFonts: 'Source Sans Pro',"Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
 
 $buttonBorderRadius:4px;
-$buttonColor: #ee6768;//#7bdcf5;
+$buttonColor: #ee6768;
 $buttonShadowColor: #BE4B4C;
 $buttonShadowWidth: 6px;
 $buttonWidth: 195px;
@@ -30,12 +29,12 @@ $footerLinkColor: $linkColor;
 $footerLinkHoverColor: $linkHoverColor;
 
 $wellBgColor: $backgroundColor;
-$wellShadow: #d3d3d3;//rgba(135,205,234,0.15);
+$wellShadow: #d3d3d3;
 $wellBorderColor: $wellShadow;
 
 $sideItemWidth: 250px;
 
-$footerBgColor: $wellBgColor;//rgb(235,245,250);
+$footerBgColor: $wellBgColor;
 
 $profilePicRadius: $buttonBorderRadius + 6px;
 $sideAffixMarginTop: 20px;

@@ -113,23 +113,6 @@
   }
 }
 
-// Code for getting sidebar elements to stack in center as separate row:
-// @media (max-width: 1044px) and (min-width:676px) {
-//   .row-fluid aside.span4 {
-//     width: 100%;
-//     text-align: center;
-//   }
-
-//   .side-centering section {
-//     float:left;
-//     width:250px;
-//     min-height: 165px;
-//   }
-//   .side-centering > section:first-child {
-//     margin-left: 0;
-//   }
-// }
-
 @media (min-width: 1045px) {
   .side-responsive {
     display: none;
@@ -348,8 +331,6 @@
   section.side-nav {
     display: none;
     z-index:100;
-    // border: none;
-    // box-shadow: none;
     margin:0;
     padding: 10px 0 10px 0;
     height: auto;
