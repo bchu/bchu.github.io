@@ -94,6 +94,10 @@ $(function () {
 
   // after the google contact form submission's response is loaded in the iframe
   $('#contact-form-frame').load(function() {
+    // in firefox, loading 'about:blank' fires the load event, so check it:
+    if (this.src === 'about:blank') {
+      return;
+    }
     var $alert = $('.alert');
     $alert.addClass('alert-success');
     $alert.find('strong').text('Thanks!');
