@@ -92,7 +92,7 @@ var module = (function (module) { var private = module.private = &hellip;">
   </head>
 
   <body>
-    <!--[if lt IE 7]>
+    <!--[if lt IE 9]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
     <div class="fixed-top alert text-center" style="display:none">
@@ -112,7 +112,7 @@ var module = (function (module) { var private = module.private = &hellip;">
           </h1>
 
           <span class="subtext">
-      <h3 class="inline">a full-stack software engineer. I ♥ JavaScript + iOS.</h3>
+      <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
     </span>
 
         </section>
@@ -125,7 +125,7 @@ var module = (function (module) { var private = module.private = &hellip;">
         <aside class="span4 side-bar clear-affix" data-spy="affix" data-offset-top="206"></aside>
 
         <aside class="span4 side-bar" data-spy="affix" data-offset-top="206">
-          <div class="side-centering">
+          <div class="side-bar-responsive">
 
             <button class="menu-btn hide"><i class="icon-align-justify icon-large"></i>
             </button>
@@ -344,12 +344,12 @@ var module = (function (module) { var private = module.private = &hellip;">
             </p>
             <ul class="pager">
 
+
               <li class="previous"><a class="basic-alignment left"
         href="/blog/2013/08/14/a-little-thing-with-versions/" title="Previous Post:
         A Little Note on Versions">&laquo; A Little Note on Versions</a></li>
 
-              <li><a href="/blog/archives">Blog Archives</a></li>
-
+              <li class="archives"><a href="/blog/archives">Blog Archives</a></li>
             </ul>
 
 
@@ -524,6 +524,10 @@ var module = (function (module) { var private = module.private = &hellip;">
     <script src="/javascripts/libs.js"></script>
     <script src="/javascripts/custom.js"></script>
 
+
+    <!--[if lte IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
+<![endif]-->
 
 
 
