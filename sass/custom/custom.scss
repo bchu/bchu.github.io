@@ -180,6 +180,7 @@ header.row-fluid {
 }
 
 .side-item {
+  margin-left: auto;
   text-align:left;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
@@ -221,10 +222,6 @@ input, textarea, select {
 
 section.side-nav {
   text-align:center;
-}
-
-.side-centering {
-  display: inline-block;
 }
 
 .nav-list {
