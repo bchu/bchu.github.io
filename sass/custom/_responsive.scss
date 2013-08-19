@@ -184,7 +184,20 @@
   }
 }
 
-// search input collapses into an icon, button icons disappear
+// button icons disappear
+// 440px: menu button appears
+@media (max-width: 767px) and (min-width: 440px) {
+  .nav-list {
+    .flat-btn {
+      padding-left:0;
+      text-align: center;
+    }
+    .icon:before {
+      content:'';
+    }
+  }
+}
+// search input collapses into an icon
 // bootstrap does stuff here
 @media (max-width: 767px) {
   section.side-nav {
@@ -194,13 +207,6 @@
     padding-right: 35px; // space for icon
     li {
       width: 25%;
-      .flat-btn {
-        padding-left:0;
-        text-align: center;
-      }
-      .icon:before {
-        content:'';
-      }
     }
   }
   .nav-search {
@@ -316,6 +322,10 @@
       margin-right: auto;
       .flat-btn {
         vertical-align: middle;
+        padding-left: 15%;
+      }
+      .icon:before {
+        right:0;
       }
     }
   }
