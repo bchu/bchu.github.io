@@ -13,4 +13,10 @@
 <script src="{{ root_url }}/javascripts/libs.js"></script>
 <script src="{{ root_url }}/javascripts/custom.js"></script>
 <!(endif)-->
+{% comment %}
+IE 9 bug: placeholders do not show properly
+{% endcomment %}
+<!--[if lte IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
+<![endif]-->
 
