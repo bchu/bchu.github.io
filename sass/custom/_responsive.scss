@@ -96,13 +96,22 @@
       text-align:justify;
     }
   }
+  .row-fluid .span4 {
+    min-height: 0; // collapse sidebars
+  }
   header.row-fluid {
     padding: 15px;
+    text-align: center;
+    .span8, .span4 {
+      width: auto;
+      float:none;
+      display:inline-block;
+      vertical-align:top;
+    }
     .span8 {
       margin: 0 auto;
-    }
-    .span4 {
-      width: 20%;
+      text-align: left;
+      padding-left: 3%;
     }
   }
 
@@ -177,17 +186,10 @@
   }
 }
 
-// 767px is when bootstrap automatically sets width to 100%
-@media (max-width: 1044px) and (min-width: 768px) {
-  header.row-fluid .span8 {
-    width: 75%;
-  }
-}
-
 // button icons disappear
 // 440px: menu button appears
 @media (max-width: 767px) and (min-width: 440px) {
-  .nav-list {
+  .nav-list li {
     .flat-btn {
       padding-left:0;
       text-align: center;
@@ -230,20 +232,6 @@
     }
   }
 
-  header.row-fluid .span4.profile-pic-container {
-    width: auto;
-    vertical-align: top;
-    display: inline-block;
-    float:left;
-    // this must be set manually and depends on the length of the header subtitle
-    // if the subtitle is too long, then the profile pic and header get scrunched on top of each other, so spacing between both must be decreased.
-    margin-left: 25px;
-  }
-  header.row-fluid .span8 {
-    display: inline-block;
-    width: auto;
-    box-sizing:  border-box;
-  }
   body {
     padding-right: 0;
     padding-left: 0;
@@ -262,11 +250,10 @@
 }
 
 // collapse profile-pic and headline
-@media (max-width: 690px) {
+@media (max-width: 702px) {
   header.row-fluid .span4.profile-pic-container {
     width: 100%;
     text-align: center;
-    margin-left:0;
     margin-bottom: 10px;
   }
   header.row-fluid .span8 {
