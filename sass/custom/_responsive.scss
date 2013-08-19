@@ -64,16 +64,28 @@
   }
 }
 
-// Collapse rows
-@media (max-width: 1044px) {
-  #profile-pic {
-    margin-right: 0;
+@media (min-width: 1045px) {
+  .side-responsive {
+    display: none;
+    visibility: hidden;
   }
+}
+
+// Collapse rows, collapse sidebar to top
+@media (max-width: 1044px) {
+  body {
+    padding-top: $navbarHeight;
+  }
+
   .affix {
     position: static !important;
   }
   .clear-affix {
     position: absolute !important;
+  }
+
+  .row-fluid {
+    margin-top: 20px;
   }
   .content-row .span8 {
     margin:0 auto;
@@ -84,7 +96,6 @@
       text-align:justify;
     }
   }
-
   header.row-fluid {
     padding: 15px;
     .span8 {
@@ -100,44 +111,16 @@
     text-align: center;
     max-width: none;
   }
-  .row-fluid .span4 {
-    min-height: 0;
-  }
-}
 
-// 767px is when bootstrap automatically sets width to 100%
-@media (max-width: 1044px) and (min-width: 768px) {
-  header.row-fluid .span8 {
-    width: 75%;
-  }
-}
-
-@media (min-width: 1045px) {
-  .side-responsive {
-    display: none;
-    visibility: hidden;
-  }
-}
-
-// Collapse sidebar to top
-@media (max-width: 1044px) { // 937 px
-  .profile-pic-container {
-    display: inline-block;
-  }
-  body {
-    padding-top: $navbarHeight;
-  }
-
-  .row-fluid {
-    margin-top: 20px;
+  #profile-pic {
+    margin-right: 0;
   }
 
   .side-bar-responsive {
-    margin-left:0;
     position: fixed;
     z-index: $zNavDropdown;
     top: 0;
-    left:0;
+    left:0; //fixes bug where a gap appears to the left
     width: 100%;
   }
 
@@ -145,9 +128,7 @@
     height: $navbarHeight;
     padding:15px;
     margin-bottom: 0;
-    min-height: 0;
     width: 100%;
-    background: none;
     border-radius: 0;
     background: $navbarBg;
   }
@@ -158,14 +139,11 @@
   }
 
   .nav-search {
-    text-align: right;
     position: relative;
     top:6px;
-    float: left;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     width: 20%;
-    margin-bottom: 0;
   }
   .nav-list {
     margin:0;
@@ -174,9 +152,7 @@
       // fixed issue with firefox psuedo elements not getting properly absolutely positioned.
       position: relative;
       display: inline-table;
-      vertical-align: middle !important;
       float:left;
-      margin-top: 0;
       -moz-box-sizing: border-box;
       box-sizing: border-box;
       width: 20%;
@@ -185,10 +161,9 @@
         display:table-cell;
         vertical-align: middle !important;
         text-align: left;
-        padding:0;
-        padding-left: 10%;
+        padding:0 0 0 10%;
         font-size: 0.8em;
-        width: 100%;
+        width: 100%; // unnecessary, but makes things clear
         height: 40px;
         white-space: normal;
       }
@@ -199,35 +174,20 @@
     top: -8px;
     right: 2px;
   }
-
 }
 
-// search input collapses into an icon
+// 767px is when bootstrap automatically sets width to 100%
+@media (max-width: 1044px) and (min-width: 768px) {
+  header.row-fluid .span8 {
+    width: 75%;
+  }
+}
+
+// search input collapses into an icon, button icons disappear
 // bootstrap does stuff here
 @media (max-width: 767px) {
   section.side-nav {
     padding-right: 0;
-  }
-  .nav-search {
-    text-align: right;
-    width: auto;
-    .search-toggle {
-      position: relative;
-      top: -6px; //reverse of nav-search positioning
-      display: inline-block;
-    }
-    .input-padding-wrapper {
-      width: 100%;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
-      padding-right: 65px; //space for "Close"
-      display: none;
-    }
-    input.st-search-input {
-      width: 100%;
-      max-width:400px;
-      margin: 0 10px;
-    }
   }
   .nav-list {
     padding-right: 35px; // space for icon
@@ -235,12 +195,31 @@
       width: 25%;
       .flat-btn {
         padding-left:0;
-        padding-right:0;
         text-align: center;
       }
       .icon:before {
         content:'';
       }
+    }
+  }
+  .nav-search {
+    width: auto;
+    .search-toggle {
+      position: relative;
+      top: -6px; //reverse of nav-search positioning
+      display: inline-block;
+    }
+    .input-padding-wrapper {
+      text-align: right;
+      width: 100%;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+      padding-right: 65px; //space for "Close"
+      display: none;
+    }
+    input.st-search-input {
+      max-width:400px;
+      margin-right: 10px;
     }
   }
 
@@ -249,18 +228,14 @@
     vertical-align: top;
     display: inline-block;
     float:left;
-    margin-left: 40px;
+    // this must be set manually and depends on the length of the header subtitle
+    // if the subtitle is too long, then the profile pic and header get scrunched on top of each other, so spacing between both must be decreased.
+    margin-left: 25px;
   }
   header.row-fluid .span8 {
     display: inline-block;
     width: auto;
     box-sizing:  border-box;
-  }
-  .row-fluid {
-    padding: 0;
-  }
-  .span4 {
-    text-align: left;
   }
   body {
     padding-right: 0;
@@ -290,14 +265,10 @@
   header.row-fluid .span8 {
     width: 100%;
     text-align: center;
-    margin: 0;
     padding: 0;
   }
    header h3.inline {
     font-size: 22px;
-  }
-  .entry-title {
-    text-align: center;
   }
 }
 
@@ -312,8 +283,6 @@
   body {
     padding-top:0;
   }
-  header.row-fluid {
-  }
   .hide.menu-btn {
     position: fixed;
     z-index: $zMenuBtn; // allows you to click on button
@@ -323,23 +292,35 @@
     padding: 5px;
     background: $fontColor;
     color: white;
-    display: inline-block;
+    display: block;
     box-shadow: 0 0 1px 0 $fontColor;
     // box-shadow: inset 1px 1px 1px 0px #435E6D;
   }
   header.row-fluid {
-    padding-top: $navbarHeight - 20px;
+    padding-top: 15px;
   }
   section.side-nav {
     display: none;
-    margin:0;
     padding: 10px 0 10px 0;
     height: auto;
   }
+  .nav-list {
+    padding:0 9px 0 0;
+    li {
+      padding-right:0;
+      display: table;
+      float: none;
+      width: $buttonWidth;
+      margin-left: auto;
+      margin-right: auto;
+      .flat-btn {
+        vertical-align: middle;
+      }
+    }
+  }
   .nav-search {
     width: $searchWidth;
-    float: none;
-    top: 0;
+    position: static;
     .search-toggle {
       display: none;
     }
@@ -348,33 +329,12 @@
       display: block;
     }
   }
-  .nav-list {
-    padding:0 0 0 9px;
-    text-align: center;
-    li {
-      padding-right:0;
-      width: 100%;
-      text-align: center;
-      display: block;
-      float: none;
-      .flat-btn {
-        width: $buttonWidth;
-        display: inline-block;
-      }
-      .icon:before {
-        content:inherit;
-      }
-    }
-  }
 }
 
 @media (max-width: 400px) {
-  .row-fluid {
-    padding:0;
-  }
   header.row-fluid{
-    padding: 0;
-    padding-top:15px;
+    padding-left: 0;
+    padding-right: 0;
   }
   .content-row .span8 {
     padding: 15px;
