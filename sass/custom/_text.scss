@@ -6,6 +6,21 @@
 .meta {
   margin-top:10px;
 }
+.pager {
+  width: 100%;
+  text-align: left;
+  li {
+    display: inline-block;
+    max-width: 48%;
+  }
+  .next {
+    float: right;
+    text-align: right;
+  }
+  .archives {
+    display:block;
+  }
+}
 td.code {
   vertical-align:top;
 }
