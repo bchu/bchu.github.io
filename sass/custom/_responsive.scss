@@ -33,6 +33,12 @@
   width: 300px;
 }
 
+// only br elements have this class
+// this class is used to responsively trigger line breaks
+.break {
+  display:none;
+}
+
 // Prevent sidebar from being sticky if screen is smaller than sidebar.
 // 582 = height of sidebar
 // 10px ensures that the sidebar does not overlap with the footer
@@ -266,9 +272,10 @@
   }
 }
 
-@media (max-width: 459px) {
- header h3.inline {
-    font-size: 18px;
+@media (max-width: 510px) {
+  // split subtitle into two lines
+  header .break {
+    display: inline;
   }
 }
 
