@@ -287,10 +287,11 @@
   .hide.menu-btn {
     position: fixed;
     z-index: $zMenuBtn; // allows you to click on button
-    right: 6px;
-    top: 2px; 
+    right: 8px;
+    top: 6px;
     border-radius: $buttonBorderRadius;
-    padding: 5px;
+    padding: 7px;
+    padding-bottom: 6px; // manual tweak because button icon is a little empty on the bottom
     background: $fontColor;
     color: white;
     display: block;
