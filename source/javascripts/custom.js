@@ -38,6 +38,23 @@
 $(function () {
   var $window = $(window);
 
+  // type: string
+  // header: string
+  // body: string
+  var triggerAlert = function(type,header,body) {
+    var $alert = $('.alert');
+    $alert.addClass('alert-'+type);
+    $alert.find('strong').text(header);
+    $alert.find('span').text(body);
+    $alert.slideToggle(200);
+    // automatically disappear
+    setTimeout(function() {
+      if ($alert.is(':visible')) {
+        $alert.slideToggle(200);
+      }
+    },4000);
+  };
+
   // only focus the email input field if doing so would not trigger the page to jump down
   var $subscribeInput = $('.side-email input[type="email"]').filter(function(i,el){return $(el).is(':visible');});
   if ($subscribeInput.position().top + $subscribeInput.height() < $window.height()) {
@@ -69,8 +86,10 @@ $(function () {
     }
   });
 
-  // handle email signups from contact modal
-  // also close modal on submit
+  // Submit contact form:
+  // -handle email signups from contact modal
+  // -close modal on submit
+  // -trigger a success alert
   $('.contact-modal').submit(function(e) {
     var $this = $(this);
     if ($this.find('input[type="checkbox"]').prop('checked')) {
@@ -85,30 +104,15 @@ $(function () {
       }, 500);
     }
     $this.modal('hide');
+    // slight delay
+    setTimeout(function() {
+      triggerAlert('success','Thanks!',"I'll get back to you ASAP!");
+    },300);
   });
 
   // push contact button back up when modal hides
   $('.contact-modal').on('hide', function() {
     $('a[data-target=".contact-modal.hide.fade"]').button('toggle');
-  });
-
-  // after the google contact form submission's response is loaded in the iframe
-  $('#contact-form-frame').load(function() {
-    // in firefox, loading 'about:blank' fires the load event, so check it:
-    if (this.src === 'about:blank') {
-      return;
-    }
-    var $alert = $('.alert');
-    $alert.addClass('alert-success');
-    $alert.find('strong').text('Thanks!');
-    $alert.find('span').text("I'll get back to you ASAP!");
-    $alert.slideToggle(200);
-    // automatically disappear
-    setTimeout(function() {
-      if ($alert.is(':visible')) {
-        $alert.slideToggle(200);
-      }
-    },4000);
   });
 
   // toggle search bar
