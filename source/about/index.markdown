@@ -9,4 +9,6 @@ I'm a full-stack JavaScript engineer. I believe rich client-side apps are the fu
 
 I was formerly the Lead Developer at MakeGamesWithUs (YC W12), an iOS game publishing startup. I've got Objective-C down pretty well, and dabble in some iOS app development in addition to iOS game development.
 
+I'm currently hacking on my own products and open-source projects while studying CS at UC Berkeley.
+
 Reach out to me! There's a contact form on the left.
