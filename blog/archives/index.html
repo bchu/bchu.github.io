@@ -45,8 +45,11 @@
 
 
     <meta name="twitter:description" content="{% for post in site.posts reverse %}
+
 {% capture this_year %}{{ post.date | date: " %Y " }}{% endcapture %}
+
 {% unless year == this_year %} {% assign year = this_year %} {{ year }}
+
 {% endunless %} {% &hellip;">
 
     <meta name="twitter:image" content="http://www.brianchu.com/images/profile.png">
@@ -113,7 +116,9 @@
           </h1>
 
           <span class="subtext">
+
       <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
+
     </span>
 
         </section>
@@ -137,7 +142,9 @@
                 <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
 
                 <li data-toggle="buttons-checkbox">
+
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
+
     </li>
               </ul>
               <form class="nav-search">

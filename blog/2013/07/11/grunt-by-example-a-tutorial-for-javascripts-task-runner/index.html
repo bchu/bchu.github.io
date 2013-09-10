@@ -112,7 +112,9 @@
           </h1>
 
           <span class="subtext">
+
       <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
+
     </span>
 
         </section>
@@ -136,7 +138,9 @@
                 <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
 
                 <li data-toggle="buttons-checkbox">
+
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
+
     </li>
               </ul>
               <form class="nav-search">
@@ -233,93 +237,179 @@
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
 <span class='line-number'>2</span>
+
 <span class='line-number'>3</span>
+
 <span class='line-number'>4</span>
+
 <span class='line-number'>5</span>
+
 <span class='line-number'>6</span>
+
 <span class='line-number'>7</span>
+
 <span class='line-number'>8</span>
+
 <span class='line-number'>9</span>
+
 <span class='line-number'>10</span>
+
 <span class='line-number'>11</span>
+
 <span class='line-number'>12</span>
+
 <span class='line-number'>13</span>
+
 <span class='line-number'>14</span>
+
 <span class='line-number'>15</span>
+
 <span class='line-number'>16</span>
+
 <span class='line-number'>17</span>
+
 <span class='line-number'>18</span>
+
 <span class='line-number'>19</span>
+
 <span class='line-number'>20</span>
+
 <span class='line-number'>21</span>
+
 <span class='line-number'>22</span>
+
 <span class='line-number'>23</span>
+
 <span class='line-number'>24</span>
+
 <span class='line-number'>25</span>
+
 <span class='line-number'>26</span>
+
 <span class='line-number'>27</span>
+
 <span class='line-number'>28</span>
+
 <span class='line-number'>29</span>
+
 <span class='line-number'>30</span>
+
 <span class='line-number'>31</span>
+
 <span class='line-number'>32</span>
+
 <span class='line-number'>33</span>
+
 <span class='line-number'>34</span>
+
 <span class='line-number'>35</span>
+
 <span class='line-number'>36</span>
+
 <span class='line-number'>37</span>
+
 <span class='line-number'>38</span>
+
 <span class='line-number'>39</span>
+
 <span class='line-number'>40</span>
+
 <span class='line-number'>41</span>
+
 <span class='line-number'>42</span>
+
 <span class='line-number'>43</span>
+
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//Grunt is just JavaScript running in node, after all...</span>
+
 </span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+
 </span><span class='line'>
+
 </span><span class='line'>  <span class="c1">// All upfront config goes in a massive nested object.</span>
+
 </span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+
 </span><span class='line'>    <span class="c1">// You can set arbitrary key-value pairs.</span>
+
 </span><span class='line'>    <span class="nx">distFolder</span><span class="o">:</span> <span class="s1">&#39;dist&#39;</span><span class="p">,</span>
+
 </span><span class='line'>    <span class="c1">// You can also set the value of a key as parsed JSON.</span>
+
 </span><span class='line'>    <span class="c1">// Allows us to reference properties we declared in package.json.</span>
+
 </span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+
 </span><span class='line'>    <span class="c1">// Grunt tasks are associated with specific properties.</span>
+
 </span><span class='line'>    <span class="c1">// these names generally match their npm package name.</span>
+
 </span><span class='line'>    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>      <span class="c1">// Specify some options, usually specific to each plugin.</span>
+
 </span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>        <span class="c1">// Specifies string to be inserted between concatenated files.</span>
+
 </span><span class='line'>        <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+
 </span><span class='line'>      <span class="p">},</span>
+
 </span><span class='line'>      <span class="c1">// &#39;dist&#39; is what is called a &quot;target.&quot;</span>
+
 </span><span class='line'>      <span class="c1">// It&#39;s a way of specifying different sub-tasks or modes.</span>
+
 </span><span class='line'>      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>        <span class="c1">// The files to concatenate:</span>
+
 </span><span class='line'>        <span class="c1">// Notice the wildcard, which is automatically expanded.</span>
+
 </span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;scripts/*.js&#39;</span><span class="p">],</span>
+
 </span><span class='line'>        <span class="c1">// The destination file:</span>
+
 </span><span class='line'>        <span class="c1">// Notice the angle-bracketed ERB-like templating,</span>
+
 </span><span class='line'>        <span class="c1">// which allows you to reference other properties.</span>
+
 </span><span class='line'>        <span class="c1">// This is equivalent to &#39;dist/main.js&#39;.</span>
+
 </span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= distFolder %&gt;/main.js&#39;</span>
+
 </span><span class='line'>        <span class="c1">// You can reference any grunt config property you want.</span>
+
 </span><span class='line'>        <span class="c1">// Ex: &#39;&lt;%= concat.options.separator %&gt;&#39; instead of &#39;;&#39;</span>
+
 </span><span class='line'>      <span class="p">}</span>
+
 </span><span class='line'>    <span class="p">}</span>
+
 </span><span class='line'>  <span class="p">});</span> <span class="c1">// The end of grunt.initConfig</span>
+
 </span><span class='line'>
+
 </span><span class='line'>  <span class="c1">// We&#39;ve set up each task&#39;s configuration.</span>
+
 </span><span class='line'>  <span class="c1">// Now actually load the tasks.</span>
+
 </span><span class='line'>  <span class="c1">// This will do a lookup similar to node&#39;s require() function.</span>
+
 </span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
+
 </span><span class='line'>
+
 </span><span class='line'>  <span class="c1">// Register our own custom task alias.</span>
+
 </span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;concat&#39;</span><span class="p">]);</span>
+
 </span><span class='line'><span class="p">};</span>
+
 </span></code></pre>
                       </td>
                     </tr>
@@ -342,43 +432,79 @@
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
 <span class='line-number'>2</span>
+
 <span class='line-number'>3</span>
+
 <span class='line-number'>4</span>
+
 <span class='line-number'>5</span>
+
 <span class='line-number'>6</span>
+
 <span class='line-number'>7</span>
+
 <span class='line-number'>8</span>
+
 <span class='line-number'>9</span>
+
 <span class='line-number'>10</span>
+
 <span class='line-number'>11</span>
+
 <span class='line-number'>12</span>
+
 <span class='line-number'>13</span>
+
 <span class='line-number'>14</span>
+
 <span class='line-number'>15</span>
+
 <span class='line-number'>16</span>
+
 <span class='line-number'>17</span>
+
 <span class='line-number'>18</span>
+
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>    <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+
 </span><span class='line'>  <span class="p">},</span>
+
 </span><span class='line'>  <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;scripts/*.js&#39;</span><span class="p">],</span>
+
 </span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= distFolder %&gt;/main.js&#39;</span>
+
 </span><span class='line'>  <span class="p">},</span>
+
 </span><span class='line'>  <span class="nx">deploy</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>    <span class="c1">// options that are specific to the &#39;deploy&#39; target</span>
+
 </span><span class='line'>    <span class="c1">// target-level options override task-level options</span>
+
 </span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>      <span class="c1">// separator:&#39;;;;&#39; would override the parent setting</span>
+
 </span><span class='line'>    <span class="p">},</span>
+
 </span><span class='line'>    <span class="nx">src</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;deploy/*.js&#39;</span><span class="p">],</span>
+
 </span><span class='line'>    <span class="nx">dest</span><span class="o">:</span><span class="s1">&#39;deploy.js&#39;</span>
+
 </span><span class='line'>  <span class="p">}</span>
+
 </span><span class='line'><span class="p">}</span>
+
 </span></code></pre>
                       </td>
                     </tr>
@@ -407,43 +533,79 @@
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
 <span class='line-number'>2</span>
+
 <span class='line-number'>3</span>
+
 <span class='line-number'>4</span>
+
 <span class='line-number'>5</span>
+
 <span class='line-number'>6</span>
+
 <span class='line-number'>7</span>
+
 <span class='line-number'>8</span>
+
 <span class='line-number'>9</span>
+
 <span class='line-number'>10</span>
+
 <span class='line-number'>11</span>
+
 <span class='line-number'>12</span>
+
 <span class='line-number'>13</span>
+
 <span class='line-number'>14</span>
+
 <span class='line-number'>15</span>
+
 <span class='line-number'>16</span>
+
 <span class='line-number'>17</span>
+
 <span class='line-number'>18</span>
+
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// This is the default port that livereload listens on;</span>
+
 </span><span class='line'><span class="c1">// change it if you configure livereload to use another port.</span>
+
 </span><span class='line'><span class="kd">var</span> <span class="nx">LIVERELOAD_PORT</span> <span class="o">=</span> <span class="mi">35729</span><span class="p">;</span>
+
 </span><span class='line'><span class="c1">// lrSnippet is just a function.</span>
+
 </span><span class='line'><span class="c1">// It&#39;s a piece of Connect middleware that injects</span>
+
 </span><span class='line'><span class="c1">// a script into the static served html.</span>
+
 </span><span class='line'><span class="kd">var</span> <span class="nx">lrSnippet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;connect-livereload&#39;</span><span class="p">)({</span> <span class="nx">port</span><span class="o">:</span> <span class="nx">LIVERELOAD_PORT</span> <span class="p">});</span>
+
 </span><span class='line'><span class="c1">// All the middleware necessary to serve static files.</span>
+
 </span><span class='line'><span class="kd">var</span> <span class="nx">livereloadMiddleware</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">connect</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+
 </span><span class='line'>  <span class="k">return</span> <span class="p">[</span>
+
 </span><span class='line'>    <span class="c1">// Inject a livereloading script into static files.</span>
+
 </span><span class='line'>    <span class="nx">lrSnippet</span><span class="p">,</span>
+
 </span><span class='line'>    <span class="c1">// Serve static files.</span>
+
 </span><span class='line'>    <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">base</span><span class="p">),</span>
+
 </span><span class='line'>    <span class="c1">// Make empty directories browsable.</span>
+
 </span><span class='line'>    <span class="nx">connect</span><span class="p">.</span><span class="nx">directory</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">base</span><span class="p">)</span>
+
 </span><span class='line'>  <span class="p">];</span>
+
 </span><span class='line'><span class="p">};</span>
+
 </span></code></pre>
                       </td>
                     </tr>
@@ -461,67 +623,127 @@
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
 <span class='line-number'>2</span>
+
 <span class='line-number'>3</span>
+
 <span class='line-number'>4</span>
+
 <span class='line-number'>5</span>
+
 <span class='line-number'>6</span>
+
 <span class='line-number'>7</span>
+
 <span class='line-number'>8</span>
+
 <span class='line-number'>9</span>
+
 <span class='line-number'>10</span>
+
 <span class='line-number'>11</span>
+
 <span class='line-number'>12</span>
+
 <span class='line-number'>13</span>
+
 <span class='line-number'>14</span>
+
 <span class='line-number'>15</span>
+
 <span class='line-number'>16</span>
+
 <span class='line-number'>17</span>
+
 <span class='line-number'>18</span>
+
 <span class='line-number'>19</span>
+
 <span class='line-number'>20</span>
+
 <span class='line-number'>21</span>
+
 <span class='line-number'>22</span>
+
 <span class='line-number'>23</span>
+
 <span class='line-number'>24</span>
+
 <span class='line-number'>25</span>
+
 <span class='line-number'>26</span>
+
 <span class='line-number'>27</span>
+
 <span class='line-number'>28</span>
+
 <span class='line-number'>29</span>
+
 <span class='line-number'>30</span>
+
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// The connect task is used to serve static files with a local server.</span>
+
 </span><span class='line'><span class="nx">connect</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>  <span class="nx">client</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>      <span class="c1">// The server&#39;s port, and the folder to serve from:</span>
+
 </span><span class='line'>      <span class="c1">// Ex: &#39;localhost:9000&#39; would serve up &#39;client/index.html&#39;</span>
+
 </span><span class='line'>      <span class="nx">port</span><span class="o">:</span> <span class="mi">9000</span><span class="p">,</span>
+
 </span><span class='line'>      <span class="nx">base</span><span class="o">:</span><span class="s1">&#39;client&#39;</span>
+
 </span><span class='line'>      <span class="c1">// Custom middleware for the HTTP server:</span>
+
 </span><span class='line'>      <span class="c1">// The injected JavaScript reloads the page.</span>
+
 </span><span class='line'>      <span class="nx">middleware</span><span class="o">:</span> <span class="nx">livereloadMiddleware</span>
+
 </span><span class='line'>    <span class="p">}</span>
+
 </span><span class='line'>  <span class="p">}</span>
+
 </span><span class='line'><span class="p">}</span>
+
 </span><span class='line'><span class="c1">// The watch task is used to run tasks in response to file changes</span>
+
 </span><span class='line'><span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>  <span class="nx">client</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>    <span class="c1">// &#39;**&#39; is used to include all subdirectories</span>
+
 </span><span class='line'>    <span class="c1">// and subdirectories of subdirectories, and so on, recursively.</span>
+
 </span><span class='line'>    <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;client/**/*&#39;</span><span class="p">],</span>
+
 </span><span class='line'>    <span class="c1">// In our case, we don&#39;t configure any additional tasks,</span>
+
 </span><span class='line'>    <span class="c1">// since livereload is built into the watch task,</span>
+
 </span><span class='line'>    <span class="c1">// and since the browser refresh is handled by the snippet.</span>
+
 </span><span class='line'>    <span class="c1">// Any other tasks to run (e.g. compile CoffeeScript) go here:</span>
+
 </span><span class='line'>    <span class="nx">tasks</span><span class="o">:</span><span class="p">[],</span>
+
 </span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+
 </span><span class='line'>      <span class="nx">livereload</span><span class="o">:</span><span class="nx">LIVERELOAD_PORT</span>
+
 </span><span class='line'>    <span class="p">}</span>
+
 </span><span class='line'>  <span class="p">}</span>
+
 </span><span class='line'><span class="p">}</span>
+
 </span></code></pre>
                       </td>
                     </tr>
@@ -539,9 +761,11 @@
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;preview&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;connect:client&#39;</span><span class="p">,</span><span class="s1">&#39;watch:client&#39;</span><span class="p">]);</span>
+
 </span></code></pre>
                       </td>
                     </tr>
@@ -561,7 +785,10 @@
                 <li><code>grunt-contrib-sass</code> for compiling SASS.</li>
                 <li><code>grunt-concurrent</code> for running tasks concurrently (instead of sequentially) &ndash; useful if you want to run multiple watch tasks concurrently.
 
+
+
 <ul>
+
 <li>If you have a series of tasks, the <code>watch</code> task must be run last. <code>watch</code> is a task that never ends until you terminate it. Thus, Grunt won&rsquo;t ever reach tasks that come after <code>watch</code>.</li>
               </ul>
               </li>
@@ -577,7 +804,10 @@
                 <li>If your Gruntfile starts getting too unwieldy, you can break it up by using <code>grunt.file.readJSON()</code>.</li>
                 <li>Tired of copying and pasting <code>loadNpmTasks</code>?  Try this:
 
+
+
 <ul>
+
 <li><code>npm install --save-dev matchdep</code></li>
                 <li>use <code>require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);</code> where you would otherwise list out all your multiple <code>grunt.loadNpmTask</code> calls.</li>
                 </ul>
@@ -613,9 +843,13 @@
 
 
               <span class="categories">
+
   
+
     <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
+
   
+
 </span>
 
 
@@ -623,7 +857,9 @@
             <ul class="pager">
 
               <li class="next"><a class="basic-alignment right" href="/blog/2013/08/14/a-little-thing-with-versions/"
+
         title="Next Post: A Little Note on Versions">A Little Note on Versions
+
         &raquo;</a></li>
 
 
