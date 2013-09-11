@@ -47,7 +47,6 @@
 
 
     <meta name="twitter:description" content="An interesting way to share private state across components of modules in JavaScript: (credit goes to this article) ``` javascript
-
 var module = (function (module) { var private = module.private = &hellip;">
 
 
@@ -114,9 +113,7 @@ var module = (function (module) { var private = module.private = &hellip;">
           </h1>
 
           <span class="subtext">
-
       <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
-
     </span>
 
         </section>
@@ -140,9 +137,7 @@ var module = (function (module) { var private = module.private = &hellip;">
                 <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
 
                 <li data-toggle="buttons-checkbox">
-
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
-
     </li>
               </ul>
               <form class="nav-search">
@@ -210,71 +205,39 @@ var module = (function (module) { var private = module.private = &hellip;">
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-
 <span class='line-number'>2</span>
-
 <span class='line-number'>3</span>
-
 <span class='line-number'>4</span>
-
 <span class='line-number'>5</span>
-
 <span class='line-number'>6</span>
-
 <span class='line-number'>7</span>
-
 <span class='line-number'>8</span>
-
 <span class='line-number'>9</span>
-
 <span class='line-number'>10</span>
-
 <span class='line-number'>11</span>
-
 <span class='line-number'>12</span>
-
 <span class='line-number'>13</span>
-
 <span class='line-number'>14</span>
-
 <span class='line-number'>15</span>
-
 <span class='line-number'>16</span>
-
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
-
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">||</span> <span class="p">{};</span>
-
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-
 </span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span><span class="p">;</span>
-
 </span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">;</span>
-
 </span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span><span class="p">;</span>
-
 </span><span class='line'>  <span class="p">}</span>
-
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-
 </span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">_private</span><span class="p">;</span>
-
 </span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">_seal</span><span class="p">;</span>
-
 </span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">_unseal</span><span class="p">;</span>
-
 </span><span class='line'>  <span class="p">};</span>
-
 </span><span class='line'>  <span class="c1">// permanent access to _private, _seal, and _unseal</span>
-
 </span><span class='line'>
-
 </span><span class='line'>  <span class="k">return</span> <span class="nx">module</span><span class="p">;</span>
-
 </span><span class='line'><span class="p">}(</span><span class="nx">module</span> <span class="o">||</span> <span class="p">{}));</span>
-
 </span></code></pre>
                       </td>
                     </tr>
@@ -294,95 +257,51 @@ var module = (function (module) { var private = module.private = &hellip;">
                   <table>
                     <tr>
                       <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-
 <span class='line-number'>2</span>
-
 <span class='line-number'>3</span>
-
 <span class='line-number'>4</span>
-
 <span class='line-number'>5</span>
-
 <span class='line-number'>6</span>
-
 <span class='line-number'>7</span>
-
 <span class='line-number'>8</span>
-
 <span class='line-number'>9</span>
-
 <span class='line-number'>10</span>
-
 <span class='line-number'>11</span>
-
 <span class='line-number'>12</span>
-
 <span class='line-number'>13</span>
-
 <span class='line-number'>14</span>
-
 <span class='line-number'>15</span>
-
 <span class='line-number'>16</span>
-
 <span class='line-number'>17</span>
-
 <span class='line-number'>18</span>
-
 <span class='line-number'>19</span>
-
 <span class='line-number'>20</span>
-
 <span class='line-number'>21</span>
-
 <span class='line-number'>22</span>
-
 </pre>
                       </td>
                       <td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">loadScript</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scriptUrl</span><span class="p">)</span> <span class="p">{</span>
-
 </span><span class='line'>  <span class="nx">_unseal</span><span class="p">();</span>
-
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
-
 </span><span class='line'>  <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">scriptUrl</span><span class="p">;</span>
-
 </span><span class='line'>
-
 </span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span><span class="p">)</span> <span class="p">{</span>
-
 </span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-
 </span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;loaded&quot;</span> <span class="o">||</span>
-
 </span><span class='line'>          <span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;complete&quot;</span><span class="p">)</span> <span class="p">{</span>
-
 </span><span class='line'>        <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-
 </span><span class='line'>        <span class="nx">module</span><span class="p">.</span><span class="nx">seal</span><span class="p">();</span>
-
 </span><span class='line'>      <span class="p">}</span>
-
 </span><span class='line'>    <span class="p">};</span>
-
 </span><span class='line'>  <span class="p">}</span>
-
 </span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
-
 </span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-
 </span><span class='line'>      <span class="nx">module</span><span class="p">.</span><span class="nx">seal</span><span class="p">()</span>
-
 </span><span class='line'>    <span class="p">};</span>
-
 </span><span class='line'>  <span class="p">}</span>
-
 </span><span class='line'>
-
 </span><span class='line'>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">append</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
-
 </span><span class='line'><span class="p">};</span>
-
 </span></code></pre>
                       </td>
                     </tr>
@@ -417,24 +336,22 @@ var module = (function (module) { var private = module.private = &hellip;">
 
 
               <span class="categories">
-
   
-
     <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
-
   
-
 </span>
 
 
             </p>
             <ul class="pager">
 
+              <li class="next"><a class="basic-alignment right" href="/blog/2013/09/11/photo-embarrassment/"
+        title="Next Post: Photo Embarrassment">Photo Embarrassment
+        &raquo;</a></li>
+
 
               <li class="previous"><a class="basic-alignment left"
-
         href="/blog/2013/08/14/a-little-thing-with-versions/" title="Previous Post:
-
         A Little Note on Versions">&laquo; A Little Note on Versions</a></li>
 
               <li class="archives"><a href="/blog/archives">Blog Archives</a></li>
