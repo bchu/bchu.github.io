@@ -4,7 +4,7 @@ comments: true
 date: 2013-09-11 10:00
 categories: [product thoughts]
 title: "Photo Embarrassment"
-description: "Similarities between Instagram and Snapchat."
+description: "What do Instagram and Snapchat have in common? Reducing self-restrain."
 ---
 
 Instagram and Snapchat seem to share a common theme: they try to solve the hurdle of photo embarrassment - they find ways to get around our self-restraint with sharing photos. <!-- more --> Instagram does this with filters so that users can create beautiful pictures of mundane scenes. Snapchat does this with ephemeral photos that disappear[1].
