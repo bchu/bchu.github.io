@@ -56,10 +56,10 @@ $(function () {
   };
 
   // only focus the email input field if doing so would not trigger the page to jump down
-  var $subscribeInput = $('.side-email input[type="email"]').filter(function(i,el){return $(el).is(':visible');});
-  if ($subscribeInput.position().top + $subscribeInput.height() < $window.height()) {
-    $subscribeInput.focus();
-  }
+  // var $subscribeInput = $('.side-email input[type="email"]').filter(function(i,el){return $(el).is(':visible');});
+  // if ($subscribeInput.position().top + $subscribeInput.height() < $window.height()) {
+  //   $subscribeInput.focus();
+  // }
 
   // auto focus contact form when it is opened
   $('.contact-modal').on('shown', function() {
