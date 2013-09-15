@@ -16,6 +16,7 @@ Based on Octopress.
 ###Todo
 
 1. color scheme, colorify headers
+2. make contact form gradient consistent with search, remove jquery duplication
 3. cleanup CSS, simplify and consolidate responsive features
 6. add images for projects
 8. show additional list of categories and recent posts when you scroll down a certain amount.
