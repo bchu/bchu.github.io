@@ -6,7 +6,7 @@ sharing: false
 footer: false
 ---
 
-##[Nodetron](http://www.nodetron.com) <i class="icon-cogs"></i> <small>(ongoing open-source project)</small>
+##[Nodetron](http://www.nodetron.com) <i class="icon-cogs"></i> <small>(work-in-progress open-source project)</small>
 
 A peer-to-peer, rich-client web app library that uses HTML5 WebRTC and Web Workers to reduce reliance on central servers. Using this library, developers should be able to quickly build peer to peer apps that directly send queries and transfer data directly with each other.
 
@@ -16,6 +16,19 @@ A peer-to-peer, rich-client web app library that uses HTML5 WebRTC and Web Worke
 <div class="github-widget" data-repo="bchu/nodetron"></div>
 <br>
 
+##Devils In Heaven <i class="icon-mobile-phone"></i> <small>(work-in-progress commercial project)</small>
+
+An infinite runner, obstacle manipulation physics game for iOS.
+
+##[99tabs](https://github.com/bchu/99tabs) <i class="icon-ellipsis-horizontal"></i>
+
+A Chrome extension for tree-style, vertically listed tabs. So when you've got 99 tabs open, Chrome ain't the problem. PennApps 2013 hackathon project.
+
+{% comment %}
+[<i class="icon-github-sign"></i> See the GitHub repo.](https://github.com/bchu/99tabs)
+{% endcomment %}
+<div class="github-widget" data-repo="bchu/99tabs"></div>
+<br>
 
 ##[Preductive](http://pred.uctive.com) <i class="icon-tasks"></i>
 
