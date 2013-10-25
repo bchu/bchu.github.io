@@ -18,10 +18,14 @@ Based on Octopress.
 1. color scheme, colorify headers
 2. make contact form gradient consistent with search, remove jquery duplication
 3. cleanup CSS, simplify and consolidate responsive features
-6. add images for projects
-8. show additional list of categories and recent posts when you scroll down a certain amount.
-10. mixpanel, quantcast, google analytics goals/click tracking
-11. github slideout
+4. add images for projects
+5. show additional list of categories and recent posts when you scroll down a certain amount.
+6. mixpanel, quantcast, google analytics goals/click tracking
+7. github slideout
+8. upgrade font awesome
+9. fix personal page dynamic 404s, with search interference fixed
+10. *convert homepage to a summary of all and about and blog*
+11. convert png profile to jpg
 
 ## Prerequisites
 
