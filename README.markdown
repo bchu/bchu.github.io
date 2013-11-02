@@ -6,6 +6,7 @@ Based on Octopress.
 
 0. Follow Octopress setup: <http://octopress.org/docs/setup/>
     * Make sure `sass` gem is installed, run `bundle install`
+    * Syntax highlighting (via pygments) requires Python 2.7+ to be installed and bound to the `python` global name. This can be accomplished by creating a symbolic link in the root directory of the project.
 2. Set up github pages deploy: <http://octopress.org/docs/deploying/github/>
     * run `./setup_github_pages.sh` to set up a clone of the repo in `/_deploy`.
     * this creates another repo in /_deploy, which tracks the master branch of the repo. For that reason, do not do anything under the master branch (except through Octopress's scripts) if you're sharing the same repo. Also make sure to run the above command if you're setting up a github pages repo that already exists.
@@ -26,6 +27,7 @@ Based on Octopress.
 9. fix personal page dynamic 404s, with search interference fixed
 10. *convert homepage to a summary of all and about and blog*
 11. convert png profile to jpg
+12. cleanup stylesheet mess
 
 ## Prerequisites
 

@@ -25,6 +25,24 @@ td.code {
   vertical-align:top;
 }
 
+// Copied from octopress source - bit of a hack
+figure.code figcaption {
+  text-align: center;
+  font-size: 13px;
+  line-height: 2em;
+  text-shadow: #cbcccc 0 1px 0;
+  color: #474747;
+  font-weight: normal;
+  margin-bottom: 0;
+  font-family: "Helvetica Neue", Arial, "Lucida Grande", "Lucida Sans Unicode", Lucida, sans-serif;
+  background: #aaaaaa image-url("code_bg.png") top repeat-x;
+  border: 1px solid #565656;
+  border-top-color: #cbcbcb;
+  border-left-color: #a5a5a5;
+  border-right-color: #a5a5a5;
+  border-bottom: 0;
+}
+
 // This fixes a bug with lines of code not lining up with their line numbers.
 // Caused by the fact that bootstrap sets font-size to 13px.
 // which affects the line-height of the span elements that make up the lines of code
