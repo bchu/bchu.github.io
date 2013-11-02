@@ -3,7 +3,7 @@ published: false
 layout: post
 comments: true
 date: 2013-10-27 17:53
-categories: [iOS, projects]
+categories: [iOS, Projects]
 title: "My first iPhone game: Devils in Heaven"
 description: "Introducing my first iPhone game, Devils in Heaven, a 2D, infinite runner with physics based obstacles."
 ---

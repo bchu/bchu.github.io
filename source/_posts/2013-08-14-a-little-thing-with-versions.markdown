@@ -2,7 +2,7 @@
 layout: post
 comments: true
 date: 2013-08-14 04:27
-categories: [bower, npm]
+categories: [Bower, NPM]
 title: "A Little Note on Versions"
 description: Versions in bower and npm are maddeningly inconsistent.
 ---

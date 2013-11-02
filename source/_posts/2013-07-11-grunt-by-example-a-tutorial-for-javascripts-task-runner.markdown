@@ -2,7 +2,7 @@
 layout: post
 comments: true
 date: 2013-07-11 16:35
-categories: [JavaScript, tutorial]
+categories: [JavaScript, Tutorials]
 title: Grunt by Example - A Tutorial for JavaScript's Task Runner
 html_title: Grunt by Example -<br>A Tutorial for JavaScript's Task Runner
 share_title: Grunt by Example

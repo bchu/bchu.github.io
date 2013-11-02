@@ -2,7 +2,7 @@
 layout: post
 comments: true
 date: 2013-09-11 10:00
-categories: [product thoughts]
+categories: [Product Thoughts]
 title: "Photo Embarrassment"
 description: "What do Instagram and Snapchat have in common? Reducing self-restraint."
 ---
