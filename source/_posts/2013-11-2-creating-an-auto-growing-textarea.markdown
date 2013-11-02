@@ -18,14 +18,14 @@ This is an implementation inspired by some bits an pieces on StackOverflow. The 
 
 The full code is below:
 
-``` html
+``` html HTML
 <div class="textarea-container">
   <textarea></textarea>
   <div class="textarea-size"></div>
 </div>
 ```
 
-``` css
+``` css CSS
 .textarea-container {
   width: 20%;
   position: relative;
@@ -56,7 +56,7 @@ textarea {
 }
 ```
 
-``` javascript
+``` javascript JavaScript
 var textContainer, textareaSize, input;
 var autoSize = function () {
   textareaSize.innerHTML = input.value + '\n' || 'a';
