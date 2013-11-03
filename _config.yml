@@ -10,7 +10,7 @@ first_name: Brian
 last_name: Chu
 simple_search: http://google.com/search
 description: Posts, guides, tutorials, and projects from Brian Chu, a full-stack software engineer with a focus on JavaScript and iOS.
-profile_picture: http://www.brianchu.com/images/profile.png
+profile_picture: http://www.brianchu.com/images/profile.jpg
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
 # You can customize the format as defined in
