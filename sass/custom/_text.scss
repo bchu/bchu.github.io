@@ -25,6 +25,15 @@ td.code {
   vertical-align:top;
 }
 
+.gist .highlight, figure.code .highlight {
+  * {
+    &::selection {
+      background: #b3d4fc;
+      text-shadow: none;
+    }
+  }
+}
+
 // Copied from octopress source - bit of a hack
 figure.code figcaption {
   text-align: center;
