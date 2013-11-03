@@ -4,81 +4,47 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
 <html class="no-js" lang="en">
   <!--<![endif]-->
-
   <head>
     <meta charset="utf-8">
-
-
-
     <title>An Interesting Module Pattern: the Sealed Module - Brian Chu</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="HandheldFriendly" content="True">
     <meta name="MobileOptimized" content="320">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
     <meta name="author" content="Brian Chu">
     <meta name="description" content="Sharing private state across components of a module in JavaScript.">
-
-
-
-
     <meta property="og:title" content="An Interesting Module Pattern: the Sealed Module - Brian Chu">
     <meta property="og:site_name" content="I'm Brian Chu">
     <meta property="og:description" content="Sharing private state across components of a module in JavaScript.">
     <meta property="fb:profile_id" content="brian.chu">
     <meta property="og:type" content="article">
     <meta property="og:title" content="An Interesting Module Pattern: the Sealed Module - Brian Chu">
-
     <meta property="article:published_date" content="2013-08-18 06:00:00 -0700">
     <meta property="article:section" content="Blog">
-
     <meta property="article:tag" content="JavaScript">
-
-    <meta property="article:tag" content="tutorial">
-
-
-
-
+    <meta property="article:tag" content="Tutorials">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="brrrianchu">
-
     <meta name="twitter:title" content="An Interesting Module Pattern: the Sealed Module">
-
-
     <meta name="twitter:description" content="An interesting way to share private state across components of modules in JavaScript: (credit goes to this article) ``` javascript
 var module = (function (module) { var private = module.private = &hellip;">
-
-
-
     <meta property="st:title" content="An Interesting Module Pattern: the Sealed Module - Brian Chu">
-
     <meta property="st:published_at" content="2013-08-18T06:00:00-07:00">
-
-
-
-
     <link rel="canonical" href="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module">
     <link href="/favicon.ico" rel="icon">
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
-
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet'>
     <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
-
-
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" rel="stylesheet">
     <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="/stylesheets/custom/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
-
     <link href="/atom.xml" rel="alternate" title="I'm Brian Chu" type="application/atom+xml">
-
     <script>
     var _gaq = _gaq || [];
     _gaq.push(['_setAccount', 'UA-41298092-1']);
     _gaq.push(['_trackPageview']);
-    (function()
-    {
+    (function() {
       var ga = document.createElement('script');
       ga.type = 'text/javascript';
       ga.async = true;
@@ -88,10 +54,7 @@ var module = (function (module) { var private = module.private = &hellip;">
       s.parentNode.insertBefore(ga, s);
     })();
     </script>
-
-
   </head>
-
   <body>
     <!--[if lt IE 9]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
@@ -104,30 +67,21 @@ var module = (function (module) { var private = module.private = &hellip;">
       <header class="row-fluid" role="banner">
         <section class="span4 profile-pic-container">
           <a href="/">
-            <img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic">
+            <img src="http://www.brianchu.com/images/profile.jpg" title="Brian Chu" alt="Me" id="profile-pic">
           </a>
         </section>
-
         <section class="span8" role="banner">
           <h1 class="title">I'm <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span>
           </h1>
-
           <span class="subtext">
       <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
     </span>
-
         </section>
       </header>
-
-
       <div class="row-fluid content-row">
-
-
         <aside class="span4 side-bar clear-affix" data-spy="affix" data-offset-top="206"></aside>
-
         <aside class="span4 side-bar" data-spy="affix" data-offset-top="206">
           <div class="side-bar-responsive">
-
             <button class="menu-btn hide"><i class="icon-align-justify icon-large"></i>
             </button>
             <section role="navigation" class="well side-item side-nav">
@@ -135,7 +89,6 @@ var module = (function (module) { var private = module.private = &hellip;">
                 <li><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li>
                 <li><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
                 <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
-
                 <li data-toggle="buttons-checkbox">
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
     </li>
@@ -150,61 +103,26 @@ var module = (function (module) { var private = module.private = &hellip;">
             </section>
             <section class="well side-item side-email clearfix side-nonresponsive">
               <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
-
               <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
                 <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
               </form>
             </section>
-
-
           </div>
         </aside>
-
-
-
         <section class="hentry span8 block" role="article">
-
           <article data-swiftype-index="true">
-
             <header class="page-header">
-
-
               <h2 class="entry-title">An Interesting Module Pattern: the Sealed Module</h2>
-
-
               <p class="meta">
-
-
-
-
-
-
-
-
-
-
-
-
                 <time datetime="2013-08-18T06:00:00-07:00" pubdate data-updated="true">Aug 18<span>th</span>, 2013</time>
-
               </p>
-
             </header>
-
-
             <div class="article-body">
               <p>An interesting way to share private state across components of modules in JavaScript:
                 <!-- more -->
                 <br/>(credit goes to <a href="http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html">this article</a>)</p>
-
-              <figure class='code'>
-                <figcaption><span></span>
-                </figcaption>
-                <div class="highlight">
-                  <table>
-                    <tr>
-                      <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+              <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -220,9 +138,7 @@ var module = (function (module) { var private = module.private = &hellip;">
 <span class='line-number'>14</span>
 <span class='line-number'>15</span>
 <span class='line-number'>16</span>
-</pre>
-                      </td>
-                      <td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">||</span> <span class="p">{};</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span><span class="p">;</span>
@@ -238,25 +154,10 @@ var module = (function (module) { var private = module.private = &hellip;">
 </span><span class='line'>
 </span><span class='line'>  <span class="k">return</span> <span class="nx">module</span><span class="p">;</span>
 </span><span class='line'><span class="p">}(</span><span class="nx">module</span> <span class="o">||</span> <span class="p">{}));</span>
-</span></code></pre>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </figure>
-
-
+</span></code></pre></td></tr></table></div></figure>
               <p><code>_unseal</code> must be called by a function (probably some sort of loader function) that was initialized before <code>_seal</code> was called (so that <code>_unseal</code> will be present in its closure scope).</p>
-
               <p>For example:</p>
-
-              <figure class='code'>
-                <figcaption><span></span>
-                </figcaption>
-                <div class="highlight">
-                  <table>
-                    <tr>
-                      <td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+              <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
 <span class='line-number'>4</span>
@@ -278,9 +179,7 @@ var module = (function (module) { var private = module.private = &hellip;">
 <span class='line-number'>20</span>
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
-</pre>
-                      </td>
-                      <td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">loadScript</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scriptUrl</span><span class="p">)</span> <span class="p">{</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">loadScript</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scriptUrl</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>  <span class="nx">_unseal</span><span class="p">();</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
 </span><span class='line'>  <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">scriptUrl</span><span class="p">;</span>
@@ -302,91 +201,41 @@ var module = (function (module) { var private = module.private = &hellip;">
 </span><span class='line'>
 </span><span class='line'>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">append</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
 </span><span class='line'><span class="p">};</span>
-</span></code></pre>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </figure>
-
+</span></code></pre></td></tr></table></div></figure>
             </div>
-
           </article>
-
           <footer>
             <p class="meta subtext">
-
-
-
               <span class="byline author vcard">Posted by <span class="fn">Brian Chu</span></span>
-
-
-
-
-
-
-
-
-
-
-
-
-
               <time datetime="2013-08-18T06:00:00-07:00" pubdate data-updated="true">Aug 18<span>th</span>, 2013</time>
-
-
               <span class="categories">
   
-    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorial/'>tutorial</a>
+    <a class='category' href='/blog/categories/javascript/'>JavaScript</a>, <a class='category' href='/blog/categories/tutorials/'>Tutorials</a>
   
 </span>
-
-
             </p>
             <ul class="pager">
-
               <li class="next"><a class="basic-alignment right" href="/blog/2013/09/11/photo-embarrassment/"
         title="Next Post: Photo Embarrassment">Photo Embarrassment
         &raquo;</a></li>
-
-
               <li class="previous"><a class="basic-alignment left"
         href="/blog/2013/08/14/a-little-thing-with-versions/" title="Previous Post:
         A Little Note on Versions">&laquo; A Little Note on Versions</a></li>
-
               <li class="archives"><a href="/blog/archives">Blog Archives</a></li>
             </ul>
-
-
-
-
             <div class="bottom-asides">
               <section class="well side-item side-email side-responsive">
                 <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
-
                 <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
                   <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
                 </form>
               </section>
-
             </div>
-
-
-
-
             <div class="sharing">
-
               <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/">Tweet</a>
-
-
-
               <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
-
             </div>
-
-
-
             <section>
               <h2>Comments</h2>
               <div id="disqus_thread" aria-live="polite">
@@ -394,48 +243,30 @@ var module = (function (module) { var private = module.private = &hellip;">
                 </noscript>
               </div>
             </section>
-
           </footer>
         </section>
-
       </div>
-
       <footer role="contentinfo" class="row-fluid content-row end-footer">
-        <!-- <ul class="span4"></ul> -->
         <ul class="span12 inline">
-          <li><a href="/blog/archives">Blog</a></li>
-          <li><a href="/about/">About</a></li>
-          <li><a href="/projects/">Projects</a></li>
-          <li><a href="https://github.com/bchu"><i class="icon-github-sign"></i> bchu</a></li>
-          <li><a href="https://twitter.com/brrrianchu"><i class="icon-twitter-sign"/></i> @brrrianchu</a></li>
-          <li><a href="http://www.linkedin.com/in/brchu"><i class="icon-linkedin-sign icon-large"/></i></a></li>
-
-          <li><a href="https://plus.google.com/115101039553139400331?rel=author"><i class="icon-google-plus-sign icon-large"/></i></a></li>
-
-          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="icon-rss icon-large"></i></a></li>
+          <li><a href="https://github.com/bchu"><i class="fa fa-github-square"></i> bchu</a></li>
+          <li><a href="https://twitter.com/brrrianchu"><i class="fa fa-twitter-square"/></i> @brrrianchu</a></li>
+          <li><a href="http://www.linkedin.com/in/brchu"><i class="fa fa-linkedin-square fa-lg"/></i></a></li>
+          <li><a href="https://plus.google.com/115101039553139400331?rel=author"><i class="fa fa-google-plus-square fa-lg"/></i></a></li>
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="fa fa-rss fa-lg"></i></a></li>
         </ul>
       </footer>
-
-
-
-
       <div class="modal hide fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
-
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
           <h3 id="modalHeader">Contact Me</h3>
         </div>
-
         <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
         <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame">
-
           <div class="modal-body">
             <label class="control-label" for="entry_562979872">Name:</label>
             <input class="fullspan" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
-
             <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
             <input class="fullspan defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
-
             <label class="control-label" for="entry_1142668288">Message:</label>
             <textarea class="fullspan defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
             <label class="checkbox contact-checkbox">
@@ -444,25 +275,19 @@ var module = (function (module) { var private = module.private = &hellip;">
             <input type="hidden" name="draftResponse" value="[]">
             <input type="hidden" name="pageHistory" value="0">
           </div>
-
           <div class="modal-footer">
             <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust">
           </div>
         </form>
-
       </div>
-
     </div>
-
-
     <script>
     var disqus_shortname = 'brianchu';
      // var disqus_developer = 1;
     var disqus_identifier = 'http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/';
     var disqus_url = 'http://www.brianchu.com/blog/2013/08/18/an-interesting-module-pattern-the-sealed-module/';
     var disqus_script = 'embed.js';
-    (function()
-    {
+    (function() {
       var dsq = document.createElement('script');
       dsq.type = 'text/javascript';
       dsq.async = true;
@@ -471,16 +296,11 @@ var module = (function (module) { var private = module.private = &hellip;">
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
     </script>
-
-
-
     <div id="fb-root"></div>
     <script>
-    (function(d, s, id)
-    {
+    (function(d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
-      if (d.getElementById(id))
-      {
+      if (d.getElementById(id)) {
         return;
       }
       js = d.createElement(s);
@@ -491,14 +311,8 @@ var module = (function (module) { var private = module.private = &hellip;">
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
     </script>
-
-
-
-
-
     <script>
-    (function()
-    {
+    (function() {
       var twitterWidgets = document.createElement('script');
       twitterWidgets.async = true;
       twitterWidgets.defer = true;
@@ -506,15 +320,10 @@ var module = (function (module) { var private = module.private = &hellip;">
       document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
     })();
     </script>
-
-
-
     <div id="st-results-container"></div>
     <script>
-    var Swiftype = window.Swiftype ||
-    {};
-    (function()
-    {
+    var Swiftype = window.Swiftype || {};
+    (function() {
       Swiftype.key = '5J3i1dwgBx7wrJPqyp31';
       Swiftype.inputElement = '#st-search-input';
       Swiftype.resultContainingElement = '#st-results-container';
@@ -528,14 +337,8 @@ var module = (function (module) { var private = module.private = &hellip;">
     <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
     <script src="/javascripts/libs.js"></script>
     <script src="/javascripts/custom.js"></script>
-
-
     <!--[if lte IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
 <![endif]-->
-
-
-
   </body>
-
 </html>
