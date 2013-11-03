@@ -1,6 +1,8 @@
 {
+  "condense":true,
   "preserve_newlines": false,
   "max_preserve_newlines": 0,
+  "brace_style": "end-expand",
   "unformatted": [
     "a",
     "abbr",
@@ -15,6 +17,7 @@
     "dfn",
     "dt",
     "em",
+    "figure",
     "font",
     "i",
     "ins",
