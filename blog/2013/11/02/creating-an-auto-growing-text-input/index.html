@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><script src="//cdnjs.cloudflare.com/ajax/libs/wysihtml5/0.3.0/wysihtml5.min.js"></script><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
+<html class="no-js" lang="en">
+  <!--<![endif]-->
+  <head>
+    <meta charset="utf-8">
+    <title>Creating an Auto-Growing Text Input - Brian Chu</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Brian Chu">
+    <meta name="description" content="How to create a textarea that expands to fit the size of your input.">
+    <meta name="apple-mobile-web-app-title" content="Brian Chu">
+    <meta property="og:title" content="Creating an Auto-Growing Text Input - Brian Chu">
+    <meta property="og:site_name" content="I'm Brian Chu">
+    <meta property="og:description" content="How to create a textarea that expands to fit the size of your input.">
+    <meta property="fb:profile_id" content="brian.chu">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Creating an Auto-Growing Text Input - Brian Chu">
+    <meta property="article:published_date" content="2013-11-02 12:00:00 -0700">
+    <meta property="article:section" content="Blog">
+    <meta property="article:tag" content="Front End">
+    <meta property="article:tag" content="Tutorials">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="brrrianchu">
+    <meta name="twitter:title" content="Creating an Auto-Growing Text Input">
+    <meta name="twitter:description" content="On two occasions I&rsquo;ve encountered the same problem: how do you create a textarea that automatically expands along with your input. Here&rsquo;s an implementation. This is an implementation &hellip;">
+    <meta property="st:title" content="Creating an Auto-Growing Text Input - Brian Chu">
+    <meta property="st:published_at" content="2013-11-02T12:00:00-07:00">
+    <link rel="canonical" href="http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input">
+    <link href="/favicon.ico" rel="icon">
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet'>
+    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/stylesheets/custom/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+    <link href="/atom.xml" rel="alternate" title="I'm Brian Chu" type="application/atom+xml">
+    <script>
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-41298092-1']);
+    _gaq.push(['_trackPageview']);
+    (function() {
+      var ga = document.createElement('script');
+      ga.type = 'text/javascript';
+      ga.async = true;
+      ga.defer = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0];
+      s.parentNode.insertBefore(ga, s);
+    })();
+    </script>
+  </head>
+  <body>
+    <!--[if lt IE 9]>
+  <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+    <div class="fixed-top alert text-center" style="display:none">
+      <button type="button" class="close" data-dismiss="alert">&times;</button>
+      <strong></strong>  <span></span>
+    </div>
+    <div class="container-fluid">
+      <header class="row-fluid" role="banner">
+        <section class="span4 profile-pic-container">
+          <a href="/">
+            <img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic">
+          </a>
+        </section>
+        <section class="span8" role="banner">
+          <h1 class="title">I'm <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span>
+          </h1>
+          <span class="subtext">
+      <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
+    </span>
+        </section>
+      </header>
+      <div class="row-fluid content-row">
+        <aside class="span4 side-bar clear-affix" data-spy="affix" data-offset-top="206"></aside>
+        <aside class="span4 side-bar" data-spy="affix" data-offset-top="206">
+          <div class="side-bar-responsive">
+            <button class="menu-btn hide"><i class="fa fa-align-justify fa-lg"></i>
+            </button>
+            <section role="navigation" class="well side-item side-nav">
+              <ul class="nav nav-list">
+                <li><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li>
+                <li><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
+                <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
+                <li data-toggle="buttons-checkbox">
+        <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
+    </li>
+              </ul>
+              <form class="nav-search">
+                <a class="search-toggle"><i class="fa fa-search"></i></a>
+                <div class="input-padding-wrapper">
+                  <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
+                </div>
+                <a class="close-search force-hide">Close</a>
+              </form>
+            </section>
+            <section class="well side-item side-email clearfix side-nonresponsive">
+              <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
+              <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
+                <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+              </form>
+            </section>
+          </div>
+        </aside>
+        <section class="hentry span8 block" role="article">
+          <article data-swiftype-index="true">
+            <header class="page-header">
+              <h2 class="entry-title">Creating an Auto-Growing Text Input</h2>
+              <p class="meta">
+                <time datetime="2013-11-02T12:00:00-07:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time>
+              </p>
+            </header>
+            <div class="article-body">
+              <p>On two occasions I&rsquo;ve encountered the same problem: how do you create a textarea that automatically expands along with your input. Here&rsquo;s an implementation.</p>
+              <!-- more -->
+              <p>This is an implementation inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.</p>
+              <p>Here&rsquo;s a jsFiddle:</p>
+              <iframe width="100%" height="300" src="http://jsfiddle.net/2UDdh/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+              <p>A copy of the code is below:</p>
+              <figure class='code'><figcaption><span>HTML</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;textarea-container&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;textarea&gt;&lt;/textarea&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;textarea-size&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+              <figure class='code'><figcaption><span>CSS</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.textarea-container</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">20</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">textarea</span><span class="o">,</span> <span class="nc">.textarea-size</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">font-family</span><span class="o">:</span> <span class="k">sans-serif</span><span class="p">;</span> <span class="c">/* need to manually set font and font size */</span>
+</span><span class='line'>  <span class="k">font-size</span><span class="o">:</span> <span class="m">14px</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">textarea</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">resize</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.textarea-size</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">visibility</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">wrap</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">word</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">overflow</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span><span class="p">;</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
+              <figure class='code'><figcaption><span>JavaScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">textContainer</span><span class="p">,</span> <span class="nx">textareaSize</span><span class="p">,</span> <span class="nx">input</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">autoSize</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">textareaSize</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">||</span> <span class="s1">&#39;a&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">textContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-container&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">textareaSize</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-size&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">input</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;textarea&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">autoSize</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">input</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="nx">autoSize</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+            </div>
+          </article>
+          <footer>
+            <p class="meta subtext">
+              <span class="byline author vcard">Posted by <span class="fn">Brian Chu</span></span>
+              <time datetime="2013-11-02T12:00:00-07:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time>
+              <span class="categories">
+  
+    <a class='category' href='/blog/categories/front-end/'>Front End</a>, <a class='category' href='/blog/categories/tutorials/'>Tutorials</a>
+  
+</span>
+            </p>
+            <ul class="pager">
+              <li class="previous"><a class="basic-alignment left"
+        href="/blog/2013/09/11/photo-embarrassment/" title="Previous Post:
+        Photo Embarrassment">&laquo; Photo Embarrassment</a></li>
+              <li class="archives"><a href="/blog/archives">Blog Archives</a></li>
+            </ul>
+            <div class="bottom-asides">
+              <section class="well side-item side-email side-responsive">
+                <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
+                <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
+                  <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+                </form>
+              </section>
+            </div>
+            <div class="sharing">
+              <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input/">Tweet</a>
+              <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+            </div>
+            <section>
+              <h2>Comments</h2>
+              <div id="disqus_thread" aria-live="polite">
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+                </noscript>
+              </div>
+            </section>
+          </footer>
+        </section>
+      </div>
+      <footer role="contentinfo" class="row-fluid content-row end-footer">
+        <ul class="span12 inline">
+          <li><a href="https://github.com/bchu"><i class="fa fa-github-square"></i> bchu</a></li>
+          <li><a href="https://twitter.com/brrrianchu"><i class="fa fa-twitter-square"/></i> @brrrianchu</a></li>
+          <li><a href="http://www.linkedin.com/in/brchu"><i class="fa fa-linkedin-square fa-lg"/></i></a></li>
+          <li><a href="https://plus.google.com/115101039553139400331?rel=author"><i class="fa fa-google-plus-square fa-lg"/></i></a></li>
+          <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS"><i class="fa fa-rss fa-lg"></i></a></li>
+        </ul>
+      </footer>
+      <div class="modal hide fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+          <h3 id="modalHeader">Contact Me</h3>
+        </div>
+        <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
+        <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame">
+          <div class="modal-body">
+            <label class="control-label" for="entry_562979872">Name:</label>
+            <input class="fullspan" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
+            <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
+            <input class="fullspan defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
+            <label class="control-label" for="entry_1142668288">Message:</label>
+            <textarea class="fullspan defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
+            <label class="checkbox contact-checkbox">
+              <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
+            </label>
+            <input type="hidden" name="draftResponse" value="[]">
+            <input type="hidden" name="pageHistory" value="0">
+          </div>
+          <div class="modal-footer">
+            <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust">
+          </div>
+        </form>
+      </div>
+    </div>
+    <script>
+    var disqus_shortname = 'brianchu';
+     // var disqus_developer = 1;
+    var disqus_identifier = 'http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input/';
+    var disqus_url = 'http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input/';
+    var disqus_script = 'embed.js';
+    (function() {
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.defer = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+    </script>
+    <div id="fb-root"></div>
+    <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) {
+        return;
+      }
+      js = d.createElement(s);
+      js.id = id;
+      js.async = true;
+      js.defer = true;
+      js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+    </script>
+    <script>
+    (function() {
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.async = true;
+      twitterWidgets.defer = true;
+      twitterWidgets.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+    </script>
+    <div id="st-results-container"></div>
+    <script>
+    var Swiftype = window.Swiftype || {};
+    (function() {
+      Swiftype.key = '5J3i1dwgBx7wrJPqyp31';
+      Swiftype.inputElement = '#st-search-input';
+      Swiftype.resultContainingElement = '#st-results-container';
+      Swiftype.attachElement = '#st-search-input';
+      Swiftype.renderStyle = 'overlay';
+    }());
+    </script>
+    <script src="//swiftype.com/embed.js" async defer></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="/javascripts/libs.js"></script>
+    <script src="/javascripts/custom.js"></script>
+    <!--[if lte IE 9]>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
+<![endif]-->
+  </body>
+</html>

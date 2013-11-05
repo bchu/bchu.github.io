@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Front End | I'm Brian Chu]]></title>
+  <link href="http://www.brianchu.com/blog/categories/front-end/atom.xml" rel="self"/>
+  <link href="http://www.brianchu.com/"/>
+  <updated>2013-11-05T04:26:27-08:00</updated>
+  <id>http://www.brianchu.com/</id>
+  <author>
+    <name><![CDATA[Brian Chu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Creating an Auto-Growing Text Input]]></title>
+    <link href="http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input/"/>
+    <updated>2013-11-02T12:00:00-07:00</updated>
+    <id>http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input</id>
+    <content type="html"><![CDATA[<p>On two occasions I&rsquo;ve encountered the same problem: how do you create a textarea that automatically expands along with your input. Here&rsquo;s an implementation.</p>
+
+<!-- more -->
+
+
+<p>This is an implementation inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.</p>
+
+<p>Here&rsquo;s a jsFiddle:</p>
+
+<iframe width="100%" height="300" src="http://jsfiddle.net/2UDdh/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+
+
+<p>A copy of the code is below:</p>
+
+<p>``` html HTML</p>
+
+<div class="textarea-container">
+  <textarea></textarea>
+  <div class="textarea-size"></div>
+</div>
+
+
+<p>```</p>
+
+<p>``` css CSS
+.textarea-container {
+  width: 20%;
+  position: relative;
+}</p>
+
+<p>textarea, .textarea-size {
+  font-family: sans-serif; /<em> need to manually set font and font size </em>/
+  font-size: 14px;
+  box-sizing: border-box;
+  padding: 4px;
+  border: 1px solid;</p>
+
+<p>  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}</p>
+
+<p>textarea {
+  position: absolute;
+  resize:none;
+}</p>
+
+<p>.textarea-size {
+  visibility: hidden;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  overflow-wrap:; break-word;
+}
+```</p>
+
+<p>``` javascript JavaScript
+var textContainer, textareaSize, input;
+var autoSize = function () {
+  textareaSize.innerHTML = input.value + &lsquo;\n&rsquo; || &lsquo;a&rsquo;;
+};</p>
+
+<p>document.addEventListener(&lsquo;DOMContentLoaded&rsquo;, function() {
+  textContainer = document.querySelector(&lsquo;.textarea-container&rsquo;);
+  textareaSize = textContainer.querySelector(&lsquo;.textarea-size&rsquo;)
+  input = textContainer.querySelector(&lsquo;textarea&rsquo;);</p>
+
+<p>  autoSize();
+  input.addEventListener(&lsquo;input&rsquo;, autoSize);
+});
+```</p>
+]]></content>
+  </entry>
+  
+</feed>

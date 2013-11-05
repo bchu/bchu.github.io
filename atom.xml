@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2013-11-02T20:41:30-07:00</updated>
+  <updated>2013-11-05T04:26:27-08:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Creating an Auto-Growing Text Input]]></title>
-    <link href="http://www.brianchu.com/blog/2013/11/01/creating-an-auto-growing-textarea/"/>
-    <updated>2013-11-01T12:00:00-07:00</updated>
-    <id>http://www.brianchu.com/blog/2013/11/01/creating-an-auto-growing-textarea</id>
+    <link href="http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input/"/>
+    <updated>2013-11-02T12:00:00-07:00</updated>
+    <id>http://www.brianchu.com/blog/2013/11/02/creating-an-auto-growing-text-input</id>
     <content type="html"><![CDATA[<p>On two occasions I&rsquo;ve encountered the same problem: how do you create a textarea that automatically expands along with your input. Here&rsquo;s an implementation.</p>
 
 <!-- more -->

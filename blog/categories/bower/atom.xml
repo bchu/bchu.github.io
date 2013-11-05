@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Bower | I'm Brian Chu]]></title>
+  <link href="http://www.brianchu.com/blog/categories/bower/atom.xml" rel="self"/>
+  <link href="http://www.brianchu.com/"/>
+  <updated>2013-11-05T04:26:27-08:00</updated>
+  <id>http://www.brianchu.com/</id>
+  <author>
+    <name><![CDATA[Brian Chu]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[A Little Note on Versions]]></title>
+    <link href="http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions/"/>
+    <updated>2013-08-14T04:27:00-07:00</updated>
+    <id>http://www.brianchu.com/blog/2013/08/14/a-little-thing-with-versions</id>
+    <content type="html"><![CDATA[<p>tl;dr. Versions in bower and npm are <del>maddeningly inconsistent in a tiny way</del> now consistent.</p>
+
+<!-- more -->
+
+
+<p>So&hellip; In semver and bower (I&rsquo;m assuming bower since it relies on the node-semver module), a hypenated version suffix (postfix) decreases precedence &lt;(1.0.0 > 1.0.0-alpha > 1.0.0-1) and non-hypenated suffixes are invalid (1.0.0alpha is invalid).</p>
+
+<p>Whereas in npm, <del>hypenation with a numeric suffix increases precedence (1.0.0-1 > 1.0.0) whereas anything that is not a hypenated number decreases precedence (1.0.0 > 1.0.0alpha). So 1.0.0-1 > 1.0.0-1-a > 1.0.0 > 1.0.0alpha.</del> versioning does in fact follow semver. Npm will automatically append a hypen if you leave it out (1.0.0alpha is 1.0.0-alpha). <del>The (outdated?) <a href="https://npmjs.org/doc/json.html#version">npm documentation</a> had led me to believe otherwise.</del> The docs have been updated!</p>
+]]></content>
+  </entry>
+  
+</feed>
