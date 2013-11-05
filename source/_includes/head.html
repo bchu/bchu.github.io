@@ -18,6 +18,7 @@
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
+  <meta name="apple-mobile-web-app-title" content="{{ site.author }}">
 
   {% capture og_type %}{% if page.date %}article{% else %}profile{% endif %}{% endcapture %}
   <meta property="og:title" content="{{ title }}">
