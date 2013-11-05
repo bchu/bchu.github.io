@@ -8,7 +8,7 @@ title: "My first iPhone game: Devils in Heaven"
 description: "Introducing my first iPhone game, Devils in Heaven, a 2D, infinite runner with physics based obstacles."
 ---
 
-NOTES: add screenshots, add git commit visual app store link, cross-post to reddit, hn, stumbleupon, cocos2d forums, kobold2d forums
+NOTES: add screenshots, add icon picture, cross-post to reddit, hn, stumbleupon, cocos2d forums, kobold2d forums
 
 Introducing my first iPhone game, [Devils in Heaven (app store link)](), a 2D infinite runner game with interactive obstacles!
 
@@ -30,7 +30,7 @@ Here's what it looked like at that point:
 
 Afterwards, I [joined](/about) the MGWU team full-time as I took a year off. I worked on the game here and there, bringing it up to 90%, before largely shelving the project for nearly a year until the past few weeks.
 
-<git screenshot>
+{% img [class names] /images/blog/2013/dih-githistory.jpg 'Git commit history' 'Git commit history from August 2012 to November 2013' %}
 
 The project was the first 10,000+ lines of code object-oriented program I ever worked on, and it shows itself - the code is in dire need of serious refactoring, probably a month's worth of work, if the game ever takes off.
 

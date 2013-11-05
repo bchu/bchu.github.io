@@ -2,7 +2,7 @@
 published: true
 layout: post
 comments: true
-date: 2013-11-01 12:00
+date: 2013-11-02 12:00
 categories: [Front End, Tutorials]
 title: "Creating an Auto-Growing Text Input"
 description: "How to create a textarea that expands to fit the size of your input."
