@@ -35,4 +35,4 @@ if [ "$2" == "" ]; then
     set $1 "-c2" # default: RGB, no alpha
 fi
 
-pngout $@
+./pngout $@
