@@ -11,4 +11,6 @@ I'm currently hacking on my own products and open-source projects while studying
 
 I was formerly the Lead Developer at MakeGamesWithUs (YC W12), an iOS game publishing startup. I've got Objective-C down pretty well, and dabble in some iOS app development in addition to iOS game development.
 
+Check out [my resume](/about/brianchu_resume.pdf).
+
 Reach out to me! There's a contact form on the left.
