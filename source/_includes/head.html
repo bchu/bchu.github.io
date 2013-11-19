@@ -39,7 +39,7 @@
   {% endif %}
   {% if share_image != '' %}
     {% comment %}At least 50x50, ideally square{% endcomment %}
-    <meta property="og:image" content="{{ share_image }}">
+    <meta property="og:image" content="{{ site.url }}{{ share_image }}">
   {% endif %}
 
   <meta name="twitter:card" content="summary">
@@ -53,7 +53,7 @@
   {% capture description_content %}{% if page.homepage %}{{ site.description }}{% else if page.content %}{{ page.content | raw_content }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="twitter:description" content="{{ description_content | markdownify | strip_html | condense_spaces | truncate:200 }}">
   {% if share_image != '' %}
-  <meta name="twitter:image" content="{{ share_image }}">
+  <meta name="twitter:image" content="{{ site.url }}{{ share_image }}">
   {% endif %}
 
   {% if site.swiftype %}
