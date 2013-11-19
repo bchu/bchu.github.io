@@ -81,6 +81,11 @@ a {
  * Customize the background color to match your design.
  */
 
+ //Bootstrap OVERRIDE
+ .img-polaroid {
+  padding:0;
+ }
+
 ::-moz-selection {
   background: #b3d4fc;
   text-shadow: none;
