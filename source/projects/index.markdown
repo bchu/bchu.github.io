@@ -6,9 +6,9 @@ sharing: false
 footer: false
 ---
 
-##[Devils In Heaven](https://itunes.apple.com/app/id744368918) <i class="icon-mobile-phone"></i>
+##[Devils In Heaven](https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg) <i class="icon-mobile-phone"></i>
 
-An infinite runner, obstacle manipulation physics game for iOS. Read more about it in [this blog post](/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/)
+An infinite runner, obstacle manipulation physics game for iOS. Published by MakeGamesWithUs. Read more about it in [this blog post](/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/).
 
 
 ##[StandHub](http://www.standhub.com) <i class="icon-question-sign"></i>
