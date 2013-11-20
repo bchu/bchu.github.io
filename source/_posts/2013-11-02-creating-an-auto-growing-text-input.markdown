@@ -13,7 +13,7 @@ On two occasions I've encountered the same problem: how do you create a textarea
 
 <!-- more -->
 
-This is an implementation inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.
+This was inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.
 
 Here's a jsFiddle:
 
