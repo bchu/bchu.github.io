@@ -4,7 +4,7 @@
   <title><![CDATA[Category: iOS | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2013-11-19T01:00:02-08:00</updated>
+  <updated>2013-11-20T04:10:35-08:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My First iPhone game: Devils in Heaven]]></title>
+    <title type="html"><![CDATA[My First iPhone Game: Devils in Heaven]]></title>
     <link href="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/"/>
     <updated>2013-11-20T10:00:00-08:00</updated>
     <id>http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven</id>
@@ -23,7 +23,9 @@
 <!-- more -->
 
 
-<p><img class="img-polaroid center" src="/images/blog/2013/dih-screenshot1.png" title="&lsquo;Devils in Heaven&rsquo; &lsquo;Screenshot of gameplay.&rsquo;" ></p>
+<p><a href="https://itunes.apple.com/app/id744368918"><img class="center" src="/images/app_store_download.png"></a></p>
+
+<p><img class="img-polaroid center" src="/images/blog/2013/dih-animated.gif" title="&lsquo;Devils in Heaven&rsquo; &lsquo;Video of gameplay.&rsquo;" ></p>
 
 <p>Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.</p>
 
@@ -32,6 +34,8 @@
 <p>Like it? <a href="https://www.makegameswith.us/games/devils-in-heaven/">Text a link to your friends!</a></p>
 
 <p>Built with <a href="http://www.cocos2d-iphone.org/">coocs2d-iphone</a> and <a href="http://www.kobold2d.com/display/KKSITE/Home">Kobold2D</a>. Published by <a href="https://www.makegameswith.us/">MakeGamesWithUs</a>.</p>
+
+<p><img class="img-polaroid center" src="/images/blog/2013/dih-screenshot1.png" title="&lsquo;Devils in Heaven&rsquo; &lsquo;Screenshot of gameplay.&rsquo;" ></p>
 
 <h1>The Process</h1>
 

@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2013-11-19T01:00:02-08:00</updated>
+  <updated>2013-11-20T04:10:35-08:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[My First iPhone game: Devils in Heaven]]></title>
+    <title type="html"><![CDATA[My First iPhone Game: Devils in Heaven]]></title>
     <link href="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/"/>
     <updated>2013-11-20T10:00:00-08:00</updated>
     <id>http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven</id>
@@ -23,7 +23,9 @@
 <!-- more -->
 
 
-<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png" title="Devils in Heaven" alt="Screenshot of gameplay."></p>
+<p><a href="https://itunes.apple.com/app/id744368918"><img class="center" src="http://www.brianchu.com/images/app_store_download.png"></a></p>
+
+<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-animated.gif" title="Devils in Heaven" alt="Video of gameplay."></p>
 
 <p>Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.</p>
 
@@ -32,6 +34,8 @@
 <p>Like it? <a href="https://www.makegameswith.us/games/devils-in-heaven/">Text a link to your friends!</a></p>
 
 <p>Built with <a href="http://www.cocos2d-iphone.org/">coocs2d-iphone</a> and <a href="http://www.kobold2d.com/display/KKSITE/Home">Kobold2D</a>. Published by <a href="https://www.makegameswith.us/">MakeGamesWithUs</a>.</p>
+
+<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png" title="Devils in Heaven" alt="Screenshot of gameplay."></p>
 
 <h1>The Process</h1>
 
@@ -67,7 +71,7 @@
 <!-- more -->
 
 
-<p>This is an implementation inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.</p>
+<p>This was inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.</p>
 
 <p>Here&rsquo;s a jsFiddle:</p>
 

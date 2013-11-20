@@ -26,10 +26,7 @@
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="brrrianchu">
     <meta name="twitter:title" content="Blog Archive">
-    <meta name="twitter:description" content="{% for post in site.posts reverse %}
-{% capture this_year %}{{ post.date | date: " %Y " }}{% endcapture %}
-{% unless year == this_year %} {% assign year = this_year %} {{ year }}
-{% endunless %} {% &hellip;">
+    <meta name="twitter:description" content=" {{ post.date | date: " %Y " }} {{ year }} ">
     <meta name="twitter:image" content="http://www.brianchu.comhttp://www.brianchu.com/images/profile.png">
     <meta property="st:title" content="Blog Archive - Brian Chu">
     <link rel="canonical" href="http://www.brianchu.com/blog/archives">
@@ -76,7 +73,7 @@
           <h1 class="title">I'm <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span>
           </h1>
           <span class="subtext">
-      <h3 class="inline">a full-stack software engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
+      <h3 class="inline">a web and mobile engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
     </span>
         </section>
       </header>
@@ -120,7 +117,7 @@
             <h1>2013</h1>
             <article>
               <div class="well">
-                <h2><a href="/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/">My First iPhone game: Devils in Heaven</a>
+                <h2><a href="/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/">My First iPhone Game: Devils in Heaven</a>
                 </h2>
                 <time datetime="2013-11-20T10:00:00-08:00" pubdate><span class='month'>Nov</span>  <span class='day'>20</span>  <span class='year'>2013</span>
                 </time>
