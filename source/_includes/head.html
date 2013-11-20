@@ -13,8 +13,8 @@
   <meta name="MobileOptimized" content="320">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% capture description %}{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description}}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="author" content="{{ site.author }}">
+  {% capture description %}{% if page.description %}{{ page.description }}{% else if site.description %}{{ site.description}}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
   <meta name="description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% if page.keywords %}<meta name="keywords" content="{{ page.keywords }}">{% endif %}
 
@@ -23,7 +23,9 @@
   {% capture og_type %}{% if page.date %}article{% else %}profile{% endif %}{% endcapture %}
   <meta property="og:title" content="{{ title }}">
   <meta property="og:site_name" content="{{ site.title }}">
+  {% unless page.twitter_card_app %} {% comment %} Twitter will look for twitter:description and og:description before it uses the actual app description {% endcomment %}
   <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
+  {% endunless %}
   <meta property="fb:profile_id" content="{{ site.facebook_user }}">
   <meta property="og:type" content="{{ og_type }}">
   <meta property="og:title" content="{{ title }}">
@@ -42,19 +44,34 @@
     <meta property="og:image" content="{{ site.url }}{{ share_image }}">
   {% endif %}
 
-  <meta name="twitter:card" content="summary">
+
+  {% capture twitter_card %}{% if page.twitter_card_app %}app{% else %}summary{% endif %}{% endcapture %}
+  <meta name="twitter:card" content="{{ twitter_card }}">
   <meta name="twitter:site" content="{{ site.twitter_user }}">
+
+  {% if page.twitter_card_app %}
+  <meta name="twitter:app:id:iphone" content="{{ page.twitter_card_app }}">
+    {% if page.twitter_card_app_url %}
+  <meta name="twitter:app:url:iphone" content="{{ page.twitter_card_app_url }}">
+    {% endif %}
+  {% endif %}
+
   {% comment %}
   Commented out cause this and twitter:site are redundant (and visually redundant)
   <meta name="twitter:creator" content="{{ site.twitter_user }}">
   {% endcomment %}
+
   <meta name="twitter:title" content="{{ twitter_card_title }}">
-  {% comment %} This gives a tuncated copy of the actual content of the page, rather than just a summary line (which og:description gives) {% endcomment %}
+
+  {% comment %} This gives a tuncated copy of the actual content of the page, rather than just a summary line (which og:description or meta-description gives), except for the homepage {% endcomment %}
   {% capture description_content %}{% if page.homepage %}{{ site.description }}{% else if page.content %}{{ page.content | raw_content }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
+  {% unless page.twitter_card_app %}
   <meta name="twitter:description" content="{{ description_content | markdownify | strip_liquid | strip_html | condense_spaces | truncate:200 }}">
+  {% endunless %}
   {% if share_image != '' %}
   <meta name="twitter:image" content="{{ site.url }}{{ share_image }}">
   {% endif %}
+
 
   {% if site.swiftype %}
   <meta property="st:title" content="{{ title }}" >
@@ -62,6 +79,7 @@
       <meta property="st:published_at" content="{{ page.date | date_to_xmlschema }}">
     {% endif %}
   {% endif %}
+
 
   {% capture canonical %}{{ site.url }}{% if site.permalink contains '.html' %}{{ page.url }}{% else %}{{ page.url | remove:'index.html' | strip_slash }}{% endif %}{% endcapture %}
   <link rel="canonical" href="{{ canonical }}">
