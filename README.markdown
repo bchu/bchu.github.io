@@ -23,11 +23,10 @@ Based on Octopress.
 5. show additional list of categories and recent posts when you scroll down a certain amount.
 6. mixpanel, quantcast, google analytics goals/click tracking
 7. github slideout
-8. upgrade font awesome
-9. fix personal page dynamic 404s, with search interference fixed
-10. *convert homepage to a summary of all and about and blog*
-11. convert png profile to jpg
-12. cleanup stylesheet mess
+8. *convert homepage to a summary of all and about and blog*
+9. cleanup stylesheet mess (esp. extraneous)
+10. Upgrade bootstrap
+11. Add blog icons
 
 ## Prerequisites
 
@@ -52,6 +51,29 @@ as compass might pick one of those up and site generation would fail.
 Theme utilizes the solarized color scheme for code snippets. By default, the
 bootstrap variant is selected, but light/dark colors can be used by setting
 the $solarized variable in sass/syntax/\_higlight.scss.
+
+# Front-Matter Documentation
+
+This is the metadata at the top of every markdown post.
+
+## Required
+* published: *bool* | Toggle whether to publish the post
+* layout: *type* | Determines which template inside '_layouts' to use. *type* can be post, page, default, category_index
+* comments: *bool* | Toggles Disqus comments
+* date: *date* | Specify date
+* categories: *list* | Comma-separated array of categories. E.g. [1,2,3]
+* title: *title* | Title - affects both the article title (h2 tag), and the website title.
+* description: *description* | Description
+
+## Optional
+* sharing: false | set this to disable sharing links
+* footer: false | set this to disable the pagination footer
+* share_image | Set the default share thumbnail, relative to the root url, e.g. /images/blog/hi.png
+* twitter_card_app: *id* | Presence sets the twitter card as an iphone app, with the app store *id*, also disables twitter:card:description and og:description
+* twitter_card_app_url: *url* | Sets the twitter app card url
+* html_title: *raw_html* | Use this to override the default article header (h2 tag) with html. Normally the header is just the "title" attribute. Use this for custom styling/icons/images/text
+* share_title: *title* | Use this to override the title that appears in FB/Twitter shares
+* alias: *relative root url* | Create a redirect url relative to root, e.g. '/blog/2013/11/01/creating-an-auto-growing-textarea/index.html'
 
 
 ## Acknowledgements and License
