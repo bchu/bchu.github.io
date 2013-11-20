@@ -68,6 +68,9 @@ bottom_asides: [custom/asides/subscribe.html]
 #   3rd Party Settings    #
 # ----------------------- #
 
+#Mailchimp
+mailchimp_form_target: http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0
+
 # Linkedin
 linkedin_user: brchu
 
