@@ -33,7 +33,7 @@ root: /
 permalink: /blog/:year/:month/:day/:title/
 source: source
 destination: public
-plugins: plugins
+plugins: [plugins, source/_plugins] # source/_plugins contains custom plugins
 code_dir: downloads/code
 category_dir: blog/categories
 markdown: rdiscount
