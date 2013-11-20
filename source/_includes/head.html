@@ -51,7 +51,7 @@
   <meta name="twitter:title" content="{{ twitter_card_title }}">
   {% comment %} This gives a tuncated copy of the actual content of the page, rather than just a summary line (which og:description gives) {% endcomment %}
   {% capture description_content %}{% if page.homepage %}{{ site.description }}{% else if page.content %}{{ page.content | raw_content }}{% else %}{{ content | raw_content }}{% endif %}{% endcapture %}
-  <meta name="twitter:description" content="{{ description_content | markdownify | strip_html | condense_spaces | truncate:200 }}">
+  <meta name="twitter:description" content="{{ description_content | markdownify | strip_liquid | strip_html | condense_spaces | truncate:200 }}">
   {% if share_image != '' %}
   <meta name="twitter:image" content="{{ site.url }}{{ share_image }}">
   {% endif %}
