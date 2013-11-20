@@ -15,7 +15,9 @@ Introducing my first iPhone game, [Devils in Heaven](https://itunes.apple.com/ap
 
 <!-- more -->
 
-{% img img-polaroid center /images/blog/2013/dih-screenshot1.png 'Devils in Heaven' 'Screenshot of gameplay.' %}
+[{% img center /images/app_store_download.png %}](https://itunes.apple.com/app/id744368918)
+
+{% img img-polaroid center /images/blog/2013/dih-animated.gif 'Devils in Heaven' 'Video of gameplay.' %}
 
 Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.
 
@@ -24,6 +26,8 @@ It's completely free with no ads or in-app purchases, though I might add in-app 
 Like it? [Text a link to your friends!](https://www.makegameswith.us/games/devils-in-heaven/)
 
 Built with [coocs2d-iphone](http://www.cocos2d-iphone.org/) and [Kobold2D](http://www.kobold2d.com/display/KKSITE/Home). Published by [MakeGamesWithUs](https://www.makegameswith.us/).
+
+{% img img-polaroid center /images/blog/2013/dih-screenshot1.png 'Devils in Heaven' 'Screenshot of gameplay.' %}
 
 # The Process
 
