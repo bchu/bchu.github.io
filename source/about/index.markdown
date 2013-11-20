@@ -5,7 +5,7 @@ sharing: false
 footer: false
 ---
 
-I'm a full-stack JavaScript engineer. I believe rich client-side apps are the future of web development. I'm really excited about the emergent JavaScript ecosystem: MV* frameworks and libraries like `AngularJS`, and `D3.js`, server-side technologies like `node.js`, `Express`, `WebSockets`, and `Meteor`, and HTML5 APIs like `WebRTC` and `IndexedDB`.
+I'm a web and mobile engineer who loves to work with JavaScript on the web and iOS for mobile. I believe rich client-side apps are the future of web development. I'm really excited about the emergent JavaScript ecosystem: MV* frameworks and libraries like `AngularJS`, and `D3.js`, server-side technologies like `node.js`, `Express`, `WebSockets`, and `Meteor`, and HTML5 APIs like `WebRTC` and `IndexedDB`.
 
 I'm currently hacking on my own products and open-source projects while studying CS at UC Berkeley.
 
