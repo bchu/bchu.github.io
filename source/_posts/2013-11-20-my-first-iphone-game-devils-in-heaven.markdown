@@ -5,17 +5,17 @@ comments: true
 date: 2013-11-20 10:00
 categories: [iOS, Projects]
 title: "My First iPhone Game: Devils in Heaven"
-description: "My first iPhone game, Devils in Heaven, a 2D, infinite runner with physics based obstacles."
+description: "My first iPhone game, Devils in Heaven, an infinite runner with physics obstacles."
 share_image: /images/blog/2013/dih-screenshot1.png
 twitter_card_app: 744368918
 twitter_card_app_url: https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg
 ---
 
-Introducing my first iPhone game, [Devils in Heaven](https://itunes.apple.com/app/id744368918), a 2D infinite runner game with interactive obstacles!
+Introducing my first iPhone game, [Devils in Heaven](https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg), a 2D infinite runner game with interactive obstacles!
 
 <!-- more -->
 
-[{% img center /images/app_store_download.png %}](https://itunes.apple.com/app/id744368918)
+[{% img center /images/app_store_download.png %}](https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg)
 
 {% img img-polaroid center /images/blog/2013/dih-animated.gif 'Devils in Heaven' 'Video of gameplay.' %}
 
