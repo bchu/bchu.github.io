@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Projects | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/projects/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2013-11-21T21:18:56-08:00</updated>
+  <updated>2013-11-24T01:24:30-08:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -59,7 +59,7 @@
 
 <p><img class="img-polaroid center" src="/images/blog/2013/dih-physics.png" title="&lsquo;Physics debugging&rsquo; &lsquo;Screenshot of game with physics debugging graphics.&rsquo;" ></p>
 
-<p>By the way, I&rsquo;m looking for a summer internship! So <a data-toggle="modal" data-target=".contact-modal.hide.fade">contact me</a>!</p>
+<p>By the way, I&rsquo;m looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal.hide.fade">contact me</a>!</p>
 ]]></content>
   </entry>
   
