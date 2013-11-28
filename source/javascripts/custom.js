@@ -10,7 +10,7 @@
     }
   });
 
-// Avoid `console` errors in browsers that lack a console.
+  // Avoid 'console' errors in browsers that lack a console.
   if (window.console) {
     return;
   }
@@ -38,6 +38,7 @@
 $(function () {
   var $window = $(window);
 
+  // Creates a bootstrap alert that is shown and then disappears
   // type: string
   // header: string
   // body: string
@@ -92,13 +93,23 @@ $(function () {
   // -trigger a success alert
   $('.contact-modal').submit(function(e) {
     var $this = $(this);
-    if ($this.find('input[type="checkbox"]').prop('checked')) {
+
+    // handle spam:
+    // if name is link
+    if ($this.find('.contact-name').val().match(/http:\/\//)) {
+      e.preventDefault();
+    }
+
+    // if email subscription box is checked
+    else if ($this.find('input[type="checkbox"]').prop('checked')) {
       var $form = $this.find('form');
       var email = $form.find('input[type="email"]').val();
+      // get mailchimp subscribe form
       var $subscribeForm = $('.subscribe-form');
       var $inputFill = $subscribeForm.find('input[type="email"]');
       $inputFill.val(email);
       setTimeout(function() {
+        // submit mailchimp form and erase value
         $subscribeForm.submit();
         $inputFill.val('');
       }, 500);
@@ -124,7 +135,7 @@ $(function () {
     $this.parent().toggleClass('fullwidth');
     $this.siblings('.input-padding-wrapper').toggleClass('inline-block');
     $this.siblings('a').toggleClass('force-hide'); // either .search-toggle or .close-search
-    $('.nav-list li').toggleClass('force-hide');
+    $('.list-group .list-group-item').toggleClass('force-hide');
   };
   $('.search-toggle, .close-search').click(toggleSearch);
   // 767 px threshold
