@@ -35,8 +35,8 @@
     <link rel="apple-touch-icon" href="apple-touch-icon.png">
     <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
     <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet'>
-    <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
-    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
     <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="/stylesheets/custom/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
     <link href="/atom.xml" rel="alternate" title="I'm Brian Chu" type="application/atom+xml">
@@ -63,54 +63,56 @@
       <button type="button" class="close" data-dismiss="alert">&times;</button>
       <strong></strong>  <span></span>
     </div>
-    <div class="container-fluid">
-      <header class="row-fluid" role="banner">
-        <section class="span4 profile-pic-container">
+    <div class="container">
+      <header class="row" role="banner">
+        <section class="col-md-4 profile-pic-container">
           <a href="/">
-            <img src="http://www.brianchu.com/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic">
+            <img src="/images/profile.png" title="Brian Chu" alt="Me" id="profile-pic">
           </a>
         </section>
-        <section class="span8" role="banner">
+        <section class="col-md-8" role="banner">
           <h1 class="title">I'm <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span>
           </h1>
-          <span class="subtext">
+          <span>
       <h3 class="inline">a web and mobile engineer. <br class="break">I &hearts; JavaScript + iOS.</h3>
     </span>
         </section>
       </header>
-      <div class="row-fluid content-row">
-        <aside class="span4 side-bar clear-affix" data-spy="affix" data-offset-top="206"></aside>
-        <aside class="span4 side-bar" data-spy="affix" data-offset-top="206">
+      <div class="row content-row">
+        <aside class="col-md-4 side-bar clear-affix" data-spy="affix" data-offset-top="161"></aside>
+        <aside class="col-md-4 side-bar" data-spy="affix" data-offset-top="161">
           <div class="side-bar-responsive">
             <button class="menu-btn hide"><i class="fa fa-align-justify fa-lg"></i>
             </button>
             <section role="navigation" class="well side-item side-nav">
-              <ul class="nav nav-list">
-                <li><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li>
-                <li><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
-                <li><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
-                <li data-toggle="buttons-checkbox">
-        <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
+              <ul class="list-group">
+                <li class="list-group-item"><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li>
+                <li class="list-group-item"><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
+                <li class="list-group-item"><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
+                <li class="list-group-item" data-toggle="buttons-checkbox">
+        <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal">Contact Me</a>
     </li>
               </ul>
               <form class="nav-search">
                 <a class="search-toggle"><i class="fa fa-search"></i></a>
                 <div class="input-padding-wrapper">
-                  <input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search">
+                  <input type="text" id="st-search-input" class="col-md-12 st-search-input search-query" placeholder="Search">
                 </div>
                 <a class="close-search force-hide">Close</a>
               </form>
             </section>
             <section class="well side-item side-email clearfix side-nonresponsive">
               <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
-              <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
-                <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+              <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
+                <div class="form-group">
+                  <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+                </div>
                 <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
               </form>
             </section>
           </div>
         </aside>
-        <section class="hentry span8 block" role="article">
+        <section class="hentry col-md-8 block" role="article">
           <article data-swiftype-index="true">
             <header class="page-header">
               <h2 class="entry-title">Creating an Auto-Growing Text Input</h2>
@@ -221,7 +223,7 @@
             </div>
           </article>
           <footer>
-            <p class="meta subtext">
+            <p class="meta">
               <span class="byline author vcard">Posted by <span class="fn">Brian Chu</span></span>
               <time datetime="2013-11-02T12:00:00-07:00" pubdate data-updated="true">Nov 2<span>nd</span>, 2013</time>
               <span class="categories">
@@ -242,8 +244,10 @@
             <div class="bottom-asides">
               <section class="well side-item side-email side-responsive">
                 <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
-                <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
-                  <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+                <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
+                  <div class="form-group">
+                    <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+                  </div>
                   <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
                 </form>
               </section>
@@ -262,8 +266,8 @@
           </footer>
         </section>
       </div>
-      <footer role="contentinfo" class="row-fluid content-row end-footer">
-        <ul class="span12 inline">
+      <footer role="contentinfo" class="row content-row end-footer">
+        <ul class="col-md-12 list-inline">
           <li><a href="https://github.com/bchu" title="Github"><i class="fa fa-github-square"></i> bchu</a></li>
           <li><a href="https://twitter.com/brrrianchu" title="Twitter"><i class="fa fa-twitter-square"/></i> @brrrianchu</a></li>
           <li><a href="http://www.linkedin.com/in/brchu" title="LinkedIn"><i class="fa fa-linkedin-square fa-lg"/></i></a></li>
@@ -272,31 +276,47 @@
           <li><small><a href="/privacy">Privacy</a></small></li>
         </ul>
       </footer>
-      <div class="modal hide fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
-        <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-          <h3 id="modalHeader">Contact Me</h3>
+      <div class="modal fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+              <h3 id="modalHeader">Contact Me</h3>
+            </div>
+            <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
+            <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame" role="form">
+              <div class="modal-body">
+                <div class="form-group">
+                  <label for="entry_562979872">Name:</label>
+                  <input class="form-control contact-name" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
+                </div>
+                <div class="form-group">
+                  <label for="entry_1424764388">Email (for my reply):</label>
+                  <input class="form-control defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
+                </div>
+                <div class="form-group">
+                  <label for="entry_1142668288">Message:</label>
+                  <textarea class="form-control defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
+                </div>
+                <div class="form-group">
+                  <label class="checkbox contact-checkbox">
+                    <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
+                  </label>
+                </div>
+                <input type="hidden" name="draftResponse" value="[]">
+                <input type="hidden" name="pageHistory" value="0">
+              </div>
+              <!-- /.modal-body -->
+              <div class="modal-footer">
+                <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust">
+              </div>
+            </form>
+          </div>
+          <!-- /.modal-content -->
         </div>
-        <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
-        <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame">
-          <div class="modal-body">
-            <label class="control-label" for="entry_562979872">Name:</label>
-            <input class="fullspan" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
-            <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
-            <input class="fullspan defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
-            <label class="control-label" for="entry_1142668288">Message:</label>
-            <textarea class="fullspan defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
-            <label class="checkbox contact-checkbox">
-              <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
-            </label>
-            <input type="hidden" name="draftResponse" value="[]">
-            <input type="hidden" name="pageHistory" value="0">
-          </div>
-          <div class="modal-footer">
-            <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust">
-          </div>
-        </form>
+        <!-- /.modal-dialog -->
       </div>
+      <!-- /.modal -->
     </div>
     <script>
     var disqus_shortname = 'brianchu';
@@ -351,7 +371,7 @@
     <script src="//swiftype.com/embed.js" async defer></script>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
-    <script src="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/js/bootstrap.min.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
     <script src="/javascripts/libs.js"></script>
     <script src="/javascripts/custom.js"></script>
     <!--[if lte IE 9]>

@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2013-11-24T01:24:30-08:00</updated>
+  <updated>2013-12-28T07:23:22-08:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -25,7 +25,7 @@
 
 <p><a href="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&amp;uo=4&amp;at=10lpgg"><img class="center" src="http://www.brianchu.com/images/app_store_download.png"></a></p>
 
-<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-animated.gif" title="Devils in Heaven" alt="Video of gameplay."></p>
+<p><img class="img-thumbnail center" src="http://www.brianchu.com/images/blog/2013/dih-animated.gif" title="Devils in Heaven" alt="Video of gameplay."></p>
 
 <p>Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.</p>
 
@@ -35,7 +35,7 @@
 
 <p>Built with <a href="http://www.cocos2d-iphone.org/">coocs2d-iphone</a> and <a href="http://www.kobold2d.com/display/KKSITE/Home">Kobold2D</a>. Published by <a href="https://www.makegameswith.us/">MakeGamesWithUs</a>.</p>
 
-<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png" title="Devils in Heaven" alt="Screenshot of gameplay."></p>
+<p><img class="img-thumbnail center" src="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png" title="Devils in Heaven" alt="Screenshot of gameplay."></p>
 
 <h1>The Process</h1>
 
@@ -45,19 +45,19 @@
 
 <p>Afterwards, I <a href="http://www.brianchu.com/about">joined</a> the MGWU team full-time as I took a full year off from school. I worked on the game here and there, bringing it up to 90%, before largely shelving the project for nearly a year until the past few weeks.</p>
 
-<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-githistory.jpg" title="Git commit history" alt="Git commit history from August 2012 to November 2013"></p>
+<p><img class="img-thumbnail center" src="http://www.brianchu.com/images/blog/2013/dih-githistory.jpg" title="Git commit history" alt="Git commit history from August 2012 to November 2013"></p>
 
 <p>There were a couple of difficult challenges. The game features ragdoll physics for the devil and angels, and setting up the parameters for the physical bodies was quite a lot of work. Dealing with physics in general was challenging at times: all the objects in the game are objects that can fully interact with the physical world, which meant dealing with unexpected behavior like being tipped over.</p>
 
 <p>One cool part: I got to use some of the physics I learned in school when I was calculating the velocity of the arrows in the game, using the kinematic equations of motion.</p>
 
-<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-equations-small.jpg" title="Kinematic equations" alt="Handwritten calulations of the arrow"></p>
+<p><img class="img-thumbnail center" src="http://www.brianchu.com/images/blog/2013/dih-equations-small.jpg" title="Kinematic equations" alt="Handwritten calulations of the arrow"></p>
 
 <p>The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows &ndash; the code is in dire need of serious refactoring, probably a month&rsquo;s worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.</p>
 
 <p>But it works! Hope you like it!</p>
 
-<p><img class="img-polaroid center" src="http://www.brianchu.com/images/blog/2013/dih-physics.png" title="Physics debugging" alt="Screenshot of game with physics debugging graphics."></p>
+<p><img class="img-thumbnail center" src="http://www.brianchu.com/images/blog/2013/dih-physics.png" title="Physics debugging" alt="Screenshot of game with physics debugging graphics."></p>
 
 <p>By the way, I&rsquo;m looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal.hide.fade">contact me</a>!</p>
 ]]></content>
