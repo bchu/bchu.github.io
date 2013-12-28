@@ -13,7 +13,7 @@
       +'.github-box a{color:#4183c4;border:0;text-decoration:none}'
       +'.github-box a:hover{text-decoration:underline}'
       +'.github-box .github-box-title{position:relative;border-bottom:1px solid #ddd;border-radius:3px 3px 0 0;background:#fcfcfc;background:-moz-linear-gradient(#fcfcfc,#ebebeb);background:-webkit-linear-gradient(#fcfcfc,#ebebeb);}'
-      +'.github-box .github-box-title h3 {font-family:helvetica,arial,sans-serif;font-weight:normal;font-size:16px;color:gray;margin:0;padding:0 0 0 30px;background:url('+box_title_png+') 7px center no-repeat}'
+      +'.github-box .github-box-title h3 {line-height:40px;font-family:helvetica,arial,sans-serif;font-weight:normal;font-size:16px;color:gray;margin:0;padding:0 0 0 30px;background:url('+box_title_png+') 7px center no-repeat}'
       +'.github-box .github-box-title h3 .repo{font-weight:bold}'
       +'.github-box .github-box-title .github-stats{position:absolute;top:8px;right:10px;background:white;border:1px solid #ddd;border-radius:3px;font-size:11px;font-weight:bold;line-height:21px;height:21px}'
       +'.github-box .github-box-title .github-stats a{display:inline-block;height:21px;color:#666;padding:0 5px 0 18px;background: url('+stats_png+') no-repeat}'
@@ -28,8 +28,10 @@
       +'.github-box .github-box-download .download{position:absolute;display:block;top:10px;right:10px;height:24px;line-height:24px;font-size:12px;color:#666;font-weight:bold;text-shadow:0 1px 0 rgba(255,255,255,0.9);padding:0 10px;border:1px solid #ddd;border-bottom-color:#bbb;border-radius:3px;background:#f5f5f5;background:-moz-linear-gradient(#f5f5f5,#e5e5e5);background:-webkit-linear-gradient(#f5f5f5,#e5e5e5);}'
       +'.github-box .github-box-download .download:hover{color:#527894;border-color:#cfe3ed;border-bottom-color:#9fc7db;background:#f1f7fa;background:-moz-linear-gradient(#f1f7fa,#dbeaf1);background:-webkit-linear-gradient(#f1f7fa,#dbeaf1);}'
       +'.github-box .github-box-download .travis { position:absolute;top:13px;right:135px;}'
+      +'.github-box *,.github-box *:before,.github-box *:after {-webkit-box-sizing: content-box;-moz-box-sizing: content-box;box-sizing: content-box;}'
       +'</style>'
     );
+
     i++;
 
     var $container = $(this), $widget,
