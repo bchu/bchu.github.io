@@ -37,15 +37,15 @@ $sideItemWidth: 250px;
 $footerBgColor: $wellBgColor;
 
 $profilePicRadius: $buttonBorderRadius + 6px;
-$sideAffixMarginTop: 20px;
+$sideAffixMarginTop: 20px; // distance between top of sidebar affix and top of window
 
 $navbarBg: $fontColor;
 $navbarHeight: 70px;
 
 $zMenuBtn: 2;
 $zSidebarAffix: 2;
-$zFixedTop: 3;
 $zNavDropdown: 100;
+$zAlert: 101;
 
 
 //Experiment with a multi-fonted header

@@ -63,8 +63,14 @@ figure.code figcaption {
 }
 // END Octopress specific
 
+h1, h2, h3 {
+  line-height: 40px;
+}
+
 h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
+  font-family: $bodyFonts; // BOOTSTRAP OVERRIDE
+  font-weight: bold; //BOOTSTRAP OVERRIDE
 }
 
 a {
@@ -82,7 +88,7 @@ a {
  */
 
  //Bootstrap OVERRIDE
- .img-polaroid {
+ .img-thumbnail {
   padding:0;
  }
 
@@ -122,13 +128,6 @@ h2 {
 
 .fullwidth {
   width: 100% !important;
-}
-
-.fullspan {
-  min-height: 30px;
-  width: 100%;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
 .plus {

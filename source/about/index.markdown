@@ -13,4 +13,4 @@ I was formerly the Lead Developer at MakeGamesWithUs (YC W12), an iOS game publi
 
 Check out [my resume](/about/brianchu_resume.pdf).
 
-<a href="#" data-toggle="modal" data-target=".contact-modal.hide.fade">Reach out to me!</a> I love hearing about what everyone is up to!
+<a href="#" data-toggle="modal" data-target=".contact-modal">Reach out to me!</a> I love hearing about what everyone is up to!

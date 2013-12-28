@@ -1,32 +1,47 @@
-<div class="modal hide fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+<div class="modal fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-  <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="modalHeader">Contact Me</h3>
-  </div>
-
-    <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
-    <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame">
-
-      <div class="modal-body">
-        <label class="control-label" for="entry_562979872">Name:</label>
-        <input class="fullspan" class="contact-name" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
-
-        <label class="control-label" for="entry_1424764388">Email (for my reply):</label>
-        <input class="fullspan defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
-
-        <label class="control-label" for="entry_1142668288">Message:</label>
-        <textarea class="fullspan defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
-        <label class="checkbox contact-checkbox">
-          <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
-        </label>
-        <input type="hidden" name="draftResponse" value="[]">
-        <input type="hidden" name="pageHistory" value="0">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="modalHeader">Contact Me</h3>
       </div>
 
-      <div class="modal-footer">
-        <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust">
-      </div>
-  </form>
+      <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
+      <form action="https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse" method="POST" target="contact-form-frame" role="form">
 
-</div>
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="entry_562979872">Name:</label>
+            <input class="form-control contact-name" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
+          </div>
+
+          <div class="form-group">
+            <label for="entry_1424764388">Email (for my reply):</label>
+            <input class="form-control defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
+          </div>
+
+          <div class="form-group">
+            <label for="entry_1142668288">Message:</label>
+            <textarea class="form-control defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox contact-checkbox">
+              <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1">Sign up for email updates?
+            </label>
+          </div>
+          <input type="hidden" name="draftResponse" value="[]">
+          <input type="hidden" name="pageHistory" value="0">
+
+        </div><!-- /.modal-body -->
+
+        <div class="modal-footer">
+          <input type="submit" name="submit" value="Send" class="btn btn-default flat-btn flat-small well-adjust">
+        </div>
+      </form>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->

@@ -56,14 +56,8 @@ $(function () {
     },4000);
   };
 
-  // only focus the email input field if doing so would not trigger the page to jump down
-  // var $subscribeInput = $('.side-email input[type="email"]').filter(function(i,el){return $(el).is(':visible');});
-  // if ($subscribeInput.position().top + $subscribeInput.height() < $window.height()) {
-  //   $subscribeInput.focus();
-  // }
-
   // auto focus contact form when it is opened
-  $('.contact-modal').on('shown', function() {
+  $('.contact-modal').on('shown.bs.modal', function() {
     $(this).find('input[type="text"]').focus();
   });
 
@@ -122,8 +116,8 @@ $(function () {
   });
 
   // push contact button back up when modal hides
-  $('.contact-modal').on('hide', function() {
-    $('a[data-target=".contact-modal.hide.fade"]').button('toggle');
+  $('.contact-modal').on('hide.bs.modal', function() {
+    $('a[data-target=".contact-modal"]').button('toggle');
   });
 
   // toggle search bar
@@ -138,12 +132,12 @@ $(function () {
     $('.list-group .list-group-item').toggleClass('force-hide');
   };
   $('.search-toggle, .close-search').click(toggleSearch);
-  // 767 px threshold
+  // 800 px threshold
   // if browser window expands after search bar activated, clear the special search toggle
   $window.resize(function() {
     if (toggledSearch) {
-      var width = $window.width();
-      if (width > 767) {
+      var width = window.innerWidth || $window.width();
+      if (width > 800) {
         toggleSearch.call($('.close-search')[0]);
       }
     }

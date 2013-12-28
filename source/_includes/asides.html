@@ -1,8 +1,9 @@
 {% unless page.sidebar == false %}
-<aside class="span4 side-bar clear-affix" data-spy="affix" data-offset-top="206"></aside>
+<aside class="col-md-4 side-bar clear-affix" data-spy="affix" data-offset-top="161"></aside>
 {% comment %}
+data-offset-top = number of pixels to scroll before trigerring affix
 {% endcomment %}
-<aside class="span4 side-bar" data-spy="affix" data-offset-top="206">
+<aside class="col-md-4 side-bar" data-spy="affix" data-offset-top="161">
   <div class="side-bar-responsive">
     {% if site.page_asides.size %}
       {% include_array page_asides %}

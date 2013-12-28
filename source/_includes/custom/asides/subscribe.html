@@ -1,8 +1,10 @@
 <section class="well side-item side-email {% if asides_bottom %}side-responsive{% else %}clearfix side-nonresponsive{% endif %}">
   <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
 
-  <form action="{{ site.mailchimp_form_target }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank">
-    <input type="email" value="" name="EMAIL" class="span12 email defer-invalid" id="mce-EMAIL" placeholder="Email" required>
-    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+  <form action="{{ site.mailchimp_form_target }}" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
+  <div class="form-group">
+    <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+   </div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn btn-default flat-btn flat-small pull-right well-adjust clearfix">
   </form>
 </section>

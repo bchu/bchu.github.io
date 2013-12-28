@@ -1,8 +1,8 @@
 <section class="well">
-  <ul id="recent_posts" class="nav nav-list">
-    <li class="nav-header">Recent Posts</li>
+  <ul id="recent_posts" class="list-group">
+    <li class="list-group-item">Recent Posts</li>
     {% for post in site.posts limit: site.recent_posts %}
-      <li class="post">
+      <li class="list-group-item post">
         <a href="{{ root_url }}{{ post.url }}">{% if site.titlecase %}{{ post.title | titlecase }}{% else %}{{ post.title }}{% endif %}</a>
       </li>
     {% endfor %}

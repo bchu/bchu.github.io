@@ -1,21 +1,21 @@
 <button class="menu-btn hide"><i class="fa fa-align-justify fa-lg"></i></button>
 <section role="navigation" class="well side-item side-nav">
-  <ul class="nav nav-list">
-    <li><a href="{{ root_url }}/" class="btn flat-btn icon icon-blog {% unless page.title %}active{% endunless %}">Blog</a></li>
-    <li><a href="{{ root_url }}/about/" class="btn flat-btn icon icon-user {%if page.title == 'About Me' %}active{% endif %}">About Me</a></li>
-    <li><a href="{{ root_url }}/projects/" class="btn flat-btn icon icon-projects {%if page.title == 'Projects' %}active{% endif %}">Projects</a></li>
+  <ul class="list-group">
+    <li class="list-group-item"><a href="{{ root_url }}/" class="btn flat-btn icon icon-blog {% unless page.title %}active{% endunless %}">Blog</a></li>
+    <li class="list-group-item"><a href="{{ root_url }}/about/" class="btn flat-btn icon icon-user {%if page.title == 'About Me' %}active{% endif %}">About Me</a></li>
+    <li class="list-group-item"><a href="{{ root_url }}/projects/" class="btn flat-btn icon icon-projects {%if page.title == 'Projects' %}active{% endif %}">Projects</a></li>
     {% comment %}
     <!--TODO-->
     <!-- <li><a href="#bchu" class="slidebtn slideout git-icon">GitHub</a></li> -->
     <!-- <li><a href="" class="slidebtn">Contact&nbsp;Me</a></li> -->
     {% endcomment %}
-    <li data-toggle="buttons-checkbox">
-        <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal.hide.fade">Contact Me</a>
+    <li class="list-group-item" data-toggle="buttons-checkbox">
+        <a class="btn btn-default flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal">Contact Me</a>
     </li>
   </ul>
   <form class="nav-search">
     <a class="search-toggle"><i class="fa fa-search"></i></a>
-    <div class="input-padding-wrapper"><input type="text" id="st-search-input" class="span-12 st-search-input search-query" placeholder="Search"></div>
+    <div class="input-padding-wrapper"><input type="text" id="st-search-input" class="col-md-12 st-search-input search-query" placeholder="Search"></div>
     <a class="close-search force-hide">Close</a>
   </form>
 </section>

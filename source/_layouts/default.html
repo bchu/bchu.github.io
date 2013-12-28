@@ -5,11 +5,11 @@
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
   {% include alerts.html %}
-  <div class="container-fluid">
+  <div class="container">
     {% include header.html %}
-    <div class="row-fluid content-row">
+    <div class="row content-row">
       {% comment %}
-      <nav role="navigation" class="span4 offset2 left-col">{% include navigation.html %}</nav>
+      <nav role="navigation" class="col-md-offset-2 col-md-4 left-col">{% include navigation.html %}</nav>
       {% endcomment %}
       {{ content | expand_urls: root_url }}
     </div>

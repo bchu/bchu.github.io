@@ -23,26 +23,28 @@
 }
 
 .bottom-asides {
-  margin-top: 10px;
+  margin-top: 15px;
   text-align: center;
 }
 
+// placed on sidebar elements only if the bottom-asides are not present
+// DEPRECATED 
 .side-responsive {
   display: inline-block;
   margin:0;
   width: 300px;
 }
 
-// only br elements have this class
+// only <br> elements have this class
 // this class is used to responsively trigger line breaks
 .break {
   display:none;
 }
 
 // Prevent sidebar from being sticky if screen is smaller than sidebar.
-// 582 = height of sidebar
-// 10px ensures that the sidebar does not overlap with the footer
-@media (max-height: 582px + $sideAffixMarginTop + 1px + 20px) {
+// 553 = height of sidebar
+// 58px = height of footer, ensures that the sidebar does not overlap with the footer
+@media (max-height: 553px + $sideAffixMarginTop + 58px + 15px) {
   .affix {
     position: static !important;
   }
@@ -51,25 +53,17 @@
   }
 }
 
-
-// text and code block starts collapsing again
-@media (max-width: 1445px) {
-  figure.code {
-    margin:0 !important;
-  }
-}
-
 // decrease width of sidebar, expand width of content area
 @media (max-width: 1136px) {
-  .row-fluid .span4 {
-    width: 25%;//31.623932%;
-    *width: 24.9%;
+  .row .col-md-4 {
+    width: 30%; //33.333
   }
-  .content-row .span8 {
-    width: 75%;
+  .content-row .col-md-8 {
+    width: 70%; //66.667
   }
 }
 
+// DEPRECATED
 @media (min-width: 1045px) {
   .side-responsive {
     display: none;
@@ -77,7 +71,7 @@
   }
 }
 
-// Collapse rows, collapse sidebar to top
+// Collapse rows, anchor navbar to top
 @media (max-width: 1044px) {
   body {
     padding-top: $navbarHeight;
@@ -90,28 +84,28 @@
     position: absolute !important;
   }
 
-  .row-fluid {
+  .row {
     margin-top: 20px;
   }
-  .content-row .span8 {
+  .content-row .col-md-8 {
     margin:0 auto;
     padding: 30px;
     width: 100%;
     float:none;
   }
-  .row-fluid .span4 {
+  .row .col-md-4 {
     min-height: 0; // collapse sidebars
   }
-  header.row-fluid {
+  header.row {
     padding: 15px;
     text-align: center;
-    .span8, .span4 {
+    .col-md-8, .col-md-4 {
       width: auto;
       float:none;
       display:inline-block;
       vertical-align:top;
     }
-    .span8 {
+    .col-md-8 {
       margin: 0 auto;
       text-align: left;
       padding-left: 3%;
@@ -119,7 +113,7 @@
   }
 
   // footer
-  .end-footer .span8 {
+  .end-footer .col-md-8 {
     text-align: center;
     max-width: none;
   }
@@ -154,20 +148,19 @@
   .nav-search {
     position: relative;
     top:6px;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     width: 20%;
   }
-  .nav-list {
+  .list-group {
     margin:0;
     padding:0;
-    li {
+    .list-group-item {
+      margin-right: 0;
       // fixed issue with firefox psuedo elements not getting properly absolutely positioned.
       position: relative;
       display: inline-table;
       float:left;
-      -moz-box-sizing: border-box;
-      box-sizing: border-box;
+      // -moz-box-sizing: border-box;
+      // box-sizing: border-box;
       width: 20%;
       padding-right: 15px;
       .flat-btn {
@@ -190,9 +183,9 @@
 }
 
 // button icons disappear
-// 440px: menu button appears
-@media (max-width: 767px) and (min-width: 440px) {
-  .nav-list li {
+// 440px: menu button appears, so we can reinstate button icons
+@media (max-width: 820px) and (min-width: 440px) {
+  .list-group .list-group-item {
     .flat-btn {
       padding-left:0;
       text-align: center;
@@ -202,15 +195,15 @@
     }
   }
 }
-// search input collapses into an icon
-// bootstrap does stuff here
-@media (max-width: 767px) {
+// search input collapses into a search icon
+// bootstrap also does stuff here
+@media (max-width: 800px) {
   section.side-nav {
     padding-right: 0;
   }
-  .nav-list {
+  .list-group {
     padding-right: 35px; // space for icon
-    li {
+    .list-group-item {
       width: 25%;
     }
   }
@@ -246,7 +239,7 @@
   .line-numbers {
     display: none;
   }
-  pre code, p code {
+  pre code, p code, code {
     word-wrap: break-word;
     white-space: pre-wrap;
   }
@@ -254,12 +247,12 @@
 
 // collapse profile-pic and headline
 @media (max-width: 702px) {
-  header.row-fluid .span4.profile-pic-container {
+  header.row .col-md-4.profile-pic-container {
     width: 100%;
     text-align: center;
     margin-bottom: 10px;
   }
-  header.row-fluid .span8 {
+  header.row .col-md-8 {
     width: 100%;
     text-align: center;
     padding: 0;
@@ -291,11 +284,10 @@
     padding-bottom: 6px; // manual tweak because button icon is a little empty on the bottom
     background: $fontColor;
     color: white;
-    display: block;
+    display: block !important;
     box-shadow: 0 0 1px 0 $fontColor;
-    // box-shadow: inset 1px 1px 1px 0px #435E6D;
   }
-  header.row-fluid {
+  header.row {
     padding-top: 15px;
   }
   section.side-nav {
@@ -303,9 +295,9 @@
     padding: 10px 0 20px 0;
     height: auto;
   }
-  .nav-list {
+  .list-group {
     padding:0 9px 0 0;
-    li {
+    .list-group-item {
       padding-right:0;
       display: table;
       float: none;
@@ -332,14 +324,20 @@
       display: block;
     }
   }
+
+  // fix bug where code blocks can spill over edge of screen
+  li code {
+    display: inline;
+  }
+
 }
 
 @media (max-width: 400px) {
-  header.row-fluid{
+  header.row {
     padding-left: 0;
     padding-right: 0;
   }
-  .content-row .span8 {
+  .content-row .col-md-8 {
     padding: 15px;
     border-left:0;
     border-right:0;

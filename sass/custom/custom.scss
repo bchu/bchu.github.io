@@ -29,18 +29,18 @@ button {
 a, input, button {
     -ms-touch-action: none !important;
 }
-// Bootstrap override
-.row-fluid .span4 {
-  width: 31%;//31.623932%;
-  *width: 30.9%;
-}
+
 .pager li > a {
   border-radius: $buttonBorderRadius;
 }
 // end override
 
 .github-box-content {
-  display: none !important;
+  display: none !important; // hide the github project description
+}
+
+.github-box-download {
+  box-sizing: border-box;
 }
 
 .profile-pic-container {
@@ -63,7 +63,7 @@ html {
 
 body {
   margin-bottom: $footerHeight; //hack for sticky footers
-  font-family: $bodyFonts;
+  font-family: $bodyFonts !important;
   color:$fontColor;
   padding-bottom:70px;
   font-size:$baseFontSize;
@@ -83,7 +83,7 @@ body:before {
 // content line-height and font-size and hacks to get around em stacking
 ._content {
   line-height: $contentLineHeight;
-  margin-bottom:20px;
+  margin-bottom:20px; // space between blog summaries
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 .content-row {
@@ -94,7 +94,7 @@ body:before {
   p {
     @extend ._content;
   }
-  .span8 {
+  .col-md-8 {
     ul, ol {
       @extend ._content;
     }
@@ -112,65 +112,79 @@ body:before {
 
 
 // cannot set percentage (fluid) padding on container nor row, since this will create problems for the sticky sidebar
-.container-fluid{
+.container {
+  width: 100%;
   padding: 0;
-  margin: 0 auto;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
 }
 
-.row-fluid {
-  padding: 0;
+// note that BS has rows with negative margin and a wider content body, which messes up affix percentage widths
+.row {
+  margin: 0; // override BS negative margins
   margin-top: 40px;
-  -moz-box-sizing: border-box;
-  box-sizing:border-box;
 }
 
-header.row-fluid {
+header.row {
+  margin-top:0; //override .row
+  padding: 20px 0 20px 0; // top and bottom padding
   position: relative; //used to absolutely position profile pic at 767px media query
   background: $headerBgColor;
   color: $headerFontColor;
   border-bottom: 1px solid $wellBorderColor;
-  margin-top:0;
   box-shadow: 0 0px 0px 0px $wellShadow; // x-off, y-off, blur-radius, spread (neg = shrink)
-  padding: 20px 0 20px 0;
+  .col-md-8 {
+    padding-left: 40px; // match padding of content
+  }
 }
 
-.span4 {
+.title {
+  margin-top: 10px;
+}
+
+.col-md-4 {
+  padding: 0;
+  padding-right: 3%; //increase gap with content block
+  // padding-right: 40px; *
+  // padding-right: 35px;
   text-align:right;
   display:inline-block;
 
   &.affix {
+    // FIX: this is a fix for the -15px left/right margin on BS .row. We divide by 3 because the width of col-md-4 is 33.33%
+    left: -5px; // 15 / 3 
+    display: block;
+    // padding-right: 20px *
     top: $sideAffixMarginTop;
     z-index:$zSidebarAffix;
   }
   &.side-bar {
-    margin-left: 0;
+    // margin-left: 0; *
   }
 }
 
 // hack - a placeholder aside that ensures proper page flow after the regular aside is stickified
 .clear-affix {
   position: absolute;
-  margin-left:0 !important;
+  left: 0; // fix for Firefox
+  min-height: 30px;
   &.affix {
     position:static;
   }
 }
 
 // guideline: keep line width to between 50-75 characters
-.span8 {
-  margin: 0 auto;
-  padding-left:40px;
+.content-row .col-md-8 {
+  max-width: 750px;
+}
+.col-md-8 {
+  // margin-left: 3%; //increase gap with content block
+  // margin: 0 auto; *
+  // padding-left:40px;*
   &.block {
     padding: 30px 40px;
     padding-top: 19px - 5px; //19px matches well padding
   }
 }
 
-.content-row .span8 {
-  max-width: 750px;
-}
 
 .block {
   border:1px solid $wellBorderColor;
@@ -180,7 +194,7 @@ header.row-fluid {
 }
 
 .side-item {
-  margin-left: auto;
+  margin-left: auto; //moves item to the right
   text-align:left;
   -moz-box-sizing: border-box;
   box-sizing:border-box;
@@ -189,15 +203,14 @@ header.row-fluid {
   background:$wellBgColor;
   box-shadow:0 0 1px 0px $wellShadow;//inset 1px 1px 2px $wellShadow;
   border-radius:$buttonBorderRadius;
-  padding-bottom:25px;
 }
 
 .well.clear-well {
   text-align: right;
   background: none;
-  margin:0;
-  padding-top:0px;
-  margin-right:2px;
+  // margin:0; *
+  // padding-top:0px; *
+  // margin-right:2px; *
   min-width: 0;
   width:auto;
   border: 0;
@@ -215,32 +228,64 @@ input, textarea, select {
 .nav-search {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  margin: 0;
+  // margin: 0; *
   width: $searchWidth;
   display: inline-block;
 }
 
-section.side-nav {
+.side-nav {
   text-align:center;
-}
-
-.nav-list {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  padding-left: 15px - $buttonShadowWidth;
-  padding-right: 0;
-  li {
+  .list-group-item {
+    padding: 0;
+    margin-right: 5px; // compensate for the drop-shadow of the buttons
     margin-bottom: 15px;
   }
 }
 
+.list-group {
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  // padding: 0; *
+  .list-group-item {
+    background: none; // BS override
+    border: none; // BS override
+  }
+}
+
+.side-email input[type='email'] {
+  font-size: 16px;
+}
+
+.modal-dialog {
+  // padding-top: 50px; FIX THIS  
+}
+
+// BS override
+// fixes issue where opening modal creates a scrollbar on the right that shifts everything to the left
+.modal {
+  overflow-y: visible;
+}
+.modal-open {
+  overflow: visible;
+}
+// end override
+
 .contact-modal {
-  text-align: left;
-  form {
-    margin:0;
+  label {
+    font-weight: normal;
   }
 
+  h3 {
+    margin: 0; // BS override
+  }
+  .modal-body {
+    padding-bottom: 0; // BS override
+  }
   .modal-footer {
+    // form element interferes with submission
+    border-bottom-left-radius: 6px; // BS fix
+    border-bottom-right-radius: 6px; // BS fix
+    margin: 0; // BS override
     background-color: $wellBgColor;
     text-align: center;
   }
@@ -251,14 +296,11 @@ section.side-nav {
   }
 }
 
-.contact-checkbox {
-  margin-top: 10px;
-}
-
+//Blog headers
 .page-header {
-  padding-bottom: 0;
   margin-top: 0;
   margin-bottom: 10px;
+  padding-bottom: 0; 
 }
 
 article footer {
@@ -266,11 +308,11 @@ article footer {
 }
 
 footer.end-footer {
+  margin-top: 40px;
+  padding-top:4px;
   border-top: 1px solid $wellBorderColor;
   position:absolute;
   bottom:0;
-  margin-top: 40px;
-  padding-top:4px;
   font-size: 0.95em;
   width:100%; // position absolute causes element's width to shink to contents, which breaks text align, so we set width
   background: $footerBgColor;
@@ -280,7 +322,6 @@ footer.end-footer {
     padding-left: 2%;
     display:block;
     line-height:32px;
-    margin-bottom: 8px;
     text-align: center;
   }
   li {
@@ -298,7 +339,7 @@ footer.end-footer {
 .fixed-top {
   position:fixed;
   top:0;
-  z-index:$zFixedTop;
+  z-index:$zAlert;
 }
 
 .alert {
