@@ -1,57 +1,37 @@
 .btn {
-  font-family: $bodyFonts;
-  font-size:1em;
+  font-size:1em; // BS override
 }
 
-.pager li>.flat-btn, .btn {
-  border-radius: $buttonBorderRadius;
-}
-
-.flat-btn, li a.flat-btn, .btn.flat-btn {
-  //bootstrap override
+.flat-btn {
   color: $buttonTextColor;
-  transition:none;
-  background-image:none;
-
-  font-family: $bodyFonts;
   background: $buttonColor;
-  border:0;
+  border:0; // BS override
   border-radius:$buttonBorderRadius;
   border-top-right-radius:$buttonBorderRadius + 2px;
   border-bottom-right-radius:$buttonBorderRadius + 2px;
   -webkit-box-shadow: $buttonShadowColor $buttonShadowWidth 0px 0px 0px;
   box-shadow: $buttonShadowColor $buttonShadowWidth 0px 0px 0px;
-  -moz-box-sizing:border-box;
-  box-sizing: border-box;
-  display: inline-block;
-  font-weight: bold;
+  font-weight: bold; // BS override
   letter-spacing: 1px;
-  line-height: normal;
-  padding: 12px 137px 0 26px; //12px 52px 20px 26px
+  line-height: normal; // BS override
+  padding: 12px 137px 0 26px;
   position: relative;
-  text-align: center;
   text-shadow: none;
   text-transform: uppercase;
   width: $buttonWidth;
   height:45px;
-  word-spacing: 0px;
   white-space: nowrap; // fallback
   white-space: pre;
 
   // Commented-out box-shadow and left properties deal with make the buttons depress on hover and click
-  &:hover {
-    //bootstrap override
-    color: $buttonTextColor;
-    border-radius:$buttonBorderRadius;
-    background-color: $buttonColor;
-    box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
+  // &:hover {
+    // box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
     // box-shadow: ($buttonShadowWidth - 2) 0 $buttonShadowColor;
     // left: 2px;
-  }
-  &:focus, &:active, &.active {
-    border-radius:$buttonBorderRadius;
+  // }
+  &:hover, &:focus, &:active, &.active {
+    color: $buttonTextColor; //BS override
     box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
-    background-color: $buttonColor;
     // box-shadow: inset 1px 1px 0 0 $buttonShadowColor;
     // left: $buttonShadowWidth;
   }
@@ -80,73 +60,7 @@
 
 //adjust buttons to account for box-shadow (move the buttons to the left)
 .well-adjust {
-  margin-right:5px;
-}
-
-li .slideout {
-  /*background-color: rgb(242, 158, 13);*/
-  /*display: inline-block;*/
-  /*font-size: 16px;*/
-  /*font-weight: bold;*/
-  /*height: 69px;*/
-  /*letter-spacing: 1px;*/
-  /*padding-bottom: 25px;*/
-  /*padding-left: 120px;*/
-  /*padding-right: 150px;*/
-  /*padding-top: 25px;*/
-  /*position: relative;*/
-  /*text-transform: uppercase;*/
-  /*-webkit-transition: all 0.3s;*/
-  /*-moz-transition: all 0.3s;*/
-  /*transition: all 0.3s;*/
-  /*width: 264px;*/
-}
-
-.slideout:before {
-  background: #fff;
-  z-index: 2;
-  border-radius: 0px 10px 10px 0px; // my change, also hack to fix bg from peeking out
-  //border-radius: 10px 0 0 10px;
-  position: absolute;
-  height: 100%;
-  right:0; // my change
-  //left: 0; // my change
-  top: 0;
-  line-height: 2.6;
-  font-size: 160%;
-  width: 60px;
-  content:'';
-
-
-  font-family: 'FontAwesome';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  -webkit-font-smoothing: antialiased;
-}
-
-/*
-beaker: F0C3
-bolt: F0E7
-cloud: F0C2
-inbox: F01C
-lightbulb: F0EB
-github: F113, F09B, F092
-archive: F187;
-envelope: F0E0
-comments: F086
-bullhorn: F0A1
-comment: F075
-envelop-alt: F003
-rocket: F135
-user: F007
-*/
-
-.icon {
-  //bootstrap override
-  margin-right: 0 !important;
+  margin-right:$buttonShadowWidth / 2;
 }
 
 .icon:before {
@@ -196,6 +110,49 @@ user: F007
   color:$buttonColor;
 }
 
+li .slideout {
+  /*background-color: rgb(242, 158, 13);*/
+  /*display: inline-block;*/
+  /*font-size: 16px;*/
+  /*font-weight: bold;*/
+  /*height: 69px;*/
+  /*letter-spacing: 1px;*/
+  /*padding-bottom: 25px;*/
+  /*padding-left: 120px;*/
+  /*padding-right: 150px;*/
+  /*padding-top: 25px;*/
+  /*position: relative;*/
+  /*text-transform: uppercase;*/
+  /*-webkit-transition: all 0.3s;*/
+  /*-moz-transition: all 0.3s;*/
+  /*transition: all 0.3s;*/
+  /*width: 264px;*/
+}
+
+.slideout:before {
+  background: #fff;
+  z-index: 2;
+  border-radius: 0px 10px 10px 0px; // my change, also hack to fix bg from peeking out
+  //border-radius: 10px 0 0 10px;
+  position: absolute;
+  height: 100%;
+  right:0; // my change
+  //left: 0; // my change
+  top: 0;
+  line-height: 2.6;
+  font-size: 160%;
+  width: 60px;
+  content:'';
+
+
+  font-family: 'FontAwesome';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+}
 
 // .slideout:after, .slideout:before {
 //     -webkit-transform:rotate(-1deg) translate(0,-1px);
