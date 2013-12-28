@@ -117,7 +117,7 @@ body:before {
   padding: 0;
 }
 
-// note that BS has rows with negative margin and a wider content body, which messes up affix percentage widths
+// note that BS has rows with negative margin and a wider content body, which can mess up affix percentage widths
 .row {
   margin: 0; // override BS negative margins
   margin-top: 40px;
@@ -147,8 +147,8 @@ header.row {
   display:inline-block;
 
   &.affix {
-    // FIX: this is a fix for the -15px left/right margin on BS .row. We divide by 3 because the width of col-md-4 is 33.33%
-    left: -5px; // 15 / 3 
+    // FIX: this is a *deprecated* fix for the -15px left/right margin on BS .row. We divide by 3 because the width of col-md-4 is 33.33%
+    // left: -5px; // 5 = 15/3  ; fix is deprecated because we have removed the negative margins
     display: block;
     top: $sideAffixMarginTop;
     z-index:$zSidebarAffix;
