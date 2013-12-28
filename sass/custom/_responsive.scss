@@ -27,8 +27,7 @@
   text-align: center;
 }
 
-// placed on sidebar elements only if the bottom-asides are not present
-// DEPRECATED 
+// placed on bottom (responsive) version of asides
 .side-responsive {
   display: inline-block;
   margin:0;
@@ -63,11 +62,10 @@
   }
 }
 
-// DEPRECATED
 @media (min-width: 1045px) {
+// placed on bottom (responsive) version of asides
   .side-responsive {
     display: none;
-    visibility: hidden;
   }
 }
 
@@ -139,10 +137,9 @@
     border-radius: 0;
     background: $navbarBg;
   }
-
+  // placed on normal asides (in the sidebar, not the responsive asides at the bottom)
   .side-nonresponsive {
     display: none;
-    visibility: hidden;
   }
 
   .nav-search {
@@ -159,8 +156,6 @@
       position: relative;
       display: inline-table;
       float:left;
-      // -moz-box-sizing: border-box;
-      // box-sizing: border-box;
       width: 20%;
       padding-right: 15px;
       .flat-btn {

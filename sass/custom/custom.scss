@@ -143,8 +143,6 @@ header.row {
 .col-md-4 {
   padding: 0;
   padding-right: 3%; //increase gap with content block
-  // padding-right: 40px; *
-  // padding-right: 35px;
   text-align:right;
   display:inline-block;
 
@@ -152,12 +150,8 @@ header.row {
     // FIX: this is a fix for the -15px left/right margin on BS .row. We divide by 3 because the width of col-md-4 is 33.33%
     left: -5px; // 15 / 3 
     display: block;
-    // padding-right: 20px *
     top: $sideAffixMarginTop;
     z-index:$zSidebarAffix;
-  }
-  &.side-bar {
-    // margin-left: 0; *
   }
 }
 
@@ -176,9 +170,6 @@ header.row {
   max-width: 750px;
 }
 .col-md-8 {
-  // margin-left: 3%; //increase gap with content block
-  // margin: 0 auto; *
-  // padding-left:40px;*
   &.block {
     padding: 30px 40px;
     padding-top: 19px - 5px; //19px matches well padding
@@ -208,9 +199,6 @@ header.row {
 .well.clear-well {
   text-align: right;
   background: none;
-  // margin:0; *
-  // padding-top:0px; *
-  // margin-right:2px; *
   min-width: 0;
   width:auto;
   border: 0;
@@ -228,7 +216,6 @@ input, textarea, select {
 .nav-search {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  // margin: 0; *
   width: $searchWidth;
   display: inline-block;
 }
@@ -245,7 +232,6 @@ input, textarea, select {
 .list-group {
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  // padding: 0; *
   .list-group-item {
     background: none; // BS override
     border: none; // BS override
@@ -254,10 +240,6 @@ input, textarea, select {
 
 .side-email input[type='email'] {
   font-size: 16px;
-}
-
-.modal-dialog {
-  // padding-top: 50px; FIX THIS  
 }
 
 // BS override

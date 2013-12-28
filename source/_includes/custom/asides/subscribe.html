@@ -1,3 +1,6 @@
+{% comment %}
+Since this aside is repeated twice, the asides_bottom if statement serves to provide a different class depending on whether this aside is in the sidebar (side-nonresponsive) or the bottom (side-responsive)
+{% endcomment %}
 <section class="well side-item side-email {% if asides_bottom %}side-responsive{% else %}clearfix side-nonresponsive{% endif %}">
   <p>I write posts occasionally. Leave your email here and I'll keep you updated!</p>
 

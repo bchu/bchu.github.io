@@ -52,15 +52,6 @@ figure.code figcaption {
   border-bottom: 0;
 }
 
-// This fixes a bug with lines of code not lining up with their line numbers.
-// Caused by the fact that bootstrap sets font-size to 13px.
-// which affects the line-height of the span elements that make up the lines of code
-// this causes the lines to be smaller than they should be.
-// .highlight code is the exact selector that is used to set the line-height
-// Override bootstrap
-.highlight code {
-  font-size: 13px;
-}
 // END Octopress specific
 
 h1, h2, h3 {
@@ -69,8 +60,7 @@ h1, h2, h3 {
 
 h1,h2,h3,h4,h5,h6 {
   text-rendering: optimizeLegibility;
-  font-family: $bodyFonts; // BOOTSTRAP OVERRIDE
-  font-weight: bold; //BOOTSTRAP OVERRIDE
+  font-weight: bold;
 }
 
 a {
@@ -87,7 +77,7 @@ a {
  * Customize the background color to match your design.
  */
 
- //Bootstrap OVERRIDE
+ // Bootstrap OVERRIDE
  .img-thumbnail {
   padding:0;
  }
@@ -104,10 +94,6 @@ a {
 
 s, strike, del {
   text-shadow: none;
-}
-
-.subtext {
-  // color: $subFontColor;
 }
 
 .title .title-subdue {
