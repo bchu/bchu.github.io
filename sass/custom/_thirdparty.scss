@@ -2,6 +2,10 @@
   min-height: 30px;
   font-size: 14px !important;
   width: 100% !important; //override swiftype styles
+
+  // Swiftype loads its styles after initial page load, so we want to prevent a flash of unstyled content with the search input
+  border: 1px solid #ccc;
+  border-radius: 15px;
 }
 
 .st-search-summary h2 {
