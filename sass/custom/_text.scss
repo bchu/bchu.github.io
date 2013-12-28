@@ -13,6 +13,9 @@
     display: inline-block;
     max-width: 48%;
   }
+  li > a {
+    border-radius: $buttonBorderRadius;
+  }
   .next {
     float: right;
     text-align: right;

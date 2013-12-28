@@ -29,18 +29,10 @@ button {
 a, input, button {
     -ms-touch-action: none !important;
 }
-
-.pager li > a {
-  border-radius: $buttonBorderRadius;
-}
 // end override
 
 .github-box-content {
   display: none !important; // hide the github project description
-}
-
-.github-box-download {
-  box-sizing: border-box;
 }
 
 .profile-pic-container {
