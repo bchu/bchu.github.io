@@ -75,6 +75,12 @@
     padding-top: $navbarHeight;
   }
 
+
+  // prevents bug where gap between header and body changes due to affix
+  .side-bar {
+    display: block;
+  }
+
   .affix {
     position: static !important;
   }
