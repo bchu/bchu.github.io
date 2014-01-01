@@ -277,7 +277,6 @@
   }
   .hide.menu-btn {
     position: fixed;
-    z-index: $zMenuBtn; // allows you to click on button
     right: 8px;
     top: 6px;
     border-radius: $buttonBorderRadius;
@@ -287,6 +286,7 @@
     color: white;
     display: block !important;
     box-shadow: 0 0 1px 0 $fontColor;
+    outline: 0; // remove outline when button in focus
   }
   header.row {
     padding-top: 15px;
