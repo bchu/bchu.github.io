@@ -270,6 +270,12 @@ input, textarea, select {
   }
 }
 
+// Modal close button
+// BS override
+.close {
+  font-size: 36px;
+}
+
 //Blog headers
 .page-header {
   margin-top: 0;
