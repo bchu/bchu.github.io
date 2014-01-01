@@ -137,7 +137,9 @@ $(function () {
   $window.resize(function() {
     if (toggledSearch) {
       var width = window.innerWidth || $window.width();
-      if (width > 800) {
+      // 440px = threshold to use menu button (<=440px)
+      // 800px = threshold to use search icon (>800px there is no search icon)
+      if (width <= 440 || width > 800) {
         toggleSearch.call($('.close-search')[0]);
       }
     }
