@@ -163,7 +163,7 @@ header.row {
 }
 .col-md-8 {
   &.block {
-    padding: 30px 40px;
+    padding: 30px 40px 30px 42px;
     padding-top: 19px - 5px; //19px matches well padding
   }
 }
@@ -279,8 +279,21 @@ input, textarea, select {
 //Blog headers
 .page-header {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding-bottom: 0; 
+}
+
+.index-page .article-body {
+  p:last-of-type {
+    margin: 0; // BS override of <p>
+    display: inline;
+  }
+  display: inline;
+}
+
+.read-more {
+  display: inline;
+  white-space: nowrap;
 }
 
 article footer {
