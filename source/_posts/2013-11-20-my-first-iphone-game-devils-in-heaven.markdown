@@ -51,5 +51,5 @@ But it works! Hope you like it!
 
 {% img img-thumbnail center /images/blog/2013/dih-physics.png 'Physics debugging' 'Screenshot of game with physics debugging graphics.' %}
 
-By the way, I'm looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal.hide.fade">contact me</a>!
+By the way, I'm looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal">contact me</a>!
 
