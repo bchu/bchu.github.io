@@ -13,7 +13,7 @@ layout: default
     {% comment %}Prefer page.html_title, fall back to page.title; assign to the variable 'title'{% endcomment %}
     {% capture title %}{% if page.html_title %}{{ page.html_title }}{% else %}{{ page.title }}{% endif %}{% endcapture %}
     <h2 class="entry-title">{% if site.titlecase %}{{ title | titlecase }}{% else %}{{ title }}{% endif %}</h2>
-    {% if page.date %}<p class="meta">{% include post/date.html %}{{ time }}</p>{% endif %}
+    {% if page.date %}<div class="meta">{% include post/date.html %}{{ time }}</div>{% endif %}
   </header>
   {% endif %}
   {{ content }}
@@ -22,11 +22,11 @@ layout: default
   {% include asides_bottom.html %}
 
     <footer>
-      {% if page.date or page.author %}<p class="meta">
+      {% if page.date or page.author %}<div class="meta">
         {% if page.author %}{% include post/author.html %}{% endif %}
         {% include post/date.html %}{% if updated %}{{ updated }}{% else %}{{ time }}{% endif %}
         {% if page.categories %}{% include post/categories.html %}{% endif %}
-      </p>{% endif %}
+      </div>{% endif %}
       {% unless page.sharing == false %}
         {% include post/sharing.html %}
       {% endunless %}

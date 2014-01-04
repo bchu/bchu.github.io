@@ -1,11 +1,8 @@
 // BEGIN Octopress specific
-.sharing, .meta, .pager {
+.sharing, .pager {
   margin: 20px 0px 20px 0px;
 }
 
-.meta {
-  margin-top:10px;
-}
 .pager {
   width: 100%;
   text-align: left;
@@ -114,6 +111,9 @@ h2 {
 
 .entry-title {
   margin-top: 0;
+}
+.meta {
+  margin:0 0 10px 0; // BS override of <p>
 }
 
 .fullwidth {
