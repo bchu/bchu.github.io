@@ -90,6 +90,11 @@ $(function () {
     }
   });
 
+  // dynamically add form action link on click (to prevent spam due to scraping links)
+  $('.contact-modal input[type="submit"]').click(function(){
+    $(this).parent().parent().attr('action', 'https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse');
+  })
+
   // Contact form validation:
   var isInvalidInput = function(name, email, msg) {
     return name.match(/http:\/\//);
@@ -103,10 +108,11 @@ $(function () {
     var $this = $(this);
     var $form = $this.find('form');
     var email = $form.find('input[type="email"]').val();
+    var msg = $form.find('textarea').val();
 
     // handle spam:
     // validate inputs
-    if (isInvalidInput($form.find('.contact-name').val(), email, $form.find('textarea').val())) {
+    if (isInvalidInput($form.find('.contact-name').val(), email, msg)) {
       e.preventDefault();
     }
 
