@@ -133,6 +133,7 @@ $(function () {
     // slight delay
     setTimeout(function() {
       triggerAlert('success','Thanks!',"I'll get back to you ASAP!");
+      $form[0].reset();
     },300);
   });
 
