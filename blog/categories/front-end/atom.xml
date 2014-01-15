@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Front End | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/front-end/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-01-05T18:06:43-08:00</updated>
+  <updated>2014-01-14T16:01:33-08:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -23,7 +23,7 @@
 <!-- more -->
 
 
-<p>This was inspired by some bits an pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.</p>
+<p>This was inspired by some bits and pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.</p>
 
 <p>Here&rsquo;s a jsFiddle:</p>
 
