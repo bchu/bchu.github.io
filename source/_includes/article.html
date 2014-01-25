@@ -21,7 +21,7 @@
 
 {% if index %}
   {% capture excerpted %}{{ content | has_excerpt }}{% endcapture %}
-  <div class="article-body">{{ content | excerpt }}</div>
+  <div class="article-body">{{ content | excerpt | strip_div }}</div>
   {% if excerpted == 'true' %}
     <footer class="read-more">
       <a rel="full-article" href="{{ root_url }}{{ post.url }}">{{ site.excerpt_link }}</a>
