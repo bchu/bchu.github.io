@@ -97,6 +97,11 @@
     width: 100%;
     float:none;
   }
+  .article-cover {
+    margin-left: -30px; // matches .content-row .col-md-9 padding
+    margin-right: -30px;
+  }
+
   .row .col-md-4 {
     min-height: 0; // collapse sidebars
   }
@@ -342,5 +347,9 @@
     padding: 15px;
     border-left:0;
     border-right:0;
+  }
+  .article-cover {
+    margin-right: -15px;
+    margin-left: -15px;
   }
 }
