@@ -75,7 +75,7 @@ body:before {
 // content line-height and font-size and hacks to get around em stacking
 ._content {
   line-height: $contentLineHeight;
-  margin-bottom:20px; // space between blog summaries
+  margin-bottom:24px; // space between blog summaries
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.8);
 }
 .content-row {
