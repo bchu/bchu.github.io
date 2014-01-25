@@ -7,5 +7,9 @@ module CustomLiquidFilters
     input.gsub(/\{%\s.*?\s%\}/, '')
   end
 
+  def strip_div(input)
+    input.gsub(/<div.*?<\/div>/, '')
+  end
+
 end
 Liquid::Template.register_filter CustomLiquidFilters
