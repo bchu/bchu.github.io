@@ -150,6 +150,10 @@ h2 {
   visibility: hidden;
 }
 
+a[href*='#'] {
+  color: #4B7A86;
+}
+
 img.center {
   display: block;
   margin-left: auto;
