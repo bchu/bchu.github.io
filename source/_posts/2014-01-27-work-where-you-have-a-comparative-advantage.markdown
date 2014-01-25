@@ -10,11 +10,15 @@ description: "How do you prioritize what to build? One way I try to decide what 
 
 Like most developers, you probably keep a running list of ideas for apps you might build. I do. They all seem promising and potentially useful. How do you prioritize what to build? One way I try to decide what to work on: I think of my comparative advantages.
 
+<!-- more -->
+
 Work where you have a comparative advantage. Consider the unique skills, insights, networks of people, networks of beta users, and marketing channels that are available to you as a result of your where you are today and what you've done in the past. What you choose to work on should take advantage of those things [1].
 
 College students, like myself, will probably have greater insight into the social behavior of teenagers and twenty-somethings than other demographics [2]. They have access to an extremely broad and dense group of fellow students, all close to their age. They have access to college-specific activities - dorm life, taking classes, parties, homework - and close access to a set of potential beta users in a narrow demographic, other students. A college student can access a huge variety of college-specific marketing channels - friends, clubs, campus billboards, club tabling, and classes. An experienced engineer will have a different set comparative advantages. An engineer might have insight into the problems companies face with software architecture, databases, servers, testing. An engineer will have access to a strong network of engineers, managers, and CTOs. An engineer might have better access to other marketing channels - meetups, invite-only networking events, and technology conferences.
 
 Domain expertise is a subset of comparative advantage. A college student would be hard-pressed to build a better CRM that takes the market. They don't have domain expertise. On the other hand, an operations leader with years of enterprise experience would be hard-pressed to build the next trendy social networking app. They don't have any domain expertise. They don't necessarily suffer from handicaps; they just don't have any legs up on the competition - twenty-somethings with the same ideas. So they would be better off competing elsewhere and exploiting their own comparative advantages.
+
+Take a moment to think: what are your comparative advantages? What networks do you have access to, both as a result of your location and your experience? What skills do you have? What kind of beta users can you test your projects with? What insights do you have as a result of your experience? What other distribution/marketing channels do you have?
 
 I'm in college right now. That's why my latest side project is tackling the problem of buying and selling things locally - a quintissentially college student problem.
 
