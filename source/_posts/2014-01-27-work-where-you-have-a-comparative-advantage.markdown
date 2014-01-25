@@ -8,6 +8,8 @@ title: "Work where you have a comparative advantage"
 description: "How do you prioritize what to build? One way I try to decide what to work on: I think of my comparative advantages."
 ---
 
+<div class="article-cover" style="background-image: url('/images/blog/2014/comparative-advantage.jpg')"></div>
+
 Like most developers, you probably keep a running list of ideas for apps you might build. I do. They all seem promising and potentially useful. How do you prioritize what to build? One way I try to decide what to work on: I think of my comparative advantages.
 
 <!-- more -->
