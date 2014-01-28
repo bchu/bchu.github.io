@@ -27,6 +27,7 @@
   <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% endunless %}
   <meta property="fb:profile_id" content="{{ site.facebook_user }}">
+  <meta property="fb:app_id" content="{{ site.facebook_app_id }}">
   <meta property="og:type" content="{{ og_type }}">
   <meta property="og:title" content="{{ title }}">
   {% if og_type == 'article' %}

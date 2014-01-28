@@ -117,6 +117,7 @@ quantcast_id:
 # Facebook
 facebook_user: brian.chu
 facebook_like: true
+facebook_app_id: 210604952463349
 
 # Linkedin
 linkedin_share_button: true
