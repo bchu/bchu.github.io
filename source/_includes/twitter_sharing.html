@@ -1,4 +1,6 @@
 {% if site.twitter_follow_button or site.twitter_tweet_button %}
+<script src="//platform.twitter.com/widgets.js" async defer></script>
+{% comment %}
   <script>
     (function(){
       var t = document.createElement('script');
@@ -7,4 +9,5 @@
       document.getElementsByTagName('head')[0].appendChild(t);
     })();
   </script>
+{% endcomment %}
 {% endif %}

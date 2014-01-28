@@ -1,4 +1,6 @@
 {% if site.google_plus_one %}
+<script src="https://apis.google.com/js/plusone.js" async defer></script>
+{% comment %}
   <script>
     (function() {
       var script = document.createElement('script');
@@ -7,4 +9,5 @@
       var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s);
     })();
   </script>
+{% endcomment %}
 {% endif %}
