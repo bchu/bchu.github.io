@@ -1,11 +1,11 @@
 {% if site.twitter_follow_button or site.twitter_tweet_button %}
   <script>
     (function(){
-      var twitterWidgets = document.createElement('script');
-      twitterWidgets.async = true;
-      twitterWidgets.defer = true;
-      twitterWidgets.src = '//platform.twitter.com/widgets.js';
-      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+      var t = document.createElement('script');
+      t.async = true;
+      t.defer = true;
+      t.src = '//platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(t);
     })();
   </script>
 {% endif %}
