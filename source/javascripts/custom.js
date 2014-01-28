@@ -43,8 +43,6 @@
 $(function () {
   var $window = $(window);
 
-
-
   // *** CONTACT FORM MODAL ***
 
   // Creates a bootstrap alert that is shown and then disappears
@@ -119,12 +117,18 @@ $(function () {
     // if email subscription box is checked
     if ($this.find('input[type="checkbox"]').prop('checked')) {
       // get mailchimp subscribe form
-      var $subscribeForm = $('.subscribe-form');
+      // .first() fixes a dual submission bug. The selector matches two elements, due to the responsive widget structure (email subscribe form is repeated at the bottom of the page)
+      // we only need one.
+      var $subscribeForm = $('.subscribe-form').first();
+      // the default target of _blank causes Chrome to open a popup window
+      $subscribeForm.attr('target', 'contact-form-frame');
       var $inputFill = $subscribeForm.find('input[type="email"]');
       $inputFill.val(email);
       setTimeout(function() {
         // submit mailchimp form and erase value
         $subscribeForm.submit();
+        // reset to default:
+        $subscribeForm.attr('target', '_blank');
         $inputFill.val('');
       }, 500);
     }
