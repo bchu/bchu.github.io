@@ -29,9 +29,8 @@
   <meta property="fb:profile_id" content="{{ site.facebook_user }}">
   <meta property="fb:app_id" content="{{ site.facebook_app_id }}">
   <meta property="og:type" content="{{ og_type }}">
-  <meta property="og:title" content="{{ title }}">
   {% if og_type == 'article' %}
-  <meta property="article:published_date" content="{{ page.date }}">
+  <meta property="article:published_time" content="{{ page.date }}">
   <meta property="article:section" content="Blog">
   {% for tag in page.categories %}
     <meta property="article:tag" content="{{ tag }}">
