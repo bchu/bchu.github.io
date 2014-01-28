@@ -29,6 +29,9 @@
     // box-shadow: ($buttonShadowWidth - 2) 0 $buttonShadowColor;
     // left: 2px;
   // }
+  &:focus {
+    outline: 0; // remove link click outline in Firefox
+  }
   &:hover, &:focus, &:active, &.active {
     color: $buttonTextColor; //BS override
     box-shadow: $buttonColor $buttonShadowWidth 0px 0px 0px;
