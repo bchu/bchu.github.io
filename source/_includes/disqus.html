@@ -4,18 +4,28 @@
       var disqus_shortname = '{{ site.disqus_short_name }}';
       {% if page.comments == true %}
         {% comment %} `page.comments` can be only be set to true on pages/posts, so we embed the comments here. {% endcomment %}
-        // var disqus_developer = 1;
         var disqus_identifier = '{{ site.url }}{{ page.url }}';
         var disqus_url = '{{ site.url }}{{ page.url }}';
+        var disqus_title = '{{ page.title }}'
         var disqus_script = 'embed.js';
       {% else %}
         {% comment %} As `page.comments` is empty, we must be on the index page. {% endcomment %}
         var disqus_script = 'count.js';
       {% endif %}
+
+    {% comment %}
     (function () {
       var dsq = document.createElement('script'); dsq.async = true; dsq.defer = true;
-      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
       (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     }());
+    {% endcomment %}
 </script>
+
+  {% if page.comments == true %}
+    <script src="//{{ site.disqus_short_name }}.disqus.com/embed.js" async defer></script>
+  {% else %}
+    <script src="//{{ site.disqus_short_name }}.disqus.com/count.js" async defer></script>
+  {% endif %}
+
 {% endif %}

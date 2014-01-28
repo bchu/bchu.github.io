@@ -1,4 +1,5 @@
-<div class="sharing">
+{% comment %} aria-live polite makes the screen reader not immediately prompt user with new data when an area updates {% endcomment %}
+<div class="sharing" aria-live="polite">
   {% if site.twitter_tweet_button %}
     <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.twitter_user }}">Tweet</a>
   {% endif %}
