@@ -118,5 +118,11 @@ quantcast_id:
 facebook_user: brian.chu
 facebook_like: true
 
+# Linkedin
+linkedin_share_button: true
+
+# Quora
+quora_user: Brian-Chu-2
+
 # Swiftype
 swiftype: 5J3i1dwgBx7wrJPqyp31
