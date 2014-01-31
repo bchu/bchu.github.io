@@ -127,6 +127,7 @@ module.exports = function (grunt) {
   // only watch public folder, sass stylesheets, and js files (preview mode)
   grunt.registerTask('static', [
     'exec:generate',
+    'prettify:public', // re-run same prettify tasks to check for whitespace errors
     'connect:livereload',
     'open',
     'concurrent:static'
