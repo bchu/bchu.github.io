@@ -28,6 +28,11 @@ listen from parent, check event.target (or jquery sugar)
 301/302
 caching
 
+#Request response factors
+batching
+progressive processing
+spdy
+
 # Selectors
 #id
 caching
@@ -43,3 +48,9 @@ caching length
 Links
 http://blog.fogcreek.com/we-spent-a-week-making-trello-boards-load-extremely-fast-heres-how-we-did-it/
 https://news.ycombinator.com/item?id=7103815
+
+batched requests
+https://tech.dropbox.com/2014/01/retrieving-thumbnails/
+
+measurement:
+https://dvcs.w3.org/hg/webperf/raw-file/tip/specs/NavigationTiming/Overview.html
