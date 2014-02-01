@@ -1,6 +1,7 @@
 require "rubygems"
 require "bundler/setup"
 require "stringex"
+require "SecureRandom" # for generating post uuid's for Disqus
 
 ## -- Rsync Deploy config -- ##
 # Be sure your public key is listed in your server's ~/.ssh/authorized_keys file
@@ -106,6 +107,7 @@ task :new_post, :title do |t, args|
   puts "Creating new post: #{filename}"
   open(filename, 'w') do |post|
     post.puts "---"
+    post.puts "uuid: #{SecureRandom.uuid()}"
     post.puts "published: false"
     post.puts "layout: post"
     post.puts "comments: true"
