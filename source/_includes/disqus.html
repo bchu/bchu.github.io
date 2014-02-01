@@ -7,7 +7,7 @@
         {% capture disqus_identifier %}{% if page.uuid %}{{ page.uuid }}{% else %}{{ site.url }}{{ page.url }}{% endif %}{% endcapture %}
         var disqus_identifier = '{{ disqus_identifier }}';
         var disqus_url = '{{ site.url }}{{ page.url }}';
-        var disqus_title = '{{ page.title }}'
+        var disqus_title = '{{ page.title | escape_quotes }}'
         var disqus_script = 'embed.js';
       {% else %}
         {% comment %} As `page.comments` is empty, we must be on the index page. {% endcomment %}

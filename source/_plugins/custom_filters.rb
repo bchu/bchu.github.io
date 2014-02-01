@@ -1,4 +1,4 @@
-#custom filters for brianchu.com
+# custom filters for brianchu.com
 
 module CustomLiquidFilters
 
@@ -10,6 +10,11 @@ module CustomLiquidFilters
   def strip_div(input)
     input.gsub(/<div.*?<\/div>/, '')
   end
+
+	def escape_quotes(input)
+    input.gsub(/'/, '&#39').gsub(/"/, '\\"')
+  end
+
 
 end
 Liquid::Template.register_filter CustomLiquidFilters
