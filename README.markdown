@@ -14,19 +14,21 @@ Based on Octopress.
 4. `grunt static` to generate the website and have livereload watch the sass and public folders (for editing the static website directly)
 5. `grunt` to generate the website and have livereload do the same watches as `grunt static`, but also regenerate the entire website when non-style/js/public source files change.
 
-###Todo
+### Todo
 
-1. color scheme, colorify headers
-2. make contact form gradient consistent with search, remove jquery duplication
-3. cleanup CSS, simplify and consolidate responsive features
-4. add images for projects
-5. show additional list of categories and recent posts when you scroll down a certain amount.
-6. mixpanel, quantcast, google analytics goals/click tracking
-7. github slideout
-8. *convert homepage to a summary of all and about and blog*
-9. cleanup stylesheet mess (esp. extraneous)
-10. Upgrade bootstrap
-11. Add blog icons
+1. add images for projects
+2. show additional list of categories and recent posts when you scroll down a certain amount.
+3. mixpanel, quantcast, google analytics goals/click tracking
+4. github slideout
+5. *convert homepage to a summary of all and about and blog*
+6. cleanup stylesheet mess (esp. extraneous)
+7. Add blog icons
+8. consider full bleed magazine like experience at header
+make contact form gradient consistent with search, remove jquery duplication
+search form popout shifts due to scroll bar
+clickable blog index excerpt
+fix firefox share box position
+add tags to blog post preview byline
 
 ## Prerequisites
 
@@ -34,7 +36,7 @@ Please check that you have a recent version of [compass](http://compass-style.or
 (see Gemfile.lock in your octopress directory and run bundle update if necessary), otherwise, you might get errors
 similar to those reported in issue #7. Compass version 0.12.1 is known to work.
 
-Currently, version of sass least 3.2 is needed due to requirements of [twitter-bootstrap-sass](https://github.com/jlong/sass-twitter-bootstrap):
+Currently, version of sass least 3.2 is needed.
 
      $ gem list| grep sass
      sass (3.2.4)
@@ -57,13 +59,14 @@ the $solarized variable in sass/syntax/\_higlight.scss.
 This is the metadata at the top of every markdown post.
 
 ## Required
+* uuid: *string* | UUID (version 4) for tracking Disqus discussion. Auto-generated with rake (see Rakefile)
 * published: *bool* | Toggle whether to publish the post
 * layout: *type* | Determines which template inside '_layouts' to use. *type* can be post, page, default, category_index
 * comments: *bool* | Toggles Disqus comments
 * date: *date* | Specify date
 * categories: *list* | Comma-separated array of categories. E.g. [1,2,3]
-* title: *title* | Title - affects both the article title (h2 tag), and the website title.
-* description: *description* | Description
+* title: *title* | Title - affects both the article title (h2 tag), and the website title tag.
+* description: *description* | Description (meta description) - affects search engine blurb
 
 ## Optional
 * sharing: false | set this to disable sharing links
