@@ -47,6 +47,8 @@ as compass might pick one of those up and site generation would fail.
      $ bundle update sass
      $ gem remove sass -v3.1.20
 
+**Note**: Octopress requires a minimum Ruby version of `1.9.3-p0`.
+A [list of 3rd party plug-ins](https://github.com/imathis/octopress/wiki/3rd-party-plugins).
 
 ## Code snippet colors
 

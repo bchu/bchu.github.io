@@ -3,12 +3,12 @@
 .sass-cache
 .gist-cache
 .pygments-cache
+sass.old
+source.old
 _deploy
 public
-sass.old
 vendor
 node_modules
-source.old
 source/_stash
 source/stylesheets/bootstrap
 source/stylesheets/custom

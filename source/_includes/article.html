@@ -12,7 +12,8 @@
       <div class="meta">
         {% include post/date.html %}{{ time }}
         {% if site.disqus_short_name and page.comments != false and site.disqus_show_comment_count == true %}
-         | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread">Comments</a>
+          {% capture disqus_id %}{% if post.meta.disqus_id %}{{ post.meta.disqus_id }}{% else %}{% if post.meta.uuid %}{{ post.meta.uuid }}{% else %}{{ site.url }}{{ post.url }}{% endif %}{% endif %}{% endcapture %}
+           | <a href="{% if index %}{{ root_url }}{{ post.url }}{% endif %}#disqus_thread" data-disqus-identifier="{{ disqus_id }}">Comments</a>
         {% endif %}
       </div>
     {% endunless %}
