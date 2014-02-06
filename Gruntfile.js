@@ -76,7 +76,7 @@ module.exports = function (grunt) {
     },
     prettify: {
       options: {
-        prettifyrc:'.prettifyrc'
+        config:'.prettifyrc'
       },
       public: {
         expand:true,
