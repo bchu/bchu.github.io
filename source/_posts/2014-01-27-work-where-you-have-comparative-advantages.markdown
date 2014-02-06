@@ -23,7 +23,7 @@ Domain expertise is a subset of comparative advantage. A college student would b
 
 Take a moment to think: what are your comparative advantages? What networks do you have access to, both as a result of your location and your experience? What skills do you have? What kind of beta users can you test your projects with? What insights do you have as a result of your experience? What other distribution/marketing channels do you have?
 
-I'm in college right now (after a hiatus). That's why my latest side project is tackling the problem of buying and selling things locally - a quintissentially college student problem.
+I'm in college right now (after a hiatus). That's why my latest side project is tackling the problem of buying and selling things locally - a quintessentially college student problem.
 
 <a name="1" href="#1-back">[1]</a> I don't use the term as precisely as it's used in economics. Technically, comparative advantage is the idea that economies are better at producing different goods. Perhaps China produces cars more efficiently than software. Perhaps America produces software more efficiently than cars. Even if America is more efficient in absolute terms at mass-producing cars than China, the idea behind comparative advantage is that if America focuses on software, China focuses on cars, and both trade with each other, both will be richer than if they didn't focus on their comparative advantages.
 
