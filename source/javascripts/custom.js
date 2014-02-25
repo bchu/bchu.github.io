@@ -91,7 +91,7 @@ $(function () {
   // dynamically add form action link on click (to prevent spam due to scraping links)
   $('.contact-modal input[type="submit"]').click(function(){
     $(this).parent().parent().attr('action', 'https://docs.google.com/a/brianchu.com/forms/d/19H0X9cpiviJdxyqZRcAcQGsZAtbNOzOuGn3wiOx3UbM/formResponse');
-  })
+  });
 
   // Contact form validation:
   var isInvalidInput = function(name, email, msg) {
