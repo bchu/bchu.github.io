@@ -36,7 +36,11 @@
   }
 }());
 
-
+// Console log message to visitors:
+// 2 second delay ensures the item is at the bottom of the console log
+setTimeout(function(){
+  console.info('Fancy site, amirite? Please say hi!');
+}, 2000);
 
 
 
