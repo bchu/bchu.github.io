@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-03-14T20:56:47-07:00</updated>
+  <updated>2014-03-16T04:06:56-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -12,6 +12,40 @@
   </author>
   
 
+  
+  <entry>
+    <title type="html"><![CDATA[Decision Making Frameworks]]></title>
+    <link href="http://www.brianchu.com/blog/2014/03/20/decision-making-frameworks/"/>
+    <updated>2014-03-20T12:22:00-07:00</updated>
+    <id>http://www.brianchu.com/blog/2014/03/20/decision-making-frameworks</id>
+    <content type="html"><![CDATA[<div class="article-cover top-bottom-border" style="background-image: url('/images/blog/2014/decision-frameworks.jpg')"></div>
+
+
+<p>A few of the frameworks and factors I&rsquo;ve encountered for thinking about the decisions I make and the judgments I make.</p>
+
+<!-- more -->
+
+
+<h2>Frameworks</h2>
+
+<p>When facing multiple priorities and opportunities that you can take, consider these ideas:</p>
+
+<ol>
+<li><p><em>The regret-minimization framework</em>: Ask yourself which opportunity you will regret not taking. Ask yourself if you will regret doing something. This has probably been the most influential for me. <a name="1-back" href="#1">[1]</a>.</p></li>
+<li><p><em>Focus on optimizing single factor and only then seek ways to mitigate the tradeoffs.</em> We tend to evaluate choices based on tradeoffs. For example, an engineer friend of mine was trying to decide on which company to join. He felt that joining a rapidly growing startup would maximize his potential upside (through equity), whereas joining a big tech firm would give him the opportunity to learn more, earn him more money (expected value), and boost his resume, wheras staying at his current company would increase his opportunities for internal advancement. Under this framework, he should pick the most important factor (education, salary, upside potential, advancement) to optimize, and completely ignore all other factors. This is useful because the most distracting part of making a decision is having to consider all of the tiny little tradeoffs that have to be evaluated. <a name="2-back" href="#2">[2]</a></p></li>
+<li><p><em>Consider the uniqueness of an opportunity</em>. Are some of your opportunities ones that can only be seized now, or are they ones that you have years and years to pursue in the future. This is quite broad. For example, if you want to have kids and if one opportunity you want to pursue is a startup, you have to consider that you&rsquo;ll have less time when you&rsquo;re older.</p></li>
+<li><p><em>Consider comparative advantage</em>. Which opportunities are specific to your skills, and which are general opportunities open to all? I wrote more about this <a href="http://www.brianchu.com/blog/2014/01/27/work-where-you-have-comparative-advantages/">in a previous blog post</a>.</p></li>
+<li><p><em>Potential is greater than what is possible right now.</em> Refrain from judging opportunities by what they mean today. Judge them by what they mean for the future. This is more specifically geared towards technological opportunities. For example, I don&rsquo;t have the highest opinion of trends like Bitcoin, but I try very hard to refrain from dismissing Bitcoin out of hand, simply because most flaws of cyptocurrencies are rooted in flaws that exist today. But those flaws might possibly be eliminated in the future.</p></li>
+</ol>
+
+
+<p>These are just ways of thinking about decisions, not hard rules on how to act. Sometimes these frameworks don&rsquo;t apply. Sometimes they might even conflict!</p>
+
+<p><a name="1" href="#1-back">[1]</a> I encountered this in an <a href="http://www.achievement.org/autodoc/page/bez0int-3">interview of Jeff Bezos</a>.</p>
+
+<p><a name="2" href="#2-back">[2]</a> This was a piece of advice from someone else, but I forget where I enountered it.</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Work where you have comparative advantages]]></title>
@@ -28,13 +62,13 @@
 
 <p>Work where you have a comparative advantage. Consider the unique skills, insights, networks of people, networks of beta users, and marketing channels that are available to you as a result of your where you are today and what you&rsquo;ve done in the past. What you choose to work on should take advantage of those things <a name="1-back" href="#1">[1]</a>.</p>
 
-<p>College students, like myself, will probably have greater insight into the social behavior of teenagers and twenty-somethings than other demographics <a name="2-back" href="#2">[2]</a>. They have access to an extremely broad and dense group of fellow students, all close to their age. They have access to college-specific activities &ndash; dorm life, taking classes, parties, homework &ndash; and close access to a set of potential beta users in a narrow demographic, other students. A college student can access a huge variety of college-specific marketing channels &ndash; friends, clubs, campus billboards, club tabling, and classes. An experienced engineer will have a different set comparative advantages. An engineer might have insight into the problems companies face with software architecture, databases, servers, testing. An engineer will have access to a strong network of engineers, managers, and CTOs. An engineer might have better access to other marketing channels &ndash; meetups, invite-only networking events, and technology conferences.</p>
+<p>College students, like myself, will probably have greater insight into the social behavior of teenagers and twenty-somethings than other demographics <a name="2-back" href="#2">[2]</a>. They have access to an extremely broad and dense group of fellow students, all close to their age. They have access to college-specific activities - dorm life, taking classes, parties, homework - and close access to a set of potential beta users in a narrow demographic, other students. A college student can access a huge variety of college-specific marketing channels - friends, clubs, campus billboards, club tabling, and classes. An experienced engineer will have a different set comparative advantages. An engineer might have insight into the problems companies face with software architecture, databases, servers, testing. An engineer will have access to a strong network of engineers, managers, and CTOs. An engineer might have better access to other marketing channels - meetups, invite-only networking events, and technology conferences.</p>
 
-<p>Domain expertise is a subset of comparative advantage. A college student would be hard-pressed to build a better CRM that takes the market. They don&rsquo;t have domain expertise. On the other hand, an operations leader with years of enterprise experience would be hard-pressed to build the next trendy social networking app. They don&rsquo;t have any domain expertise. They don&rsquo;t necessarily suffer from handicaps; they just don&rsquo;t have any legs up on the competition &ndash; twenty-somethings with the same ideas. So they would be better off competing elsewhere and exploiting their own comparative advantages.</p>
+<p>Domain expertise is a subset of comparative advantage. A college student would be hard-pressed to build a better CRM that takes the market. They don&rsquo;t have domain expertise. On the other hand, an operations leader with years of enterprise experience would be hard-pressed to build the next trendy social networking app. They don&rsquo;t have any domain expertise. They don&rsquo;t necessarily suffer from handicaps; they just don&rsquo;t have any legs up on the competition - twenty-somethings with the same ideas. So they would be better off competing elsewhere and exploiting their own comparative advantages.</p>
 
 <p>Take a moment to think: what are your comparative advantages? What networks do you have access to, both as a result of your location and your experience? What skills do you have? What kind of beta users can you test your projects with? What insights do you have as a result of your experience? What other distribution/marketing channels do you have?</p>
 
-<p>I&rsquo;m in college right now (after a hiatus). That&rsquo;s why my latest side project is tackling the problem of buying and selling things locally &ndash; a quintessentially college student problem.</p>
+<p>I&rsquo;m in college right now (after a hiatus). That&rsquo;s why my latest side project is tackling the problem of buying and selling things locally - a quintessentially college student problem.</p>
 
 <p><a name="1" href="#1-back">[1]</a> I don&rsquo;t use the term as precisely as it&rsquo;s used in economics. Technically, comparative advantage is the idea that economies are better at producing different goods. Perhaps China produces cars more efficiently than software. Perhaps America produces software more efficiently than cars. Even if America is more efficient in absolute terms at mass-producing cars than China, the idea behind comparative advantage is that if America focuses on software, China focuses on cars, and both trade with each other, both will be richer than if they didn&rsquo;t focus on their comparative advantages.</p>
 
@@ -68,9 +102,9 @@
 
 <h1>The Process</h1>
 
-<p>Originally the game was meant to be titled <em>Demolition Gauntlet</em> &ndash; featuring a knight running through Hell, chased by demons and devils. That was a pretty uninspiring theme, so I inverted the concept, giving the game the whimsical twist I wanted it to have from the start.</p>
+<p>Originally the game was meant to be titled <em>Demolition Gauntlet</em> - featuring a knight running through Hell, chased by demons and devils. That was a pretty uninspiring theme, so I inverted the concept, giving the game the whimsical twist I wanted it to have from the start.</p>
 
-<p>Devils in Heaven was a project I worked on in short bursts, a project that I left dormant for months at a time. I started the game in June of 2012 when I interned over the summer with MakeGamesWithUs (MGWU) after high school. The internship program, which continues today, is unlike your typical internship &ndash; it&rsquo;s more like an incubator where you work on our own game alongside the MGWU developers and other interns. Over three months I finished roughly half the game &ndash; while learning Objective-C and cocos2d.</p>
+<p>Devils in Heaven was a project I worked on in short bursts, a project that I left dormant for months at a time. I started the game in June of 2012 when I interned over the summer with MakeGamesWithUs (MGWU) after high school. The internship program, which continues today, is unlike your typical internship - it&rsquo;s more like an incubator where you work on our own game alongside the MGWU developers and other interns. Over three months I finished roughly half the game - while learning Objective-C and cocos2d.</p>
 
 <p>Afterwards, I <a href="http://www.brianchu.com/about">joined</a> the MGWU team full-time as I took a full year off from school. I worked on the game here and there, bringing it up to 90%, before largely shelving the project for nearly a year until the past few weeks.</p>
 
@@ -82,7 +116,7 @@
 
 <p><img class="img-thumbnail center" src="http://www.brianchu.com/images/blog/2013/dih-equations-small.jpg" title="Kinematic equations" alt="Handwritten calulations of the arrow"></p>
 
-<p>The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows &ndash; the code is in dire need of serious refactoring, probably a month&rsquo;s worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.</p>
+<p>The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows - the code is in dire need of serious refactoring, probably a month&rsquo;s worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.</p>
 
 <p>But it works! Hope you like it!</p>
 
@@ -223,11 +257,11 @@
     <link href="http://www.brianchu.com/blog/2013/09/11/photo-embarrassment/"/>
     <updated>2013-09-11T10:00:00-07:00</updated>
     <id>http://www.brianchu.com/blog/2013/09/11/photo-embarrassment</id>
-    <content type="html"><![CDATA[<p>Instagram and Snapchat seem to share a common theme: they try to solve the hurdle of photo embarrassment &ndash; they find ways to get around our self-restraint with sharing photos. <!-- more --> Instagram does this with filters so that users can create beautiful pictures of mundane scenes. Snapchat does this with ephemeral photos that disappear <a name="1-back" href="#1">[1]</a>.</p>
+    <content type="html"><![CDATA[<p>Instagram and Snapchat seem to share a common theme: they try to solve the hurdle of photo embarrassment - they find ways to get around our self-restraint with sharing photos. <!-- more --> Instagram does this with filters so that users can create beautiful pictures of mundane scenes. Snapchat does this with ephemeral photos that disappear <a name="1-back" href="#1">[1]</a>.</p>
 
-<p>This theme fits in with my observations of frequent users of Instagram and Snapchat. Instagram photos seems to lean towards the aspirational and idealized &ndash; an expression of a desired identity. I see my friends posting idealized pictures of food, activities, moments, scenery, and people. Filters get users to share photos of mundane moments when they would otherwise exercise self-restraint.</p>
+<p>This theme fits in with my observations of frequent users of Instagram and Snapchat. Instagram photos seems to lean towards the aspirational and idealized - an expression of a desired identity. I see my friends posting idealized pictures of food, activities, moments, scenery, and people. Filters get users to share photos of mundane moments when they would otherwise exercise self-restraint.</p>
 
-<p>Snapchat seems to lean towards reality and the moment &ndash; a way of communicating your current status. I have friends that just post pictures of their faces (very specifically and almost exclusively their faces) throughout the day. Snapchat has in that sense become Twitter for photos: the disappearance of photos is not a gimmick but just a way to get users to take and share unflattering photos of themselves (the unflattering photo seems to be the hallmark of a Snapchat photo), when they would otherwise exercise self-restraint.</p>
+<p>Snapchat seems to lean towards reality and the moment - a way of communicating your current status. I have friends that just post pictures of their faces (very specifically and almost exclusively their faces) throughout the day. Snapchat has in that sense become Twitter for photos: the disappearance of photos is not a gimmick but just a way to get users to take and share unflattering photos of themselves (the unflattering photo seems to be the hallmark of a Snapchat photo), when they would otherwise exercise self-restraint.</p>
 
 <p><a name="1" href="#1-back">[1]</a> The fact that Snapchat does not have any technology that will actually ensure a photo&rsquo;s disappearance is largely irrelevant, for the same reason that it&rsquo;s irrelevant that Instagram does not guarantee your photos will actually look good.</p>
 ]]></content>
@@ -357,7 +391,7 @@
 <!-- more -->
 
 
-<p>The catch &ndash; Grunt configuration files can be fairly convoluted at first glance, usually due to the fact that developers add more and more steps to their workflow over time.</p>
+<p>The catch - Grunt configuration files can be fairly convoluted at first glance, usually due to the fact that developers add more and more steps to their workflow over time.</p>
 
 <p>Grunt is just a task runner. Every unit of functionality that you would want is usually achieved with a separate npm package (a grunt &ldquo;plugin&rdquo;).</p>
 
@@ -645,7 +679,7 @@
 <li><code>grunt-contrib-jshint</code> for running JSHint.</li>
 <li><code>grunt contrib-coffee</code> for compiling CoffeeScript.</li>
 <li><code>grunt-contrib-sass</code> for compiling SASS.</li>
-<li><code>grunt-concurrent</code> for running tasks concurrently (instead of sequentially) &ndash; useful if you want to run multiple watch tasks concurrently.
+<li><code>grunt-concurrent</code> for running tasks concurrently (instead of sequentially) - useful if you want to run multiple watch tasks concurrently.
 
 <ul>
 <li>If you have a series of tasks, the <code>watch</code> task must be run last. <code>watch</code> is a task that never ends until you terminate it. Thus, Grunt won&rsquo;t ever reach tasks that come after <code>watch</code>.</li>
