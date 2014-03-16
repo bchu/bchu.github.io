@@ -6,7 +6,10 @@ date: 2014-03-20 12:22
 categories: [Life]
 title: "Decision Making Frameworks"
 description: "A few of the frameworks and factors I've encountered for thinking about the decisions I make and the judgments I make."
+share_image: /images/blog/2014/decision-frameworks.jpg
 ---
+
+<div class="article-cover top-bottom-border" style="background-image: url('/images/blog/2014/decision-frameworks.jpg')"></div>
 
 A few of the frameworks and factors I've encountered for thinking about the decisions I make and the judgments I make.
 
