@@ -36,7 +36,7 @@ destination: public
 plugins: [plugins, source/_plugins] # source/_plugins contains custom plugins
 code_dir: downloads/code
 category_dir: blog/categories
-markdown: redcarpet # rdiscount is the default (and is faster), but redcarpet is compatible with post_url
+markdown: rdiscount # rdiscount is the default (and is faster); redcarpet is github's markdown parser
 rdiscount:
   extensions:
     - autolink
