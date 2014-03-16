@@ -3,7 +3,7 @@ published: true
 layout: post
 comments: true
 date: 2014-01-27 10:30
-categories: [Product Thoughts]
+categories: [Product Thoughts, Life]
 title: "Work where you have comparative advantages"
 description: "How do you prioritize what to build? One way I try to decide what to work on: I think of my comparative advantages."
 share_image: /images/blog/2014/comparative-advantage.jpg
