@@ -13,7 +13,7 @@ module.exports = function (grunt) {
     connect: {
       options: {
         hostname: '0.0.0.0',
-        port:8000
+        port: 8000
       },
       livereload: {
         options: {
@@ -114,6 +114,13 @@ module.exports = function (grunt) {
         tasks:['exec:generate'],
       }
     }
+  });
+
+  grunt.registerTask('port', 'Same as static, but with port as an argument', function (portArg) {
+    var connect = grunt.config.get('connect');
+    connect.options.port = portArg || 80;
+    grunt.config.set('connect', connect);
+    grunt.task.run('static');
   });
 
   // regenerate full, entire project upon changes in source files, except for sass stylesheets and js files, which are selectively rebuilt and copied over without regenerating the entire project 

@@ -13,6 +13,7 @@ Based on Octopress.
 3. `./deploy.sh` to install the theme and deploy.
 4. `grunt static` to generate the website and have livereload watch the sass and public folders (for editing the static website directly)
 5. `grunt` to generate the website and have livereload do the same watches as `grunt static`, but also regenerate the entire website when non-style/js/public source files change.
+6. Use `grunt port:<port>` to run `grunt static`, but served under a different port (default is port 80, for preview on other LAN computers).
 
 ### Todo
 
