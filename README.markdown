@@ -72,6 +72,7 @@ This is the metadata at the top of every markdown post.
 * description: *description* | Description (meta description) - affects search engine blurb
 
 ## Optional
+* hide: false | set this to hide a post from showing up on the blog index front page
 * sharing: false | set this to disable sharing links
 * footer: false | set this to disable the pagination footer
 * share_image | Set the default share thumbnail, relative to the root url, e.g. /images/blog/hi.png

@@ -1,5 +1,6 @@
 ---
 published: true
+hide: true
 layout: post
 comments: true
 date: 2014-03-20 12:22

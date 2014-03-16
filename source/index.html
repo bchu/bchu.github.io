@@ -9,7 +9,9 @@ homepage: true
     {% for post in paginator.posts %}
     {% assign content = post.content %}
 
+    {% if post.hide != true %}
     {% include article.html %}
+    {% endif %}
 
     {% endfor %}
     <ul class="pager">
