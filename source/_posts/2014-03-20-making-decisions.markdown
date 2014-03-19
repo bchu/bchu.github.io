@@ -27,9 +27,9 @@ When facing multiple priorities and opportunities that you can take, consider th
 
     For example, an engineer friend of mine was trying to decide on which company to join. He felt that joining a rapidly growing startup would maximize his potential upside (through equity), whereas joining a big tech firm would give him the opportunity to learn more, earn him more money (expected value), and boost his resume. Staying at his current company would increase his opportunities for internal advancement. Under this framework, he should examine the most important factor (pick one of: education, salary, upside potential, advancement) to optimize, and ignore all other factors. This is useful because the most distracting part of making a decision is having to consider all of the tiny little tradeoffs that have to be evaluated.
 
-3. **Consider which choices can only be pursued now.** Are some of your opportunities ones that can only be seized now, or are they ones that you have years and years to pursue in the future.
+3. **Consider which choices are time-dependent.**
 
-    This is quite broad. Some opportunities are obviously time-sensitive. For example, a job offer about to expire. Others are time-sensitive in non-obvious ways. For example, pursuing a risky opportunity is better done when you're younger, because life obligations tend to increase as you get older.
+    Some opportunities can only be seized now. An example would be a job offer about to expire. A subtler category of opportunities consists of opportunities that are *better* taken now, rather than later. For example, pursuing risky opportunities are usually done better when you're younger, because life obligations tend to increase as you get older. Then there are opportunities that you have years and years to pursue in the future.
 
 4. **Consider your comparative advantages.** Which opportunities are specific to your skills, and which are general opportunities open to all? You're going to have a better chance of success pursuing an opportunity that suits your skills. I wrote more about this [in a previous blog post]({% post_url 2014-01-27-work-where-you-have-comparative-advantages %}).
 
