@@ -25,6 +25,8 @@ Take a moment to think: what are your comparative advantages? What networks do y
 
 I'm in college right now (after a hiatus). That's why my latest side project is tackling the problem of buying and selling things locally - a quintessentially college student problem.
 
+*A cautionary note*: This is only one way to think about choosing your work. Working where you have comparative advantages can sometimes conflict with other valuable goals. Examples include: trying becoming well-rounded, trying to change careers, and trying to learn about new technologies. In those cases you have to take other factors into account!
+
 <a name="1" href="#1-back">[1]</a> I don't use the term as precisely as it's used in economics. Technically, comparative advantage is the idea that economies are better at producing different goods. Perhaps China produces cars more efficiently than software. Perhaps America produces software more efficiently than cars. Even if America is more efficient in absolute terms at mass-producing cars than China, the idea behind comparative advantage is that if America focuses on software, China focuses on cars, and both trade with each other, both will be richer than if they didn't focus on their comparative advantages.
 
 <a name="2" href="#2-back">[2]</a> I use the term "probably" very loosely, on the assumption that "you get the point." None of these are absolutes. There are definitely college students who don't know anything about their fellow students. There are definitely people 10 years out of school that have deep insight into teenage social behavior.
