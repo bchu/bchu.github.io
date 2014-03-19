@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-03-16T19:49:21-07:00</updated>
+  <updated>2014-03-19T03:34:22-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -35,9 +35,9 @@
 <li><p><strong>Focus on optimizing single factor and only then seek ways to mitigate the tradeoffs.</strong> We tend to evaluate choices based on tradeoffs. <a name="2-back" href="#2">[2]</a></p>
 
 <p> For example, an engineer friend of mine was trying to decide on which company to join. He felt that joining a rapidly growing startup would maximize his potential upside (through equity), whereas joining a big tech firm would give him the opportunity to learn more, earn him more money (expected value), and boost his resume. Staying at his current company would increase his opportunities for internal advancement. Under this framework, he should examine the most important factor (pick one of: education, salary, upside potential, advancement) to optimize, and ignore all other factors. This is useful because the most distracting part of making a decision is having to consider all of the tiny little tradeoffs that have to be evaluated.</p></li>
-<li><p><strong>Consider which choices can only be pursued now.</strong> Are some of your opportunities ones that can only be seized now, or are they ones that you have years and years to pursue in the future.</p>
+<li><p><strong>Consider which choices are time-dependent.</strong></p>
 
-<p> This is quite broad. Some opportunities are obviously time-sensitive. For example, a job offer about to expire. Others are time-sensitive in non-obvious ways. For example, pursuing a risky opportunity is better done when you&rsquo;re younger, because life obligations tend to increase as you get older.</p></li>
+<p> Some opportunities can only be seized now. An example would be a job offer about to expire. A subtler category of opportunities consists of opportunities that are <em>better</em> taken now, rather than later. For example, pursuing risky opportunities are usually done better when you&rsquo;re younger, because life obligations tend to increase as you get older. Then there are opportunities that you have years and years to pursue in the future.</p></li>
 <li><p><strong>Consider your comparative advantages.</strong> Which opportunities are specific to your skills, and which are general opportunities open to all? You&rsquo;re going to have a better chance of success pursuing an opportunity that suits your skills. I wrote more about this <a href="http://www.brianchu.com/blog/2014/01/27/work-where-you-have-comparative-advantages/">in a previous blog post</a>.</p></li>
 <li><p><strong>Potential is greater than what is possible right now.</strong> I try to refrain from judging opportunities by what they mean today. Judge them by what they mean for the future. This is more specifically geared towards technological opportunities.</p>
 
@@ -75,6 +75,8 @@
 <p>Take a moment to think: what are your comparative advantages? What networks do you have access to, both as a result of your location and your experience? What skills do you have? What kind of beta users can you test your projects with? What insights do you have as a result of your experience? What other distribution/marketing channels do you have?</p>
 
 <p>I&rsquo;m in college right now (after a hiatus). That&rsquo;s why my latest side project is tackling the problem of buying and selling things locally - a quintessentially college student problem.</p>
+
+<p><em>A cautionary note</em>: This is only one way to think about choosing your work. Working where you have comparative advantages can sometimes conflict with other valuable goals. Examples include: trying becoming well-rounded, trying to change careers, and trying to learn about new technologies. In those cases you have to take other factors into account!</p>
 
 <p><a name="1" href="#1-back">[1]</a> I don&rsquo;t use the term as precisely as it&rsquo;s used in economics. Technically, comparative advantage is the idea that economies are better at producing different goods. Perhaps China produces cars more efficiently than software. Perhaps America produces software more efficiently than cars. Even if America is more efficient in absolute terms at mass-producing cars than China, the idea behind comparative advantage is that if America focuses on software, China focuses on cars, and both trade with each other, both will be richer than if they didn&rsquo;t focus on their comparative advantages.</p>
 
