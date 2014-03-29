@@ -28,7 +28,10 @@
 
   {% capture og_type %}{% if page.date %}article{% else %}profile{% endif %}{% endcapture %}
   <meta property="og:title" content="{{ title }}">
+  {% comment %}
+  Removed for google title SEO reasons
   <meta property="og:site_name" content="{{ site.title }}">
+  {% endcomment %}
   {% unless page.twitter_card_app %} {% comment %} Twitter will look for twitter:description and og:description before it uses the actual app description {% endcomment %}
   <meta property="og:description" content="{{ description | strip_html | condense_spaces | truncate:150 }}">
   {% endunless %}
