@@ -1,10 +1,10 @@
 ---
 uuid: eb56c911-dd93-4118-9971-d1d98e171840
 published: true
-hide: true
+hide: false
 layout: post
 comments: true
-date: 2014-03-20 12:22
+date: 2014-03-28 8:22
 categories: [Life]
 title: "Making Decisions"
 description: "A few of the frameworks and factors I've encountered for thinking about the decisions and choices I make."
