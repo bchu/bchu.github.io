@@ -4,7 +4,7 @@
   <title><![CDATA[I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-04-26T02:45:32-07:00</updated>
+  <updated>2014-04-30T00:07:56-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -201,9 +201,30 @@
 <span class='line-number'>26</span>
 <span class='line-number'>27</span>
 <span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
 </pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.textarea-container</span> <span class="p">{</span>
-</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">20</span><span class="o">%</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span><span class="p">;</span> <span class="c">/* you should change this*/</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="nt">textarea</span><span class="o">,</span> <span class="nc">.textarea-size</span> <span class="p">{</span>
@@ -215,19 +236,40 @@
 </span><span class='line'>
 </span><span class='line'>  <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="nt">textarea</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
 </span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
 </span><span class='line'>  <span class="n">resize</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c">/*</span>
+</span><span class='line'><span class="c">  Using &quot;pre&quot; or &quot;normal&quot; or &quot;preline&quot; fixes a Chrome issue where whitespace at the end of the lines does not trigger a line break.</span>
+</span><span class='line'><span class="c">  However, it causes the text to exhibit the behavior seen with &quot;pre&quot; that is described below.</span>
+</span><span class='line'><span class="c">  That issue does not occur in Firefox.</span>
+</span><span class='line'><span class="c">  We use pre-line because the whitespace property here must match the white-space property in textarea-size</span>
+</span><span class='line'><span class="c">   */</span>
+</span><span class='line'>  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">line</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span><span class='line'>
 </span><span class='line'><span class="nc">.textarea-size</span> <span class="p">{</span>
 </span><span class='line'>  <span class="k">visibility</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">wrap</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c">/*</span>
+</span><span class='line'><span class="c">  Pre-wrap: preserve spacing and newlines, but wrap text.</span>
+</span><span class='line'><span class="c">  Pre: preserve spacing and newlines but don&#39;t wrap text.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">  Using &quot;pre&quot; does not wrap properly on Firefox, even with word-wrap: break-word.</span>
+</span><span class='line'><span class="c">  &quot;pre&quot; on Chrome works with word-wrap: break-word, but exhibits different behavior:</span>
+</span><span class='line'><span class="c">  Instead of entire words being moved to the next line when wrapping,</span>
+</span><span class='line'><span class="c">  the browser will simply cut words in the middle if needed for wrapping.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">  We use pre-line here because pre does not work on Firefox, and pre-wrap has issues with whitespace at ends of lines.</span>
+</span><span class='line'><span class="c">  */</span>
+</span><span class='line'>  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">line</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/* Required for wrapping lines in Webkit, but not necessary in Firefox if you have white-space wrapping (pre-wrap, normal, pre-line) already set */</span>
 </span><span class='line'>  <span class="n">word</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
-</span><span class='line'>  <span class="k">overflow</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span><span class="p">;</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">overflow</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
 </span><span class='line'><span class="p">}</span>
 </span></code></pre></td></tr></table></div></figure>
 
@@ -249,14 +291,14 @@
 <span class='line-number'>13</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">textContainer</span><span class="p">,</span> <span class="nx">textareaSize</span><span class="p">,</span> <span class="nx">input</span><span class="p">;</span>
 </span><span class='line'><span class="kd">var</span> <span class="nx">autoSize</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">textareaSize</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span> <span class="o">||</span> <span class="s1">&#39;a&#39;</span><span class="p">;</span>
+</span><span class='line'>  <span class="nx">textareaSize</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span><span class="p">;</span> <span class="c1">// also can use textContent or innerText</span>
 </span><span class='line'><span class="p">};</span>
 </span><span class='line'>
 </span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 </span><span class='line'>  <span class="nx">textContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-container&#39;</span><span class="p">);</span>
-</span><span class='line'>  <span class="nx">textareaSize</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-size&#39;</span><span class="p">)</span>
+</span><span class='line'>  <span class="nx">textareaSize</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-size&#39;</span><span class="p">);</span>
 </span><span class='line'>  <span class="nx">input</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;textarea&#39;</span><span class="p">);</span>
-</span><span class='line'>  
+</span><span class='line'>
 </span><span class='line'>  <span class="nx">autoSize</span><span class="p">();</span>
 </span><span class='line'>  <span class="nx">input</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="nx">autoSize</span><span class="p">);</span>
 </span><span class='line'><span class="p">});</span>
