@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Front End | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/front-end/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-04-30T00:07:56-07:00</updated>
+  <updated>2014-04-30T00:30:00-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -27,7 +27,7 @@ This was inspired by some bits and pieces on StackOverflow. The gist of it is th
 
 Here's a jsFiddle:
 
-<iframe width="100%" height="300" src="http://jsfiddle.net/2UDdh/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+<iframe width="100%" height="300" src="http://jsfiddle.net/2UDdh/43/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 A copy of the code is below:
 
@@ -41,11 +41,14 @@ A copy of the code is below:
 ``` css CSS
 .textarea-container {
   position: relative;
-  width: 50%; /* you should change this*/
+  /* you should change this*/
+  width: 50%;
 }
 
 textarea, .textarea-size {
-  font-family: sans-serif; /* need to manually set font and font size */
+  min-height: 25px;
+  /* need to manually set font and font size */
+  font-family: sans-serif;
   font-size: 14px;
   box-sizing: border-box;
   padding: 4px;
@@ -61,12 +64,12 @@ textarea {
   resize:none;
 
   /*
-  Using "pre" or "normal" or "preline" fixes a Chrome issue where whitespace at the end of the lines does not trigger a line break.
-  However, it causes the text to exhibit the behavior seen with "pre" that is described below.
-  That issue does not occur in Firefox.
-  We use pre-line because the whitespace property here must match the white-space property in textarea-size
+  "pre" or "preline" or "normal" fixes Chrome issue where
+    whitespace at end of lines does not trigger a line break.
+  However, it causes the text to exhibit the behavior seen with
+    "pre" that is described below.
    */
-  white-space: pre-line;
+  white-space: normal;
 }
 
 .textarea-size {
@@ -76,15 +79,16 @@ textarea {
   Pre-wrap: preserve spacing and newlines, but wrap text.
   Pre: preserve spacing and newlines but don't wrap text.
 
-  Using "pre" does not wrap properly on Firefox, even with word-wrap: break-word.
-  "pre" on Chrome works with word-wrap: break-word, but exhibits different behavior:
-  Instead of entire words being moved to the next line when wrapping,
-  the browser will simply cut words in the middle if needed for wrapping.
-
-  We use pre-line here because pre does not work on Firefox, and pre-wrap has issues with whitespace at ends of lines.
+  "pre" does not wrap well on Firefox, even with word-wrap:break-word.
+  "pre" on Chrome works with word-wrap, but exhibits different behavior:
+  Instead of entire words being moved to the next line for wrapping,
+  the browser will cut words in the middle for wrapping.
+  "pre-line" has Firefox issues
   */
-  white-space: pre-line;
-  /* Required for wrapping lines in Webkit, but not necessary in Firefox if you have white-space wrapping (pre-wrap, normal, pre-line) already set */
+  white-space: pre-wrap;
+  /* Required for wrapping lines in Webkit,
+    but not necessary in Firefox if you have white-space wrapping
+    (pre-wrap, normal, pre-line) already set */
   word-wrap: break-word;
   overflow-wrap: break-word;
 }
@@ -93,7 +97,8 @@ textarea {
 ``` javascript JavaScript
 var textContainer, textareaSize, input;
 var autoSize = function () {
-  textareaSize.innerHTML = input.value + '\n'; // also can use textContent or innerText
+  // also can use textContent or innerText
+  textareaSize.innerHTML = input.value + '\n';
 };
 
 document.addEventListener('DOMContentLoaded', function() {
