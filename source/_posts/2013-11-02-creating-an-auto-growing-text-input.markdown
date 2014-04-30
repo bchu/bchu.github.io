@@ -30,8 +30,8 @@ A copy of the code is below:
 
 ``` css CSS
 .textarea-container {
-  width: 20%;
   position: relative;
+  width: 50%; /* you should change this*/
 }
 
 textarea, .textarea-size {
@@ -43,31 +43,52 @@ textarea, .textarea-size {
 
   overflow: hidden;
   width: 100%;
-  height: 100%;
 }
 
 textarea {
+  height: 100%;
   position: absolute;
   resize:none;
+
+  /*
+  Using "pre" or "normal" or "preline" fixes a Chrome issue where whitespace at the end of the lines does not trigger a line break.
+  However, it causes the text to exhibit the behavior seen with "pre" that is described below.
+  That issue does not occur in Firefox.
+  We use pre-line because the whitespace property here must match the white-space property in textarea-size
+   */
+  white-space: pre-line;
 }
 
 .textarea-size {
   visibility: hidden;
-  white-space: pre-wrap;
+
+  /*
+  Pre-wrap: preserve spacing and newlines, but wrap text.
+  Pre: preserve spacing and newlines but don't wrap text.
+
+  Using "pre" does not wrap properly on Firefox, even with word-wrap: break-word.
+  "pre" on Chrome works with word-wrap: break-word, but exhibits different behavior:
+  Instead of entire words being moved to the next line when wrapping,
+  the browser will simply cut words in the middle if needed for wrapping.
+
+  We use pre-line here because pre does not work on Firefox, and pre-wrap has issues with whitespace at ends of lines.
+  */
+  white-space: pre-line;
+  /* Required for wrapping lines in Webkit, but not necessary in Firefox if you have white-space wrapping (pre-wrap, normal, pre-line) already set */
   word-wrap: break-word;
-  overflow-wrap:; break-word;
+  overflow-wrap: break-word;
 }
 ```
 
 ``` javascript JavaScript
 var textContainer, textareaSize, input;
 var autoSize = function () {
-  textareaSize.innerHTML = input.value + '\n' || 'a';
+  textareaSize.innerHTML = input.value + '\n'; // also can use textContent or innerText
 };
 
 document.addEventListener('DOMContentLoaded', function() {
   textContainer = document.querySelector('.textarea-container');
-  textareaSize = textContainer.querySelector('.textarea-size')
+  textareaSize = textContainer.querySelector('.textarea-size');
   input = textContainer.querySelector('textarea');
   
   autoSize();
