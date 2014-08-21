@@ -9,6 +9,7 @@ description: "My first iPhone game, Devils in Heaven, an infinite runner with ph
 share_image: /images/blog/2013/dih-screenshot1.png
 twitter_card_app: 744368918
 twitter_card_app_url: https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg
+alias: /devils-in-heaven/index.html
 ---
 
 Introducing my first iPhone game, [Devils in Heaven](https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg), a 2D infinite runner game with interactive obstacles!
