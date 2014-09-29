@@ -13,4 +13,4 @@ I formerly worked on iOS at `Keychain Logistics` (YC S12), a mobile trucking log
 
 Check out [my resume](/about/brianchu_resume.pdf).
 
-<a href="#" data-toggle="modal" data-target=".contact-modal">Reach out to me!</a> I love hearing about what everyone is up to!
+<a href="#" data-toggle="modal" data-target=".contact-modal">Reach out to me!</a> I love hearing what everyone is up to!
