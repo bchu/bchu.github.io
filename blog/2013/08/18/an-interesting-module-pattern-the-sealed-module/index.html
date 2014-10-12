@@ -182,7 +182,7 @@
 <span class='line-number'>21</span>
 <span class='line-number'>22</span>
 </pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">loadScript</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scriptUrl</span><span class="p">)</span> <span class="p">{</span>
-</span><span class='line'>  <span class="nx">_unseal</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span><span class="p">();</span>
 </span><span class='line'>  <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
 </span><span class='line'>  <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">scriptUrl</span><span class="p">;</span>
 </span><span class='line'>
@@ -191,13 +191,13 @@
 </span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;loaded&quot;</span> <span class="o">||</span>
 </span><span class='line'>          <span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;complete&quot;</span><span class="p">)</span> <span class="p">{</span>
 </span><span class='line'>        <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
-</span><span class='line'>        <span class="nx">module</span><span class="p">.</span><span class="nx">seal</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">();</span>
 </span><span class='line'>      <span class="p">}</span>
 </span><span class='line'>    <span class="p">};</span>
 </span><span class='line'>  <span class="p">}</span>
 </span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
 </span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-</span><span class='line'>      <span class="nx">module</span><span class="p">.</span><span class="nx">seal</span><span class="p">()</span>
+</span><span class='line'>      <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">()</span>
 </span><span class='line'>    <span class="p">};</span>
 </span><span class='line'>  <span class="p">}</span>
 </span><span class='line'>

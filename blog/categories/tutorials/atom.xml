@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Tutorials | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/tutorials/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-09-28T18:09:34-07:00</updated>
+  <updated>2014-10-12T15:23:49-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -149,7 +149,7 @@ For example:
 
 ``` javascript
 var loadScript = function (scriptUrl) {
-  _unseal();
+  module._unseal();
   var script = document.createElement('script');
   script.src = scriptUrl;
 
@@ -158,13 +158,13 @@ var loadScript = function (scriptUrl) {
       if (script.readyState === "loaded" ||
           script.readyState === "complete") {
         script.onreadystatechange = null;
-        module.seal();
+        module._seal();
       }
     };
   }
   else {
     script.onload = function() {
-      module.seal()
+      module._seal()
     };
   }
 
