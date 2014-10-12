@@ -35,7 +35,7 @@ For example:
 
 ``` javascript
 var loadScript = function (scriptUrl) {
-  _unseal();
+  module._unseal();
   var script = document.createElement('script');
   script.src = scriptUrl;
 
@@ -44,13 +44,13 @@ var loadScript = function (scriptUrl) {
       if (script.readyState === "loaded" ||
           script.readyState === "complete") {
         script.onreadystatechange = null;
-        module.seal();
+        module._seal();
       }
     };
   }
   else {
     script.onload = function() {
-      module.seal()
+      module._seal()
     };
   }
 
