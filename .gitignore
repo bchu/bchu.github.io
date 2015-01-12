@@ -1,5 +1,5 @@
-.DS_Store
 .bundle
+.DS_Store
 .sass-cache
 .gist-cache
 .pygments-cache
@@ -16,3 +16,4 @@ source/stylesheets/syntax
 source/stylesheets/screen.css
 source/stylesheets/main.css
 source/stylesheets/syntax
+Gemfile.lock
