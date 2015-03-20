@@ -55,6 +55,7 @@ module Jekyll
       alias_paths << aliases
       alias_paths.compact!
 
+
       alias_paths.flatten.each do |alias_path|
         alias_path = alias_path.to_s
 
@@ -63,6 +64,9 @@ module Jekyll
 
         fs_path_to_dir   = File.join(@site.dest, alias_dir)
         alias_index_path = File.join(alias_dir, alias_file)
+
+        puts fs_path_to_dir
+        puts alias_index_path
 
         FileUtils.mkdir_p(fs_path_to_dir)
 

@@ -1,7 +1,7 @@
 {% comment %} aria-live polite makes the screen reader not immediately prompt user with new data when an area updates {% endcomment %}
 <div class="sharing" aria-live="polite">
   {% if site.twitter_tweet_button %}
-    <a href="https://twitter.com/share" class="twitter-share-button" data-via="{{ site.twitter_user }}">Tweet</a>
+    <a href="//twitter.com/share" class="twitter-share-button" data-url="{{ site.url }}{{ page.url }}" data-via="{{ site.twitter_user }}" data-counturl="{{ site.url }}{{ page.url }}" >Tweet</a>
   {% endif %}
 
   {% if site.google_plus_one %}
@@ -9,6 +9,9 @@
   {% endif %}
 
   {% if site.facebook_like %}
+  {% comment %}
+  TODO: compare with "<div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>"
+  {% endcomment %}
     <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-ref></div>
   {% endif %}
 

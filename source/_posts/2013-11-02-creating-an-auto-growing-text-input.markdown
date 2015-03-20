@@ -6,7 +6,8 @@ date: 2013-11-02 12:00
 categories: [Front End, Tutorials]
 title: "Creating an Auto-Growing Text Input"
 description: "How to create a textarea that expands to fit the size of your input."
-alias: /blog/2013/11/01/creating-an-auto-growing-textarea/index.html
+redirect_from:
+  - /blog/2013/11/01/creating-an-auto-growing-textarea/
 ---
 
 On two occasions I've encountered the same problem: how do you create a textarea that automatically expands along with your input. Here's an implementation.

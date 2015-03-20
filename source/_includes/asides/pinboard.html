@@ -10,7 +10,6 @@
   var pinboard_count = {{ site.pinboard_count }}; //id target for pinboard list
   (function(){
     var pinboardInit = document.createElement('script');
-    pinboardInit.type = 'text/javascript';
     pinboardInit.async = true;
     pinboardInit.src = '{{ root_url }}/javascripts/pinboard.js';
     document.getElementsByTagName('head')[0].appendChild(pinboardInit);
