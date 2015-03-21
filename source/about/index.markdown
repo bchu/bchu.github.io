@@ -5,11 +5,11 @@ sharing: false
 footer: false
 ---
 
-I'm a web and mobile engineer that loves to work with `iOS` and `JavaScript`, including server-side JavaScript. I believe in building rich  web and mobile client apps. I'm really excited about the established iOS ecosystem and the emergent JavaScript ecosystem: MV* frameworks and libraries like `AngularJS`, and `D3.js`, server-side technologies like `Node.js` and `WebSockets`, and HTML5 APIs like `WebRTC`.
+I'm a software engineer hacking on my own [projects](/projects/) while studying `Computer Science` at `UC Berkeley`. I'm also heavily involved as an officer at [Hackers @ Berkeley](http://hackersatberkeley.com/). Go H@B! 
 
-I'm currently hacking on my own projects while studying `Computer Science` at `UC Berkeley`. I'm also involved as an officer at [Hackers@Berkeley](http://hackersatberkeley.com/)
+I've recently been diving into machine learning and software systems areas, but I still love to work with `iOS` mobile and `JavaScript` web technologies. I enjoy building rich web and mobile apps. I'm still excited about the established iOS ecosystem and the emergent JavaScript ecosystem (single page apps, server-side technologies, and novel HTML5 APIs).
 
-I formerly worked on iOS at `Keychain Logistics` (YC S12), a mobile trucking logistics startup, game development at `MakeGamesWithUs` (YC W12), an iOS gaming startup, and JavaScript at `Hack Reactor`.
+This summer I'll be working at Twitter. I formerly worked on iOS at `Keychain Logistics` (YC S12) - a mobile trucking logistics startup, iOS game development at `MakeGamesWithUs` (YC W12, now called MakeSchool), and JavaScript at `Hack Reactor`.
 
 Check out [my resume](/about/brianchu_resume.pdf).
 
