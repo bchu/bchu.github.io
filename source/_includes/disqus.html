@@ -13,14 +13,6 @@
         {% comment %} As `page.comments` is empty, we must be on the index page. {% endcomment %}
         var disqus_script = 'count.js';
       {% endif %}
-
-    {% comment %}
-    (function () {
-      var dsq = document.createElement('script'); dsq.async = true; dsq.defer = true;
-      dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    }());
-    {% endcomment %}
 </script>
 
   {% if page.comments == true %}
