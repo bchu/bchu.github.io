@@ -80,7 +80,10 @@ This is the metadata at the top of every markdown post.
 * twitter_card_app_url: *url* | Sets the twitter app card url
 * html_title: *raw_html* | Use this to override the default article header (h2 tag) with html. Normally the header is just the "title" attribute. Use this for custom styling/icons/images/text
 * share_title: *title* | Use this to override the title that appears in FB/Twitter shares
-* alias: *relative root url* | Create a redirect url relative to root, e.g. '/blog/2013/11/01/creating-an-auto-growing-textarea/index.html'
+* redirect_from: 
+    <br>\- *relative root url* 
+    <br>\- ...
+    <br>Create a redirect url relative to root, e.g. '/blog/2013/11/01/creating-an-auto-growing-textarea/'
 
 
 ## Acknowledgements and License
