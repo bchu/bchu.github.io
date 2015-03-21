@@ -114,6 +114,7 @@ task :new_post, :title do |t, args|
     post.puts "uuid: #{SecureRandom.uuid()}"
     post.puts "published: false"
     post.puts "hide: false"
+    post.puts "sitemap: true"
     post.puts "layout: post"
     post.puts "comments: true"
     # post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"

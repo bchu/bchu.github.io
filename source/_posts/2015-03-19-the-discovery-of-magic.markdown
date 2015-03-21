@@ -2,6 +2,7 @@
 uuid: 034d4013-a314-42ec-a322-7c721f8de02d
 published: true
 hide: true
+sitemap: false
 layout: post
 comments: true
 date: 2015-03-19 20:36:10 -0700
