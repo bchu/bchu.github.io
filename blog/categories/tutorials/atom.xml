@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: Tutorials | I'm Brian Chu]]></title>
+  <title><![CDATA[Category: tutorials | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/tutorials/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-10-13T05:07:51-07:00</updated>
+  <updated>2015-03-21T07:54:23-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -25,91 +25,159 @@
 
 This was inspired by some bits and pieces on StackOverflow. The gist of it is that you place your textarea inside a wrapper div, set the textarea height to 100% so that it fills the parent, and then insert a div behind the textarea that maintains a copy of the textarea text. The browser will correctly size the hidden div, which will stretch the parent and stretch the textarea.
 
-Here's a jsFiddle:
+Here&#8217;s a jsFiddle:
 
 <iframe width="100%" height="300" src="http://jsfiddle.net/2UDdh/43/embedded/" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 
 A copy of the code is below:
 
-``` html HTML
-<div class="textarea-container">
-  <textarea></textarea>
-  <div class="textarea-size"></div>
-</div>
-```
+<figure class='code'><figcaption><span>HTML</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='html'><span class='line'><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;textarea-container&quot;</span><span class="nt">&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;textarea&gt;&lt;/textarea&gt;</span>
+</span><span class='line'>  <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">&quot;textarea-size&quot;</span><span class="nt">&gt;&lt;/div&gt;</span>
+</span><span class='line'><span class="nt">&lt;/div&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
 
-``` css CSS
-.textarea-container {
-  position: relative;
-  /* you should change this*/
-  width: 50%;
-}
+<figure class='code'><figcaption><span>CSS</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+</pre></td><td class='code'><pre><code class='css'><span class='line'><span class="nc">.textarea-container</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">relative</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/* you should change this*/</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">50</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">textarea</span><span class="o">,</span> <span class="nc">.textarea-size</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">min-height</span><span class="o">:</span> <span class="m">25px</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/* need to manually set font and font size */</span>
+</span><span class='line'>  <span class="k">font-family</span><span class="o">:</span> <span class="k">sans-serif</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">font-size</span><span class="o">:</span> <span class="m">14px</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">box</span><span class="o">-</span><span class="n">sizing</span><span class="o">:</span> <span class="k">border</span><span class="o">-</span><span class="n">box</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">padding</span><span class="o">:</span> <span class="m">4px</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">border</span><span class="o">:</span> <span class="m">1px</span> <span class="k">solid</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">overflow</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">width</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nt">textarea</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">height</span><span class="o">:</span> <span class="m">100</span><span class="o">%</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">position</span><span class="o">:</span> <span class="k">absolute</span><span class="p">;</span>
+</span><span class='line'>  <span class="n">resize</span><span class="o">:</span><span class="k">none</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c">/*</span>
+</span><span class='line'><span class="c">  &quot;pre&quot; or &quot;preline&quot; or &quot;normal&quot; fixes Chrome issue where</span>
+</span><span class='line'><span class="c">    whitespace at end of lines does not trigger a line break.</span>
+</span><span class='line'><span class="c">  However, it causes the text to exhibit the behavior seen with</span>
+</span><span class='line'><span class="c">    &quot;pre&quot; that is described below.</span>
+</span><span class='line'><span class="c">   */</span>
+</span><span class='line'>  <span class="k">white-space</span><span class="o">:</span> <span class="k">normal</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'><span class="nc">.textarea-size</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">visibility</span><span class="o">:</span> <span class="k">hidden</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c">/*</span>
+</span><span class='line'><span class="c">  Pre-wrap: preserve spacing and newlines, but wrap text.</span>
+</span><span class='line'><span class="c">  Pre: preserve spacing and newlines but don&#39;t wrap text.</span>
+</span><span class='line'>
+</span><span class='line'><span class="c">  &quot;pre&quot; does not wrap well on Firefox, even with word-wrap:break-word.</span>
+</span><span class='line'><span class="c">  &quot;pre&quot; on Chrome works with word-wrap, but exhibits different behavior:</span>
+</span><span class='line'><span class="c">  Instead of entire words being moved to the next line for wrapping,</span>
+</span><span class='line'><span class="c">  the browser will cut words in the middle for wrapping.</span>
+</span><span class='line'><span class="c">  &quot;pre-line&quot; has Firefox issues</span>
+</span><span class='line'><span class="c">  */</span>
+</span><span class='line'>  <span class="k">white-space</span><span class="o">:</span> <span class="n">pre</span><span class="o">-</span><span class="n">wrap</span><span class="p">;</span>
+</span><span class='line'>  <span class="c">/* Required for wrapping lines in Webkit,</span>
+</span><span class='line'><span class="c">    but not necessary in Firefox if you have white-space wrapping</span>
+</span><span class='line'><span class="c">    (pre-wrap, normal, pre-line) already set */</span>
+</span><span class='line'>  <span class="n">word</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
+</span><span class='line'>  <span class="k">overflow</span><span class="o">-</span><span class="n">wrap</span><span class="o">:</span> <span class="n">break</span><span class="o">-</span><span class="n">word</span><span class="p">;</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
-textarea, .textarea-size {
-  min-height: 25px;
-  /* need to manually set font and font size */
-  font-family: sans-serif;
-  font-size: 14px;
-  box-sizing: border-box;
-  padding: 4px;
-  border: 1px solid;
-
-  overflow: hidden;
-  width: 100%;
-}
-
-textarea {
-  height: 100%;
-  position: absolute;
-  resize:none;
-
-  /*
-  "pre" or "preline" or "normal" fixes Chrome issue where
-    whitespace at end of lines does not trigger a line break.
-  However, it causes the text to exhibit the behavior seen with
-    "pre" that is described below.
-   */
-  white-space: normal;
-}
-
-.textarea-size {
-  visibility: hidden;
-
-  /*
-  Pre-wrap: preserve spacing and newlines, but wrap text.
-  Pre: preserve spacing and newlines but don't wrap text.
-
-  "pre" does not wrap well on Firefox, even with word-wrap:break-word.
-  "pre" on Chrome works with word-wrap, but exhibits different behavior:
-  Instead of entire words being moved to the next line for wrapping,
-  the browser will cut words in the middle for wrapping.
-  "pre-line" has Firefox issues
-  */
-  white-space: pre-wrap;
-  /* Required for wrapping lines in Webkit,
-    but not necessary in Firefox if you have white-space wrapping
-    (pre-wrap, normal, pre-line) already set */
-  word-wrap: break-word;
-  overflow-wrap: break-word;
-}
-```
-
-``` javascript JavaScript
-var textContainer, textareaSize, input;
-var autoSize = function () {
-  // also can use textContent or innerText
-  textareaSize.innerHTML = input.value + '\n';
-};
-
-document.addEventListener('DOMContentLoaded', function() {
-  textContainer = document.querySelector('.textarea-container');
-  textareaSize = textContainer.querySelector('.textarea-size');
-  input = textContainer.querySelector('textarea');
-  
-  autoSize();
-  input.addEventListener('input', autoSize);
-});
-```
+<figure class='code'><figcaption><span>JavaScript</span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">textContainer</span><span class="p">,</span> <span class="nx">textareaSize</span><span class="p">,</span> <span class="nx">input</span><span class="p">;</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">autoSize</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="c1">// also can use textContent or innerText</span>
+</span><span class='line'>  <span class="nx">textareaSize</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="nx">input</span><span class="p">.</span><span class="nx">value</span> <span class="o">+</span> <span class="s1">&#39;\n&#39;</span><span class="p">;</span>
+</span><span class='line'><span class="p">};</span>
+</span><span class='line'>
+</span><span class='line'><span class="nb">document</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;DOMContentLoaded&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">textContainer</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-container&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">textareaSize</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;.textarea-size&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">input</span> <span class="o">=</span> <span class="nx">textContainer</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">&#39;textarea&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nx">autoSize</span><span class="p">();</span>
+</span><span class='line'>  <span class="nx">input</span><span class="p">.</span><span class="nx">addEventListener</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">,</span> <span class="nx">autoSize</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
 
 
 ]]></content>
@@ -124,53 +192,89 @@ document.addEventListener('DOMContentLoaded', function() {
     <content type="html"><![CDATA[An interesting way to share private state across components of modules in JavaScript: <!-- more -->  
 (credit goes to [this article](http://www.adequatelygood.com/JavaScript-Module-Pattern-In-Depth.html))
 
-``` javascript
-var module = (function (module) {
-  var _private = module._private = module._private || {};
-  var _seal = module._seal = module._seal || function () {
-    delete module._private;
-    delete module._seal;
-    delete module._unseal;
-  }
-  var _unseal = module._unseal = module._unseal || function () {
-    module._private = _private;
-    module._seal = _seal;
-    module._unseal = _unseal;
-  };
-  // permanent access to _private, _seal, and _unseal
-
-  return module;
-}(module || {}));
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">module</span> <span class="o">=</span> <span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">module</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">||</span> <span class="p">{};</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">;</span>
+</span><span class='line'>    <span class="k">delete</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">||</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_private</span> <span class="o">=</span> <span class="nx">_private</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span> <span class="o">=</span> <span class="nx">_seal</span><span class="p">;</span>
+</span><span class='line'>    <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span> <span class="o">=</span> <span class="nx">_unseal</span><span class="p">;</span>
+</span><span class='line'>  <span class="p">};</span>
+</span><span class='line'>  <span class="c1">// permanent access to _private, _seal, and _unseal</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="nx">module</span><span class="p">;</span>
+</span><span class='line'><span class="p">}(</span><span class="nx">module</span> <span class="o">||</span> <span class="p">{}));</span>
+</span></code></pre></td></tr></table></div></figure>
 
 `_unseal` must be called by a function (probably some sort of loader function) that was initialized before `_seal` was called (so that `_unseal` will be present in its closure scope).
 
 For example:
 
-``` javascript
-var loadScript = function (scriptUrl) {
-  module._unseal();
-  var script = document.createElement('script');
-  script.src = scriptUrl;
-
-  if (script.readyState) {
-    script.onreadystatechange = function () {
-      if (script.readyState === "loaded" ||
-          script.readyState === "complete") {
-        script.onreadystatechange = null;
-        module._seal();
-      }
-    };
-  }
-  else {
-    script.onload = function() {
-      module._seal()
-    };
-  }
-
-  document.getElementsByTagName('head')[0].append(script);
-};
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">loadScript</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">scriptUrl</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">module</span><span class="p">.</span><span class="nx">_unseal</span><span class="p">();</span>
+</span><span class='line'>  <span class="kd">var</span> <span class="nx">script</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;script&#39;</span><span class="p">);</span>
+</span><span class='line'>  <span class="nx">script</span><span class="p">.</span><span class="nx">src</span> <span class="o">=</span> <span class="nx">scriptUrl</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="k">if</span> <span class="p">(</span><span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;loaded&quot;</span> <span class="o">||</span>
+</span><span class='line'>          <span class="nx">script</span><span class="p">.</span><span class="nx">readyState</span> <span class="o">===</span> <span class="s2">&quot;complete&quot;</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>        <span class="nx">script</span><span class="p">.</span><span class="nx">onreadystatechange</span> <span class="o">=</span> <span class="kc">null</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">();</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>  <span class="k">else</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">script</span><span class="p">.</span><span class="nx">onload</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">module</span><span class="p">.</span><span class="nx">_seal</span><span class="p">()</span>
+</span><span class='line'>    <span class="p">};</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="nb">document</span><span class="p">.</span><span class="nx">getElementsByTagName</span><span class="p">(</span><span class="s1">&#39;head&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">].</span><span class="nx">append</span><span class="p">(</span><span class="nx">script</span><span class="p">);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
 ]]></content>
   </entry>
   
@@ -188,171 +292,276 @@ Enter Grunt by Example! A blow-by-blow tutorial. Just the way I like it. Let's d
 
 The catch - Grunt configuration files can be fairly convoluted at first glance, usually due to the fact that developers add more and more steps to their workflow over time.
 
-Grunt is just a task runner. Every unit of functionality that you would want is usually achieved with a separate npm package (a grunt "plugin").
+Grunt is just a task runner. Every unit of functionality that you would want is usually achieved with a separate npm package (a grunt &#8220;plugin&#8221;).
 
 `npm search grunt` to view literally every grunt plugin available.
 
 Get the command line interface: `npm install -g grunt-cli`
 
-Add the actual grunt task runner as a development dependency to your project (`--save-dev` adds the package as a dependency to `package.json`):
-`npm install --save-dev grunt`
+Add the actual grunt task runner as a development dependency to your project (`&#8211;save-dev` adds the package as a dependency to `package.json`):
+`npm install &#8211;save-dev grunt`
 
-Let's follow a process of gradual expansion.
+Let&#8217;s follow a process of gradual expansion.
 
 Create an empty `Gruntfile.js` file in your project root. This will contain all of your task configuration.
 
-Let's say that the first task we want to add to our workflow is to be able to concatenate several JavaScript files into one. Let's say those files are all in the `scripts/` sub-directory. We'd want to do this before deploying a website, for example.
+Let&#8217;s say that the first task we want to add to our workflow is to be able to concatenate several JavaScript files into one. Let&#8217;s say those files are all in the `scripts/` sub-directory. We&#8217;d want to do this before deploying a website, for example.
 
-Run `npm install --save-dev grunt-contrib-concat`.
+Run `npm install &#8211;save-dev grunt-contrib-concat`.
 
-Let's look at our Gruntfile configured with just this one task.
+Let&#8217;s look at our Gruntfile configured with just this one task.
 
 A quick preview of the result before we look at the code. After setting up our configuration object, running `grunt concat`, `grunt concat:dist`, or `grunt build` in the shell in the project root will all do the same thing: concatenate all scripts in the `scripts` sub-directory into a single script called `main.js`.
-``` javascript
-//Grunt is just JavaScript running in node, after all...
-module.exports = function(grunt) {
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">//Grunt is just JavaScript running in node, after all...</span>
+</span><span class='line'><span class="nx">module</span><span class="p">.</span><span class="nx">exports</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span><span class="nx">grunt</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// All upfront config goes in a massive nested object.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">initConfig</span><span class="p">({</span>
+</span><span class='line'>    <span class="c1">// You can set arbitrary key-value pairs.</span>
+</span><span class='line'>    <span class="nx">distFolder</span><span class="o">:</span> <span class="s1">&#39;dist&#39;</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// You can also set the value of a key as parsed JSON.</span>
+</span><span class='line'>    <span class="c1">// Allows us to reference properties we declared in package.json.</span>
+</span><span class='line'>    <span class="nx">pkg</span><span class="o">:</span> <span class="nx">grunt</span><span class="p">.</span><span class="nx">file</span><span class="p">.</span><span class="nx">readJSON</span><span class="p">(</span><span class="s1">&#39;package.json&#39;</span><span class="p">),</span>
+</span><span class='line'>    <span class="c1">// Grunt tasks are associated with specific properties.</span>
+</span><span class='line'>    <span class="c1">// these names generally match their npm package name.</span>
+</span><span class='line'>    <span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// Specify some options, usually specific to each plugin.</span>
+</span><span class='line'>      <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// Specifies string to be inserted between concatenated files.</span>
+</span><span class='line'>        <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>      <span class="p">},</span>
+</span><span class='line'>      <span class="c1">// &#39;dist&#39; is what is called a &quot;target.&quot;</span>
+</span><span class='line'>      <span class="c1">// It&#39;s a way of specifying different sub-tasks or modes.</span>
+</span><span class='line'>      <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>        <span class="c1">// The files to concatenate:</span>
+</span><span class='line'>        <span class="c1">// Notice the wildcard, which is automatically expanded.</span>
+</span><span class='line'>        <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;scripts/*.js&#39;</span><span class="p">],</span>
+</span><span class='line'>        <span class="c1">// The destination file:</span>
+</span><span class='line'>        <span class="c1">// Notice the angle-bracketed ERB-like templating,</span>
+</span><span class='line'>        <span class="c1">// which allows you to reference other properties.</span>
+</span><span class='line'>        <span class="c1">// This is equivalent to &#39;dist/main.js&#39;.</span>
+</span><span class='line'>        <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= distFolder %&gt;/main.js&#39;</span>
+</span><span class='line'>        <span class="c1">// You can reference any grunt config property you want.</span>
+</span><span class='line'>        <span class="c1">// Ex: &#39;&lt;%= concat.options.separator %&gt;&#39; instead of &#39;;&#39;</span>
+</span><span class='line'>      <span class="p">}</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">});</span> <span class="c1">// The end of grunt.initConfig</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// We&#39;ve set up each task&#39;s configuration.</span>
+</span><span class='line'>  <span class="c1">// Now actually load the tasks.</span>
+</span><span class='line'>  <span class="c1">// This will do a lookup similar to node&#39;s require() function.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">loadNpmTasks</span><span class="p">(</span><span class="s1">&#39;grunt-contrib-concat&#39;</span><span class="p">);</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="c1">// Register our own custom task alias.</span>
+</span><span class='line'>  <span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;build&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;concat&#39;</span><span class="p">]);</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
 
-  // All upfront config goes in a massive nested object.
-  grunt.initConfig({
-    // You can set arbitrary key-value pairs.
-    distFolder: 'dist',
-    // You can also set the value of a key as parsed JSON.
-    // Allows us to reference properties we declared in package.json.
-    pkg: grunt.file.readJSON('package.json'),
-    // Grunt tasks are associated with specific properties.
-    // these names generally match their npm package name.
-    concat: {
-      // Specify some options, usually specific to each plugin.
-      options: {
-        // Specifies string to be inserted between concatenated files.
-        separator: ';'
-      },
-      // 'dist' is what is called a "target."
-      // It's a way of specifying different sub-tasks or modes.
-      dist: {
-        // The files to concatenate:
-        // Notice the wildcard, which is automatically expanded.
-        src: ['scripts/*.js'],
-        // The destination file:
-        // Notice the angle-bracketed ERB-like templating,
-        // which allows you to reference other properties.
-        // This is equivalent to 'dist/main.js'.
-        dest: '<%= distFolder %>/main.js'
-        // You can reference any grunt config property you want.
-        // Ex: '<%= concat.options.separator %>' instead of ';'
-      }
-    }
-  }); // The end of grunt.initConfig
+You might still be confused about the notion of a &#8220;target.&#8221; More on that:
 
-  // We've set up each task's configuration.
-  // Now actually load the tasks.
-  // This will do a lookup similar to node's require() function.
-  grunt.loadNpmTasks('grunt-contrib-concat');
-
-  // Register our own custom task alias.
-  grunt.registerTask('build', ['concat']);
-};
-```
-
-You might still be confused about the notion of a "target." More on that:
-
-Let's say there's another set of files you want to concatenate. All script files in `deploy/` should be concatenated into `deploy.js` (in the project root). Let's say we want that task to look like `grunt concat:deploy`
+Let&#8217;s say there&#8217;s another set of files you want to concatenate. All script files in `deploy/` should be concatenated into `deploy.js` (in the project root). Let&#8217;s say we want that task to look like `grunt concat:deploy`
 
 To achieve that, our concat task now looks like:
 
-``` javascript
-    concat: {
-      options: {
-        separator: ';'
-      },
-      dist: {
-        src: ['scripts/*.js'],
-        dest: '<%= distFolder %>/main.js'
-      },
-      deploy: {
-        // options that are specific to the 'deploy' target
-        // target-level options override task-level options
-        options: {
-          // separator:';;;' would override the parent setting
-        },
-        src:['deploy/*.js'],
-        dest:'deploy.js'
-      }
-    }
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">concat</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">separator</span><span class="o">:</span> <span class="s1">&#39;;&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">dist</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;scripts/*.js&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span> <span class="s1">&#39;&lt;%= distFolder %&gt;/main.js&#39;</span>
+</span><span class='line'>  <span class="p">},</span>
+</span><span class='line'>  <span class="nx">deploy</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// options that are specific to the &#39;deploy&#39; target</span>
+</span><span class='line'>    <span class="c1">// target-level options override task-level options</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// separator:&#39;;;;&#39; would override the parent setting</span>
+</span><span class='line'>    <span class="p">},</span>
+</span><span class='line'>    <span class="nx">src</span><span class="o">:</span><span class="p">[</span><span class="s1">&#39;deploy/*.js&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="nx">dest</span><span class="o">:</span><span class="s1">&#39;deploy.js&#39;</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 If you run `grunt concat:dist,` all scripts in `scripts/` will be concatenated into  `dist/main.js`. `grunt concat:dist` runs the concat task with the config settings that are specified under `dist`. `grunt concat:deploy` runs the concat task with the config settings specified under `deploy`. `grunt concat` will run concat with *both* targets, separately. The parent-level `options` setting specifies config settings that are shared by both targets. `grunt build` is an alias for `grunt concat`.
 
-Now let's tackle a common, yet relatively complicated task.
+Now let&#8217;s tackle a common, yet relatively complicated task.
 
-Let's get Grunt to run certain tasks in response to changes in files. An extremely powerful and common use-case: reloading a static website when you change its HTML/CSS/JS. It's fairly complicated and it's usually something you just copy-and-paste. Here are the steps to setting this up using the `watch` and `connect` plugins, along with the `connect-livereload` (a piece of Connect middleware that is not grunt-specific). For this example, let's assume that your static website is located in the `client/` folder.
+Let&#8217;s get Grunt to run certain tasks in response to changes in files. An extremely powerful and common use-case: reloading a static website when you change its HTML/CSS/JS. It&#8217;s fairly complicated and it&#8217;s usually something you just copy-and-paste. Here are the steps to setting this up using the `watch` and `connect` plugins, along with the `connect-livereload` (a piece of Connect middleware that is not grunt-specific). For this example, let&#8217;s assume that your static website is located in the `client/` folder.
 
 Install the three plugins:  
-`npm install --save-dev grunt-contrib-watch grunt-contrib-connect connect-livereload`
+`npm install &#8211;save-dev grunt-contrib-watch grunt-contrib-connect connect-livereload`
 
 Add this basic initialization code to the top of your Gruntfile:
 
-``` javascript
-// This is the default port that livereload listens on;
-// change it if you configure livereload to use another port.
-var LIVERELOAD_PORT = 35729;
-// lrSnippet is just a function.
-// It's a piece of Connect middleware that injects
-// a script into the static served html.
-var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
-// All the middleware necessary to serve static files.
-var livereloadMiddleware = function (connect, options) {
-  return [
-    // Inject a livereloading script into static files.
-    lrSnippet,
-    // Serve static files.
-    connect.static(options.base),
-    // Make empty directories browsable.
-    connect.directory(options.base)
-  ];
-};
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// This is the default port that livereload listens on;</span>
+</span><span class='line'><span class="c1">// change it if you configure livereload to use another port.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">LIVERELOAD_PORT</span> <span class="o">=</span> <span class="mi">35729</span><span class="p">;</span>
+</span><span class='line'><span class="c1">// lrSnippet is just a function.</span>
+</span><span class='line'><span class="c1">// It&#39;s a piece of Connect middleware that injects</span>
+</span><span class='line'><span class="c1">// a script into the static served html.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">lrSnippet</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;connect-livereload&#39;</span><span class="p">)({</span> <span class="nx">port</span><span class="o">:</span> <span class="nx">LIVERELOAD_PORT</span> <span class="p">});</span>
+</span><span class='line'><span class="c1">// All the middleware necessary to serve static files.</span>
+</span><span class='line'><span class="kd">var</span> <span class="nx">livereloadMiddleware</span> <span class="o">=</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">connect</span><span class="p">,</span> <span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="k">return</span> <span class="p">[</span>
+</span><span class='line'>    <span class="c1">// Inject a livereloading script into static files.</span>
+</span><span class='line'>    <span class="nx">lrSnippet</span><span class="p">,</span>
+</span><span class='line'>    <span class="c1">// Serve static files.</span>
+</span><span class='line'>    <span class="nx">connect</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">base</span><span class="p">),</span>
+</span><span class='line'>    <span class="c1">// Make empty directories browsable.</span>
+</span><span class='line'>    <span class="nx">connect</span><span class="p">.</span><span class="nx">directory</span><span class="p">(</span><span class="nx">options</span><span class="p">.</span><span class="nx">base</span><span class="p">)</span>
+</span><span class='line'>  <span class="p">];</span>
+</span><span class='line'><span class="p">};</span>
+</span></code></pre></td></tr></table></div></figure>
 
 Add to your grunt.initConfig object the following two tasks configurations:
 
-``` javascript
-// The connect task is used to serve static files with a local server.
-connect: {
-  client: {
-    options: {
-      // The server's port, and the folder to serve from:
-      // Ex: 'localhost:9000' would serve up 'client/index.html'
-      port: 9000,
-      base:'client'
-      // Custom middleware for the HTTP server:
-      // The injected JavaScript reloads the page.
-      middleware: livereloadMiddleware
-    }
-  }
-}
-// The watch task is used to run tasks in response to file changes
-watch: {
-  client: {
-    // '**' is used to include all subdirectories
-    // and subdirectories of subdirectories, and so on, recursively.
-    files: ['client/**/*'],
-    // In our case, we don't configure any additional tasks,
-    // since livereload is built into the watch task,
-    // and since the browser refresh is handled by the snippet.
-    // Any other tasks to run (e.g. compile CoffeeScript) go here:
-    tasks:[],
-    options: {
-      livereload:LIVERELOAD_PORT
-    }
-  }
-}
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="c1">// The connect task is used to serve static files with a local server.</span>
+</span><span class='line'><span class="nx">connect</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">client</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="c1">// The server&#39;s port, and the folder to serve from:</span>
+</span><span class='line'>      <span class="c1">// Ex: &#39;localhost:9000&#39; would serve up &#39;client/index.html&#39;</span>
+</span><span class='line'>      <span class="nx">port</span><span class="o">:</span> <span class="mi">9000</span><span class="p">,</span>
+</span><span class='line'>      <span class="nx">base</span><span class="o">:</span><span class="s1">&#39;client&#39;</span>
+</span><span class='line'>      <span class="c1">// Custom middleware for the HTTP server:</span>
+</span><span class='line'>      <span class="c1">// The injected JavaScript reloads the page.</span>
+</span><span class='line'>      <span class="nx">middleware</span><span class="o">:</span> <span class="nx">livereloadMiddleware</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span><span class='line'><span class="c1">// The watch task is used to run tasks in response to file changes</span>
+</span><span class='line'><span class="nx">watch</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">client</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// &#39;**&#39; is used to include all subdirectories</span>
+</span><span class='line'>    <span class="c1">// and subdirectories of subdirectories, and so on, recursively.</span>
+</span><span class='line'>    <span class="nx">files</span><span class="o">:</span> <span class="p">[</span><span class="s1">&#39;client/**/*&#39;</span><span class="p">],</span>
+</span><span class='line'>    <span class="c1">// In our case, we don&#39;t configure any additional tasks,</span>
+</span><span class='line'>    <span class="c1">// since livereload is built into the watch task,</span>
+</span><span class='line'>    <span class="c1">// and since the browser refresh is handled by the snippet.</span>
+</span><span class='line'>    <span class="c1">// Any other tasks to run (e.g. compile CoffeeScript) go here:</span>
+</span><span class='line'>    <span class="nx">tasks</span><span class="o">:</span><span class="p">[],</span>
+</span><span class='line'>    <span class="nx">options</span><span class="o">:</span> <span class="p">{</span>
+</span><span class='line'>      <span class="nx">livereload</span><span class="o">:</span><span class="nx">LIVERELOAD_PORT</span>
+</span><span class='line'>    <span class="p">}</span>
+</span><span class='line'>  <span class="p">}</span>
+</span><span class='line'><span class="p">}</span>
+</span></code></pre></td></tr></table></div></figure>
 
 Finally, we need to run the `connect` and `watch` tasks in sequence. To save ourselves from having to type in two shell commands, we can register a task alias:
 
-``` javascript
-grunt.registerTask('preview', ['connect:client','watch:client']);
-```
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="nx">grunt</span><span class="p">.</span><span class="nx">registerTask</span><span class="p">(</span><span class="s1">&#39;preview&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;connect:client&#39;</span><span class="p">,</span><span class="s1">&#39;watch:client&#39;</span><span class="p">]);</span>
+</span></code></pre></td></tr></table></div></figure>
 
 Running `grunt preview` will now run both tasks.
 
@@ -363,7 +572,7 @@ Some more grunt plugins to be aware about (`contrib` plugins are officially main
 * `grunt contrib-coffee` for compiling CoffeeScript.
 * `grunt-contrib-sass` for compiling SASS.
 * `grunt-concurrent` for running tasks concurrently (instead of sequentially) - useful if you want to run multiple watch tasks concurrently.
-  * If you have a series of tasks, the `watch` task must be run last. `watch` is a task that never ends until you terminate it. Thus, Grunt won't ever reach tasks that come after `watch`.
+  * If you have a series of tasks, the `watch` task must be run last. `watch` is a task that never ends until you terminate it. Thus, Grunt won&#8217;t ever reach tasks that come after `watch`.
 * `grunt-nodemon` for running [nodemon](https://github.com/remy/nodemon) with your node app. This runs your node app and reloads it when files change.
 * `grunt-simplemocha` for running mocha tests.
 * `grunt-open` for opening files and URLs.
@@ -372,10 +581,10 @@ Some tips:
 
 1. If your Gruntfile starts getting too unwieldy, you can break it up by using `grunt.file.readJSON()`.
 2. Tired of copying and pasting `loadNpmTasks`?  Try this:
-    * `npm install --save-dev matchdep`
-    * use `require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);` where you would otherwise list out all your multiple `grunt.loadNpmTask` calls.
+    * `npm install &#8211;save-dev matchdep`
+    * use `require(&#8216;matchdep&#8217;).filterDev(&#8216;grunt-*&#8217;).forEach(grunt.loadNpmTasks);` where you would otherwise list out all your multiple `grunt.loadNpmTask` calls.
 
-For more advanced concepts, [read the Grunt docs!](http://gruntjs.com/getting-started) They're pretty good.]]></content>
+For more advanced concepts, [read the Grunt docs!](http://gruntjs.com/getting-started) They&#8217;re pretty good.]]></content>
   </entry>
   
 </feed>

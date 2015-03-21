@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: iOS | I'm Brian Chu]]></title>
+  <title><![CDATA[Category: ios | I'm Brian Chu]]></title>
   <link href="http://www.brianchu.com/blog/categories/ios/atom.xml" rel="self"/>
   <link href="http://www.brianchu.com/"/>
-  <updated>2014-10-13T05:07:51-07:00</updated>
+  <updated>2015-03-21T07:54:23-07:00</updated>
   <id>http://www.brianchu.com/</id>
   <author>
     <name><![CDATA[Brian Chu]]></name>
@@ -29,7 +29,7 @@
 
 Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.
 
-It's completely free with no ads or in-app purchases, though I might add in-app purchases if the game gets popular enough.
+It&#8217;s completely free with no ads or in-app purchases, though I might add in-app purchases if the game gets popular enough.
 
 Like it? [Text a link to your friends!](https://www.makegameswith.us/games/devils-in-heaven/)
 
@@ -41,7 +41,7 @@ Built with [coocs2d-iphone](http://www.cocos2d-iphone.org/) and [Kobold2D](http:
 
 Originally the game was meant to be titled *Demolition Gauntlet* - featuring a knight running through Hell, chased by demons and devils. That was a pretty uninspiring theme, so I inverted the concept, giving the game the whimsical twist I wanted it to have from the start.
 
-Devils in Heaven was a project I worked on in short bursts, a project that I left dormant for months at a time. I started the game in June of 2012 when I interned over the summer with MakeGamesWithUs (MGWU) after high school. The internship program, which continues today, is unlike your typical internship - it's more like an incubator where you work on our own game alongside the MGWU developers and other interns. Over three months I finished roughly half the game - while learning Objective-C and cocos2d.
+Devils in Heaven was a project I worked on in short bursts, a project that I left dormant for months at a time. I started the game in June of 2012 when I interned over the summer with MakeGamesWithUs (MGWU) after high school. The internship program, which continues today, is unlike your typical internship - it&#8217;s more like an incubator where you work on our own game alongside the MGWU developers and other interns. Over three months I finished roughly half the game - while learning Objective-C and cocos2d.
 
 Afterwards, I [joined](/about) the MGWU team full-time as I took a full year off from school. I worked on the game here and there, bringing it up to 90%, before largely shelving the project for nearly a year until the past few weeks.
 
@@ -53,13 +53,13 @@ One cool part: I got to use some of the physics I learned in school when I was c
 
 <img class="img-thumbnail center" src="/images/blog/2013/dih-equations-small.jpg" title="Kinematic equations" alt="Handwritten calulations of the arrow">
 
-The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows - the code is in dire need of serious refactoring, probably a month's worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.
+The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows - the code is in dire need of serious refactoring, probably a month&#8217;s worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.
 
 But it works! Hope you like it!
 
 <img class="img-thumbnail center" src="/images/blog/2013/dih-physics.png" title="Physics debugging" alt="Screenshot of game with physics debugging graphics.">
 
-By the way, I'm looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal">contact me</a>!
+By the way, I&#8217;m looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal">contact me</a>!
 
 ]]></content>
   </entry>
