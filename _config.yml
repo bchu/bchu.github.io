@@ -4,12 +4,12 @@
 
 url: http://www.brianchu.com
 title: I'm Brian Chu
-subtitle: a web and mobile engineer
+subtitle: a software engineer
 author: Brian Chu
 first_name: Brian
 last_name: Chu
 simple_search: http://google.com/search
-description: Posts, guides, tutorials, and projects from Brian Chu, a full-stack software engineer and a JavaScript and iOS aficionado.
+description: Posts, guides, tutorials, and projects from Brian Chu, a full-stack software engineer and an iOS, JavaScript, and machine learning aficionado.
 profile_picture: /images/profile.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")
