@@ -30,7 +30,7 @@ Some specific trends that I believe will play out in my lifetime:
 
     And there is a substantial chance I will live to some age beyond 300.
 
-    Historical data actually doesn't support this idea - in recent decades life expectancy has only inched up a year or so per decade (roughly one year from 2002-2010 in the US). But I still believe medicine will be one of the fields that is transformed in the next fifty years. The seeds have already been planted in genomics and biotech.
+    Historical data actually doesn't support this idea - in recent decades life expectancy has only inched up a year or so per decade (roughly one year from 2002-2010 in the US). This is a problem whenever you look at the past and try to use that to look towards a future of what I believe to be accelerating change. I still believe medicine will be one of the fields that is transformed in the next fifty years. The seeds have already been planted in genomics and biotech.
 
 3. **The divide between labor and capital will grow.** During my longer lifespan, those with capital - financial resources, machinery, and organizational clout - will gain a growing and disproportionate share of wealth and power over those with labor - employment and time that people have to put into their work. This is closely related to rising income inequality in America <a name="4-back" href="#4">[4]</a>. This will significantly alter the political landscape of the future.
 
