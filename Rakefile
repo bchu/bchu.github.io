@@ -112,9 +112,9 @@ task :new_post, :title do |t, args|
   open(filename, 'w') do |post|
     post.puts "---"
     post.puts "uuid: #{SecureRandom.uuid()}"
-    post.puts "published: false"
-    post.puts "hide: false"
-    post.puts "sitemap: true"
+    post.puts "published: true"
+    post.puts "hide: true"
+    post.puts "sitemap: false"
     post.puts "layout: post"
     post.puts "comments: true"
     # post.puts "date: #{Time.now.strftime('%Y-%m-%d %H:%M')}"

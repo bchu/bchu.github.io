@@ -1,11 +1,10 @@
 ---
 uuid: 034d4013-a314-42ec-a322-7c721f8de02d
 published: true
-hide: true
-sitemap: false
+hide: false
 layout: post
 comments: true
-date: 2015-03-23 10:36:10 -0700
+date: 2015-03-24 10:00:10 -0700
 categories: [Life]
 title: "The Discovery of Magic"
 description: "My thoughts on trends for the future and how to prepare."
@@ -25,7 +24,7 @@ But we know that the world fifty years from now is going to be completely differ
 
 Some specific trends that I believe will play out in my lifetime:
 
-1. **We will discover magic (again).** Life and society will be transformed several times over by advances in science and engineering. I don't have a single shred of doubt about this. I can't tell you exactly what will change, though, except that they will involve rapidly growing fields like biotech, energy, and computing <a name="3-back" href="#3">[3]</a>. If only to prepare myself, I like to describe the future as having the kind of change we would call magic <a name="4-back" href="#4">[4]</a>.
+1. **We will discover magic (again).** Life and society will be transformed several times over by advances in science and engineering. I don't have a single shred of doubt about this. I can't tell you exactly what will change, though, except that they will involve rapidly growing fields like biotech, energy, and computing <a name="3-back" href="#3">[3]</a>. If only to prepare myself, I like to describe the future as having the kind of change we would call magic: sufficiently advanced technology.
 
 2. **We will live drastically longer lives.** As a result of advances in medicine, I will probably live beyond the age of 120.
 
@@ -33,9 +32,9 @@ Some specific trends that I believe will play out in my lifetime:
 
     Historical data actually doesn't support this idea - in recent decades life expectancy has only inched up a year or so per decade (roughly one year from 2002-2010 in the US). But I still believe medicine will be one of the fields that is transformed in the next fifty years. The seeds have already been planted in genomics and biotech.
 
-3. **The divide between labor and capital will grow.** During my longer lifespan, those with capital - financial resources, machinery, and organizational clout - will gain a growing and disproportionate share of wealth and power over those with labor - employment and time that people have to put into their work. This is closely related to rising income inequality in America <a name="5-back" href="#5">[5]</a>. This will significantly alter the political landscape of the future.
+3. **The divide between labor and capital will grow.** During my longer lifespan, those with capital - financial resources, machinery, and organizational clout - will gain a growing and disproportionate share of wealth and power over those with labor - employment and time that people have to put into their work. This is closely related to rising income inequality in America <a name="4-back" href="#4">[4]</a>. This will significantly alter the political landscape of the future.
 
-    We might be tempted to believe this is an issue that will be fixed soon. I read an interesting idea on this: with increasing inequality, larger and larger swaths of the populace would be excluded from access to wealth and power. Most modern nations are democracies, so rising inequality might eventually be checked by majority support for redistributive economics policies (heavier taxes on the wealthy, and so on). But I wouldn't count on this to let us safely ignore the trend. Inequality will continue increasing for some time. Entrepreneurs and those with capital, expertise, and financial resources will always emigrate to nations with less economically restrictive policies (more economically liberal policies). And technology is inherently a multiplier on productivity - even if the rising tide of technology lifts all boats, it will still widen the gap.
+    We might be tempted to believe this is an trend that we or society will stop through political action. I read an interesting idea on this: with increasing inequality, larger and larger swaths of the populace would be excluded from access to wealth and power. Most modern nations are democracies, so rising inequality might eventually be checked by majority support for redistributive economics policies (heavier taxes on the wealthy, and so on). But I wouldn't count on this to let us safely ignore the trend. Inequality will continue increasing for some time. Entrepreneurs and those with capital, expertise, and financial resources will generally emigrate to nations with less economically restrictive policies (more economically liberal policies). And technology is inherently a multiplier on productivity - even if the rising tide of technology lifts all boats, it will still widen the gap.
 
 I don't believe in planning too far for the future, but I always try to keep these trends in mind.
 
@@ -53,6 +52,4 @@ I am much, much less convinced of these things, but I personally forsee two outc
 
 <a name="3" href="#3-back">[3]</a> I have no idea if I'll live to see *specific* technologies like artificial general intelligence or whatever else is going to be hyped tomorrow.
 
-<a name="4" href="#4-back">[4]</a> Sufficiently advanced technology.
-
-<a name="5" href="#5-back">[5]</a> [Income inequality in the United States](http://en.wikipedia.org/wiki/Income_inequality_in_the_United_States). Income inequality *is* falling globally - but largely due to the catch-up development of the third world, where people are finding employment as inexpensive labor. Labor holds value in the third world, ironically contributing to the decline in labor's share of wealth in America.
+<a name="4" href="#4-back">[4]</a> [Income inequality in the United States](http://en.wikipedia.org/wiki/Income_inequality_in_the_United_States). Income inequality *is* falling globally - but largely due to the catch-up development of the third world, where people are finding employment as inexpensive labor. Labor holds value in the third world, ironically contributing to the decline in labor's share of wealth in America.
