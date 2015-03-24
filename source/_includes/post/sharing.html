@@ -12,18 +12,12 @@
   {% endif %}
 
   {% if site.facebook_like %}
-  {% comment %}
-  TODO: compare with "<div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>"
-  {% endcomment %}
+    <style>.fb-like span { vertical-align: top !important; }</style>
     <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-ref></div>
   {% endif %}
 
   {% if site.linkedin_share_button %}
-    <script src="//platform.linkedin.com/in.js">lang: en_US</script><script type="IN/Share" data-counter="right" data-showzero="false"></script>
-  {% endif %}
-
-  {% if site.quora_user %}
-    <span class="quora-follow-button" data-name="{{ site.quora_user }}">Follow <a href="//www.quora.com/{{ site.quora_user }}">{{ site.author }}</a><script src="//www.quora.com/widgets/follow?embed_code=1dCnejc" async defer></script></span>
+    <script src="//platform.linkedin.com/in.js">lang: en_US</script><script type="IN/Share" data-counter="right" data-showzero="false" async defer></script>
   {% endif %}
 
 </div>
