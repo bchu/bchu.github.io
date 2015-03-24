@@ -40,6 +40,8 @@ I don't believe in planning too far for the future, but I always try to keep the
 
 These ideas don't always paint a clear picture of the best path forwards. The concentration of wealth in those with capital suggests entrepreneurial careers or careers in leadership. The scientific revolutions that await us suggest deep study in rapidly advancing areas like biotechnology, computing, or energy. And the long lifespans we will enjoy suggests taking time off - after all, we have long working lives ahead of us.
 
+What do you think? Let me know!
+
 ### A crazier side note:
 
 I am much, much less convinced of these things, but I personally forsee two outcomes for us over the next two centuries or so. Humanity reaches an unimaginably advanced level of technological achievement (exponential technological progress), or we end up killing ourselves off. This binary outcome is a fun thing to think about, but not anything that applies to decisions I make today.
