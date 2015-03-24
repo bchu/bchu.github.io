@@ -255,6 +255,7 @@ input, textarea, select {
     margin: 0; // BS override
   }
   .modal-body {
+    padding: 20px;
     padding-bottom: 0; // BS override
   }
   .modal-footer {
@@ -269,6 +270,10 @@ input, textarea, select {
   input[type='submit'] {
     width: 70% !important;
     min-width: 200px;
+  }
+
+  input[type='checkbox'] {
+    margin-top: 6px;
   }
 }
 
