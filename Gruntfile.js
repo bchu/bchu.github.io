@@ -38,7 +38,7 @@ module.exports = function (grunt) {
         files:[{
           expand:true,
           cwd: 'source/javascripts/',
-          src:['**'],
+          src:['**/**'],
           dest:'public/javascripts/'
         }]
       }
