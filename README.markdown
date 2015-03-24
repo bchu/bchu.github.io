@@ -15,6 +15,9 @@ Based on Octopress.
 5. `grunt` to generate the website and have livereload do the same watches as `grunt static`, but also regenerate the entire website when non-style/js/public source files change.
 6. Use `grunt port:<port>` to run `grunt static`, but served under a different port (default is port 80, for preview on other LAN computers).
 
+## Notes:
+Any custom JS files or libs that are not linked via a CDN need to be added to the Gruntfile so that they will be included in the compiled lib.js/custom.js.
+
 ### Todo
 
 1. add images for projects

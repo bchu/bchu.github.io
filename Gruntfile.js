@@ -89,7 +89,7 @@ module.exports = function (grunt) {
       public: {
         files: [
           {'public/javascripts/custom.js': ['public/javascripts/custom.js']},
-          {'public/javascripts/libs.js': ['public/javascripts/octopress.js','public/javascripts/libs/github-widgets.js']}
+          {'public/javascripts/libs.js': ['public/javascripts/octopress.js','public/javascripts/libs/github-widgets.js', 'public/javascripts/libs/hn.min.js']}
         ]
       }
     },
