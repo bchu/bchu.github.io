@@ -7,7 +7,7 @@ comments: true
 date: 2015-03-24 10:00:10 -0700
 categories: [Life]
 title: "The Discovery of Magic"
-description: "My thoughts on trends for the future and how to prepare."
+description: "My high-level thoughts on very long-term trends to keep in mind."
 ---
 
 <div class="article-cover" style="background-image: url('/images/blog/2015/discovery-magic.jpg')"></div>
