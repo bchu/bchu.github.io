@@ -122,6 +122,7 @@ task :new_post, :title do |t, args|
     post.puts "categories: "
     post.puts "title: \"#{title.gsub(/&/,'&amp;')}\""
     post.puts "description: "
+    post.puts "share_image: "
     post.puts "---"
   end
 end
