@@ -39,7 +39,9 @@ Some specific trends that I believe will play out in my lifetime:
 
 I don't believe in planning too far for the future, but I always try to keep these trends in mind.
 
-These ideas don't always paint a clear picture of the best path forwards. The concentration of wealth in those with capital suggests entrepreneurial careers or careers in leadership. The scientific revolutions that await us suggest deep study in rapidly advancing areas like biotechnology, computing, or energy. And the long lifespans we will enjoy suggests taking time off - after all, we have long working lives ahead of us.
+These ideas as a whole don't paint a clear picture of the best path forwards. The concentration of wealth in those with capital suggests entrepreneurial careers or careers in leadership. The scientific revolutions that await us suggest deep study in rapidly advancing areas like biotechnology, computing, or energy. And the long lifespans we will enjoy suggests taking time off - after all, we have long working lives ahead of us.
+
+You can't ever optimize over everything, so picking the two trends you think are the most likely and will have the most influence on the future paints a clearer guiding path. If you believe science and the labor-capital divide are more relevant, that would direct you towards an entrepreneurial career in science. If you believe science and longer lifespans are more relevant, that would suggest a career in research - the academic path takes a long time, but you'll live longer. And if you think longer lifespans and the labor-capital divide are more relevant, that suggests pursuing any relevant entrepreneural or leadership career that you enjoy.
 
 What do you think? Let me know!
 

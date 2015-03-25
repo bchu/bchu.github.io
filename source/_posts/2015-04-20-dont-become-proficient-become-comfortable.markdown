@@ -2,10 +2,10 @@
 published: false
 layout: post
 comments: true
-date: 2013-10-29 02:07
+date: 2015-04-20 10:07
 categories: 
-title: "Don't Become Proficient. Become Comfortable"
-description: "When you're learning a new technology, the right goal is becoming comfortable with it, not proficient in it."
+title: "Don't Become Proficient, Become Comfortable"
+description: "When you're learning something new, the right goal is becoming comfortable with it, not proficient in it."
 ---
 
 When you're learning something new, be it web development, mobile development, or something else, you shouldn't immediately set a goal of being proficient. Set a goal of being comfortable.
