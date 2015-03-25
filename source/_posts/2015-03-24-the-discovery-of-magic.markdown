@@ -17,11 +17,13 @@ I spend plenty of time thinking about the kinds of questions most ambitious coll
 
 <!-- more -->
 
-Most of my college friends think about their next semester, their next year, and what happens after graduation. Most of my friends in industry think about as far as their next job. This is a pretty good strategy. I don't believe in planning any further out than a couple of years, because I can never predict how things change in my life. The future is hard to predict.
+Most of my college friends plan their next semester, next year, and the year after graduation. Most of my friends in industry plan about as far as their next job. This is a pretty good strategy. I don't believe in planning any further out than a couple of years, because I can never predict how things change in my life. The future is hard to predict.
 
-But we know that the world fifty years from now is going to be completely different. We know it. Compare the 1960s to today: a total transformation. In the 1960s the Vietnam War was escalating. Cancer was a death sentence. Colonialism in Africa was still unwinding. ALGOL was just invented. The civil rights movement in America was beginning. <a name="1-back" href="#1">[1]</a>
+I don't mean you shouldn't think about the future and have long-term goals. You should have an idea of where you want to be four years from now. Maybe even ten years from now. But you shouldn't start from where you want to be four years from now and plan out the steps in between <a name="1-back" href="#1">[1]</a>. The details of the future are hard to predict.
 
-**Society will change.** Even if you don't share my beliefs about the direction of the future, and even though you can never predict how things change in your life, you can predict something: change is coming. Technological change, social change, and economic change. It's obvious, but we don't think about this much. We usually watch events as they happen, as spectators. Every so often we'll stop and realize what rushed by us. So it's a useful exercise to think about the future now. <a name="2-back" href="#2">[2]</a>
+But if it's possible to have some idea of where you want to be four years from now, it's also possible to have an inkling about the world fifty years from now. We know that the world fifty years from now is going to be completely different. There we have it - we know something. Compare the 1960s to today: a total transformation. In the 1960s the Vietnam War was escalating. Cancer was a death sentence. Colonialism in Africa was still unwinding. ALGOL was just invented. The civil rights movement in America was beginning. <a name="2-back" href="#2">[2]</a>
+
+**Society will change.** Even if you don't share my beliefs about the direction of the future, and even though you can never predict how things change in your life, you can predict something: change is coming. Technological change, social change, and economic change. It's obvious, but we don't think about this much. We usually watch events as they happen, as spectators. Every so often we'll stop and realize what happened. So it's a useful exercise to think about the future now.
 
 Some specific trends that I believe will play out in my lifetime:
 
@@ -29,7 +31,7 @@ Some specific trends that I believe will play out in my lifetime:
 
 2. **We will live drastically longer lives.** As a result of advances in medicine, I will probably live beyond the age of 120.
 
-    And there is a substantial chance I will live to some age beyond 300.
+    And there is some chance I will live to an age beyond 300.
 
     Historical data actually doesn't support this idea - in recent decades life expectancy has only inched up a year or so per decade (roughly one year from 2002-2010 in the US). This is a problem whenever you look at the past and try to use that to look towards a future of what I believe to be accelerating change. I still believe medicine will be one of the fields that is transformed in the next fifty years. The seeds have already been planted in genomics and biotech.
 
@@ -47,13 +49,13 @@ What do you think? Let me know!
 
 ### A crazier side note:
 
-I am much, much less convinced of these things, but I personally foresee two outcomes for us over the next two centuries or so. Humanity reaches an unimaginably advanced level of technological achievement (exponential technological progress), or we end up killing ourselves off. This binary outcome is a fun thing to think about, but not anything that applies to decisions I make today.
+I am much, much less convinced of these things, but I foresee two outcomes for us over the next two centuries or so. Humanity reaches an unimaginably advanced level of technological achievement (exponential technological progress), or we end up killing ourselves off. This binary outcome is a fun thing to think about, but not anything that applies to decisions I make today.
 
 <br>
 
-<a name="1" href="#1-back">[1]</a> Interestingly, with hindsight we can notice the seeds of the fifty years that followed. Chemotherapy had barely emerged, and is today firmly established in medicine. African nations - independent - still struggle with the legacy of colonialism. And computing has exploded and taken over our lives.
+<a name="1" href="#1-back">[1]</a> A microcosmic example of this is planning out college. Originally I carefully planned out all the classes I'd take during my four years at Berkeley. That plan was abandoned within my first year at Berkeley because I realized: 1) the professor teaching a class is the most important factor (and it changes every semester), 2) every semester I'd learn about a new topic I hadn't been interested in before, and 3) new classes emerged every year.
 
-<a name="2" href="#2-back">[2]</a> Think about the first derivative of society. And the second derivative if you're adventurous.
+<a name="2" href="#2-back">[2]</a> With hindsight we can notice the seeds of the fifty years that followed. Chemotherapy had barely emerged, and is today firmly established in medicine. African nations - independent - still struggle with the legacy of colonialism. And computing has exploded and taken over our lives.
 
 <a name="3" href="#3-back">[3]</a> I have no idea if I'll live to see *specific* technologies like artificial general intelligence or whatever else is going to be hyped tomorrow.
 
