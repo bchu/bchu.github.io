@@ -41,19 +41,19 @@ I don't believe in planning too far for the future, but I always try to keep the
 
 These ideas as a whole don't paint a clear picture of the best path forwards. The concentration of wealth in those with capital suggests entrepreneurial careers or careers in leadership. The scientific revolutions that await us suggest deep study in rapidly advancing areas like biotechnology, computing, or energy. And the long lifespans we will enjoy suggests taking time off - after all, we have long working lives ahead of us.
 
-You can't ever optimize over everything, so picking the two trends you think are the most likely and will have the most influence on the future paints a clearer guiding path. If you believe science and the labor-capital divide are more relevant, that would direct you towards an entrepreneurial career in science. If you believe science and longer lifespans are more relevant, that would suggest a career in research - the academic path takes a long time, but you'll live longer. And if you think longer lifespans and the labor-capital divide are more relevant, that suggests pursuing any relevant entrepreneural or leadership career that you enjoy.
+You can't ever optimize over everything, so picking the two trends you think are the most likely and will have the most influence on the future paints a clearer guiding path. If you believe science and the labor-capital divide are more relevant, that would direct you towards an entrepreneurial career in science. If you believe science and longer lifespans are more relevant, that would suggest a career in research - the academic path takes a long time, but you'll live longer. And if you think longer lifespans and the labor-capital divide are more relevant, that suggests pursuing any relevant entrepreneurial or leadership career that you enjoy.
 
 What do you think? Let me know!
 
 ### A crazier side note:
 
-I am much, much less convinced of these things, but I personally forsee two outcomes for us over the next two centuries or so. Humanity reaches an unimaginably advanced level of technological achievement (exponential technological progress), or we end up killing ourselves off. This binary outcome is a fun thing to think about, but not anything that applies to decisions I make today.
+I am much, much less convinced of these things, but I personally foresee two outcomes for us over the next two centuries or so. Humanity reaches an unimaginably advanced level of technological achievement (exponential technological progress), or we end up killing ourselves off. This binary outcome is a fun thing to think about, but not anything that applies to decisions I make today.
 
 <br>
 
 <a name="1" href="#1-back">[1]</a> Interestingly, with hindsight we can notice the seeds of the fifty years that followed. Chemotherapy had barely emerged, and is today firmly established in medicine. African nations - independent - still struggle with the legacy of colonialism. And computing has exploded and taken over our lives.
 
-<a name="2" href="#2-back">[2]</a> Think about the first derivative of society (if you want to beat the analogy to death: the Jacobian of society with respect to the trends you think are relevant). And the second derivative if you're adventurous.
+<a name="2" href="#2-back">[2]</a> Think about the first derivative of society. And the second derivative if you're adventurous.
 
 <a name="3" href="#3-back">[3]</a> I have no idea if I'll live to see *specific* technologies like artificial general intelligence or whatever else is going to be hyped tomorrow.
 
