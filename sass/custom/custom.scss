@@ -291,6 +291,9 @@ input, textarea, select {
 }
 
 .index-page .article-body {
+  p {
+    font-size: 16px;
+  }
   p:last-of-type {
     margin: 0; // BS override of <p>
     display: inline;
