@@ -9,7 +9,7 @@ author: Brian Chu
 first_name: Brian
 last_name: Chu
 simple_search: http://google.com/search
-description: Posts, guides, tutorials, and projects from Brian Chu, a full-stack software engineer and an iOS, JavaScript, and machine learning aficionado.
+description: Posts, tutorials, and projects from a software engineer at Cal. I love working with systems, machine learning, and iOS.
 profile_picture: /images/profile.png
 
 # Default date format is "ordinal" (resulting in "July 22nd 2007")

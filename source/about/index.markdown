@@ -5,11 +5,11 @@ sharing: false
 footer: false
 ---
 
-I'm a software engineer hacking on my own [projects](/projects/) while studying `Computer Science` at `UC Berkeley`. I'm also heavily involved as an officer at [Hackers @ Berkeley](http://hackersatberkeley.com/). Go H@B! 
+I'm a software engineer hacking on my own [projects](/projects/) while studying `Computer Science` at `UC Berkeley`. This summer I'm working at `Twitter` on revenue analytics. I'm also involved as an officer at [Hackers @ Berkeley](http://hackersatberkeley.com/). Next fall I'll be a undergraduate teaching assistant for Berkeley's machine learning class.
 
-I've recently been diving into `machine learning` and software systems areas, but I still love to work with `iOS` mobile and `JavaScript` web technologies. I enjoy building rich web and mobile apps. I'm still excited about the established iOS ecosystem and the emergent JavaScript ecosystem (single page apps, server-side technologies, and novel HTML5 APIs).
+I've recently been diving into software systems and `machine learning`, but I still love to build `iOS` mobile and `JavaScript` web applications. I'm still excited about the iOS ecosystem and the JavaScript ecosystem.
 
-This summer I'll be working at `Twitter`. I formerly worked on iOS at `Keychain Logistics` (YC S12) - a mobile trucking logistics startup, iOS game development at `MakeGamesWithUs` (YC W12, now called MakeSchool), and JavaScript at `Hack Reactor`.
+I formerly worked on iOS at `Keychain Logistics` (YC S12) - a mobile trucking logistics startup, iOS game development at `MakeGamesWithUs` (YC W12, now called MakeSchool), and JavaScript at `Hack Reactor`.
 
 Check out [my resume](/about/brianchu_resume.pdf).
 
