@@ -1,4 +1,5 @@
 User-agent: *
 Disallow: /404.html
+Disallow: /about/brianchu_resume.pdf
 
 Sitemap: http://www.brianchu.com/sitemap.xml 
