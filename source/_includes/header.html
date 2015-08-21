@@ -1,1 +1,14 @@
-{% include custom/header.html %}
+<header class="row" role="banner">
+  <section class="col-md-4 profile-pic-container">
+      <a href="{{ root_url }}/"><img src="{{ site.profile_picture }}" title="{{ site.author }}" alt="Brian Chu" id="profile-pic"></a>
+  </section>
+
+  <section class="col-md-8" role="banner">
+    <h1 class="title">I'm <span class="nowrap">{{ site.author }}</span><span class="title-subdue">,</span></h1>
+  {% if site.subtitle %}
+    <span>
+        <h3 class="inline"><span style="font-size:22%">&nbsp;</span>{{ site.subtitle }}.{% comment %} <br class="break">I &hearts; iOS + JavaScript.</h3>{% endcomment %}
+    </span>
+  {% endif %}
+  </section>
+</header>
