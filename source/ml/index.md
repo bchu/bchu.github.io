@@ -10,3 +10,4 @@ footer: false
 * [Discussion 2 slides](slides/discussion2.pptx). (perceptron, norm, complexity)
 * [Discussion 3 slides](slides/discussion3.pptx). (logistic regression)
 * [Discussion 4 slides](slides/discussion4.pptx). (linear regression, logistic regression, bias & variance)
+* [Discussion 5 slides](slides/discussion5.pptx). (logistic regression)
