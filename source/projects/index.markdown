@@ -35,25 +35,11 @@ Startup Weekend team project built with Meteor. Aggregate contacts from Facebook
 <div class="github-widget" data-repo="bchu/FeedYourNetwork"></div>
 <br>
 
-##[Preductive](http://pred.uctive.com)
-
-The task app that tells you what to do, splitting and prioritizing tasks for the user. Built with AngularJS.
-
-<div class="github-widget" data-repo="bchu/preductive-web"></div>
-<br>
-
 ##[Nodetron](http://www.nodetron.com) <small>(conceptual open-source project)</small>
 
 A peer-to-peer, rich-client web app library that uses HTML5 WebRTC and Web Workers to reduce reliance on central servers. Using this library, developers should be able to quickly build peer to peer apps that directly send queries and transfer data directly with each other.
 
 <div class="github-widget" data-repo="bchu/nodetron"></div>
-<br>
-
-##[99tabs](https://github.com/bchu/99tabs)
-
-A Chrome extension for tree-style, vertically listed tabs. So when you've got 99 tabs open, Chrome ain't the problem. PennApps 2013 hackathon project.
-
-<div class="github-widget" data-repo="bchu/99tabs"></div>
 <br>
 
 {% comment %}
