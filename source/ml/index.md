@@ -11,5 +11,7 @@ footer: false
 * [Discussion 3 slides](slides/discussion3.pptx). (logistic regression)
 * [Discussion 4 slides](slides/discussion4.pptx). (linear regression, logistic regression, bias & variance)
 * [Discussion 5 slides](slides/discussion5.pptx). (logistic regression)
+* [Discussion 6 slides](slides/discussion6.pptx). (PCA, LDA, generative)
+* [Discussion 7 slides](slides/discussion7.pptx). (bias variance decomposition)
 
 Feedback form: http://goo.gl/forms/IGD3KkxbA0
