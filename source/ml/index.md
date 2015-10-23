@@ -13,5 +13,6 @@ footer: false
 * [Discussion 5 slides](slides/discussion5.pptx). (logistic regression)
 * [Discussion 6 slides](slides/discussion6.pptx). (PCA, LDA, generative)
 * [Discussion 7 slides](slides/discussion7.pptx). (bias variance decomposition)
+* [Discussion 8 slides](slides/discussion8.pptx). (midterm)
 
 Feedback form: http://goo.gl/forms/IGD3KkxbA0
