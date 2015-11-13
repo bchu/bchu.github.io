@@ -14,5 +14,6 @@ footer: false
 * [Discussion 6 slides](slides/discussion6.pptx). (PCA, LDA, generative)
 * [Discussion 7 slides](slides/discussion7.pptx). (bias variance decomposition)
 * [Discussion 8 slides](slides/discussion8.pptx). (midterm)
-
-Feedback form: http://goo.gl/forms/IGD3KkxbA0
+* [Discussion 9 slides](slides/discussion9.pptx). (decision trees)
+* [Discussion 10 slides](slides/discussion10.pptx). (decision trees / random forests)
+* [Discussion 11 slides](slides/discussion11.pptx). (neural nets)
