@@ -28,20 +28,6 @@ AngelHack project using AngularJS and Firebase. An app that connects people need
 <div class="github-widget" data-repo="bchu/standhub"></div>
 <br>
 
-##[FeedYourNet](http://feedyournet.meteor.com)
-
-Startup Weekend team project built with Meteor. Aggregate contacts from Facebook and LinkedIn. Schedule reminders to reach out to your contacts. Maintain relationships with the contacts most important to you.
-
-<div class="github-widget" data-repo="bchu/FeedYourNetwork"></div>
-<br>
-
-##[Nodetron](http://www.nodetron.com) <small>(conceptual open-source project)</small>
-
-A peer-to-peer, rich-client web app library that uses HTML5 WebRTC and Web Workers to reduce reliance on central servers. Using this library, developers should be able to quickly build peer to peer apps that directly send queries and transfer data directly with each other.
-
-<div class="github-widget" data-repo="bchu/nodetron"></div>
-<br>
-
 {% comment %}
 [<i class="icon-github-sign"></i> See the GitHub repo.](https://github.com/bchu/99tabs)
 {% endcomment %}
