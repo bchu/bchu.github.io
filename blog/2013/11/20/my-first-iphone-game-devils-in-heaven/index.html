@@ -1,263 +1,484 @@
+
 <!DOCTYPE html>
 <!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
 <!--[if lt IE 9]><html class="no-js lte-ie8"><script src="//cdnjs.cloudflare.com/ajax/libs/wysihtml5/0.3.0/wysihtml5.min.js"></script><![endif]-->
-<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!-->
-<html class="no-js" lang="en">
-  <!--<![endif]-->
-  <head>
-    <meta charset="utf-8">
-    <title>My First iPhone Game: Devils in Heaven - Brian Chu</title>
-    <meta name="robots" content="noarchive">
-    <!-- http://t.co/dKP3o1e -->
-    <meta name="HandheldFriendly" content="True">
-    <meta name="MobileOptimized" content="320">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="author" content="Brian Chu">
-    <meta name="description" content="My first iPhone game, Devils in Heaven, an infinite runner with physics obstacles.">
-    <meta name="apple-mobile-web-app-title" content="Brian Chu">
-    <meta property="og:title" content="My First iPhone Game: Devils in Heaven - Brian Chu">
-    <meta property="fb:profile_id" content="brian.chu">
-    <meta property="fb:app_id" content="210604952463349">
-    <meta property="og:type" content="article">
-    <meta property="article:published_time" content="2013-11-20 10:00:00 -0800">
-    <meta property="article:section" content="Blog">
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  
+  
+  
+
+  <title>My First iPhone Game: Devils in Heaven - Brian Chu</title>
+
+  
+  <meta name="robots" content="noarchive">
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+
+  <meta name="author" content="Brian Chu">
+  
+  <meta name="description" content="My first iPhone game, Devils in Heaven, an infinite runner with physics obstacles.">
+  
+
+  <meta name="apple-mobile-web-app-title" content="Brian Chu">
+
+  
+  <meta property="og:title" content="My First iPhone Game: Devils in Heaven - Brian Chu">
+  
+  
+  <meta property="fb:profile_id" content="brian.chu">
+  <meta property="fb:app_id" content="210604952463349">
+  <meta property="og:type" content="article">
+  
+  <meta property="article:published_time" content="2013-11-20 10:00:00 -0800">
+  <meta property="article:section" content="Blog">
+  
     <meta property="article:tag" content="ios">
+  
     <meta property="article:tag" content="projects">
+  
+  
+  
+    
     <meta property="og:image" content="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png">
-    <meta name="twitter:card" content="app">
-    <meta name="twitter:site" content="brrrianchu">
-    <meta name="twitter:app:id:iphone" content="744368918">
-    <meta name="twitter:app:url:iphone" content="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg">
-    <meta name="twitter:title" content="My First iPhone Game: Devils in Heaven">
-    <meta name="twitter:image" content="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png">
-    <meta property="st:title" content="My First iPhone Game: Devils in Heaven - Brian Chu">
-    <meta property="st:published_at" content="2013-11-20T10:00:00-08:00">
-    <link rel="canonical" href="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/">
-    <link href="/favicon.ico" rel="icon">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
-    <link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
-    <link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet'>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
-    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-    <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="/stylesheets/custom/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
-    <link href="/atom.xml" rel="alternate" title="I'm Brian Chu" type="application/atom+xml">
-    <script>
-    (function(i, s, o, g, r, a, m) {
-      i['GoogleAnalyticsObject'] = r;
-      i[r] = i[r] || function() {
-        (i[r].q = i[r].q || []).push(arguments)
-      }, i[r].l = 1 * new Date();
-      a = s.createElement(o),
-        m = s.getElementsByTagName(o)[0];
-      a.async = 1;
-      a.src = g;
-      m.parentNode.insertBefore(a, m)
-    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  
+
+
+  
+  <meta name="twitter:card" content="app">
+  <meta name="twitter:site" content="brrrianchu">
+
+  
+  <meta name="twitter:app:id:iphone" content="744368918">
+    
+  <meta name="twitter:app:url:iphone" content="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&uo=4&at=10lpgg">
+    
+  
+
+  
+
+  <meta name="twitter:title" content="My First iPhone Game: Devils in Heaven">
+
+  
+  
+  
+  
+  <meta name="twitter:image" content="http://www.brianchu.com/images/blog/2013/dih-screenshot1.png">
+  
+
+
+  
+  <meta property="st:title" content="My First iPhone Game: Devils in Heaven - Brian Chu" >
+    
+      <meta property="st:published_at" content="2013-11-20T10:00:00-08:00">
+    
+  
+
+
+  
+  <link rel="canonical" href="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/">
+  <link href="/favicon.ico" rel="icon">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="apple-touch-icon-precomposed" href="apple-touch-icon.png">
+
+<link href='//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,400italic' rel='stylesheet'>
+<!--(if target dev)>Note: no such target, intentional<!-->
+<link href='/stylesheets/bootstrap/bootstrap.css' rel='stylesheet'>
+<link href='/stylesheets/fonts/font-awesome.css' rel='stylesheet'>
+<!--<!(endif)-->
+<!--(if target public)>
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
+<!(endif)-->
+
+  <link href="/stylesheets/syntax/syntax.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/stylesheets/custom/custom.css" media="screen, projection" rel="stylesheet" type="text/css">
+
+  <link href="/atom.xml" rel="alternate" title="I'm Brian Chu" type="application/atom+xml">
+  
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
     ga('create', 'UA-41298092-1', 'auto');
     ga('send', 'pageview');
-    </script>
-  </head>
-  <body>
-    <!--[if lt IE 9]>
+  </script>
+
+
+</head>
+
+<body   >
+<!--[if lt IE 9]>
   <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 <![endif]-->
-    <div class="fixed-top alert text-center" style="display:none">
-      <button type="button" class="close" data-dismiss="alert">&times;</button> <strong></strong> <span></span> </div>
-    <div class="container">
-      <header class="row" role="banner">
-        <section class="col-md-4 profile-pic-container">
-          <a href="/">
-            <img src="/images/profile.png" title="Brian Chu" alt="Brian Chu" id="profile-pic">
-          </a>
-        </section>
-        <section class="col-md-8" role="banner">
-          <h1 class="title">I&#8217;m <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span></h1> <span>
-        <h3 class="inline"><span style="font-size:22%">&nbsp;</span>a software engineer. </span>
-        </section>
-      </header>
-      <div class="row content-row">
-        <aside class="col-md-4 side-bar clear-affix" data-spy="affix" data-offset-top="161"></aside>
-        <aside class="col-md-4 side-bar" data-spy="affix" data-offset-top="161">
-          <div class="side-bar-responsive">
-            <button class="menu-btn hide"><i class="fa fa-align-justify fa-lg"></i></button>
-            <section role="navigation" class="well side-item side-nav">
-              <ul class="list-group"> <li class="list-group-item"><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li> <li class="list-group-item"><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li> <li class="list-group-item"><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li> <li class="list-group-item" data-toggle="buttons-checkbox">
+  <div class="fixed-top alert text-center" style="display:none">
+  <button type="button" class="close" data-dismiss="alert">&times;</button>
+  <strong></strong> <span></span>
+</div>
+  <div class="container">
+    <header class="row" role="banner">
+  <section class="col-md-4 profile-pic-container">
+      <a href="/"><img src="/images/profile.png" title="Brian Chu" alt="Brian Chu" id="profile-pic"></a>
+  </section>
+
+  <section class="col-md-8" role="banner">
+    <h1 class="title">I&#8217;m <span class="nowrap">Brian Chu</span><span class="title-subdue">,</span></h1>
+  
+    <span>
+        <h3 class="inline"><span style="font-size:22%">&nbsp;</span>a software engineer.
+    </span>
+  
+  </section>
+</header>
+
+    <div class="row content-row">
+      
+      
+<aside class="col-md-4 side-bar clear-affix" data-spy="affix" data-offset-top="161"></aside>
+
+<aside class="col-md-4 side-bar" data-spy="affix" data-offset-top="161">
+  <div class="side-bar-responsive">
+    
+      <button class="menu-btn hide"><i class="fa fa-align-justify fa-lg"></i></button>
+<section role="navigation" class="well side-item side-nav">
+  <ul class="list-group">
+    <li class="list-group-item"><a href="/" class="btn flat-btn icon icon-blog ">Blog</a></li>
+    <li class="list-group-item"><a href="/about/" class="btn flat-btn icon icon-user ">About Me</a></li>
+    <li class="list-group-item"><a href="/projects/" class="btn flat-btn icon icon-projects ">Projects</a></li>
+    
+    <li class="list-group-item" data-toggle="buttons-checkbox">
         <a class="btn flat-btn icon icon-contact" data-toggle="modal" data-target=".contact-modal">Contact Me</a>
-    </li> </ul>
-              <form class="nav-search"> <a class="search-toggle"><i class="fa fa-search"></i></a>
-                <div class="input-padding-wrapper">
-                  <input type="text" id="st-search-input" class="col-md-12 st-search-input search-query" placeholder="Search">
-                </div> <a class="close-search force-hide">Close</a> </form>
-            </section>
-            <section class="well side-item side-email clearfix side-nonresponsive">
-              <p>I write posts occasionally. Leave your email here and I&#8217;ll keep you updated!</p>
-              <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
-                <div class="form-group">
-                  <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required> </div>
-                <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix"> </form>
-            </section>
-          </div>
-        </aside>
-        <section class="hentry col-md-8 block" role="article">
-          <article data-swiftype-index="true">
-            <header class="page-header">
-              <h2 class="entry-title">My First iPhone Game: Devils in Heaven</h2>
-              <div class="meta">
-                <time class='entry-date' datetime='2013-11-20T10:00:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span>
-                </time>
-              </div>
-            </header>
-            <div class="article-body">
-              <p>Introducing my first iPhone game, <a href="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&amp;uo=4&amp;at=10lpgg">Devils in Heaven</a>, a 2D infinite runner game with interactive obstacles!</p>
-              <!-- more -->
-              <p>
-                <a href="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&amp;uo=4&amp;at=10lpgg">
-                  <img class="center" src="/images/app_store_download.png">
-                </a>
-              </p>
-              <p>
-                <img class="img-thumbnail center" src="/images/blog/2013/dih-animated.gif" title="Devils in Heaven" alt="Video of gameplay.">
-              </p>
-              <p>Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.</p>
-              <p>It&rsquo;s completely free with no ads or in-app purchases, though I might add in-app purchases if the game gets popular enough.</p>
-              <p>Like it? <a href="https://www.makegameswith.us/games/devils-in-heaven/">Text a link to your friends!</a></p>
-              <p>Built with <a href="http://www.cocos2d-iphone.org/">coocs2d-iphone</a> and <a href="http://www.kobold2d.com/display/KKSITE/Home">Kobold2D</a>. Published by <a href="https://www.makegameswith.us/">MakeGamesWithUs</a>.</p>
-              <p>
-                <img class="img-thumbnail center" src="/images/blog/2013/dih-screenshot1.png" title="Devils in Heaven" alt="Screenshot of gameplay.">
-              </p>
-              <h1>The Process</h1>
-              <p>Originally the game was meant to be titled <em>Demolition Gauntlet</em> - featuring a knight running through Hell, chased by demons and devils. That was a pretty uninspiring theme, so I inverted the concept, giving the game the whimsical twist I wanted it to have from the start.</p>
-              <p>Devils in Heaven was a project I worked on in short bursts, a project that I left dormant for months at a time. I started the game in June of 2012 when I interned over the summer with MakeGamesWithUs (MGWU) after high school. The internship program, which continues today, is unlike your typical internship - it&rsquo;s more like an incubator where you work on our own game alongside the MGWU developers and other interns. Over three months I finished roughly half the game - while learning Objective-C and cocos2d.</p>
-              <p>Afterwards, I <a href="/about">joined</a> the MGWU team full-time as I took a full year off from school. I worked on the game here and there, bringing it up to 90%, before largely shelving the project for nearly a year until the past few weeks.</p>
-              <p>
-                <img class="img-thumbnail center" src="/images/blog/2013/dih-githistory.jpg" title="Git commit history" alt="Git commit history from August 2012 to November 2013">
-              </p>
-              <p>There were a couple of difficult challenges. The game features ragdoll physics for the devil and angels, and setting up the parameters for the physical bodies was quite a lot of work. Dealing with physics in general was challenging at times: all the objects in the game are objects that can fully interact with the physical world, which meant dealing with unexpected behavior like being tipped over.</p>
-              <p>One cool part: I got to use some of the physics I learned in school when I was calculating the velocity of the arrows in the game, using the kinematic equations of motion.</p>
-              <p>
-                <img class="img-thumbnail center" src="/images/blog/2013/dih-equations-small.jpg" title="Kinematic equations" alt="Handwritten calulations of the arrow">
-              </p>
-              <p>The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows - the code is in dire need of serious refactoring, probably a month&rsquo;s worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.</p>
-              <p>But it works! Hope you like it!</p>
-              <p>
-                <img class="img-thumbnail center" src="/images/blog/2013/dih-physics.png" title="Physics debugging" alt="Screenshot of game with physics debugging graphics.">
-              </p>
-              <p>By the way, I&rsquo;m looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal">contact me</a>!</p>
-            </div>
-          </article>
-          <footer>
-            <div class="meta"> <span class="byline author vcard">Posted by <span class="fn">Brian Chu</span></span> on
-              <time class='entry-date' datetime='2013-11-20T10:00:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span>
-              </time> in <span class="categories">
+    </li>
+  </ul>
+  <form class="nav-search">
+    <a class="search-toggle"><i class="fa fa-search"></i></a>
+    <div class="input-padding-wrapper"><input type="text" id="st-search-input" class="col-md-12 st-search-input search-query" placeholder="Search"></div>
+    <a class="close-search force-hide">Close</a>
+  </form>
+</section>
+
+<section class="well side-item side-email clearfix side-nonresponsive">
+  <p>I write posts occasionally. Leave your email here and I&#8217;ll keep you updated!</p>
+
+  <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
+  <div class="form-group">
+    <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+   </div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+  </form>
+</section>
+
+    
+  </div>
+</aside>
+
+
+
+<section class="hentry col-md-8 block" role="article">
+
+<article data-swiftype-index="true">
+
+  <header class="page-header">
+    
+      
+      <h2 class="entry-title">My First iPhone Game: Devils in Heaven</h2>
+    
+    
+      <div class="meta">
+        
+
+
+
+
+
+<time class='entry-date' datetime='2013-11-20T10:00:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span></time>
+        
+      </div>
+    
+  </header>
+
+
+
+<div class="article-body"><p>Introducing my first iPhone game, <a href="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&amp;uo=4&amp;at=10lpgg">Devils in Heaven</a>, a 2D infinite runner game with interactive obstacles!</p>
+
+<!-- more -->
+
+
+<p><a href="https://itunes.apple.com/us/app/devils-in-heaven/id744368918?mt=8&amp;uo=4&amp;at=10lpgg"><img class="center" src="/images/app_store_download.png"></a></p>
+
+<p><img class="img-thumbnail center" src="/images/blog/2013/dih-animated.gif" title="Devils in Heaven" alt="Video of gameplay."></p>
+
+<p>Beezlebubbly is stuck in heaven, and you need to help him escape from the not-too-happy angels chasing him. Fling statues and harps around and protect Beezlebubbly from the arrows.</p>
+
+<p>It&rsquo;s completely free with no ads or in-app purchases, though I might add in-app purchases if the game gets popular enough.</p>
+
+<p>Like it? <a href="https://www.makegameswith.us/games/devils-in-heaven/">Text a link to your friends!</a></p>
+
+<p>Built with <a href="http://www.cocos2d-iphone.org/">coocs2d-iphone</a> and <a href="http://www.kobold2d.com/display/KKSITE/Home">Kobold2D</a>. Published by <a href="https://www.makegameswith.us/">MakeGamesWithUs</a>.</p>
+
+<p><img class="img-thumbnail center" src="/images/blog/2013/dih-screenshot1.png" title="Devils in Heaven" alt="Screenshot of gameplay."></p>
+
+<h1>The Process</h1>
+
+<p>Originally the game was meant to be titled <em>Demolition Gauntlet</em> - featuring a knight running through Hell, chased by demons and devils. That was a pretty uninspiring theme, so I inverted the concept, giving the game the whimsical twist I wanted it to have from the start.</p>
+
+<p>Devils in Heaven was a project I worked on in short bursts, a project that I left dormant for months at a time. I started the game in June of 2012 when I interned over the summer with MakeGamesWithUs (MGWU) after high school. The internship program, which continues today, is unlike your typical internship - it&rsquo;s more like an incubator where you work on our own game alongside the MGWU developers and other interns. Over three months I finished roughly half the game - while learning Objective-C and cocos2d.</p>
+
+<p>Afterwards, I <a href="/about">joined</a> the MGWU team full-time as I took a full year off from school. I worked on the game here and there, bringing it up to 90%, before largely shelving the project for nearly a year until the past few weeks.</p>
+
+<p><img class="img-thumbnail center" src="/images/blog/2013/dih-githistory.jpg" title="Git commit history" alt="Git commit history from August 2012 to November 2013"></p>
+
+<p>There were a couple of difficult challenges. The game features ragdoll physics for the devil and angels, and setting up the parameters for the physical bodies was quite a lot of work. Dealing with physics in general was challenging at times: all the objects in the game are objects that can fully interact with the physical world, which meant dealing with unexpected behavior like being tipped over.</p>
+
+<p>One cool part: I got to use some of the physics I learned in school when I was calculating the velocity of the arrows in the game, using the kinematic equations of motion.</p>
+
+<p><img class="img-thumbnail center" src="/images/blog/2013/dih-equations-small.jpg" title="Kinematic equations" alt="Handwritten calulations of the arrow"></p>
+
+<p>The project was the first 10,000+ lines of code, object-oriented program I ever worked on, and it shows - the code is in dire need of serious refactoring, probably a month&rsquo;s worth of work. My first target? The entire class inheritance and object protocol (interface) system. The OOP structure that I originally created in the game over a year ago is convoluted, tightly coupled, and distinctly non-modular.</p>
+
+<p>But it works! Hope you like it!</p>
+
+<p><img class="img-thumbnail center" src="/images/blog/2013/dih-physics.png" title="Physics debugging" alt="Screenshot of game with physics debugging graphics."></p>
+
+<p>By the way, I&rsquo;m looking for a summer internship! So <a href="#" data-toggle="modal" data-target=".contact-modal">contact me</a>!</p>
+</div>
+
+</article>
+
+  <footer>
+    <div class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Brian Chu</span></span>
+ on
+      
+
+
+
+
+
+<time class='entry-date' datetime='2013-11-20T10:00:00-08:00'><span class='date'><span class='date-month'>Nov</span> <span class='date-day'>20</span><span class='date-suffix'>th</span>, <span class='date-year'>2013</span></span></time>
+      in
+      
+
+<span class="categories">
   
     <a class='category' href='/blog/categories/ios/'>ios</a>, <a class='category' href='/blog/categories/projects/'>projects</a>
   
-</span> </div>
-            <ul class="pager"> <li class="next"><a class="basic-alignment right" href="/blog/2014/01/27/work-where-you-have-comparative-advantages/"
-        title="Next Post: Work where you have comparative advantages">Work where you have &hellip;
-        &raquo;</a></li> <li class="previous"><a class="basic-alignment left"
-        href="/blog/2013/11/02/creating-an-auto-growing-text-input/" title="Previous Post:
-        Creating an Auto-Growing Text Input">&laquo; Creating an Auto-Growing Text &hellip;</a></li> <li class="archives"><a href="/blog/archives">Blog Archives</a></li> </ul>
-            <div class="bottom-asides">
-              <section class="well side-item side-email side-responsive">
-                <p>I write posts occasionally. Leave your email here and I&#8217;ll keep you updated!</p>
-                <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
-                  <div class="form-group">
-                    <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required> </div>
-                  <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix"> </form>
-              </section>
-            </div>
-            <div class="sharing" aria-live="polite"> <a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="My First iPhone Game: Devils in Heaven">Vote on HN</a> <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/">Tweet</a>
-              <style>
-              .fb-like span {
-                vertical-align: top !important;
-              }
-              </style>
-              <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-ref></div>
-              <script src="//platform.linkedin.com/in.js">
-              lang: en_US
-              </script>
-              <script type="IN/Share" data-counter="right" data-showzero="false" async defer></script>
-            </div>
-            <section>
-              <h2>Comments</h2>
-              <div id="disqus_thread" aria-live="polite">
-                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-              </div>
-            </section>
-          </footer>
-        </section>
-      </div>
-      <footer role="contentinfo" class="row content-row end-footer">
-        <ul class="col-md-12 list-inline"> <li><a href="https://github.com/bchu" title="Github"><i class="fa fa-lg fa-github-square"></i> bchu</a></li> <li><a href="https://twitter.com/brrrianchu" title="Twitter"><i class="fa fa-lg fa-twitter-square"/></i> @brrrianchu</a></li> <li><a href="http://www.linkedin.com/in/brchu" title="LinkedIn"><i class="fa fa-lg fa-linkedin-square"/></i></a></li> <li><a href="https://plus.google.com/115101039553139400331?rel=author" title="Google+"><i class="fa fa-lg fa-google-plus-square"/></i></a></li> <li><a href="/atom.xml" rel="subscribe-rss" title="Subscribe via RSS"><i class="fa fa-lg fa-rss"></i></a></li> <li><small><a href="/privacy">Privacy</a></small></li> </ul>
-      </footer>
-      <div class="modal fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-              <h3 id="modalHeader">Contact Me</h3>
-            </div>
-            <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
-            <form action="" method="POST" target="contact-form-frame" role="form">
-              <div class="modal-body">
-                <div class="form-group">
-                  <label for="entry_562979872">Name:</label>
-                  <input class="form-control contact-name" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto"> </div>
-                <div class="form-group">
-                  <label for="entry_1424764388">Email (for my reply):</label>
-                  <input class="form-control defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required> </div>
-                <div class="form-group">
-                  <label for="entry_1142668288">Message:</label>
-                  <textarea class="form-control defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
-                </div>
-                <div class="checkbox">
-                  <label class="contact-checkbox">
-                    <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1"> Sign up for my email newsletter? </label>
-                </div>
-                <input type="hidden" name="draftResponse" value="[]">
-                <input type="hidden" name="pageHistory" value="0"> </div>
-              <!-- /.modal-body -->
-              <div class="modal-footer">
-                <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust"> </div>
-            </form>
-          </div>
-          <!-- /.modal-content -->
-        </div>
-        <!-- /.modal-dialog -->
-      </div>
-      <!-- /.modal -->
+</span>
+
+
     </div>
-    <script>
-    var disqus_shortname = 'brianchu';
-    var disqus_identifier = 'http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/';
-    var disqus_url = 'http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/';
-    var disqus_title = 'My First iPhone Game: Devils in Heaven'
-    var disqus_script = 'embed.js';
-    </script>
+    <ul class="pager">
+      
+      <li class="next"><a class="basic-alignment right" href="/blog/2014/01/27/work-where-you-have-comparative-advantages/"
+        title="Next Post: Work where you have comparative advantages">Work where you have &hellip;
+        &raquo;</a></li>
+      
+      
+      <li class="previous"><a class="basic-alignment left"
+        href="/blog/2013/11/02/creating-an-auto-growing-text-input/" title="Previous Post:
+        Creating an Auto-Growing Text Input">&laquo; Creating an Auto-Growing Text &hellip;</a></li>
+      
+      <li class="archives"><a href="/blog/archives">Blog Archives</a></li>
+    </ul>
+
+    
+
+
+<div class="bottom-asides">
+
+<section class="well side-item side-email side-responsive">
+  <p>I write posts occasionally. Leave your email here and I&#8217;ll keep you updated!</p>
+
+  <form action="http://brianchu.us7.list-manage1.com/subscribe/post?u=9711ca0ed3e46c42279302403&amp;id=7067371fb0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="subscribe-form" target="_blank" role="form">
+  <div class="form-group">
+    <input type="email" value="" name="EMAIL" class="form-control defer-invalid" id="mce-EMAIL" placeholder="Email" required>
+   </div>
+    <input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="btn flat-btn flat-small pull-right well-adjust clearfix">
+  </form>
+</section>
+
+</div>
+
+
+
+    
+      
+<div class="sharing" aria-live="polite">
+
+  <a href="http://news.ycombinator.com/submit" class="hn-share-button" data-title="My First iPhone Game: Devils in Heaven">Vote on HN</a>
+
+  
+    <a href="//twitter.com/share" class="twitter-share-button" data-url="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/" data-via="brrrianchu" data-counturl="http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/" >Tweet</a>
+  
+
+  
+
+  
+    <style>.fb-like span { vertical-align: top !important; }</style>
+    <div class="fb-like" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true" data-ref></div>
+  
+
+  
+    <script src="//platform.linkedin.com/in.js">lang: en_US</script><script type="IN/Share" data-counter="right" data-showzero="false" async defer></script>
+  
+
+</div>
+
+    
+    
+    <section>
+      <h2>Comments</h2>
+      <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+    </section>
+    
+  </footer>
+</section>
+
+    </div>
+
+    <footer role="contentinfo" class="row content-row end-footer">
+  <ul class="col-md-12 list-inline">
+    
+    <li><a href="https://github.com/bchu" title="Github"><i class="fa fa-lg fa-github-square"></i> bchu</a></li>
+    <li><a href="https://twitter.com/brrrianchu" title="Twitter"><i class="fa fa-lg fa-twitter-square"/></i> @brrrianchu</a></li>
+    <li><a href="http://www.linkedin.com/in/brchu" title="LinkedIn"><i class="fa fa-lg fa-linkedin-square"/></i></a></li>
+    
+    <li><a href="https://plus.google.com/115101039553139400331?rel=author" title="Google+"><i class="fa fa-lg fa-google-plus-square"/></i></a></li>
+    
+    <li><a href="/atom.xml" rel="subscribe-rss" title="Subscribe via RSS"><i class="fa fa-lg fa-rss"></i></a></li>
+    <li><small><a href="/privacy">Privacy</a></small></li>
+  </ul>
+</footer>
+
+
+
+    <div class="modal fade contact-modal" tabindex="-1" role="dialog" aria-labelledby="modalHeader" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="modalHeader">Contact Me</h3>
+      </div>
+
+      <iframe src="about:blank" id="contact-form-frame" name="contact-form-frame" style="display: none;"></iframe>
+      <form action="" method="POST" target="contact-form-frame" role="form">
+
+        <div class="modal-body">
+
+          <div class="form-group">
+            <label for="entry_562979872">Name:</label>
+            <input class="form-control contact-name" type="text" name="entry.562979872" value="" id="entry_562979872" dir="auto">
+          </div>
+
+          <div class="form-group">
+            <label for="entry_1424764388">Email (for my reply):</label>
+            <input class="form-control defer-invalid" type="email" name="entry.1424764388" value="" id="entry_1424764388" dir="auto" placeholder="Required" aria-required="true" required>
+          </div>
+
+          <div class="form-group">
+            <label for="entry_1142668288">Message:</label>
+            <textarea class="form-control defer-invalid" name="entry.1142668288" rows="5" cols="0" id="entry_1142668288" dir="auto" placeholder="Required" aria-required="true" required></textarea>
+          </div>
+
+          <div class="checkbox">
+            <label class="contact-checkbox">
+              <input type="checkbox" name="entry.497122630" value="Yes" id="group_497122630_1"> Sign up for my email newsletter?
+            </label>
+          </div>
+          <input type="hidden" name="draftResponse" value="[]">
+          <input type="hidden" name="pageHistory" value="0">
+
+        </div><!-- /.modal-body -->
+
+        <div class="modal-footer">
+          <input type="submit" name="submit" value="Send" class="btn flat-btn flat-small well-adjust">
+        </div>
+      </form>
+
+    </div><!-- /.modal-content -->
+  </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+
+  </div>
+  
+
+<script>
+      var disqus_shortname = 'brianchu';
+      
+        
+        
+        var disqus_identifier = 'http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/';
+        var disqus_url = 'http://www.brianchu.com/blog/2013/11/20/my-first-iphone-game-devils-in-heaven/';
+        var disqus_title = 'My First iPhone Game: Devils in Heaven'
+        var disqus_script = 'embed.js';
+      
+</script>
+
+  
     <script src="//brianchu.disqus.com/embed.js" async defer></script>
-    <script src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=210604952463349" async defer></script>
-    <div id="fb-root"></div>
-    <script src="//platform.twitter.com/widgets.js" async defer></script>
-    <div id="st-results-container"></div>
-    <script>
-    var Swiftype = window.Swiftype || {};
-    (function() {
-      Swiftype.key = '5J3i1dwgBx7wrJPqyp31';
-      Swiftype.inputElement = '#st-search-input';
-      Swiftype.resultContainingElement = '#st-results-container';
-      Swiftype.attachElement = '#st-search-input';
-      Swiftype.renderStyle = 'overlay';
-    }());
-    </script>
-    <script src="//swiftype.com/embed.js" async defer></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-    <script src="/javascripts/libs.js"></script>
-    <script src="/javascripts/custom.js"></script>
-    <!--[if lte IE 9]>
+  
+
+
+
+
+<script src="//connect.facebook.net/en_US/all.js#xfbml=1&appId=210604952463349" async defer></script>
+<div id="fb-root"></div>
+
+
+
+<script src="//platform.twitter.com/widgets.js" async defer></script>
+
+
+
+<div id="st-results-container"></div>
+<script>
+  var Swiftype = window.Swiftype || {};
+  (function() {
+    Swiftype.key = '5J3i1dwgBx7wrJPqyp31';
+    Swiftype.inputElement = '#st-search-input';
+    Swiftype.resultContainingElement = '#st-results-container';
+    Swiftype.attachElement = '#st-search-input';
+    Swiftype.renderStyle = 'overlay';
+  }());
+</script>
+<script src="//swiftype.com/embed.js" async defer></script>
+
+
+
+
+<!--(if target dev)><!-->
+<script src="/javascripts/libs/jquery-2.1.3.js"></script>
+<script src="/javascripts/libs/modernizr-2.8.3.js"></script>
+<script src="/javascripts/libs/bootstrap.js"></script>
+<script src="/javascripts/libs/github-widgets.js"></script>
+<script src="/javascripts/libs/hn.min.js"></script>
+<script src="/javascripts/octopress.js"></script>
+<script src="/javascripts/custom.js"></script>
+<!--<!(endif)-->
+<!--(if target public)>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="/javascripts/libs.js"></script>
+<script src="/javascripts/custom.js"></script>
+<!(endif)-->
+
+<!--[if lte IE 9]>
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.8/jquery.placeholder.min.js"></script>
 <![endif]-->
-  </body>
+
+
+</body>
 </html>
